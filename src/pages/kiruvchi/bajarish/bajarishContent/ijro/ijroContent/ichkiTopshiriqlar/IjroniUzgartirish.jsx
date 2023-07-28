@@ -134,7 +134,7 @@ const IjroniUzgartirish = ({ openIjroniUzgartirish, setOpenIjroniUzgartirish, ch
               otherFilesCount: 0
             })
           }
-          Alert(setAlert, "success", "Muvaffaqiyatli yuklandi!");
+          Alert(setAlert, "success", "Загружено успешно!");
           setOpenIjroniUzgartirish({ open: false, obj: {} });
           setChange(!change);
           setFile1(null);
@@ -143,10 +143,10 @@ const IjroniUzgartirish = ({ openIjroniUzgartirish, setOpenIjroniUzgartirish, ch
           console.log(error.response);
         }
       } else {
-        Alert(setAlert, "warning", "Izoh kiritish majburiy");
+        Alert(setAlert, "warning", "Требуется комментарий");
       }
     } else {
-      Alert(setAlert, "warning", "Fayl tanlash majburiy");
+      Alert(setAlert, "warning", "Выбор файла обязателен");
     }
 
     // if (visibleInputsCheckbox.checked) {
@@ -257,7 +257,7 @@ const IjroniUzgartirish = ({ openIjroniUzgartirish, setOpenIjroniUzgartirish, ch
       <div className="modal-dialog modal-xl modal-dialog-scrollable">
         <div className="modal-content adminWindowHeight">
           <div className="modal-header bg-primary text-white">
-            <h6 className="modal-title" style={{ fontWeight: "bold", textTransform: "upperCase" }}>Ijro hujjati</h6>
+            <h6 className="modal-title" style={{ fontWeight: "bold", textTransform: "upperCase" }}>Исполнительный документ</h6>
             <button type="button" className="close" onClick={() => setOpenIjroniUzgartirish({ open: false, obj: {} })}>&times;</button>
           </div>
           {/* <div className="row ">
@@ -353,7 +353,7 @@ const IjroniUzgartirish = ({ openIjroniUzgartirish, setOpenIjroniUzgartirish, ch
                     id="malumot"
                     maxLength="300"
                     className="form-control form-control-outline izohMatniUzgartirish"
-                    placeholder="Izoh"
+                    placeholder="Комментарий"
                     defaultValue={openIjroniUzgartirish.obj?.executeDocument?.comment}
                     required
                   />
@@ -362,7 +362,7 @@ const IjroniUzgartirish = ({ openIjroniUzgartirish, setOpenIjroniUzgartirish, ch
             </div>
             <div className="modal-body pt-0 mt-2 px-0">
               <div className="form-group w-100 mb-0">
-                <span className="text-muted">{chooseFiles?.length > 0 ? chooseFiles?.length + " ta fayl tanlangan" : "Faylni yuklash"}</span>
+                <span className="text-muted">{chooseFiles?.length > 0 ? chooseFiles?.length + " файл выбран" : "Загрузить файл"}</span>
                 <label className="custom-file">
                   <input
                     type="file"
@@ -374,10 +374,10 @@ const IjroniUzgartirish = ({ openIjroniUzgartirish, setOpenIjroniUzgartirish, ch
                     style={{ width: "100%" }}
                   />
                   <span className="custom-file-label w-100">
-                    {files?.length > 0 ? `${files?.length} ta fayl tanlandi` : "Faylni yuklash"}
+                    {files?.length > 0 ? `${files?.length} файл выбран` : "Загрузить файл"}
                   </span>
                 </label>
-                <label className="d-block text-muted mb-0">Ruxsat etilgan formatlar:doc, docx, xls,xlsx, ppt, pptx, pdf, .zip, .rar</label>
+                <label className="d-block text-muted mb-0">Фиксированные форматы:doc, docx, xls,xlsx, ppt, pptx, pdf, .zip, .rar</label>
               </div>
             </div>
             <div className="text-right">
@@ -408,7 +408,7 @@ const IjroniUzgartirish = ({ openIjroniUzgartirish, setOpenIjroniUzgartirish, ch
               </div>
             </div>
             <div className="modal-footer pr-0">
-              <button type="button" className="btn btn-primary" onClick={() => ijroHujjatiniUzgartirishSaqlash(openIjroniUzgartirish.obj)}>Saqlash</button>
+              <button type="button" className="btn btn-primary" onClick={() => ijroHujjatiniUzgartirishSaqlash(openIjroniUzgartirish.obj)}>Сохранять</button>
             </div>
           </div>
         </div>

@@ -183,7 +183,7 @@ const AddUser = ({ currentUser, setAlert, setData, data, setName }) => {
       // kadrga jo`natish
       const resKadr = await axiosInstanceKadr.patch(`connect/${kadr.id}/${res.data.id}`, sendData)
       console.log(resKadr.data);
-      Alert(setAlert, "success", "Ma'lumot muvaffaqiyatli qo'shildi");
+      Alert(setAlert, "success", "Информация успешно добавлена");
       setData({ ...data, content: [...data.content, res.data] });
     } catch (error) {
       console.log(error);
@@ -230,7 +230,7 @@ const AddUser = ({ currentUser, setAlert, setData, data, setName }) => {
       <div className="col-lg-6">
         <div>
           <button type="button" className="btn btn-primary" onClick={() => openModalFun()}>
-            <i className="icon-user-plus mr-1"></i>Foydalanuvchi qo'shish
+            <i className="icon-user-plus mr-1"></i>Добавить пользователя
           </button>
 
           {son > 0 && <button type="button" className="btn btn-primary ml-4" onClick={() => Refresh()}>
@@ -244,7 +244,7 @@ const AddUser = ({ currentUser, setAlert, setData, data, setName }) => {
           <div className="" style={{ width: "90%", margin: "0 auto" }}>
             <div className="modal-content">
               <div className="modal-header bg-primary text-white">
-                <h5 className="modal-title">Foydalanuvchi qo'shish</h5>
+                <h5 className="modal-title">Добавить пользователя</h5>
                 <button onClick={() => { setOpenModal(false); setShowKadrInfo({ isShow: false, id: 0 }) }} type="button" className="close" data-dismiss="modal" style={{ fontSize: "24px" }}>
                   &times;
                 </button>
@@ -255,7 +255,7 @@ const AddUser = ({ currentUser, setAlert, setData, data, setName }) => {
                   <div className="col-lg-4">
                     <div className="position-relative">
                       <Select
-                        placeholder="Kadrni tanlang:"
+                        placeholder="Выберите кадр:"
                         options={kadrOption}
                         onChange={e => changeOptions(e)}
                       />
@@ -265,7 +265,7 @@ const AddUser = ({ currentUser, setAlert, setData, data, setName }) => {
                   <div className=" col-lg-4">
                     <button onClick={malumotlarniSaqlash} type="button" className="w-100 h-100 btn btn-primary py-2"
                       disabled={showKadrInfo ? false : true}>
-                      <i className="icon-plus3 mr-1"></i> Qo'shish</button>
+                      <i className="icon-plus3 mr-1"></i> Добавлять</button>
                   </div>
                 </div>
 
@@ -285,7 +285,7 @@ const AddUser = ({ currentUser, setAlert, setData, data, setName }) => {
                                 disabled={true}
                               />
                               <label
-                                className="label-floating">Familiyasi:</label>
+                                className="label-floating">Фамилия:</label>
                             </div>
                           </div>
 
@@ -299,7 +299,7 @@ const AddUser = ({ currentUser, setAlert, setData, data, setName }) => {
                                 disabled={true}
                               />
                               <label
-                                className="label-floating">Ismi:</label>
+                                className="label-floating">имя:</label>
                             </div>
                           </div>
 
@@ -313,7 +313,7 @@ const AddUser = ({ currentUser, setAlert, setData, data, setName }) => {
                                 disabled={true}
                               />
                               <label
-                                className="label-floating">Otasining ismi:</label>
+                                className="label-floating">Очество:</label>
                             </div>
                           </div>
                         </div>
@@ -329,7 +329,7 @@ const AddUser = ({ currentUser, setAlert, setData, data, setName }) => {
                                 disabled={true}
                               />
                               <label
-                                className="label-floating">Pasport seriasi:</label>
+                                className="label-floating">Паспорт серии:</label>
                             </div>
                           </div>
 
@@ -343,7 +343,7 @@ const AddUser = ({ currentUser, setAlert, setData, data, setName }) => {
                                 disabled={true}
                               />
                               <label
-                                className="label-floating">PNFL:</label>
+                                className="label-floating">ПНФЛ:</label>
                             </div>
                           </div>
 
@@ -357,7 +357,7 @@ const AddUser = ({ currentUser, setAlert, setData, data, setName }) => {
                                 disabled={true}
                               />
                               <label
-                                className="label-floating">Tug'ilgan kuni:</label>
+                                className="label-floating">Дата рождения:</label>
                             </div>
                           </div>
                         </div>
@@ -374,7 +374,7 @@ const AddUser = ({ currentUser, setAlert, setData, data, setName }) => {
                                 required
                               />
                               <label
-                                className="label-floating">Telefon raqami:</label>
+                                className="label-floating">Номер телефона:</label>
                             </div>
                           </div>
 

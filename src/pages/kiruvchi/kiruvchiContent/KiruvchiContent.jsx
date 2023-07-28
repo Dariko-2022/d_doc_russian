@@ -25,7 +25,7 @@ const KiruvchiContent = ({ currentUser, permission, ranks }) => {
 
   return (
     <div className="content content-mobile">
-      <h3 style={{ margin: "10px 0 0 0", fontWeight: "bold", textTransform: "upperCase" }}>Yangi Qo'shish</h3>
+      <h3 style={{ margin: "10px 0 0 0", fontWeight: "bold", textTransform: "upperCase" }}>Добавить новое</h3>
       <div className="card-body card-body-mobile pt-0 px-0">
         <ul className="nav nav-tabs nav-tabs-solid nav-tabs-solid-custom bg-primary NavLink" style={{ paddingTop: "2px", position: "relative", width: "100%", minHeight: "52px" }}>
           <ContentNavbar permission={permission} ranks={ranks} currentUser={currentUser} />

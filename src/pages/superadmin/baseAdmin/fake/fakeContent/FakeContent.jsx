@@ -55,7 +55,7 @@ function FakeContent({ currentUser }) {
 
   return (
     <div className="content" style={{marginBottom: "80px"}}>
-      <h3 style={{ margin: "10px 0 0 0", fontWeight: "bold", textTransform: "upperCase" }}>Yolg'on</h3>
+      <h3 style={{ margin: "10px 0 0 0", fontWeight: "bold", textTransform: "upperCase" }}>Ложь</h3>
       <div className="card-body p-0">
         <div className="card-body p-0">
           <div>
@@ -64,15 +64,15 @@ function FakeContent({ currentUser }) {
                 <thead>
                   <tr className="bg-dark text-white NavLink text-center">
                     <th style={{ width: "3%" }}>№</th>
-                    <th style={{ width: "15%" }}>logo</th>
-                    <th style={{ width: "20%" }}>Tuman
-                      (shahar)
+                    <th style={{ width: "15%" }}>Лого</th>
+                    <th style={{ width: "20%" }}>Район 
+                    (город)
                     </th>
-                    <th style={{ width: "25%" }}>Tashkilot
-                      Nomi
+                    <th style={{ width: "25%" }}>Название
+                     организации
                     </th>
-                    <th style={{ width: "25%" }}>Rahbari</th>
-                    <td style={{ width: "8%" }}>Harakatlar</td>
+                    <th style={{ width: "25%" }}>Директор</th>
+                    <td style={{ width: "8%" }}>Действия</td>
                   </tr>
                 </thead>
                 <tbody

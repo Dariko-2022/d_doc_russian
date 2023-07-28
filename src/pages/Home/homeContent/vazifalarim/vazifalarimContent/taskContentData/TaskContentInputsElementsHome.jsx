@@ -54,7 +54,7 @@ const TaskContentInputsElementsHome = ({ setTableData, currentUser, dateFormatSe
                 type="text"
                 className="form-control form-control-lg"
                 id="xujjat"
-                placeholder="Korrespondent"
+                placeholder="Корреспондент"
                 ref={korresref}
               />
               <div className="form-control-feedback form-control-feedback-lg">
@@ -69,7 +69,7 @@ const TaskContentInputsElementsHome = ({ setTableData, currentUser, dateFormatSe
                 type="text"
                 className="form-control form-control-lg"
                 id="korrespondent2"
-                placeholder="Qisqacha Ma'lumot"
+                placeholder="Краткая информация"
                 ref={shortDescref}
               />
               <div className="form-control-feedback form-control-feedback-lg">
@@ -136,22 +136,22 @@ const TaskContentInputsElementsHome = ({ setTableData, currentUser, dateFormatSe
                   name="id" value="Id" />
                 <input type="submit"
                   className="btn btn-white dropdown-item  w-100 myBtn"
-                  name="xujjat" value="Xijjat Turi" />
+                  name="локумент" value="Тип документ" />
                 <input type="submit"
                   className="btn btn-white dropdown-item  w-100 myBtn"
-                  name="korres" value="Korrespondent" />
+                  name="korres" value="Корреспондент" />
                 <input type="submit"
                   className="btn btn-white dropdown-item  w-100 myBtn"
-                  name="qiqacha" value="Qisqacha Ma'lumot" />
+                  name="qiqacha" value="Краткая информация" />
                 <input type="submit"
                   className="btn btn-white dropdown-item  w-100 myBtn"
-                  name="reg" value="Chiquvchi № / Sana" />
+                  name="reg" value="Исходящий № / дата" />
                 <input type="submit"
                   className="btn btn-white dropdown-item  w-100 myBtn"
-                  name="ijrochi" value="Ijrochi" />
+                  name="Исполнительный" value="Исполнительный" />
                 <input type="submit"
                   className="btn btn-white dropdown-item  w-100 myBtn"
-                  name="harakat" value="Harakatlar" />
+                  name="Действия" value="Действия" />
               </div>
             </div>
           </th>

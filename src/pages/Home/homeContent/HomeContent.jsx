@@ -146,7 +146,7 @@ const HomeContent = ({ currentUser, ranks }) => {
           {count1.rezalutsiya !== 0 && (
             <div className='col-lg-2 mb-2'>
               <NavLink to="/kiruvchi/resolution" className="nav-link btn btn-primary" activeClassName='NavLinkLi'>
-                <i className="icon-user-plus mr-1 sx-none"></i> Rezalutsiya
+                <i className="icon-user-plus mr-1 sx-none"></i>Резолюция
               </NavLink>
               <span className="badge1 px-1" style={{ right: "13px", top: "-5px" }}>{count1.rezalutsiya}</span>
             </div>
@@ -155,7 +155,7 @@ const HomeContent = ({ currentUser, ranks }) => {
           {maxsusNazoratCount !== 0 && (
             <div className='col-lg-2 mb-2'>
               <NavLink to="/kiruvchi/maxsusNazorat" className="nav-link btn btn-primary" activeClassName='NavLinkLi'>
-                <i className="icon-laptop mr-1 sx-none"></i> Maxsus nazorat
+                <i className="icon-laptop mr-1 sx-none"></i> Специальный контроль
               </NavLink>
               <span className="badge1 px-1" style={{ right: "13px", top: "-5px" }}>{maxsusNazoratCount}</span>
             </div>
@@ -164,7 +164,7 @@ const HomeContent = ({ currentUser, ranks }) => {
           {count1.nazoratdanOlish !== 0 && (
             <div className='col-lg-2 mb-2'>
               <NavLink to="/kiruvchi/nazoratdan-olish" className="nav-link btn btn-primary" activeClassName='NavLinkLi'>
-                <i className="icon-check mr-1 sx-none"></i> Nazoratdan Olish
+                <i className="icon-check mr-1 sx-none"></i> Взять под контроль
               </NavLink>
               <span className="badge1 px-1" style={{ right: "13px", top: "-5px" }}>{count1.nazoratdanOlish}</span>
             </div>
@@ -173,7 +173,7 @@ const HomeContent = ({ currentUser, ranks }) => {
           {count1.bajarishUchun !== 0 && (
             <div className="col-lg-2 mb-2">
               <NavLink to="/kiruvchi/bajarish" className="nav-link btn btn-primary" activeClassName='NavLinkLi'>
-                <i className="icon-pen mr-1 sx-none"></i> Bajarish Uchun
+                <i className="icon-pen mr-1 sx-none"></i> Для выполнения
               </NavLink>
               <span className="badge1 px-1" style={{ right: "13px", top: "-5px" }}>{count1.bajarishUchun}</span>
             </div>
@@ -182,7 +182,7 @@ const HomeContent = ({ currentUser, ranks }) => {
           {count1.umumlashtiruvchi !== 0 && (
             <div className="col-lg-2 mb-2">
               <NavLink to="/kiruvchi/umumlashtiruvchi" className="nav-link btn btn-primary" activeClassName='NavLinkLi'>
-                <i className="icon-laptop mr-1 sx-none"></i> Umumlashtiruvchi
+                <i className="icon-laptop mr-1 sx-none"></i> Генерализатор
               </NavLink>
               <span className="badge1 px-1" style={{ right: "13px", top: "-5px" }}>{count1.umumlashtiruvchi}</span>
             </div>
@@ -191,7 +191,7 @@ const HomeContent = ({ currentUser, ranks }) => {
           {count1.malumotUchun !== 0 && (
             <div className="col-lg-2 mb-2">
               <NavLink to="/kiruvchi/ma'lumot-uchun" className="nav-link btn btn-primary" activeClassName='NavLinkLi'>
-                <i className="icon-laptop mr-1 sx-none"></i> Ma'lumot uchun
+                <i className="icon-laptop mr-1 sx-none"></i> Для справки
               </NavLink>
               <span className="badge1 px-1" style={{ right: "13px", top: "-5px" }}>{count1.malumotUchun}</span>
             </div>
@@ -200,7 +200,7 @@ const HomeContent = ({ currentUser, ranks }) => {
           {count1.bajarilmagan !== 0 && (
             <div className="col-lg-2 mb-2">
               <NavLink to="/kiruvchi/kechiktirilgan" className="nav-link btn btn-primary" activeClassName='NavLinkLi'>
-                <i className="icon-calendar mr-1 sx-none"></i> Bajarilmagan
+                <i className="icon-calendar mr-1 sx-none"></i> Не выполнено
               </NavLink>
               <span className="badge1 px-1" style={{ right: "13px", top: "-5px" }}>{count1.bajarilmagan}</span>
             </div>
@@ -209,7 +209,7 @@ const HomeContent = ({ currentUser, ranks }) => {
           {count1.radEtilgan !== 0 && (
             <div className="col-lg-2 mb-2">
               <NavLink to="/kiruvchi/radetilgan" className="nav-link btn btn-primary" activeClassName='NavLinkLi'>
-                <i className="icon-stack-cancel mr-1 sx-none"></i> Rad Etilgan
+                <i className="icon-stack-cancel mr-1 sx-none"></i> Отклоненный
               </NavLink>
               <span className="badge1 px-1" style={{ right: "13px", top: "-5px" }}>{count1.radEtilgan}</span>
             </div>
@@ -218,7 +218,7 @@ const HomeContent = ({ currentUser, ranks }) => {
           {count1.bajarilgan !== 0 && (
             <div className="col-lg-2 mb-2">
               <NavLink to="/kiruvchi/bajarilgan" className="nav-link btn btn-primary" activeClassName='NavLinkLi'>
-                <i className="icon-check mr-1 sx-none"></i> Bajarilgan
+                <i className="icon-check mr-1 sx-none"></i> Сделанный
               </NavLink>
               <span className="badge1 px-1" style={{ right: "13px", top: "-5px" }}>{count1.bajarilgan}</span>
             </div>
@@ -227,7 +227,7 @@ const HomeContent = ({ currentUser, ranks }) => {
           {maxsusNazoratdanOlishCount !== 0 && (
             <div className="col-lg-2 mb-2">
               <NavLink to="/kiruvchi/maxsusNazoratdanOlish" className="nav-link btn btn-primary" activeClassName='NavLinkLi'>
-                <i className="icon-check mr-1 sx-none"></i> Maxsus Nazoratdan Olish
+                <i className="icon-check mr-1 sx-none"></i> Специальная инспекция
               </NavLink>
               <span className="badge1 px-1" style={{ right: "13px", top: "-5px" }}>{maxsusNazoratdanOlishCount}</span>
             </div>
@@ -241,8 +241,7 @@ const HomeContent = ({ currentUser, ranks }) => {
         <div className="col-lg-3 px-1"  >
           <div className="card cardHome">
             <div className="card-header header-elements-inline bg-primary">
-              <h4 className="card-title text-white text-center fw-bold w-100 text-uppercase">Mening
-                Vazifalarim</h4>
+              <h4 className="card-title text-white text-center fw-bold w-100 text-uppercase">Мои задачи</h4>
             </div>
             <div className="card-body card-body-mobile">
               <table className="table table-bordered table-striped table-hover table-responsive">
@@ -250,7 +249,7 @@ const HomeContent = ({ currentUser, ranks }) => {
                   <tr>
                     <th className="TableLink" style={{ width: "98%" }}>
                       <Link to="/vazifalar_barchasi">
-                        Barchasi
+                      Все
                       </Link>
                     </th>
                     <th className="TableLink"
@@ -261,7 +260,7 @@ const HomeContent = ({ currentUser, ranks }) => {
                   <tr>
                     <th className="TableLink" style={{ width: "98%" }}>
                       <Link to="/vazifalar_yangi">
-                        Yangi
+                      Новый
                       </Link>
                     </th>
                     <th className="TableLink"
@@ -272,7 +271,7 @@ const HomeContent = ({ currentUser, ranks }) => {
                   <tr>
                     <th className="TableLink" style={{ width: "98%" }}>
                       <Link to="/vazifalar_jarayonda">
-                        Jarayonda
+                      В Процесси
                       </Link>
                     </th>
                     <th className="TableLink"
@@ -283,7 +282,7 @@ const HomeContent = ({ currentUser, ranks }) => {
                   <tr>
                     <th className="TableLink" style={{ width: "98%" }}>
                       <Link to="/vazifalar_nazoratda">
-                        Nazoratda
+                      Под контролем
                       </Link>
                     </th>
                     <th className="TableLink"
@@ -301,7 +300,7 @@ const HomeContent = ({ currentUser, ranks }) => {
           <div className="card cardHome">
             <div className="card-header header-elements-inline bg-primary">
               <h4 className="card-title text-white text-center fw-bold w-100 text-uppercase">
-                Yaqinlashmoqda</h4>
+              Приближается</h4>
             </div>
 
             <div className="card-body card-body-mobile">
@@ -310,7 +309,7 @@ const HomeContent = ({ currentUser, ranks }) => {
                   <tr>
                     <th className="TableLink" style={{ width: "98%" }}>
                       <Link to="/yaqinlashmoqda_barchasi">
-                        Barchasi
+                      Все
                       </Link>
                     </th>
                     <th className="TableLink"
@@ -321,7 +320,7 @@ const HomeContent = ({ currentUser, ranks }) => {
                   <tr>
                     <th className="TableLink" style={{ width: "98%" }}>
                       <Link to="/yaqinlashmoqda_1kun-qoldi">
-                        1 kun qoldi
+                      Остался 1 день
                       </Link>
                     </th>
                     <th className="TableLink"
@@ -332,7 +331,7 @@ const HomeContent = ({ currentUser, ranks }) => {
                   <tr>
                     <th className="TableLink" style={{ width: "98%" }}>
                       <Link to="/yaqinlashmoqda_2-3kun-qoldi">
-                        2-3 kun qoldi
+                      Осталось 2-3 дня
                       </Link>
                     </th>
                     <th className="TableLink"
@@ -343,7 +342,7 @@ const HomeContent = ({ currentUser, ranks }) => {
                   <tr>
                     <th className="TableLink" style={{ width: "98%" }}>
                       <Link to="/yaqinlashmoqda_4~kun-qoldi">
-                        4 (~) kun qoldi
+                      Осталось 4 (~) дня
                       </Link>
                     </th>
                     <th className="TableLink"
@@ -361,7 +360,7 @@ const HomeContent = ({ currentUser, ranks }) => {
           <div className="card cardHome">
             <div className="card-header header-elements-inline bg-primary">
               <h4 className="card-title text-white text-center fw-bold w-100 text-uppercase">
-                Bajarilmagan</h4>
+              Не выполнено</h4>
             </div>
 
             <div className="card-body card-body-mobile">
@@ -370,7 +369,7 @@ const HomeContent = ({ currentUser, ranks }) => {
                   <tr>
                     <th className="TableLink" style={{ width: "98%" }}>
                       <Link to="/bajarilmagan_barchasi">
-                        Barchasi
+                      Все
                       </Link>
                     </th>
                     <th className="TableLink" style={{ width: "2%", textAlign: "center", fontSize: "15px" }}>
@@ -380,7 +379,7 @@ const HomeContent = ({ currentUser, ranks }) => {
                   <tr>
                     <th className="TableLink" style={{ width: "98%" }}>
                       <Link to="/bajarilmagan_1kun-kechikkan">
-                        1 kun kechikkan
+                      Опоздание на 1 день
                       </Link>
                     </th>
                     <th className="TableLink" style={{ width: "2%", textAlign: "center", fontSize: "15px" }}>
@@ -390,7 +389,7 @@ const HomeContent = ({ currentUser, ranks }) => {
                   <tr>
                     <th className="TableLink" style={{ width: "98%" }}>
                       <Link to="/bajarilmagan_2-3kun-kechikkan">
-                        2-3 kun kechikkan
+                      Опоздание на 2-3 дня
                       </Link>
                     </th>
                     <th className="TableLink" style={{ width: "2%", textAlign: "center", fontSize: "15px" }}>
@@ -400,7 +399,7 @@ const HomeContent = ({ currentUser, ranks }) => {
                   <tr>
                     <th className="TableLink" style={{ width: "98%" }}>
                       <Link to="/bajarilmagan_4~kun-kechikkan">
-                        4 (~) kun kechikkan
+                      Опоздание на 4 (~) дня
                       </Link>
                     </th>
                     <th className="TableLink" style={{ width: "2%", textAlign: "center", fontSize: "15px" }}>
@@ -416,7 +415,7 @@ const HomeContent = ({ currentUser, ranks }) => {
           <div className="card cardHome">
             <div className="card-header header-elements-inline bg-primary">
               <h4 className="card-title text-white text-center fw-bold w-100 text-uppercase">
-                Bajarilgan</h4>
+              Сделанный</h4>
             </div>
 
             <div className="card-body card-body-mobile">
@@ -425,7 +424,7 @@ const HomeContent = ({ currentUser, ranks }) => {
                   <tr>
                     <th className="TableLink" style={{ width: "98%" }}>
                       <Link to="/bajarilgan_barchasi">
-                        Barchasi
+                      Все
                       </Link>
                     </th>
                     <th className="TableLink" style={{ width: "2%", textAlign: "center", fontSize: "15px" }}>
@@ -435,7 +434,7 @@ const HomeContent = ({ currentUser, ranks }) => {
                   <tr>
                     <th className="TableLink" style={{ width: "98%" }}>
                       <Link to="/bajarilgan_bajarilganlar">
-                        Bajarilgan
+                      Сделанный
                       </Link>
                     </th>
                     <th className="TableLink" style={{ width: "2%", textAlign: "center", fontSize: "15px" }}>
@@ -445,7 +444,7 @@ const HomeContent = ({ currentUser, ranks }) => {
                   <tr>
                     <th className="TableLink" style={{ width: "98%" }}>
                       <Link to="/bajarilgan_kechiktirib-berilgan">
-                        Kechiktirib berilgan
+                      Отправлено с опозданием
                       </Link>
                     </th>
                     <th className="TableLink" style={{ width: "2%", textAlign: "center", fontSize: "15px" }}>

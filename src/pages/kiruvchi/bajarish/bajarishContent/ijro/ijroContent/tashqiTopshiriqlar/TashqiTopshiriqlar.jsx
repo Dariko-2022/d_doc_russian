@@ -8,16 +8,16 @@ const TashqiTopshiriqlar = ({ data, dateFormat }) => {
       <div className="col-lg-12">
         <div className="card">
           <div className="card-header bg-primary text-white header-elements-inline">
-            <h6 className="card-title" style={{ fontWeight: "bold", textTransform: "upperCase" }}>Tashqi Topshiriqlar</h6>
+            <h6 className="card-title" style={{ fontWeight: "bold", textTransform: "upperCase" }}>Внешние назначения</h6>
           </div>
           <div className="card-body">
             <div className="table-responsive">
               <table className="table table-striped table-bordered table-hover Tab">
                 <thead className="bg-dark text-white NavLink text-center">
                   <tr>
-                    <th style={{ width: "33.333%" }}>Topshiriq</th>
-                    <th style={{ width: "33.333%" }}>Muddat/holat</th>
-                    <th style={{ width: "33.333%" }}>Ijro</th>
+                    <th style={{ width: "33.333%" }}>Назначение</th>
+                    <th style={{ width: "33.333%" }}>Срок/статус</th>
+                    <th style={{ width: "33.333%" }}>Производительность</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -57,12 +57,12 @@ const TashqiTopshiriqlar = ({ data, dateFormat }) => {
                                       <strong>Izoh:&nbsp;</strong>
                                       <span style={{ fontWeight: "400" }}>
                                         <span style={{ display: "none" }} className="cursor-pointer IzohTashqiTopshiriqNoneY" >
-                                          {d?.executeDocument?.comment} <span style={{ color: "blue", fontSize: "11px" }}>&nbsp; yashirish</span>
+                                          {d?.executeDocument?.comment} <span style={{ color: "blue", fontSize: "11px" }}>&nbsp; Скрывать</span>
                                         </span>
                                         <span style={{ display: "block" }} className="cursor-pointer IzohTashqiTopshiriqBlockY">
                                           {d?.executeDocument?.comment?.substring(0, 50)}...
                                           {d?.executeDocument?.comment?.length > 50 ? (
-                                            <span style={{ color: "blue", fontSize: "11px" }}>&nbsp; davomi</span>
+                                            <span style={{ color: "blue", fontSize: "11px" }}>&nbsp; продолжение</span>
                                           ) : (
                                             <span></span>
                                           )}

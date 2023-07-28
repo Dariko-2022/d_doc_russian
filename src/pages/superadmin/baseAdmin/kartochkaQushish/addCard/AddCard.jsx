@@ -31,7 +31,7 @@ const AddCard = ({ currentUser, setAlert, setChange, change, setBoshTashkilotlar
                   cardTypeId: directionName ? directionName.value : null  // arr1[0].value
                 })
                 setBoshTashkilotlar(prev => [...prev, res.data]);
-                Alert(setAlert, "success", "Kartochka muvaffaqiyatli qo'shildi");
+                Alert(setAlert, "success", "Карта успешно добавлена");
                 formreset.current.reset();
                 btnCloseref.current.click();
                 cardTyperef.current?.props?.value && cardTyperef.current.removeValue(cardTyperef.current.props.value);
@@ -42,19 +42,19 @@ const AddCard = ({ currentUser, setAlert, setChange, change, setBoshTashkilotlar
                 Alert(setAlert, "warning", error.response.data);
               }
             } else {
-              Alert(setAlert, "warning", "Bajarilish muddati 0 dan katta bo'lishi kerak");
+              Alert(setAlert, "warning", "Время выполнения должно быть больше 0");
             }
           } else {
-            Alert(setAlert, "warning", "Bajarilish muddati kiritilmagan");
+            Alert(setAlert, "warning", "Срок не указан");
           }
         } else {
-          Alert(setAlert, "warning", "Karta nomi kiritilmagan");
+          Alert(setAlert, "warning", "Не введено имя карты");
         }
       } else {
-        Alert(setAlert, "warning", "Yo'nalish nomi tanlanmagan");
+        Alert(setAlert, "warning", "Название маршрута не выбрано");
       }
     } else {
-      Alert(setAlert, "warning", "Yo'nalish turi tanlanmagan");
+      Alert(setAlert, "warning", "Тип маршрута не выбран");
     }
   }
 
@@ -63,7 +63,7 @@ const AddCard = ({ currentUser, setAlert, setChange, change, setBoshTashkilotlar
       <div className="modal-dialog modal-xl">
         <div className="modal-content">
           <div className="modal-header bg-primary text-white">
-            <h5 className="modal-title" style={{ textTransform: "capitalize" }}>Kartochka qo'shish</h5>
+            <h5 className="modal-title" style={{ textTransform: "capitalize" }}>Добавить карту</h5>
             <button type="button" className="close" ref={btnCloseref} data-dismiss="modal">&times;</button>
           </div>
 
@@ -76,7 +76,7 @@ const AddCard = ({ currentUser, setAlert, setChange, change, setBoshTashkilotlar
                       <Select
                         options={notParentsCard}
                         onChange={notParentsCardClick}
-                        placeholder="Yo'nalish:"
+                        placeholder="Направление:"
                         className="cardTypeId"
                         ref={cardTyperef}
                         isClearable={true}
@@ -89,7 +89,7 @@ const AddCard = ({ currentUser, setAlert, setChange, change, setBoshTashkilotlar
                     <div className="position-relative">
                       <Select
                         options={cardsName}
-                        placeholder="Yo'nalish nomini tanlang:"
+                        placeholder="Выберите название маршрута:"
                         className="card1"
                         ref={directionNameref}
                         isClearable={true}
@@ -105,7 +105,7 @@ const AddCard = ({ currentUser, setAlert, setChange, change, setBoshTashkilotlar
                       placeholder="Placeholder"
                       ref={cardNameref}
                     />
-                    <label className="label-floating">Kartochka nomi</label>
+                    <label className="label-floating">Название карты</label>
                   </div>
                 </div>
                 <div className="col-lg-6">
@@ -117,7 +117,7 @@ const AddCard = ({ currentUser, setAlert, setChange, change, setBoshTashkilotlar
                         placeholder="Placeholder"
                         ref={expireDateref}
                       />
-                      <label className="label-floating">Bajarilish muddati</label>
+                      <label className="label-floating">Срок Исполнение</label>
                     </div>
                   </div>
                 </div>
@@ -128,7 +128,7 @@ const AddCard = ({ currentUser, setAlert, setChange, change, setBoshTashkilotlar
                     type="submit"
                     className="btn btn-primary">
                     <i className="icon-floppy-disk mr-1"></i>
-                    Saqlash
+                    Сохранять
                   </button>
                 </div>
               </div>

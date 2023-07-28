@@ -40,7 +40,7 @@ const UpdateModal = ({ userData, setUpdateModal, setAlert, updateModal }) => {
           console.log(sendData);
           const res1 = await axiosInstance.patch("user/editProfile", sendData)
           uploaded(res1.data)
-          Alert(setAlert, 'success', "Ma'lumotingiz muvaffaqiyatli o'zgartirildi");
+          Alert(setAlert, 'success', "Ваша информация была успешно изменена");
           setUpdateModal(false);
         } catch (error) {
           console.log(error);
@@ -60,7 +60,7 @@ const UpdateModal = ({ userData, setUpdateModal, setAlert, updateModal }) => {
         console.log(sendData);
         const res = await axiosInstance.patch("user/editProfile", sendData)
         uploaded(res.data)
-        Alert(setAlert, 'success', "Ma'lumotingiz muvaffaqiyatli o'zgartirildi");
+        Alert(setAlert, 'success', "Ваша информация была успешно изменена");
         setUpdateModal(false);
       } catch (error) {
         console.log(error);
@@ -80,7 +80,7 @@ const UpdateModal = ({ userData, setUpdateModal, setAlert, updateModal }) => {
             }}>
               <div className="modal-header bg-primary "
                 style={{ color: "#fff" }}>
-                <h5 className="modal-title">Foydalanuvchi sozlamalari</h5>
+                <h5 className="modal-title">Пользовательские настройки</h5>
                 <button type="button" className="close" onClick={() => setUpdateModal(false)}>×
                 </button>
               </div>
@@ -102,7 +102,7 @@ const UpdateModal = ({ userData, setUpdateModal, setAlert, updateModal }) => {
                                 disabled={true}
                                 defaultValue={userData?.firstName + ' ' + userData?.lastName + ' ' + userData?.middleName}
                               />
-                              <label className="label-floating">FIO</label>
+                              <label className="label-floating">Ф.И.О</label>
                             </div>
                           </div>
                           <div className="col-lg-3">
@@ -154,7 +154,7 @@ const UpdateModal = ({ userData, setUpdateModal, setAlert, updateModal }) => {
                                 placeholder="Placeholder"
                                 defaultValue={userData?.mobileNumber}
                               />
-                              <label className="label-floating">Telefon nomer</label>
+                              <label className="label-floating">Телефон номер</label>
                             </div>
                           </div>
                         </div>
@@ -168,7 +168,7 @@ const UpdateModal = ({ userData, setUpdateModal, setAlert, updateModal }) => {
                           <label className="custom-file text-muted w-100"
                             htmlFor={'select'}>
                             <div className={'custom-file-label'}>
-                              {fileType ? file?.name : "Foydalanuvchi rasmi"}
+                              {fileType ? file?.name : "Фото пользователя"}
                             </div>
                           </label>
                           <input
@@ -187,7 +187,7 @@ const UpdateModal = ({ userData, setUpdateModal, setAlert, updateModal }) => {
                 <div className="row">
                   <div className="col-lg-9">
                     <div className="modal-footer">
-                      <button type="submit" className="btn btn-primary">Saqlash</button>
+                      <button type="submit" className="btn btn-primary">Сохранять</button>
                     </div>
                   </div>
                 </div>

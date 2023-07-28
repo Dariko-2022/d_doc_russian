@@ -130,7 +130,7 @@ const KartochkaQushishContent = ({ currentUser }) => {
 
   return (
     <div className="content mb-5">
-      <h3 style={{ margin: "10px 0 0 0", fontWeight: "bold", textTransform: "upperCase" }}>Kartochka qo'shish</h3>
+      <h3 style={{ margin: "10px 0 0 0", fontWeight: "bold", textTransform: "upperCase" }}>Добавить карту</h3>
       <div className="card-body p-0">
         <div className="card-body p-0">
           <ul className="nav nav-tabs nav-tabs-solid nav-tabs-solid-custom bg-primary NavLink d-flex align-items-center justify-content-between">
@@ -140,13 +140,13 @@ const KartochkaQushishContent = ({ currentUser }) => {
               textTransform: "upperCase",
               color: "#fff",
               padding: "0 5px 5px 0"
-            }}>Kartochkalar boshqaruv paneli</h5></li>
+            }}>Панель управления картами</h5></li>
             <li className="nav-item mr-3">
               <a href="#1" data-toggle="modal" data-target="#yonalish" style={{ fontWeight: "bold", textTransform: "upperCase", color: "#fff" }}>
-                <i className="icon-plus2"></i> Yo'nalish Qo'shish
+                <i className="icon-plus2"></i> Добавить направление
               </a>
               <a href="#1" data-toggle="modal" className="ml-4" data-target="#modal_theme_primary" style={{ fontWeight: "bold", textTransform: "upperCase", color: "#fff" }}>
-                <i className="icon-plus2"></i> Kartochka Qo'shish
+                <i className="icon-plus2"></i> Добавить карту
               </a>
 
               {/* add direction */}

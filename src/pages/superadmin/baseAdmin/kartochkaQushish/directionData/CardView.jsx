@@ -85,7 +85,7 @@ const CardView = ({ notParentsCardClick, notParentsCard, setCardKurish, cardKuri
                 }
                 return d;
               })
-              Alert(setAlert, "success", "Muvaffaqiyatli o'zgartirildi");
+              Alert(setAlert, "success", "Изменено успешно");
               setBoshTashkilotlar(arr1);
 
               console.log(arr1);
@@ -105,16 +105,16 @@ const CardView = ({ notParentsCardClick, notParentsCard, setCardKurish, cardKuri
               console.log(error);
             }
           } else {
-            Alert(setAlert, "warning", "Bajarish muddati kiritilmagan");
+            Alert(setAlert, "warning", "Срок не указан");
           }
         } else {
-          Alert(setAlert, "warning", "Card nomi kiritilmagan");
+          Alert(setAlert, "warning", "Имя карты не введено");
         }
       } else {
-        Alert(setAlert, "warning", "Card tanlanishi kerak");
+        Alert(setAlert, "warning", "Карта должна быть выбрана");
       }
     } else {
-      Alert(setAlert, "warning", "Card turi tanlanishi kerak");
+      Alert(setAlert, "warning", "Тип карты должен быть выбран");
     }
   }
 
@@ -123,7 +123,7 @@ const CardView = ({ notParentsCardClick, notParentsCard, setCardKurish, cardKuri
       <div className="modal-dialog modal-xl">
         <div className="modal-content">
           <div className="modal-header bg-primary text-white">
-            <h5 className="modal-title" style={{ textTransform: "capitalize" }}>Kartochkani o'zgartirish</h5>
+            <h5 className="modal-title" style={{ textTransform: "capitalize" }}>Сменить карту</h5>
             <button type="button" className="close closeSave" onClick={() => setCardKurish({ open: false, obj: {} })}>&times;</button>
           </div>
 
@@ -137,7 +137,7 @@ const CardView = ({ notParentsCardClick, notParentsCard, setCardKurish, cardKuri
                         <Select
                           options={notParentsCard}
                           onChange={notParentsCardClick}
-                          placeholder="Yo'nalish"
+                          placeholder="Направление"
                           className="cardTypeIdUzgartirish"
                           ref={cardTyperef}
                         />
@@ -151,7 +151,7 @@ const CardView = ({ notParentsCardClick, notParentsCard, setCardKurish, cardKuri
                       <div className="position-relative">
                         <Select
                           options={cardsName}
-                          placeholder="Yo'nalish nomi"
+                          placeholder="Название маршрута"
                           className="card1Uzgartirish"
                           ref={cardref}
                         />
@@ -168,7 +168,7 @@ const CardView = ({ notParentsCardClick, notParentsCard, setCardKurish, cardKuri
                         placeholder="Placeholder"
                         ref={cardNameref}
                       />
-                      <label className="label-floating">Kartochka nomi</label>
+                      <label className="label-floating">Название карты</label>
                     </div>
                   </div>
                 </div>
@@ -182,7 +182,7 @@ const CardView = ({ notParentsCardClick, notParentsCard, setCardKurish, cardKuri
                           placeholder="Placeholder"
                           ref={expireref}
                         />
-                        <label className="label-floating">Bajarilish muddati</label>
+                        <label className="label-floating">Срок Исполнение</label>
                       </div>
                     </div>
                   </div>
@@ -199,14 +199,14 @@ const CardView = ({ notParentsCardClick, notParentsCard, setCardKurish, cardKuri
                           placeholder="Placeholder"
                           ref={orderNumberref}
                         />
-                        <label className="label-floating">Tartib raqami</label>
+                        <label className="label-floating">Порядковый номер</label>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div className="col-lg-6 d-flex justify-content-end">
                   <button type="button" onClick={() => kartochkaUzgartirish(cardKurish.obj)} className="btn btn-primary">
-                    <i className="icon-floppy-disk mr-1"></i>O'zgartirish
+                    <i className="icon-floppy-disk mr-1"></i>Изменять
                   </button>
                 </div>
               </div>

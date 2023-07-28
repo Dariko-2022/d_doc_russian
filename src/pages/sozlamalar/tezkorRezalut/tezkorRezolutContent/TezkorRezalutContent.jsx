@@ -44,14 +44,14 @@ const TezkorRezalutContent = ({ currentUser }) => {
           name: nomlanishi,
           orgId: JSON.parse(localStorage.getItem('oi'))
         })
-        Alert(setAlert, "success", "Ma'lumot muvaffaqiyatli qo'shildi");
+        Alert(setAlert, "success", "Информация успешно добавлена");
         document.querySelector('.nomlanishi').value = "";
         setData(prev => [...prev, res.data]);
       } catch (error) {
         console.log(error.response);
       }
     } else {
-      Alert(setAlert, "warning", "Tashkilot nomi kiritilmagan");
+      Alert(setAlert, "warning", "Не введено название организации");
     }
   }
 
@@ -93,7 +93,7 @@ const TezkorRezalutContent = ({ currentUser }) => {
 
   return (
     <div className="content content-mobile mb-5">
-      <h3 style={{ margin: "10px 0 0 0", fontWeight: "bold", textTransform: "upperCase" }}>Tezkor Rezalutsiya</h3>
+      <h3 style={{ margin: "10px 0 0 0", fontWeight: "bold", textTransform: "upperCase" }}>Быстрое разрешение</h3>
       <div className="card-body-mobile">
         <ul className="nav nav-tabs nav-tabs-solid nav-tabs-solid-custom bg-primary NavLink">
           <ContentNavbarSozlamalar />
@@ -113,7 +113,7 @@ const TezkorRezalutContent = ({ currentUser }) => {
                             placeholder="Placeholder"
                             onKeyDown={(e) => enter(e)}
                           />
-                          <label className="label-floating">Nomlanishi</label>
+                          <label className="label-floating">Именование</label>
                         </div>
                       </div>
                     </div>
@@ -122,7 +122,7 @@ const TezkorRezalutContent = ({ currentUser }) => {
                     <div className="form-group form-group-floating row mb-0">
                       <div className="col-lg-5">
                         <div className="position-relative">
-                          <button type="button" onClick={qushish} className="btn btn-primary form-control form-control-outline">Qo'shish</button>
+                          <button type="button" onClick={qushish} className="btn btn-primary form-control form-control-outline">Добавлять</button>
                         </div>
                       </div>
                     </div>
@@ -133,8 +133,8 @@ const TezkorRezalutContent = ({ currentUser }) => {
                   <thead>
                     <tr className="bg-dark text-white NavLink text-left">
                       <th style={{ width: "5%" }}>№</th>
-                      <th style={{ width: "90%" }}>Nomlanishi</th>
-                      <th style={{ width: "5%" }}>Harakatlar</th>
+                      <th style={{ width: "90%" }}>Именование</th>
+                      <th style={{ width: "5%" }}>Действия</th>
                     </tr>
                   </thead>
                   <tbody>

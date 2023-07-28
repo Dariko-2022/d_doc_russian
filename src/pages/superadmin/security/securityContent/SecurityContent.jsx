@@ -7,8 +7,7 @@ export default function SecurityContent() {
         <div className="col-lg-3">
           <div className="card cardHome">
             <div className="card-header header-elements-inline bg-primary">
-              <h4 className="card-title text-white text-center fw-bold w-100 text-uppercase">Mening
-                Vazifalarim</h4>
+              <h4 className="card-title text-white text-center fw-bold w-100 text-uppercase">Мои обязанности</h4>
             </div>
 
             <div className="card-body">
@@ -16,7 +15,7 @@ export default function SecurityContent() {
                 <tbody className='border-0'>
                   <tr>
                     <th className="TableLink" style={{ width: "98%" }}>
-                      Barchasi
+                      Все
                       {/* <a href="#">Barchasi</a> */}
                     </th>
                     <th className="TableLink" style={{ width: "2%", textAlign: "center", fontSize: "15px" }}>
@@ -25,7 +24,7 @@ export default function SecurityContent() {
                   <tr>
                     <th className="TableLink" style={{ width: "98%" }}>
                       {/* <a href="#">Yangi</a> */}
-                      Yangi
+                      Новый
                     </th>
                     <th className="TableLink" style={{ width: "2%", textAlign: "center", fontSize: "15px" }}>
                       20</th>
@@ -33,7 +32,7 @@ export default function SecurityContent() {
                   <tr>
                     <th className="TableLink" style={{ width: "98%" }}>
                       {/* <a href="#">Jarayonda</a> */}
-                      Jarayonda
+                      В Процисси
                     </th>
                     <th className="TableLink" style={{ width: "2%", textAlign: "center", fontSize: "15px" }}>
                       20</th>
@@ -41,7 +40,7 @@ export default function SecurityContent() {
                   <tr>
                     <th className="TableLink" style={{ width: "98%" }}>
                       {/* <a href="#">Nazoratda</a> */}
-                      Nazoratda
+                      Под контролем
                     </th>
                     <th className="TableLink" style={{ width: "2%", textAlign: "center", fontSize: "15px" }}>
                       10</th>
@@ -56,7 +55,7 @@ export default function SecurityContent() {
           <div className="card cardHome">
             <div className="card-header header-elements-inline bg-primary">
               <h4 className="card-title text-white text-center fw-bold w-100 text-uppercase">
-                Yaqinlashmoqda</h4>
+              приближается</h4>
             </div>
 
             <div className="card-body">
@@ -65,14 +64,14 @@ export default function SecurityContent() {
                   <tr>
                     <th className="TableLink" style={{ width: "98%" }}>
                       {/* <a href="#">Barchasi</a> */}
-                      Barchasi
+                      Все
                     </th>
                     <th className="TableLink" style={{ width: "2%", textAlign: "center", fontSize: "15px" }}>0
                     </th>
                   </tr>
                   <tr>
                     <th className="TableLink" style={{ width: "98%" }}>
-                      1 kun qoldi
+                    остался 1 день
                       {/* <a href="#">1 kun qoldi</a> */}
                     </th>
                     <th className="TableLink" style={{ width: "2%", textAlign: "center", fontSize: "15px" }}>0
@@ -80,7 +79,7 @@ export default function SecurityContent() {
                   </tr>
                   <tr>
                     <th className="TableLink" style={{ width: "98%" }}>
-                      2-3 kun qoldi
+                    осталось 2-3 дня
                       {/* <a href="#">2-3 kun qoldi</a> */}
                     </th>
                     <th className="TableLink" style={{ width: "2%", textAlign: "center", fontSize: "15px" }}>0
@@ -88,7 +87,7 @@ export default function SecurityContent() {
                   </tr>
                   <tr>
                     <th className="TableLink" style={{ width: "98%" }}>
-                      4 (~) kun qoldi
+                    Осталось 4 (~) дня
                       {/* <a href="#">4 (~) kun qoldi</a> */}
                     </th>
                     <th className="TableLink" style={{ width: "2%", textAlign: "center", fontSize: "15px" }}>0
@@ -104,7 +103,7 @@ export default function SecurityContent() {
           <div className="card cardHome">
             <div className="card-header header-elements-inline bg-primary">
               <h4 className="card-title text-white text-center fw-bold w-100 text-uppercase">
-                Bajarilmagan</h4>
+              Не выполнено</h4>
             </div>
 
             <div className="card-body">
@@ -113,14 +112,14 @@ export default function SecurityContent() {
                   <tr>
                     <th className="TableLink" style={{ width: "98%" }}>
                       {/* <a href="#">Barchasi</a> */}
-                      Barchasi
+                      Все
                     </th>
                     <th className="TableLink" style={{ width: "2%", textAlign: "center", fontSize: "15px" }}>7
                     </th>
                   </tr>
                   <tr>
                     <th className="TableLink" style={{ width: "98%" }}>
-                      1 kun kechikkan
+                    Опоздание на 1 день
                       {/* <a href="#">1 kun kechikkan</a> */}
                     </th>
                     <th className="TableLink" style={{ width: "2%", textAlign: "center", fontSize: "15px" }}>0
@@ -128,7 +127,7 @@ export default function SecurityContent() {
                   </tr>
                   <tr>
                     <th className="TableLink" style={{ width: "98%" }}>
-                      2-3 kun kechikkan
+                    Опоздание на 2-3 дня
                       {/* <a href="#">2-3 kun kechikkan</a> */}
                     </th>
                     <th className="TableLink" style={{ width: "2%", textAlign: "center", fontSize: "15px" }}>0
@@ -136,7 +135,7 @@ export default function SecurityContent() {
                   </tr>
                   <tr>
                     <th className="TableLink" style={{ width: "98%" }}>
-                      4 (~) kun kechikkan
+                    Опоздание на 4 (~) дня
                       {/* <a href="#">4 (~) kun kechikkan</a> */}
                     </th>
                     <th className="TableLink" style={{ width: "2%", textAlign: "center", fontSize: "15px" }}>7
@@ -151,7 +150,7 @@ export default function SecurityContent() {
           <div className="card cardHome">
             <div className="card-header header-elements-inline bg-primary">
               <h4 className="card-title text-white text-center fw-bold w-100 text-uppercase">
-                Bajarilgan</h4>
+              Сделанный</h4>
             </div>
 
             <div className="card-body">
@@ -160,7 +159,7 @@ export default function SecurityContent() {
                   <tr>
                     <th className="TableLink" style={{ width: "98%" }}>
                       {/* <a href="#">Barchasi</a> */}
-                      Barchasi
+                      Все
                     </th>
                     <th className="TableLink" style={{ width: "2%", textAlign: "center", fontSize: "15px" }}>4
                     </th>
@@ -168,14 +167,14 @@ export default function SecurityContent() {
                   <tr>
                     <th className="TableLink" style={{ width: "98%" }}>
                       {/* <a href="#">Bajarilgan</a> */}
-                      Bajarilgan
+                      Сделанный
                     </th>
                     <th className="TableLink" style={{ width: "2%", textAlign: "center", fontSize: "15px" }}>4
                     </th>
                   </tr>
                   <tr>
                     <th className="TableLink" style={{ width: "98%" }}>
-                      Kechiktirib berilgan
+                    Отправлено с опозданием
                       {/* <a href="#">Kechiktirib berilgan</a> */}
                     </th>
                     <th className="TableLink" style={{ width: "2%", textAlign: "center", fontSize: "15px" }}>4
@@ -183,7 +182,7 @@ export default function SecurityContent() {
                   </tr>
                   <tr>
                     <th className="TableLink" style={{ width: "98%" }}>
-                      Bajarilmagan
+                    Не выполнено
                       {/* <a href="#">Bajarilmagan</a> */}
                     </th>
                     <th className="TableLink" style={{ width: "2%", textAlign: "center", fontSize: "15px" }}>4
@@ -200,17 +199,17 @@ export default function SecurityContent() {
         <div className="card">
           <div className="card-header">
             <h6 className="card-title" style={{ margin: "10px", fontWeight: "bold", textTransform: "uppercase" }}>
-              Ish oqimi statistikasi</h6>
+            Статистика рабочего процесса</h6>
           </div>
 
           <div className="card-body">
             <ul className="nav nav-pills nav-pills-bordered  nav-pills-toolbar nav-justified">
               <li className="nav-item"><a href="#solid-justified-tab1" className="nav-link active"
-                data-toggle="tab">3b Nazorat kartochkasi</a></li>
+                data-toggle="tab">3b Контрольная карта</a></li>
               <li className="nav-item"><a href="#solid-justified-tab2" className="nav-link"
-                data-toggle="tab">Standartniy prostoy kartochka</a></li>
+                data-toggle="tab">Стандартная простая карта</a></li>
               <li className="nav-item"><a href="#solid-justified-tab3" className="nav-link"
-                data-toggle="tab">1a Nazorat kartochkasi</a></li>
+                data-toggle="tab">1a Контрольная карта</a></li>
             </ul>
 
             <div className="tab-content">
@@ -218,16 +217,16 @@ export default function SecurityContent() {
                 <table className="table table-bordered datatable-select-single table-striped table-hover Tab mt-4">
                   <thead>
                     <tr className="bg-dark text-white NavLink text-center">
-                      <th style={{ borderRadius: "10px 0 0 0" }}>Xujjat Turi</th>
-                      <th>kechikkan</th>
-                      <th>Kiruvchi</th>
-                      <th>Jarayonda</th>
-                      <th>Muddati o'tgan</th>
+                      <th style={{ borderRadius: "10px 0 0 0" }}>Тип документа</th>
+                      <th>Отложенный</th>
+                      <th>Входящий</th>
+                      <th>В Процесси</th>
+                      <th>Просрочено</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr className="text-center">
-                      <td>Viloyat Hokimi topshiqirlari</td>
+                      <td>Задачи губернатора области</td>
                       <td></td>
                       <td>0</td>
                       <td>4</td>
@@ -242,16 +241,16 @@ export default function SecurityContent() {
                 <table className="table table-bordered datatable-select-single table-striped table-hover Tab mt-4">
                   <thead>
                     <tr className="bg-dark text-white NavLink text-center">
-                      <th style={{ borderRadius: "10px 0 0 0" }}>Xujjat Turi</th>
-                      <th>kechikkan</th>
-                      <th>Kiruvchi</th>
-                      <th>Jarayonda</th>
-                      <th>Muddati o'tgan</th>
+                      <th style={{ borderRadius: "10px 0 0 0" }}>тип документа</th>
+                      <th>отложенный</th>
+                      <th>Входящий</th>
+                      <th>В процесси</th>
+                      <th>Истекший</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr className="text-center">
-                      <td>Respublika Tashkilotlari</td>
+                      <td>Республиканские организации</td>
                       <td></td>
                       <td>0</td>
                       <td>4</td>
@@ -265,16 +264,16 @@ export default function SecurityContent() {
                 <table className="table table-bordered datatable-select-single table-striped table-hover Tab mt-4">
                   <thead>
                     <tr className="bg-dark text-white NavLink text-center">
-                      <th style={{ borderRadius: "10px 0 0 0" }}>Xujjat Turi</th>
-                      <th>kechikkan</th>
-                      <th>Kiruvchi</th>
-                      <th>Jarayonda</th>
-                      <th>Muddati o'tgan</th>
+                      <th style={{ borderRadius: "10px 0 0 0" }}>тип документа</th>
+                      <th>отложенный</th>
+                      <th>Входящий</th>
+                      <th>В процесси</th>
+                      <th>Истекший</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr className="text-center">
-                      <td>O'zbekiston Respublikasi Prezidenti qarori</td>
+                      <td>Постановление Президента Республики Узбекистан</td>
                       <td></td>
                       <td>0</td>
                       <td>4</td>

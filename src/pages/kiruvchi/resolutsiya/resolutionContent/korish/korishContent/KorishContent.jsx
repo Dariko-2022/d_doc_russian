@@ -231,14 +231,14 @@ const KorishContent = ({ currentUser, permission, ranks }) => {
                 },
                 orgId: JSON.parse(localStorage.getItem('oi'))
               })
-              Alert(setAlert, 'success', "Ma'lumot muvaffaqiyatli saqlandi");
+              Alert(setAlert, 'success', "Данные успешно сохранены");
               setTimeout(() => {
                 history.push("/kiruvchi/resolution");
               }, 1500);
             } catch (error) {
               console.log(error.response);
               if (error?.response?.data === true) {
-                Alert(setAlert, 'warning', "Hujjat imzolab bo`lingan");
+                Alert(setAlert, 'warning', "Документ подписан");
                 setTimeout(() => {
                   history.push("/kiruvchi/resolution");
                 }, 1500);
@@ -247,16 +247,16 @@ const KorishContent = ({ currentUser, permission, ranks }) => {
               }
             }
           } else {
-            Alert(setAlert, 'warning', "Hujjat kimgadir biriktirilishi shart");
+            Alert(setAlert, 'warning', "Документ должен быть прикреплен к кому-то");
           }
         } else {
-          Alert(setAlert, 'warning', "Bajaruvchi bo'limdagi xodim tanlanmagan");
+          Alert(setAlert, 'warning', "Сотрудник в исполнительный отдел не выбран");
         }
       } else {
-        Alert(setAlert, 'warning', "Asosiy bo'limdagi sana tanlanmagan");
+        Alert(setAlert, 'warning', "Дата в основном разделе не выбрана");
       }
     } else {
-      Alert(setAlert, 'warning', "Hujjat turi kiritilmagan");
+      Alert(setAlert, 'warning', "Дата в основном разделе не выбрана");
     }
   }
 
@@ -264,14 +264,14 @@ const KorishContent = ({ currentUser, permission, ranks }) => {
 
   return (
     <div className="content content-mobile" style={{ marginBottom: "130px" }}>
-      <h3 style={{ margin: "10px 0 0 0", fontWeight: "bold", textTransform: "upperCase" }}>Ko'rish</h3>
+      <h3 style={{ margin: "10px 0 0 0", fontWeight: "bold", textTransform: "upperCase" }}>Вид</h3>
       <div className="card-body card-body-mobile p-0">
         <ul className="nav nav-tabs nav-tabs-solid nav-tabs-solid-custom bg-primary NavLink" style={{ paddingTop: "2px", minHeight: "52px" }}>
           <ContentNavbar permission={permission} ranks={ranks} currentUser={currentUser} />
           <li className="nav-item">
             <NavLink to={`/kiruvchi_resolution_kurish/${params.id}`} className="nav-link"
               activeClassName='NavLinkLi'>
-              <i className="icon-eye2 mr-1"></i> Ko'rish
+              <i className="icon-eye2 mr-1"></i> Вид
             </NavLink>
           </li>
         </ul>
@@ -351,7 +351,7 @@ const KorishContent = ({ currentUser, permission, ranks }) => {
                         }
                         <label className="form-check-label"
                           style={{ fontSize: "20px" }}>
-                          Nazorat uchun
+                         Для контроля
                         </label>
                       </div>
                     ) : <p></p>}
@@ -361,7 +361,7 @@ const KorishContent = ({ currentUser, permission, ranks }) => {
                       className="btn btn-primary ml-1"
                       onClick={saveAllData}
                     >
-                      Saqlash
+                     Сохранять
                     </button>
                   </div>
                 </div>

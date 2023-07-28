@@ -5,14 +5,14 @@ function FuqaroChiquvchiContent() {
   return (
     <div className="content mb-5">
 
-      <h3 style={{ margin: "10px 0 0 20px", fontWeight: "bold", textTransform: "upperCase" }}>Chiquvchi</h3>
+      <h3 style={{ margin: "10px 0 0 20px", fontWeight: "bold", textTransform: "upperCase" }}>Исходящий</h3>
       <div className="card-body">
         <ul className="nav nav-tabs nav-tabs-solid nav-tabs-solid-custom bg-primary NavLink" style={{ borderTopRightRadius: "5px", borderTopLeftRadius: "5px" }}>
           {/*<MurojaatNavbar />*/}
           <li className="nav-item">
             <NavLink to="/super_base_admin_chiquvchi" className="nav-link" activeClassName='NavLinkLi'>
               {/* <i className="icon-plus2 mr-1"></i> */}
-              Chiquvchi
+              Исходящий
             </NavLink>
           </li>
         </ul>
@@ -27,13 +27,13 @@ function FuqaroChiquvchiContent() {
                         <div className="col-lg-12">
                           <div className="position-relative">
                             <input type="text" className="form-control form-control-outline" placeholder="Placeholder" />
-                            <label className="label-floating">Nomalnishi</label>
+                            <label className="label-floating">Именование</label>
                           </div>
                         </div>
                       </div>
                     </div>
                     <div className="col-lg-4">
-                      <button type="submit" style={{ width: "150px", height: "55px" }} className="btn btn-primary"><i className="icon-floppy-disk"></i> Saqlash</button>
+                      <button type="submit" style={{ width: "150px", height: "55px" }} className="btn btn-primary"><i className="icon-floppy-disk"></i> Сохранять</button>
                     </div>
                   </div>
                 </form>
@@ -41,9 +41,9 @@ function FuqaroChiquvchiContent() {
                   <thead>
                     <tr className="bg-dark text-white NavLink text-center">
                       <th style={{ width: "5%" }} >№</th>
-                      <th style={{ width: "45%" }}>Sarlavha (O'zbek tilida)</th>
-                      <td style={{ width: "45%" }}>Sarlavha (Rus Tilida)</td>
-                      <th style={{ width: "5%" }}>Harakatlar</th>
+                      <th style={{ width: "45%" }}>Название (на русском языке)</th>
+                      <td style={{ width: "45%" }}>Название (на узбекском)</td>
+                      <th style={{ width: "5%" }}>Действия</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -83,12 +83,12 @@ function FuqaroChiquvchiContent() {
                       </div>
 
                       <div className="modal-body">
-                        Ma'lumotni o'chirishni xoxlaysizmi?
+                      Вы хотите удалить информацию?
                       </div>
 
                       <div className="modal-footer">
-                        <button type="button" className="btn btn-link" data-dismiss="modal">Bekor qilish</button>
-                        <button type="button" className="btn btn-primary" >O'chirish</button>
+                        <button type="button" className="btn btn-link" data-dismiss="modal">Отмена</button>
+                        <button type="button" className="btn btn-primary" >Выключать</button>
                       </div>
                     </div>
                   </div>

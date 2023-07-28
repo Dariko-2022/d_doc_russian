@@ -13,12 +13,12 @@ const ControlAllData = ({ data, linkFunc }) => {
       <thead className="theadSticky">
         <tr className="bg-dark text-white NavLink text-center" style={{ height: "45px" }}>
           <th style={{ width: "5%" }} className="id">№</th>
-          <th style={{ width: "10%" }} className="Fayl xujjat mobile-table-none">Fayl</th>
-          <th style={{ width: "20%" }} className="korres">Korrespondent</th>
-          <th style={{ width: "25%" }} className="qisqacha mobile-table-none">Qisqacha Ma'lumot</th>
-          <th style={{ width: "15%" }} className="reg">Reg № / Muddati</th>
-          <th style={{ width: "20%" }} className="ijrochi mobile-table-none">Ijrochi</th>
-          <th style={{ width: "5%" }} className="text-center harakat mobile-table-none">Harakatlar</th>
+          <th style={{ width: "10%" }} className="Fayl xujjat mobile-table-none">Файл</th>
+          <th style={{ width: "20%" }} className="korres">Корреспондент</th>
+          <th style={{ width: "25%" }} className="qisqacha mobile-table-none">Краткая информация</th>
+          <th style={{ width: "15%" }} className="reg">Рег № / Срок</th>
+          <th style={{ width: "20%" }} className="ijrochi mobile-table-none">Исполнительный</th>
+          <th style={{ width: "5%" }} className="text-center harakat mobile-table-none">Действия</th>
         </tr>
       </thead>
       <tbody>

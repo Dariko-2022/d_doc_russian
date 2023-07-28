@@ -46,7 +46,7 @@ const Chat = ({ openModalChat, setOpenModalChat }) => {
           </div>
           <div className="chatCenter" >
             <div className="chatCenterWrapper">
-              <h4 className="text-center" style={{ fontSize: "14px", color: "silver" }}>Texnik ishlar olib borilyapti</h4>
+              <h4 className="text-center" style={{ fontSize: "14px", color: "silver" }}>Ведутся технические работы</h4>
               {messages.length > 0 && messages.map((m) => (
                 m.me ? (
                   <div className="userData" ref={scrollRef}>

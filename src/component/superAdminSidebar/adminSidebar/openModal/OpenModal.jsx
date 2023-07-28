@@ -40,7 +40,7 @@ const OpenModal = ({ updateModal, setUpdateModal, currentUser, setAlert, userDat
             birthCountry: shahar ? shahar : "",
             fileId: fileId.data
           })
-          Alert(setAlert, "success", "Ma'lumotingiz muvaffaqiyatli o'zgartirildi");
+          Alert(setAlert, "success", "Информация успешно изменена");
           // const userData1 = JSON.parse(jwtDecode(res.data)?.supperAdmin);
           // setUserData(userData1);
           setUpdateModal(false);
@@ -67,7 +67,7 @@ const OpenModal = ({ updateModal, setUpdateModal, currentUser, setAlert, userDat
           birthDate: tugilganKun,
           birthCountry: shahar
         })
-        Alert(setAlert, "success", "Ma'lumotingiz muvaffaqiyatli o'zgartirildi");
+        Alert(setAlert, "success", "Информация успешно изменена");
         // const userData1 = JSON.parse(jwtDecode(res.data)?.supperAdmin);
         // setUserData(userData1);
         setUpdateModal(false);
@@ -89,7 +89,7 @@ const OpenModal = ({ updateModal, setUpdateModal, currentUser, setAlert, userDat
           <div className="modal-dialog modal-xl customDialog">
             <div className="modal-content">
               <div className="modal-header bg-primary " style={{ color: "#fff" }}>
-                <h5 className="modal-title">Foydalanuvchi sozlamalari</h5>
+                <h5 className="modal-title">Пользовательские настройки</h5>
                 <button type="button" className="close" onClick={() => setUpdateModal(false)}>×
                 </button>
               </div>
@@ -109,7 +109,7 @@ const OpenModal = ({ updateModal, setUpdateModal, currentUser, setAlert, userDat
                                 placeholder="Placeholder"
                                 defaultValue={userData?.firstName}
                               />
-                              <label className="label-floating">Ism</label>
+                              <label className="label-floating">Имя</label>
                             </div>
                           </div>
                         </div>
@@ -126,7 +126,7 @@ const OpenModal = ({ updateModal, setUpdateModal, currentUser, setAlert, userDat
                                 placeholder="Placeholder"
                                 defaultValue={userData?.lastName}
                               />
-                              <label className="label-floating">Familiya</label>
+                              <label className="label-floating">Фамилия</label>
                             </div>
                           </div>
                         </div>
@@ -143,7 +143,7 @@ const OpenModal = ({ updateModal, setUpdateModal, currentUser, setAlert, userDat
                                 placeholder="Placeholder"
                                 defaultValue={userData?.middleName}
                               />
-                              <label className="label-floating">Otasi ismi</label>
+                              <label className="label-floating">Очество</label>
                             </div>
                           </div>
                         </div>
@@ -182,7 +182,7 @@ const OpenModal = ({ updateModal, setUpdateModal, currentUser, setAlert, userDat
                                 placeholder="Placeholder"
                                 defaultValue={userData?.mobileNumber}
                               />
-                              <label className="label-floating">Telefon nomer</label>
+                              <label className="label-floating">Телефон номер</label>
                             </div>
                           </div>
                         </div>
@@ -235,7 +235,7 @@ const OpenModal = ({ updateModal, setUpdateModal, currentUser, setAlert, userDat
                                 placeholder="Placeholder"
                                 defaultValue={userData?.birthCountry}
                               />
-                              <label className="label-floating w-100">Shahar</label>
+                              <label className="label-floating w-100">Город</label>
                             </div>
                           </div>
                         </div>
@@ -252,7 +252,7 @@ const OpenModal = ({ updateModal, setUpdateModal, currentUser, setAlert, userDat
                                 placeholder="Placeholder"
                                 defaultValue={userData?.birthDate}
                               />
-                              <label className="label-floating">Tug'ilgan kuni</label>
+                              <label className="label-floating">Дата рождения</label>
                             </div>
                           </div>
                         </div>
@@ -273,7 +273,7 @@ const OpenModal = ({ updateModal, setUpdateModal, currentUser, setAlert, userDat
                             />
                             <span className="custom-file-label text-muted w-100"
                               style={{ padding: "auto" }}>
-                              {fileType ? file?.name : "Foydalanuvchi rasmi"}
+                              {fileType ? file?.name : "Фото пользователя"}
                             </span>
                           </label>
                         </div>
@@ -284,7 +284,7 @@ const OpenModal = ({ updateModal, setUpdateModal, currentUser, setAlert, userDat
                 <div className="row">
                   <div className="col-lg-8 pr-0">
                     <div className="modal-footer">
-                      <button type="submit" className="btn btn-primary">Saqlash</button>
+                      <button type="submit" className="btn btn-primary">Сохранять</button>
                     </div>
                   </div>
                 </div>

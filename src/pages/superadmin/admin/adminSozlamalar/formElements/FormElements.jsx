@@ -37,19 +37,19 @@ const FormElements = ({ currentUser, setData, data, setAlert, allBulimSelect }) 
             })
             setData([...data, res.data]);
             formClear.current.reset();
-            Alert(setAlert, "success", "Ma'lumot muvaffaqiyatli qo'shildi");
+            Alert(setAlert, "success", "Информация успешно добавлена");
           } catch (error) {
             console.log(error.response);
             Alert(setAlert, "warning", error.response?.data);
           }
         } else {
-          Alert(setAlert, "warning", "Tavsif maydoni bo'sh bo'lmasligi kerak");
+          Alert(setAlert, "warning", "Поле описания не должно быть пустым");
         }
       } else {
-        Alert(setAlert, "warning", "Bo'limning ruscha nomi kiritilmagan");
+        Alert(setAlert, "warning", "Русское название кафедры не указано");
       }
     } else {
-      Alert(setAlert, "warning", "Bo'lim nomi kiritilmagan");
+      Alert(setAlert, "warning", "Не введено название раздела");
     }
   }
 
@@ -66,7 +66,7 @@ const FormElements = ({ currentUser, setData, data, setAlert, allBulimSelect }) 
                   placeholder="Placeholder"
                   ref={uzbekNameref}
                 />
-                <label className="label-floating">Nomlanishi</label>
+                <label className="label-floating">Именование</label>
               </div>
             </div>
           </div>
@@ -81,7 +81,7 @@ const FormElements = ({ currentUser, setData, data, setAlert, allBulimSelect }) 
                   placeholder="Placeholder"
                   ref={russianNameref}
                 />
-                <label className="label-floating">Ruscha nomi</label>
+                <label className="label-floating">Русское имя</label>
               </div>
             </div>
           </div>
@@ -96,14 +96,14 @@ const FormElements = ({ currentUser, setData, data, setAlert, allBulimSelect }) 
                   placeholder="Placeholder"
                   ref={shortDescref}
                 />
-                <label className="label-floating">Tavsif</label>
+                <label className="label-floating">Описание</label>
               </div>
             </div>
           </div>
         </div>
         <div className="col-lg-3">
           <button type="submit" className="btn btn-primary w-100" style={{ height: "56px" }}>
-            <i className="fas fa-save" style={{ fontSize: "18px" }}></i> Saqlash
+            <i className="fas fa-save" style={{ fontSize: "18px" }}></i> Сохранять
           </button>
         </div>
       </div>
@@ -118,7 +118,7 @@ const FormElements = ({ currentUser, setData, data, setAlert, allBulimSelect }) 
               style={{ width: "20px", height: "20px" }}
               onChange={(e) => changeCheckbox(e)}
             />
-            Asosiy kategoriyani tanlash
+           Выберите основную категорию
           </div>
         </div>
       </div>
@@ -127,7 +127,7 @@ const FormElements = ({ currentUser, setData, data, setAlert, allBulimSelect }) 
           <div className="form-group mb-0">
             <Select
               options={allBulimSelect}
-              placeholder="Bo'limlar"
+              placeholder="Разделы"
               className='upperDepartmentId'
               ref={departmentref}
             />

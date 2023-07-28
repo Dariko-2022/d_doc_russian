@@ -13,15 +13,15 @@ export default function YuklashUchunFayllar({ data }) {
                             style={{
                                 fontWeight: "bold",
                                 textTransform: "upperCase"
-                            }}>Yuklash uchun fayllar</h6>
+                            }}>файлы для загрузкифайлы для загрузки </h6>
                     </div>
                     <div className="card-body border ">
                         <div className="border d-flex">
                             <table className="table table-bordered table-striped table-hover Tab">
                                 <thead>
                                     <tr>
-                                        <th>Fayl</th>
-                                        <th>Nomi</th>
+                                        <th>Файл</th>
+                                        <th>Имя</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -81,7 +81,7 @@ export default function YuklashUchunFayllar({ data }) {
                                         </th>
                                         <th className=" text-color border p-2"
                                             style={{ width: '70%' }}>
-                                            Chiquvchi fayl
+                                            Исходящий файл
                                         </th>
                                     </tr>
 

@@ -264,7 +264,7 @@ const ChiquvchiImzolanganContent = ({ currentUser, permission, ranks }) => {
 
   return (
     <div className="content mb-5 content-mobile">
-      <h3 style={{ margin: "10px 0 0 20px", fontWeight: "bold", textTransform: "upperCase" }}>Imzolangan</h3>
+      <h3 style={{ margin: "10px 0 0 20px", fontWeight: "bold", textTransform: "upperCase" }}>Подписано</h3>
       <div className="card-body card-body-mobile pt-2">
         <ul className="nav nav-tabs nav-tabs-solid nav-tabs-solid-custom bg-primary NavLink" style={{ paddingTop: "2px", minHeight: "52px" }}>
           <ChiquvchiContentNavbar permission={permission} ranks={ranks} currentUser={currentUser} />
@@ -281,7 +281,7 @@ const ChiquvchiImzolanganContent = ({ currentUser, permission, ranks }) => {
                         className="form-group form-group-feedback form-group-feedback-left inp inp-sm-none">
                         <Select
                           options={rahbariyat}
-                          placeholder="Imzolovchilar"
+                          placeholder="Подписанты"
                           ref={tasdiqlovchiRef}
                           onMenuOpen={closeOptions}
                           className="Tasdiqlovchilar"
@@ -295,7 +295,7 @@ const ChiquvchiImzolanganContent = ({ currentUser, permission, ranks }) => {
                         className="form-group form-group-feedback form-group-feedback-left inp inp-sm-none">
                         <Select
                           options={korrespondent}
-                          placeholder="Korrespondent"
+                          placeholder="Кореспондентt"
                           isClearable={true}
                           ref={korrespondentRef}
                           className="Korrespondent"
@@ -310,7 +310,7 @@ const ChiquvchiImzolanganContent = ({ currentUser, permission, ranks }) => {
                           id="korrespondent2"
                           ref={qisqachaMalumotRef}
                           // onChange={(e) => setKorres(e.target.value)}
-                          placeholder="Qisqacha ma'lumot" />
+                          placeholder="Краткая информация" />
                       </div>
                     </th>
 
@@ -318,10 +318,10 @@ const ChiquvchiImzolanganContent = ({ currentUser, permission, ranks }) => {
                       <div
                         className="form-group form-group-feedback form-group-feedback-left inp buttonsinput inp-sm-none">
                         <button className="btn btn-primary mr-2 table-sm-full" style={{ height: '44px' }}
-                          onClick={SearchData}>Search
+                          onClick={SearchData}>Поиск
                         </button>
                         <button className="btn btn-primary mr-2 mobile-table-none" style={{ height: '44px' }}
-                          onClick={All}>Barchasi
+                          onClick={All}>Все
                         </button>
                         <button className="btn btn-primary mobile-table-none" style={{ height: '44px' }}
                           data-toggle="dropdown"><i className="icon-menu9"
@@ -333,22 +333,22 @@ const ChiquvchiImzolanganContent = ({ currentUser, permission, ranks }) => {
                             name="id" value="Id" />
                           <input type="submit"
                             className="btn btn-white dropdown-item  w-100 myBtn"
-                            name="qabul" value="fayl" />
+                            name="qabul" value="Файл" />
                           <input type="submit"
                             className="btn btn-white dropdown-item  w-100 myBtn"
-                            name="ariza" value="bo'lim" />
+                            name="ariza" value="Отделение" />
                           <input type="submit"
                             className="btn btn-white dropdown-item  w-100 myBtn"
-                            name="murojaat" value="Imzolovchi" />
+                            name="murojaat" value="Подписант" />
                           <input type="submit"
                             className="btn btn-white dropdown-item  w-100 myBtn"
-                            name="mur" value="Korrespondent" />
+                            name="mur" value="Кореспондент" />
                           <input type="submit"
                             className="btn btn-white dropdown-item  w-100 myBtn"
-                            name="qisqacha" value="qisqacha" />
+                            name="qisqacha" value="кратко" />
                           <input type="submit"
                             className="btn btn-white dropdown-item  w-100 myBtn"
-                            name="harakat" value="harakat" />
+                            name="harakat" value="Действия" />
                         </div>
                       </div>
                     </th>
@@ -369,15 +369,15 @@ const ChiquvchiImzolanganContent = ({ currentUser, permission, ranks }) => {
                   <thead>
                     <tr className="bg-dark text-white NavLink text-center">
                       <th id='tabRow' style={{ width: '5%' }} className="id">№</th>
-                      <th id='tabRow' style={{ width: '15%' }} className="qabul">Fayl</th>
-                      <th id='tabRow' style={{ width: '15%' }} className="ariza">Bo'lim (Beruvchi)</th>
-                      <th id='tabRow' style={{ width: '20%' }} className="murojaat">Tasdiqlovchi</th>
-                      <th id='tabRow' style={{ width: '20%' }} className="mur">Korrespondent</th>
-                      <th id='tabRow' style={{ width: '20%' }} className="qisqacha">Qisqacha mazmuni
+                      <th id='tabRow' style={{ width: '15%' }} className="qabul">Файл</th>
+                      <th id='tabRow' style={{ width: '15%' }} className="ariza">Отдел (Выдача)</th>
+                      <th id='tabRow' style={{ width: '20%' }} className="murojaat">Валидатор</th>
+                      <th id='tabRow' style={{ width: '20%' }} className="mur">Кореспондент</th>
+                      <th id='tabRow' style={{ width: '20%' }} className="qisqacha">Краткое содержание
                       </th>
                       {/*<th style={{width: '10 %'}} className="reg">Reg № / Sana</th>*/}
                       <th id='tabRow' style={{ width: '5%' }}
-                        className="text-center harakat">Harakatlar
+                        className="text-center harakat">Действия
                       </th>
                     </tr>
                   </thead>

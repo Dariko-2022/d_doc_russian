@@ -40,7 +40,7 @@ const UpdateModal = ({ setUpdateModal, updateModal, setData, setAlert, selectBul
           } catch (error) {
             console.log(error?.response);
           }
-          Alert(setAlert, "success", "Ma'lumot muvaffaqiyatli o'zgartirildi");
+          Alert(setAlert, "success", "Информация успешно изменена");
           rankref.current.value = "";
           setUpdateModal({ open: false, obj: {} });
         } catch (error) {
@@ -48,11 +48,11 @@ const UpdateModal = ({ setUpdateModal, updateModal, setData, setAlert, selectBul
           setUpdateModal({ open: false, obj: {} });
         }
       } else {
-        Alert(setAlert, "warning", "Lavozim kiritilmagan");
+        Alert(setAlert, "warning", "Позиция не введена");
         setUpdateModal({ open: false, obj: {} });
       }
     } else {
-      Alert(setAlert, "warning", "Bo'lim tanlanmagan");
+      Alert(setAlert, "warning", "Раздел не выбран");
       setUpdateModal({ open: false, obj: {} });
     }
   }
@@ -62,7 +62,7 @@ const UpdateModal = ({ setUpdateModal, updateModal, setData, setAlert, selectBul
       <div className="modal-dialog">
         <div className="modal-content">
           <div className="modal-header bg-primary text-white">
-            <h6 className="modal-title">Lavozim qo'shish</h6>
+            <h6 className="modal-title">Добавить позицию</h6>
             <button type="button" className="close"
               onClick={() => setUpdateModal({
                 open: false,
@@ -82,7 +82,7 @@ const UpdateModal = ({ setUpdateModal, updateModal, setData, setAlert, selectBul
                         // }}
                         options={selectBulimlar}
                         ref={departmentsref}
-                        placeholder="Ishlar boshqarmasi"
+                        placeholder="Департамент работ"
                         isClearable={true}
                       />
                     </div>
@@ -114,7 +114,7 @@ const UpdateModal = ({ setUpdateModal, updateModal, setData, setAlert, selectBul
                     onClick={() => Uzgartirish(updateModal.obj)}
                   >
                     <i className="fas fa-save"
-                      style={{ fontSize: "18px" }}></i> Saqlash
+                      style={{ fontSize: "18px" }}></i> Сохранять
                   </button>
                 </div>
               </div>

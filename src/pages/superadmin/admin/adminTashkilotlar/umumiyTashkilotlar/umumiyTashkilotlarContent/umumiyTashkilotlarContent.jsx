@@ -136,7 +136,7 @@ const UmumiyTashkilotlarContent = ({ currentUser }) => {
           }
           return d;
         })
-        Alert(setAlert, "success", "Yunalish nomi muvaffaqiyatli o'zgartirildi")
+        Alert(setAlert, "success", "Маршрутизация успешно переименована")
         setYunalishlar(arr);
         setUpdateYunalish({ open: false, obj: {} });
         let orgNames = document.querySelectorAll('.cardAccordion');
@@ -154,7 +154,7 @@ const UmumiyTashkilotlarContent = ({ currentUser }) => {
         console.log(error?.response);
       }
     } else {
-      Alert(setAlert, "warning", "Yunalish nomi kiritilishi kerak")
+      Alert(setAlert, "warning", "Необходимо ввести имя пункта назначения.")
     }
   }
 
@@ -166,7 +166,7 @@ const UmumiyTashkilotlarContent = ({ currentUser }) => {
         orgId: JSON.parse(localStorage.getItem('oi'))
       })
         .then(res => {
-          Alert(setAlert, "success", "Muvaffaqiyatli qo'shildi")
+          Alert(setAlert, "success", "Добавлено успешно")
         })
         .catch(err => {
           console.log(err.response);
@@ -179,11 +179,11 @@ const UmumiyTashkilotlarContent = ({ currentUser }) => {
         orgId: JSON.parse(localStorage.getItem('oi'))
       })
         .then(res => {
-          Alert(setAlert, "danger", "Muvaffaqiyatli o'chirildi")
+          Alert(setAlert, "danger", "Удалено успешно")
         })
         .catch(err => {
           console.log(err.response);
-          Alert(setAlert, "warning", "Serverda xatolik");
+          Alert(setAlert, "warning", "Ошибка сервера");
         })
       setChange(!change);
     }
@@ -191,7 +191,7 @@ const UmumiyTashkilotlarContent = ({ currentUser }) => {
 
   return (
     <div className="content mb-5 ">
-      <h3 style={{ margin: "10px 0 0 20px", fontWeight: "bold", textTransform: "upperCase" }}>Umumiy tashkilotlar</h3>
+      <h3 style={{ margin: "10px 0 0 20px", fontWeight: "bold", textTransform: "upperCase" }}>Общие организации</h3>
       <div className="card-body" style={{ marginTop: "-20px" }}>
         <div className="card-body p-0 mt-3" style={{ borderRadius: "0" }}>
           <ul className="nav nav-tabs nav-tabs-solid nav-tabs-solid-custom bg-primary NavLink d-flex align-items-center justify-content-between">
@@ -201,7 +201,7 @@ const UmumiyTashkilotlarContent = ({ currentUser }) => {
               textTransform: "upperCase",
               color: "#fff",
               padding: "0 5px 5px 0"
-            }}>Tashkilotlar boshqaruv paneli</h5></li>
+            }}>Панель управления организациями</h5></li>
           </ul>
 
           <div className="tab-content">
@@ -281,8 +281,7 @@ const UmumiyTashkilotlarContent = ({ currentUser }) => {
                                                 <h6 className="card-title">
                                                   <a data-toggle="collapse"
                                                     className="text-white"
-                                                    href={`#bTashkilot${index}`}>Bosh
-                                                    tashkilot</a>
+                                                    href={`#bTashkilot${index}`}>Основная организация</a>
                                                 </h6>
                                               </div>
 
@@ -298,15 +297,13 @@ const UmumiyTashkilotlarContent = ({ currentUser }) => {
                                                     <thead>
                                                       <tr className="bg-dark text-white NavLink text-center">
                                                         <th style={{ width: "3%" }}>№</th>
-                                                        <th style={{ width: "15%" }}>logo</th>
-                                                        <th style={{ width: "20%" }}>Tuman
-                                                          (shahar)
+                                                        <th style={{ width: "15%" }}>Лого</th>
+                                                        <th style={{ width: "20%" }}>Район (город)
                                                         </th>
-                                                        <th style={{ width: "25%" }}>Qisqacha
-                                                          Nomi
+                                                        <th style={{ width: "25%" }}>Короткое имя
                                                         </th>
-                                                        <th style={{ width: "25%" }}>Rahbari</th>
-                                                        <td style={{ width: "8%" }}>Harakatlar</td>
+                                                        <th style={{ width: "25%" }}>Директор</th>
+                                                        <td style={{ width: "8%" }}>Действия</td>
                                                       </tr>
                                                     </thead>
                                                     <tbody
@@ -376,8 +373,7 @@ const UmumiyTashkilotlarContent = ({ currentUser }) => {
                                                 <h6 className="card-title">
                                                   <a className="collapsed text-white"
                                                     data-toggle="collapse"
-                                                    href={`#qTashkilot${index}`}>Quyi
-                                                    tashkilotlar</a>
+                                                    href={`#qTashkilot${index}`}>Низшие организации</a>
                                                 </h6>
                                               </div>
 
@@ -393,15 +389,15 @@ const UmumiyTashkilotlarContent = ({ currentUser }) => {
                                                     <thead>
                                                       <tr className="bg-dark text-white NavLink text-center">
                                                         <th style={{ width: "3%" }}>№</th>
-                                                        <th style={{ width: "15%" }}>logo</th>
-                                                        <th style={{ width: "20%" }}>Tuman
-                                                          (shahar)
+                                                        <th style={{ width: "15%" }}>Лого</th>
+                                                        <th style={{ width: "20%" }}>TРайон 
+                                                        (город)
                                                         </th>
-                                                        <th style={{ width: "25%" }}>Qisqacha
-                                                          Nomi
+                                                        <th style={{ width: "25%" }}>Короткое
+                                                         имя
                                                         </th>
-                                                        <th style={{ width: "25%" }}>Rahbari</th>
-                                                        <td style={{ width: "8%" }}>Harakatlar</td>
+                                                        <th style={{ width: "25%" }}>Директор</th>
+                                                        <td style={{ width: "8%" }}>Действия</td>
                                                       </tr>
                                                     </thead>
                                                     <tbody
@@ -489,7 +485,7 @@ const UmumiyTashkilotlarContent = ({ currentUser }) => {
           <div className="modal-dialog modal-lg">
             <div className="modal-content">
               <div className="modal-header btn-primary p-2">
-                <h5 className="modal-title">O'zgartirish oynasi</h5>
+                <h5 className="modal-title">Изменить окно</h5>
                 <button type="button" className="close"
                   onClick={() => setUpdateYunalish({ open: false, obj: {} })}>×
                 </button>
@@ -497,12 +493,12 @@ const UmumiyTashkilotlarContent = ({ currentUser }) => {
 
               <form className="modal-body form-inline justify-content-center">
                 <label>Yo'nalish:</label>
-                <input type="text" placeholder="Yo'nalish nomi"
+                <input type="text" placeholder="Название маршрута"
                   className="form-control mb-2 mr-sm-2 ml-sm-2 mb-sm-0 w-75 yunalishName"
                   defaultValue={updateYunalish.obj?.name} />
                 <button type="button" onClick={() => yunalishUzgartirish(updateYunalish.obj)}
                   className="btn btn-primary ml-sm-2 mb-sm-0"
-                  style={{ textTransform: "capitalize" }}>O'zgartirish
+                  style={{ textTransform: "capitalize" }}>Изменять
                 </button>
               </form>
             </div>

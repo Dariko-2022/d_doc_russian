@@ -37,9 +37,9 @@ const CardSozlamaContent = ({ currentUser }) => {
       console.log(res.data);
       // setDataIs(res.data);
       if (!visible) {
-        setOpenModal({ open: true, color: "green", text: "Siz ushbu modulni yoqmoqchimisiz", obj: dat });
+        setOpenModal({ open: true, color: "green", text: "Вы хотите включить этот модуль?", obj: dat });
       } else {
-        setOpenModal({ open: true, color: "crimson", text: "Siz ushbu modulni o'chirmoqchimisiz?", obj: dat });
+        setOpenModal({ open: true, color: "crimson", text: "Вы хотите выключать этот модуль?", obj: dat });
       }
     } catch (error) {
       console.log(error);
@@ -52,7 +52,7 @@ const CardSozlamaContent = ({ currentUser }) => {
 
   return (
     <div className="content mb-5">
-      <h3 style={{ margin: "10px 0 0 0", fontWeight: "bold", textTransform: "upperCase" }}>Modul Sozlamalari</h3>
+      <h3 style={{ margin: "10px 0 0 0", fontWeight: "bold", textTransform: "upperCase" }}>Настройки модуля</h3>
       <div className="card-body p-0">
         <ul className="nav nav-tabs nav-tabs-solid nav-tabs-solid-custom bg-primary NavLink" style={{ borderTopRightRadius: "5px", borderTopLeftRadius: "5px" }}>
           <TashkilotKurishNavbar params={params.id} />
@@ -66,9 +66,9 @@ const CardSozlamaContent = ({ currentUser }) => {
                   <thead>
                     <tr className="bg-dark text-white NavLink text-center">
                       <th style={{ width: "5%" }}>№</th>
-                      <th style={{ width: "45%" }}>Xujjat</th>
-                      <th style={{ width: "40%" }}>Xolat</th>
-                      <th style={{ width: "5%" }}>Sozlamalar</th>
+                      <th style={{ width: "45%" }}>Документь</th>
+                      <th style={{ width: "40%" }}>Положение дел</th>
+                      <th style={{ width: "5%" }}>Настройки</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -86,9 +86,9 @@ const CardSozlamaContent = ({ currentUser }) => {
                         <td className="text-left">{dat?.name}</td>
                         <td id="context" className="text-center">
                           {dat?.isVisible ? (
-                            <p className="text-success">Yoqilgan</p>
+                            <p className="text-success">Включено</p>
                           ) : (
-                            <p className="text-danger">O'chirilgan</p>
+                            <p className="text-danger">Выключенный</p>
                           )}
                         </td>
                         <td >
@@ -120,13 +120,13 @@ const CardSozlamaContent = ({ currentUser }) => {
             <div className="modal-dialog">
               <div className="modal-content">
                 <div className="modal-header bg-primary text-white">
-                  <h6 className="modal-title">Modul boshqarish oynasi</h6>
+                  <h6 className="modal-title">Окно управления модулем</h6>
                 </div>
                 <div className="modal-body text-center">
                   <h5 style={{ color: openModal.color }}>{openModal.text}</h5>
                 </div>
                 <div className="modal-footer">
-                  <button type="button" className="btn btn-primary" onClick={() => accept(openModal.obj)}>Ha</button>
+                  <button type="button" className="btn btn-primary" onClick={() => accept(openModal.obj)}>Да</button>
                 </div>
               </div>
             </div>

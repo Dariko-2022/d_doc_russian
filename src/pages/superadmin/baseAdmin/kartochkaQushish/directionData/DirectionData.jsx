@@ -91,7 +91,7 @@ const DirectionData = ({ currentUser, setAlert, cardsName, notParentsCard, setYu
                                             <h6 className="card-title">
                                               <a data-toggle="collapse"
                                                 className="text-white"
-                                                href={`#bTashkilot${index}`}>Kartochkalar</a>
+                                                href={`#bTashkilot${index}`}>Карты </a>
                                             </h6>
                                           </div>
 
@@ -107,13 +107,11 @@ const DirectionData = ({ currentUser, setAlert, cardsName, notParentsCard, setYu
                                                 <thead>
                                                   <tr className="bg-dark text-white NavLink text-center">
                                                     <th style={{ width: "3%" }}>№</th>
-                                                    <th style={{ width: "15%" }}>Kartochka
-                                                      nomi
+                                                    <th style={{ width: "15%" }}>Название карты
                                                     </th>
-                                                    <th style={{ width: "20%" }}>Bajarilish
-                                                      muddati
+                                                    <th style={{ width: "20%" }}>Срок реализации 
                                                     </th>
-                                                    <td style={{ width: "8%" }}>Harakatlar</td>
+                                                    <td style={{ width: "8%" }}>Действия</td>
                                                   </tr>
                                                 </thead>
                                                 <tbody

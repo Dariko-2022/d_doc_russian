@@ -57,11 +57,11 @@ const TableData = ({ data, currentUser, setData, setAlert, selectBulimlar }) => 
         <thead>
           <tr className="bg-dark text-white NavLink text-center">
             <th style={{ width: "5%" }}>№</th>
-            <th style={{ width: "30%" }}>Birktirilgan Bo'lim</th>
-            <th style={{ width: "30%" }}>Lavozim</th>
-            <th style={{ width: "25%" }}>F.I.SH</th>
-            <th style={{ width: "5%" }}>RANK</th>
-            <th style={{ width: "5%" }}>Harakatlar</th>
+            <th style={{ width: "30%" }}>Прикрепленный раздел</th>
+            <th style={{ width: "30%" }}>Позиция</th>
+            <th style={{ width: "25%" }}> Ф.И.Ш</th>
+            <th style={{ width: "5%" }}>Рол</th>
+            <th style={{ width: "5%" }}>Действия</th>
           </tr>
         </thead>
         <tbody>

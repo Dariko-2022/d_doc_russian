@@ -230,40 +230,40 @@ const NewSettingsForms = ({ data, setAlert, currentUser, params, submissionFormr
                               }
                             }
                           } else {
-                            Alert(setAlert, "warning", "Sahifalar soni kiritilmagan")
+                            Alert(setAlert, "warning", "Количество страниц не включено")
                           }
                         } else {
-                          Alert(setAlert, "warning", "Ro'yxatdan o'tish sanasi tanlanmagan")
+                          Alert(setAlert, "warning", "Дата регистрации не выбрана")
                         }
                       } else {
-                        Alert(setAlert, "warning", "Chiquvchi sana tanlanmagan")
+                        Alert(setAlert, "warning", "Дата выезда не выбрана")
                       }
                     } else {
-                      Alert(setAlert, "warning", "Chiquvchi sana kiritilmagan")
+                      Alert(setAlert, "warning", "Дата выпуска не указана")
                     }
                   } else {
-                    Alert(setAlert, "warning", "Chiquvchi raqam kiritilmagan")
+                    Alert(setAlert, "warning", "Не введен исходящий номер")
                   }
                 } else {
-                  Alert(setAlert, "warning", "Korrespondent tanlanmagan")
+                  Alert(setAlert, "warning", "Корреспондент не выбран")
                 }
               } else {
-                Alert(setAlert, "warning", "Tasdiqlovchi tanlanmagan")
+                Alert(setAlert, "warning", "Валидатор не выбран")
               }
             } else {
-              Alert(setAlert, "warning", "Taqdim etish formasi tanlanmagan")
+              Alert(setAlert, "warning", "Форма отправки не выбрана")
             }
           } else {
-            Alert(setAlert, "warning", "Card nomi tanlanmagan")
+            Alert(setAlert, "warning", "Имя карты не выбрано")
           }
         } else {
-          Alert(setAlert, "warning", "Card tanlanmagan")
+          Alert(setAlert, "warning", "Карта не выбрана")
         }
       } else {
-        Alert(setAlert, "warning", "Jurnal nomeri kiritilmagan")
+        Alert(setAlert, "warning", "Номер журнала не указан")
       }
     } else {
-      Alert(setAlert, "warning", "Jurnal tanlanmagan")
+      Alert(setAlert, "warning", "Журнал не выбран")
     }
   }
 
@@ -276,7 +276,7 @@ const NewSettingsForms = ({ data, setAlert, currentUser, params, submissionFormr
               <Select
                 options={card}
                 onChange={clickCard}
-                placeholder="Jurnali"
+                placeholder="Журнал"
                 className='jurnali'
                 ref={journalref}
               />
@@ -290,7 +290,7 @@ const NewSettingsForms = ({ data, setAlert, currentUser, params, submissionFormr
                 <input
                   type="number"
                   className="form-control form-control-outline num"
-                  id="number" placeholder="Placeholder"
+                  id="number" placeholder="Номер"
                   disabled
                   required
                   ref={journalNumref}
@@ -307,7 +307,7 @@ const NewSettingsForms = ({ data, setAlert, currentUser, params, submissionFormr
                 <Select
                   options={notParentsCard}
                   onChange={notParentsCardClick}
-                  placeholder="Card turi"
+                  placeholder="Тип карта"
                   className="cardTypeId"
                   ref={cardTyperef}
                 />
@@ -321,7 +321,7 @@ const NewSettingsForms = ({ data, setAlert, currentUser, params, submissionFormr
               <div className="position-relative">
                 <Select
                   options={cardsName}
-                  placeholder="Card nomi"
+                  placeholder="Имя карта"
                   className="cardName"
                   ref={cardNameref}
                 />
@@ -342,7 +342,7 @@ const NewSettingsForms = ({ data, setAlert, currentUser, params, submissionFormr
                 required
                 ref={submissionFormref}
               />
-              <label className="label-floating">Taqdim etish formasi</label>
+              <label className="label-floating">Форма представления</label>
             </div>
           </div>
         </div>
@@ -351,7 +351,7 @@ const NewSettingsForms = ({ data, setAlert, currentUser, params, submissionFormr
             <div className="col-lg-12">
               <Select
                 options={tasdiqlovchi}
-                placeholder="Tasdiqlovchi"
+                placeholder="Валидатор"
                 className='tasdiqlovchi'
                 ref={confirmerref}
               />
@@ -369,7 +369,7 @@ const NewSettingsForms = ({ data, setAlert, currentUser, params, submissionFormr
                 required
                 ref={korrespondentref}
               />
-              <label className="label-floating">Korrespondent</label>
+              <label className="label-floating">Корреспондент</label>
             </div>
           </div>
         </div>
@@ -387,7 +387,7 @@ const NewSettingsForms = ({ data, setAlert, currentUser, params, submissionFormr
                   disabled
                   ref={outNumref}
                 />
-                <label className="label-floating">Chiquvchi raqami</label>
+                <label className="label-floating">Исходящий номер</label>
               </div>
             </div>
           </div>
@@ -405,7 +405,7 @@ const NewSettingsForms = ({ data, setAlert, currentUser, params, submissionFormr
                   style={{ border: "1px solid lightgray" }}
                   ref={outDateref}
                 />
-                <label className="label-floating">Chiquvchi № /sana</label>
+                <label className="label-floating">Исходящий № /дата</label>
               </div>
             </div>
           </div>
@@ -430,7 +430,7 @@ const NewSettingsForms = ({ data, setAlert, currentUser, params, submissionFormr
                   onChange={(date) => setStartDate2(date)}
                   dateFormat={'dd.MM.yyyy'}
                   isClearable
-                  placeholderText="Ro'yxatdan o'tish sanasi"
+                  placeholderText="Дата регистрации"
                   showYearDropdown scrollableMonthYearDropdown
                 />
               </div>
@@ -448,7 +448,7 @@ const NewSettingsForms = ({ data, setAlert, currentUser, params, submissionFormr
                   placeholder="Placeholder"
                   ref={countPageref}
                 />
-                <label className="label-floating">Sahifalar soni</label>
+                <label className="label-floating">Количество страниц</label>
               </div>
             </div>
           </div>
@@ -467,8 +467,8 @@ const NewSettingsForms = ({ data, setAlert, currentUser, params, submissionFormr
                   placeholder="Placeholder"
                   ref={shortDescref}
                 />
-                <label className="label-floating">Qisqacha ma'lumot</label>
-                <span className="mt-5 text-muted">Qisqacha ma'lumot 300 ta belgidan oshmaydi</span>
+                <label className="label-floating">Краткая информация</label>
+                <span className="mt-5 text-muted">Краткая информация не превышает 300 символов</span>
               </div>
             </div>
           </div>
@@ -483,9 +483,9 @@ const NewSettingsForms = ({ data, setAlert, currentUser, params, submissionFormr
 
       <div className="row mt-4 d-flex align-items-center justify-content-between">
         <div className="ml-2">
-          <button type="submit" className="btn btn-primary mr-2"><i className="fa fa-save mr-2"></i>Saqlash</button>
+          <button type="submit" className="btn btn-primary mr-2"><i className="fa fa-save mr-2"></i>Сохранить</button>
           <Link to={`${"/kiruvchi/yangi"}`}>
-            <button type="button" className="btn btn-primary"><i className="fa fa-arrow-left mr-2"></i>Orqaga qaytish</button>
+            <button type="button" className="btn btn-primary"><i className="fa fa-arrow-left mr-2"></i>Возвращаться</button>
           </Link>
         </div>
       </div>

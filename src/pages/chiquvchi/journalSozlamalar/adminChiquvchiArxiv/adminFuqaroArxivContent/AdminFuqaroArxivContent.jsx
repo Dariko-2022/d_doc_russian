@@ -64,12 +64,12 @@ const ChiquvchiArxivContent = ({ currentUser }) => {
                   <thead>
                     <tr className="bg-dark text-white NavLink text-center">
                       <th style={{ width: "5%" }}>№</th>
-                      <th style={{ width: "25%" }}>Jurnal turi/nomi</th>
-                      <th style={{ width: "25%" }}>Qisqacha tasnifi</th>
-                      <th style={{ width: "10%" }}>Jurnal Prefiksi</th>
-                      <th style={{ width: "10%" }}>Jurnal Postfiksi</th>
-                      <th style={{ width: "10%" }}>Boshlang'ich Raqam</th>
-                      <th style={{ width: "15%" }}>Xarakatlar</th>
+                      <th style={{ width: "25%" }}>Тип/название журнала</th>
+                      <th style={{ width: "25%" }}>Краткая классификация</th>
+                      <th style={{ width: "10%" }}>Префикс журнала</th>
+                      <th style={{ width: "10%" }}>Журнал Постфикс</th>
+                      <th style={{ width: "10%" }}>Начальный номер</th>
+                      <th style={{ width: "15%" }}>Действия</th>
                     </tr>
                   </thead>
                   <tbody>

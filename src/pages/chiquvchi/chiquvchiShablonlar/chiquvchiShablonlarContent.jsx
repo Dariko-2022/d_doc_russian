@@ -181,7 +181,7 @@ const ChiquvchiShablonlarContent = ({currentUser, permission, ranks}) => {
 
     return (
         <div className="content content-mobile ">
-            <h3 style={{margin: "10px 0 0 0", fontWeight: "bold", textTransform: "upperCase"}}>Yangi Shablon
+            <h3 style={{margin: "10px 0 0 0", fontWeight: "bold", textTransform: "upperCase"}}>Новый шаблон
                 yaratish</h3>
             <ul className="nav nav-tabs nav-tabs-solid nav-tabs-solid-custom bg-primary NavLink"
                 style={{paddingTop: "2px", position: "relative", width: "100%", minHeight: "52px"}}>

@@ -37,7 +37,7 @@ const AdminFoydalanuvchiContent = ({ currentUser }) => {
 
   return (
     <div className="content mb-5">
-      <h3 style={{ margin: "10px 0 0 0", fontWeight: "bold", textTransform: "upperCase" }}>Foydalanuvchi</h3>
+      <h3 style={{ margin: "10px 0 0 0", fontWeight: "bold", textTransform: "upperCase" }}>Пользователь</h3>
       <div className="">
         <ul className="nav nav-tabs nav-tabs-solid nav-tabs-solid-custom bg-primary NavLink">
           <AdminContentNavbar />

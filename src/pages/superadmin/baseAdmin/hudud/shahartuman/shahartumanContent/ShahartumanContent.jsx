@@ -131,7 +131,7 @@ const ShahartumanContent = ({ currentUser }) => {
 
   return (
     <div className="content mb-5">
-      <h3 style={{ margin: "10px 0 0 0", fontWeight: "bold", textTransform: "upperCase" }}>Shahar va tumanlar</h3>
+      <h3 style={{ margin: "10px 0 0 0", fontWeight: "bold", textTransform: "upperCase" }}>Города и районы</h3>
       <div className="card-body p-0">
         <ul className="nav nav-tabs nav-tabs-solid nav-tabs-solid-custom bg-primary NavLink" style={{ borderTopRightRadius: "5px", borderTopLeftRadius: "5px" }}>
           <HududNavbar />

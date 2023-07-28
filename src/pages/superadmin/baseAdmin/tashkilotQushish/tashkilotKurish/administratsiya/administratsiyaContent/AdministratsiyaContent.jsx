@@ -38,7 +38,7 @@ const AdministratsiyaContent = ({ currentUser }) => {
 
   return (
     <div className="content mb-5">
-      <h3 style={{ margin: "10px 0 0 0", fontWeight: "bold", textTransform: "upperCase" }}>Administrator</h3>
+      <h3 style={{ margin: "10px 0 0 0", fontWeight: "bold", textTransform: "upperCase" }}>Администратор</h3>
       <div className="card-body p-0">
         <ul className="nav nav-tabs nav-tabs-solid nav-tabs-solid-custom bg-primary NavLink" style={{ borderTopRightRadius: "5px", borderTopLeftRadius: "5px" }}>
           <TashkilotKurishNavbar params={params.id} />
@@ -48,12 +48,12 @@ const AdministratsiyaContent = ({ currentUser }) => {
           <div className="tab-pane fade show active" id="colored-tab1">
             <div className="card">
               <div className="card-body" style={{ padding: "10px 20px" }}>
-                <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#modal_theme_primary"><i className="icon-user-plus "></i> Administrator Qo'shish</button>
+                <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#modal_theme_primary"><i className="icon-user-plus "></i> Добавить администратора</button>
                 <div id="modal_theme_primary" className="modal fade" tabIndex="-1">
                   <div className="modal-dialog modal-lg ">
                     <div className="modal-content">
                       <div className="modal-header bg-primary text-white">
-                        <h1 className="modal-title">Adminstrator Qo'shish</h1>
+                        <h1 className="modal-title">Добавить администратора</h1>
                         <button type="button" className="close close4" data-dismiss="modal">&times;</button>
                       </div>
 

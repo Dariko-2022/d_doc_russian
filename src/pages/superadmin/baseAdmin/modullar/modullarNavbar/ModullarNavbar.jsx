@@ -5,7 +5,7 @@ const ModullarNavbar = () => {
   return (
     <>
       <NavLink exact to="/super_base_admin-modullar" className="nav-link" activeClassName='NavLinkLi'>
-        <i className="icon-stack2"></i> Modullar Sozlamasi
+        <i className="icon-stack2"></i> Настройка модулей
       </NavLink>
       {/* <li className="nav-item" >
         <NavLink exact to="/super_base_admin-modullar" className="nav-link" activeClassName='NavLinkLi'>

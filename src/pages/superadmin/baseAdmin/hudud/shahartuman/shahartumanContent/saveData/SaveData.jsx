@@ -18,7 +18,7 @@ const SaveData = ({ currentUser, setAlert, setData, notParentsCard }) => {
             name: nomi,
             provinceId: cardTypeId.value
           })
-          Alert(setAlert, 'success', `Ma'lumot muvaffaqiyatli qo'shildi`);
+          Alert(setAlert, 'success', `Информация успешно добавлена`);
           setData(prev => [...prev, res.data.data]);
           nameref.current.value = "";
           cardTypeId.current?.props?.value && cardTypeId.current.removeValue(cardTypeId.current.props.value);
@@ -27,10 +27,10 @@ const SaveData = ({ currentUser, setAlert, setData, notParentsCard }) => {
           Alert(setAlert, 'warning', `${error?.response?.data?.message}`)
         }
       } else {
-        Alert(setAlert, 'warning', `Yo'nalish nomi kiritilmagan`);
+        Alert(setAlert, 'warning', `Не введено название маршрута`);
       }
     } else {
-      Alert(setAlert, 'warning', `Yo'nalish tanlanmagan`);
+      Alert(setAlert, 'warning', `Направление не выбрано`);
     }
   }
 
@@ -42,7 +42,7 @@ const SaveData = ({ currentUser, setAlert, setData, notParentsCard }) => {
             <Select
               options={notParentsCard}
               // onChange={notParentsCardClick}
-              placeholder="Yo'nalish:"
+              placeholder="Направление:"
               className="cardTypeId"
               isClearable={true}
               ref={cardTyperef}
@@ -58,13 +58,13 @@ const SaveData = ({ currentUser, setAlert, setData, notParentsCard }) => {
                 placeholder="Placeholder"
                 ref={nameref}
               />
-              <label className="label-floating">Nomlanishi</label>
+              <label className="label-floating">Именование</label>
             </div>
           </div>
         </div>
         <div className="col-lg-4">
           <button type="button" style={{ width: "150px", height: "55px" }} onClick={() => saveData()} className="btn btn-primary">
-            <i className="icon-floppy-disk mr-1"></i> Saqlash
+            <i className="icon-floppy-disk mr-1"></i> Именование
           </button>
         </div>
       </div>

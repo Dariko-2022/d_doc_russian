@@ -82,7 +82,7 @@ export default function MavjudPaketlarContentOfficeMeneger({ currentUser }) {
 
   return (
     <div className="content content-mobile mb-5" >
-      <h3 style={{ margin: "10px 0 0 0", fontWeight: "bold", textTransform: "uppercase" }}>Paketlar</h3>
+      <h3 style={{ margin: "10px 0 0 0", fontWeight: "bold", textTransform: "uppercase" }}>Пакеты</h3>
       <div className=" card-body-mobile">
         <ul className="nav nav-tabs nav-tabs-solid nav-tabs-solid-custom bg-primary NavLink">
           <ContentNavbarSozlamalar />
@@ -120,7 +120,7 @@ export default function MavjudPaketlarContentOfficeMeneger({ currentUser }) {
                                           <div className="card mb-0">
                                             <div className="card-header bg-dark" onClick={() => getKartochkalar(tash.id)}>
                                               <h6 className="card-title">
-                                                <a data-toggle="collapse" className="text-white" href={`#bTashkilot${index}`}>Kartochkalar</a>
+                                                <a data-toggle="collapse" className="text-white" href={`#bTashkilot${index}`}>Карты</a>
                                               </h6>
                                             </div>
 
@@ -130,8 +130,8 @@ export default function MavjudPaketlarContentOfficeMeneger({ currentUser }) {
                                                   <thead>
                                                     <tr className="bg-dark text-white NavLink text-center">
                                                       <th style={{ width: "3%" }}>№</th>
-                                                      <th style={{ width: "15%" }}>Kartochka nomi</th>
-                                                      <th style={{ width: "20%" }}>Bajarilish muddati</th>
+                                                      <th style={{ width: "15%" }}>Название карты</th>
+                                                      <th style={{ width: "20%" }}>Исполнение срок  </th>
                                                       {/*<td style={{ width: "8%" }}>Harakatlar</td>*/}
                                                     </tr>
                                                   </thead>

@@ -70,23 +70,23 @@ const FormElements = ({ currentUser }) => {
                 beginNumber: numberref.current.value,
                 orgId: JSON.parse(localStorage.getItem('oi'))
               })
-              Alert(setAlert, "success", "Ma'lumot muvaffaqiyatli qo'shildi")
+              Alert(setAlert, "success", "Информация успешно добавлена")
               document.querySelector('.formClear').reset();
             } catch (error) {
               console.log(error?.response);
               Alert(setAlert, "warning", error?.response?.data)
             }
           } else {
-            Alert(setAlert, "warning", "Boshlang'ich raqam kiritilmagan");
+            Alert(setAlert, "warning", "Не введен стартовый номер");
           }
         } else {
-          Alert(setAlert, "warning", "Qisqacha tasnif kiritilmagan");
+          Alert(setAlert, "warning", "Краткая классификация не включена");
         }
       } else {
-        Alert(setAlert, "warning", "O'zbekcha nomi tanlanmagan");
+        Alert(setAlert, "warning", "Русское имя не выбрано");
       }
     } else {
-      Alert(setAlert, "warning", "Modul tanlanmagan");
+      Alert(setAlert, "warning", "Модуль не выбран");
     }
   }
 
@@ -98,8 +98,8 @@ const FormElements = ({ currentUser }) => {
             <div className="form-group text-left">
               <Select
                 options={modul}
-                placeholder="Modullar"
-                className="kartochka"
+                placeholder="Модули"
+                className="карта"
                 ref={cardNameref}
                 isClearable={true}
               />
@@ -114,7 +114,7 @@ const FormElements = ({ currentUser }) => {
                   placeholder="Placeholder"
                   ref={uzbekNameref}
                 />
-                <label className="label-floating">O'zbekcha nomi</label>
+                <label className="label-floating">Русское имя</label>
               </div>
             </div>
           </div>
@@ -127,7 +127,7 @@ const FormElements = ({ currentUser }) => {
                   placeholder="Placeholder"
                   ref={russianNameref}
                 />
-                <label className="label-floating">Rushcha nomi</label>
+                <label className="label-floating">Англиское имя</label>
               </div>
             </div>
           </div>
@@ -140,7 +140,7 @@ const FormElements = ({ currentUser }) => {
                   placeholder="Placeholder"
                   ref={shortDescriptionref}
                 />
-                <label className="label-floating">Qisqacha tasnifi</label>
+                <label className="label-floating">Краткая классификация</label>
               </div>
             </div>
           </div>
@@ -155,7 +155,7 @@ const FormElements = ({ currentUser }) => {
                   placeholder="Placeholder"
                   ref={journalPrefix}
                 />
-                <label className="label-floating">Jurnal prefiksi</label>
+                <label className="label-floating">Префикс журнала</label>
               </div>
             </div>
           </div>
@@ -169,7 +169,7 @@ const FormElements = ({ currentUser }) => {
                   placeholder="Placeholder"
                   ref={journalPostfix}
                 />
-                <label className="label-floating">Jurnal postfiksi</label>
+                <label className="label-floating">Постфикс журнала</label>
               </div>
             </div>
           </div>
@@ -182,7 +182,7 @@ const FormElements = ({ currentUser }) => {
                   placeholder="Placeholder"
                   ref={numberref}
                 />
-                <label className="label-floating">Boshlang'ich raqam</label>
+                <label className="label-floating">Стартовый номер</label>
               </div>
             </div>
           </div>
@@ -190,7 +190,7 @@ const FormElements = ({ currentUser }) => {
         <hr />
         <div className="row d-flex justify-content-center m-2">
           <div className="col-lg-6 d-flex justify-content-center">
-            <button type="submit" className="btn btn-primary"><i className="icon-floppy-disk"></i> Saqlash</button>
+            <button type="submit" className="btn btn-primary"><i className="icon-floppy-disk"></i> Сохранять</button>
           </div>
         </div>
       </form>

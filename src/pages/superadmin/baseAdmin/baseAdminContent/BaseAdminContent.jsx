@@ -7,8 +7,8 @@ const BaseAdminContent = () => {
         <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 mb-3">
           <div className="card cardHome h-100 ">
             <div className="card-header header-elements-inline bg-primary h-25">
-              <h4 className="card-title text-white text-center fw-bold w-100 text-uppercase">Mening
-                Vazifalarim</h4>
+              <h4 className="card-title text-white text-center fw-bold w-100 text-uppercase">Мои 
+              обязанности</h4>
             </div>
 
             <div className="card-body">
@@ -17,7 +17,7 @@ const BaseAdminContent = () => {
                   <tr>
                     <th className="TableLink" style={{ width: "98%" }}>
                       {/* <a href="#">Barchasi</a> */}
-                      Barchasi
+                      Все
                     </th>
                     <th className="TableLink" style={{ width: "2%", textAlign: "center", fontSize: "15px" }}>
                       125</th>
@@ -25,7 +25,7 @@ const BaseAdminContent = () => {
                   <tr>
                     <th className="TableLink" style={{ width: "98%" }}>
                       {/* <a href="#">Yangi</a> */}
-                      Yangi
+                      Новый
                     </th>
                     <th className="TableLink" style={{ width: "2%", textAlign: "center", fontSize: "15px" }}>
                       20</th>
@@ -33,7 +33,7 @@ const BaseAdminContent = () => {
                   <tr>
                     <th className="TableLink" style={{ width: "98%" }}>
                       {/* <a href="#">Jarayonda</a> */}
-                      Jarayonda
+                      В прогресси
                     </th>
                     <th className="TableLink" style={{ width: "2%", textAlign: "center", fontSize: "15px" }}>
                       20</th>
@@ -41,7 +41,7 @@ const BaseAdminContent = () => {
                   <tr>
                     <th className="TableLink" style={{ width: "98%" }}>
                       {/* <a href="#">Nazoratda</a> */}
-                      Nazoratda
+                      Под контролем
                     </th>
                     <th className="TableLink" style={{ width: "2%", textAlign: "center", fontSize: "15px" }}>
                       10</th>
@@ -56,7 +56,7 @@ const BaseAdminContent = () => {
           <div className="card cardHome h-100 ">
             <div className="card-header header-elements-inline bg-primary h-25">
               <h4 className="card-title text-white text-center fw-bold w-100 text-uppercase">
-                Yaqinlashmoqda</h4>
+              приближается</h4>
             </div>
 
             <div className="card-body">
@@ -65,7 +65,7 @@ const BaseAdminContent = () => {
                   <tr>
                     <th className="TableLink" style={{ width: "98%" }}>
                       {/* <a href="#">Barchasi</a> */}
-                      Barchasi
+                      Все
                     </th>
                     <th className="TableLink" style={{ width: "2%", textAlign: "center", fontSize: "15px" }}>0
                     </th>
@@ -73,7 +73,7 @@ const BaseAdminContent = () => {
                   <tr>
                     <th className="TableLink" style={{ width: "98%" }}>
                       {/* <a href="#">1 kun qoldi</a> */}
-                      1 kun qoldi
+                       Остался 1 день
                     </th>
                     <th className="TableLink" style={{ width: "2%", textAlign: "center", fontSize: "15px" }}>0
                     </th>
@@ -81,14 +81,14 @@ const BaseAdminContent = () => {
                   <tr>
                     <th className="TableLink" style={{ width: "98%" }}>
                       {/* <a href="#">2-3 kun qoldi</a> */}
-                      2-3 kun qoldi
+                      Осталось 2-3 дня
                     </th>
                     <th className="TableLink" style={{ width: "2%", textAlign: "center", fontSize: "15px" }}>0
                     </th>
                   </tr>
                   <tr>
                     <th className="TableLink" style={{ width: "98%" }}>
-                      4 (~) kun qoldi
+                    Осталось 4 (~) дня
                       {/* <a href="#">4 (~) kun qoldi</a> */}
                     </th>
                     <th className="TableLink" style={{ width: "2%", textAlign: "center", fontSize: "15px" }}>0
@@ -104,7 +104,7 @@ const BaseAdminContent = () => {
           <div className="card cardHome h-100 ">
             <div className="card-header header-elements-inline bg-primary h-25">
               <h4 className="card-title text-white text-center fw-bold w-100 text-uppercase">
-                Bajarilmagan</h4>
+              Не выполнено</h4>
             </div>
 
             <div className="card-body">
@@ -113,7 +113,7 @@ const BaseAdminContent = () => {
                   <tr>
                     <th className="TableLink" style={{ width: "98%" }}>
                       {/* <a href="#">Barchasi</a> */}
-                      Barchasi
+                      Все
                     </th>
                     <th className="TableLink" style={{ width: "2%", textAlign: "center", fontSize: "15px" }}>7
                     </th>
@@ -121,7 +121,7 @@ const BaseAdminContent = () => {
                   <tr>
                     <th className="TableLink" style={{ width: "98%" }}>
                       {/* <a href="#">1 kun kechikkan</a> */}
-                      1 kun kechikkan
+                      опоздание на 1 день
                     </th>
                     <th className="TableLink" style={{ width: "2%", textAlign: "center", fontSize: "15px" }}>0
                     </th>
@@ -129,7 +129,7 @@ const BaseAdminContent = () => {
                   <tr>
                     <th className="TableLink" style={{ width: "98%" }}>
                       {/* <a href="#">2-3 kun kechikkan</a> */}
-                      2-3 kun kechikkan
+                      Опоздание на 2-3 дня
                     </th>
                     <th className="TableLink" style={{ width: "2%", textAlign: "center", fontSize: "15px" }}>0
                     </th>
@@ -137,7 +137,7 @@ const BaseAdminContent = () => {
                   <tr>
                     <th className="TableLink" style={{ width: "98%" }}>
                       {/* <a href="#">4 (~) kun kechikkan</a> */}
-                      4 (~) kun kechikkan
+                      Опоздание на 4 (~) дня
                     </th>
                     <th className="TableLink" style={{ width: "2%", textAlign: "center", fontSize: "15px" }}>7
                     </th>
@@ -151,7 +151,7 @@ const BaseAdminContent = () => {
           <div className="card cardHome h-100 ">
             <div className="card-header header-elements-inline bg-primary h-25">
               <h4 className="card-title text-white text-center fw-bold w-100 text-uppercase">
-                Bajarilgan</h4>
+              Сделанный</h4>
             </div>
 
             <div className="card-body">
@@ -160,7 +160,7 @@ const BaseAdminContent = () => {
                   <tr>
                     <th className="TableLink" style={{ width: "98%" }}>
                       {/* <a href="#">Barchasi</a> */}
-                      Barchasi
+                      Все
                     </th>
                     <th className="TableLink" style={{ width: "2%", textAlign: "center", fontSize: "15px" }}>4
                     </th>
@@ -168,7 +168,7 @@ const BaseAdminContent = () => {
                   <tr>
                     <th className="TableLink" style={{ width: "98%" }}>
                       {/* <a href="#">Bajarilgan</a> */}
-                      Bajarilgan
+                      Сделанный
                     </th>
                     <th className="TableLink" style={{ width: "2%", textAlign: "center", fontSize: "15px" }}>4
                     </th>
@@ -176,7 +176,7 @@ const BaseAdminContent = () => {
                   <tr>
                     <th className="TableLink" style={{ width: "98%" }}>
                       {/* <a href="#">Kechiktirib berilgan</a> */}
-                      Kechiktirib berilgan
+                      Отправлено с опозданием
                     </th>
                     <th className="TableLink" style={{ width: "2%", textAlign: "center", fontSize: "15px" }}>4
                     </th>
@@ -184,7 +184,7 @@ const BaseAdminContent = () => {
                   <tr>
                     <th className="TableLink" style={{ width: "98%" }}>
                       {/* <a href="#">Bajarilmagan</a> */}
-                      Bajarilmagan
+                      Не выполнено
                     </th>
                     <th className="TableLink" style={{ width: "2%", textAlign: "center", fontSize: "15px" }}>4
                     </th>
@@ -203,17 +203,17 @@ const BaseAdminContent = () => {
         <div className="card">
           <div className="card-header">
             <h6 className="card-title" style={{ margin: "10px", fontWeight: "bold", textTransform: "uppercase" }}>
-              Ish oqimi statistikasi</h6>
+            Статистика рабочего процесса</h6>
           </div>
 
           <div className="card-body">
             <ul className="nav nav-pills nav-pills-bordered  nav-pills-toolbar nav-justified">
               <li className="nav-item"><a href="#solid-justified-tab1" className="nav-link active"
-                data-toggle="tab">3b Nazorat kartochkasi</a></li>
+                data-toggle="tab">3b Контрольная карта</a></li>
               <li className="nav-item"><a href="#solid-justified-tab2" className="nav-link"
-                data-toggle="tab">Standartniy prostoy kartochka</a></li>
+                data-toggle="tab">Стандартная простая карта</a></li>
               <li className="nav-item"><a href="#solid-justified-tab3" className="nav-link"
-                data-toggle="tab">1a Nazorat kartochkasi</a></li>
+                data-toggle="tab">1a Контрольная карта</a></li>
             </ul>
 
             <div className="tab-content">
@@ -221,16 +221,16 @@ const BaseAdminContent = () => {
                 <table className="table table-bordered datatable-select-single table-striped table-hover Tab mt-4">
                   <thead>
                     <tr className="bg-dark text-white NavLink text-center">
-                      <th style={{ borderRadius: "10px 0 0 0" }}>Xujjat Turi</th>
-                      <th>kechikkan</th>
-                      <th>Kiruvchi</th>
-                      <th>Jarayonda</th>
-                      <th>Muddati o'tgan</th>
+                      <th style={{ borderRadius: "10px 0 0 0" }}>Тип документа</th>
+                      <th>поздно</th>
+                      <th>Входящий</th>
+                      <th>В процесси</th>
+                      <th>Истекший</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr className="text-center">
-                      <td>Viloyat Hokimi topshiqirlari</td>
+                      <td>Задачи губернатора области</td>
                       <td></td>
                       <td>0</td>
                       <td>4</td>
@@ -246,15 +246,15 @@ const BaseAdminContent = () => {
                   <thead>
                     <tr className="bg-dark text-white NavLink text-center">
                       <th style={{ borderRadius: "10px 0 0 0" }}>Xujjat Turi</th>
-                      <th>kechikkan</th>
-                      <th>Kiruvchi</th>
-                      <th>Jarayonda</th>
-                      <th>Muddati o'tgan</th>
+                      <th>Поздно</th>
+                      <th>Входящий</th>
+                      <th>В процесси</th>
+                      <th>Истекший</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr className="text-center">
-                      <td>Respublika Tashkilotlari</td>
+                      <td>Республиканские организации</td>
                       <td></td>
                       <td>0</td>
                       <td>4</td>
@@ -268,16 +268,16 @@ const BaseAdminContent = () => {
                 <table className="table table-bordered datatable-select-single table-striped table-hover Tab mt-4">
                   <thead>
                     <tr className="bg-dark text-white NavLink text-center">
-                      <th style={{ borderRadius: "10px 0 0 0" }}>Xujjat Turi</th>
-                      <th>kechikkan</th>
-                      <th>Kiruvchi</th>
-                      <th>Jarayonda</th>
-                      <th>Muddati o'tgan</th>
+                      <th style={{ borderRadius: "10px 0 0 0" }}>тип документа</th>
+                      <th>Поздно</th>
+                      <th>Входящий</th>
+                      <th>В процесси</th>
+                      <th>Истекший</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr className="text-center">
-                      <td>O'zbekiston Respublikasi Prezidenti qarori</td>
+                      <td>Постановление Президента Республики Узбекистан</td>
                       <td></td>
                       <td>0</td>
                       <td>4</td>

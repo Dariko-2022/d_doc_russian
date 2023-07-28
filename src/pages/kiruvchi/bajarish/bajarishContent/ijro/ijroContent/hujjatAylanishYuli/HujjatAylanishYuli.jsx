@@ -7,26 +7,26 @@ const HujjatAylanishYuli = ({ data, dateFormat }) => {
     <div className="col-lg-12">
       <div className="card">
         <div className="card-header bg-primary text-white header-elements-inline">
-          <h6 className="card-title" style={{ fontWeight: "bold", textTransform: "upperCase" }}>Xujjat aylanish yo'li</h6>
+          <h6 className="card-title" style={{ fontWeight: "bold", textTransform: "upperCase" }}>Путь документооборота</h6>
         </div>
         <div className="card-body">
           <div className="col-lg-12">
             <span className="text-color" style={{ fontSize: "18px" }}>{data?.document?.organizationName}</span>
             <ul style={{ fontSize: "17px", lineHeight: "1.9", paddingLeft: "20px" }}>
               <li>
-                <span className="color-black mr-1">Korrespondent:</span>{data?.document?.correspondentName}
+                <span className="color-black mr-1">Корреспондент:</span>{data?.document?.correspondentName}
               </li>
               <li>
                 <span className="color-black mr-1">№:</span><b className="text-color font-size-lg">{data?.document?.journalNumber}</b> <span className="text-primary"><b className="text-dark">(</b>{dateFormat(data?.document?.registerAt)}<b className="text-dark">)</b></span>
               </li>
               <li>
-                <span className="color-black mr-1">Rezalutsiya:</span>
+                <span className="color-black mr-1">Резолюция:</span>
                 <span className="mr-1">{(data?.document?.confirmerFirstName && data?.document?.confirmerFirstName?.length > 1) ? ((((data?.document?.confirmerFirstName[0].toUpperCase() === "S" || data?.document?.confirmerFirstName[0].toUpperCase() === "C") && data?.document?.confirmerFirstName[1].toUpperCase() === "H")) ? data?.document?.confirmerFirstName?.substring(0, 2) + ". " : data?.document?.confirmerFirstName?.substring(0, 1) + ". ") : ""}{data?.document?.confirmerLastName}</span>
-                <span className="badge badge-success mr-1">Imzolangan</span>
+                <span className="badge badge-success mr-1">Подписано</span>
                 <span className="text-primary"><b className="text-dark">(</b>{dateFormat(data?.document?.signedAt)}<b className="text-dark">)</b></span>
               </li>
               <li>
-                <span className="color-black" >Nazoratda: </span>
+                <span className="color-black" >Под контролем: </span>
                 <ul className="ml-2">
                   {data?.inExecutorInformationList?.length > 0 && data?.inExecutorInformationList?.map((dat, i) => (
                     dat?.executorStatusName === "NAZORAT UCHUN" && (
@@ -60,7 +60,7 @@ const HujjatAylanishYuli = ({ data, dateFormat }) => {
                 </ul>
               </li>
               <li>
-                <span className="color-black">Ijrochilar:</span>
+                <span className="color-black">Исполнители:</span>
                 <ul className="ml-2">
                   {data?.inExecutorInformationList?.length > 0 && data?.inExecutorInformationList?.map((dat, i) => (
                     (dat?.executorStatusName !== "NAZORAT UCHUN") && (
@@ -107,7 +107,7 @@ const HujjatAylanishYuli = ({ data, dateFormat }) => {
                 </ul>
               </li>
               <li>
-                <span className="color-black">Yuborilgan tashkilotlar:</span>
+                <span className="color-black">Отправленные организации:</span>
                 <ul>
                   {data?.outExecutorInformationList?.length > 0 && data?.outExecutorInformationList?.map((d, i) => (
                     <li key={i} className="fw-bold">

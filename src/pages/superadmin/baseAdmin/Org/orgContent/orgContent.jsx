@@ -84,7 +84,7 @@ const OrgContent = ({ currentUser }) => {
 
   return (
     <div className="content" style={{ marginBottom: "80px" }}>
-      <h3 style={{ margin: "10px 0 0 0", fontWeight: "bold", textTransform: "upperCase" }}>Admistratorlar</h3>
+      <h3 style={{ margin: "10px 0 0 0", fontWeight: "bold", textTransform: "upperCase" }}>Администраторы</h3>
       <div className="card-body p-0">
         <div className="card-body p-0" >
           <div>
@@ -93,12 +93,12 @@ const OrgContent = ({ currentUser }) => {
                 <thead>
                   <tr className="bg-dark text-white NavLink text-center">
                     <th style={{ width: "3%" }}>№</th>
-                    <th style={{ width: "15%" }}>Familya</th>
-                    <th style={{ width: "15%" }}>Ism</th>
-                    <th style={{ width: "15%" }}>Seria</th>
-                    <th style={{ width: "25%" }}>TashkilotNomi</th>
-                    <th style={{ width: "15%" }}>Stir</th>
-                    <th style={{ width: "8%" }}>Harakatlar</th>
+                    <th style={{ width: "15%" }}>Фамилия</th>
+                    <th style={{ width: "15%" }}>Имя</th>
+                    <th style={{ width: "15%" }}>Паспорт серия</th>
+                    <th style={{ width: "25%" }}>Название организации</th>
+                    <th style={{ width: "15%" }}>СТИР</th>
+                    <th style={{ width: "8%" }}>Действия</th>
                   </tr>
                 </thead>
                 <tbody

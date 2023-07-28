@@ -93,7 +93,7 @@ const Tasnif2Content = ({ currentUser }) => {
             name: nomi,
             ac1Id: tasnif1Select ? tasnif1Select.value : null //id
           })
-          Alert(setAlert, 'success', `Ma'lumot muvaffaqiyatli qo'shildi`);
+          Alert(setAlert, 'success', `Информация успешно добавлена`);
           setTumanlar(prev => [...prev, res.data.data]);
           setData(prev => [...prev, res.data.data]);
         } catch (error) {
@@ -102,10 +102,10 @@ const Tasnif2Content = ({ currentUser }) => {
         }
         document.querySelector('.nomi').value = '';
       } else {
-        Alert(setAlert, 'warning', `Tasnif2 kiritilmagan`);
+        Alert(setAlert, 'warning', `Класс 2 не включен`);
       }
     } else {
-      Alert(setAlert, 'warning', `Tasnif1 tanlanmagan`);
+      Alert(setAlert, 'warning', `Классификация 1 не выбрана`);
     }
   }
 
@@ -159,7 +159,7 @@ const Tasnif2Content = ({ currentUser }) => {
 
   return (
     <div className="content mb-5">
-      <h3 style={{ margin: "10px 0 0 0", fontWeight: "bold", textTransform: "upperCase" }}>Tasnif2</h3>
+      <h3 style={{ margin: "10px 0 0 0", fontWeight: "bold", textTransform: "upperCase" }}>Классификация2</h3>
       <div className="card-body p-0">
         <ul className="nav nav-tabs nav-tabs-solid nav-tabs-solid-custom bg-primary NavLink">
           <HududNavbar />
@@ -190,14 +190,14 @@ const Tasnif2Content = ({ currentUser }) => {
                               placeholder="Placeholder"
                               ref={desc2ref}
                             />
-                            <label className="label-floating">Tasnif2</label>
+                            <label className="label-floating">Классификация </label>
                           </div>
                         </div>
                       </div>
                     </div>
                     <div className="col-lg-4">
                       <button type="button" style={{ width: "150px", height: "55px" }} onClick={saveData} className="btn btn-primary">
-                        <i className="icon-floppy-disk mr-1"></i> Saqlash
+                        <i className="icon-floppy-disk mr-1"></i> Сохранять
                       </button>
                     </div>
                   </div>

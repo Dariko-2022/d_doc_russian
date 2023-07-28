@@ -3,7 +3,7 @@ import React from "react";
 const Notpermission = () => {
     return (
         <div className="not_permission">
-            <h2>Hech qanday ma'lumot mavjud emas</h2>
+            <h2>Информация отсутствует</h2>
         </div>
     )
 }

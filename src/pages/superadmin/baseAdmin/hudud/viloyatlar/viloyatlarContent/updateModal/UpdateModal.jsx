@@ -23,7 +23,7 @@ const UpdateModal = ({ updateModal, setUpdateModal, currentUser, data, setData, 
       sortNullishValues(arr1);
       setData(arr1);
       setUpdateModal({ open: false, obj: {} });
-      Alert(setAlert, 'success', `Ma'lumot muvaffaqiyatli o'zgartirildi`)
+      Alert(setAlert, 'success', `Информация успешно изменена`)
     } catch (error) {
       console.log(error.response);
       Alert(setAlert, 'warning', `${error.response.data}`)
@@ -36,7 +36,7 @@ const UpdateModal = ({ updateModal, setUpdateModal, currentUser, data, setData, 
         <div className="updateDataWindowWrapper">
           <form>
             <div className="updateDataWindowTop">
-              <h3>O'zgartirish oynasi</h3>
+              <h3>Изменить окно</h3>
               <span onClick={() => setUpdateModal({ open: false, obj: {} })}>&times;</span>
             </div>
             <div className="updateDataWindowCenter">
@@ -53,7 +53,7 @@ const UpdateModal = ({ updateModal, setUpdateModal, currentUser, data, setData, 
                 qilish
               </button> */}
               <button type={'button'} className="btn btn-primary"
-                onClick={() => updatedData(updateModal.obj)}>O'zgartirish
+                onClick={() => updatedData(updateModal.obj)}>Изменять
               </button>
             </div>
           </form>

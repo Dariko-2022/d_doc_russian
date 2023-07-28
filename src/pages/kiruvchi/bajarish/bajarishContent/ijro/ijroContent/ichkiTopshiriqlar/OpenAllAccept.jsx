@@ -34,7 +34,7 @@ const OpenAllAccept = ({ setHokimTasdiqlash, alert, setAlert, data, setData }) =
                 const res = await axiosInstance.post("controlling/acceptAll", list)
                 console.log(res.data);
                 setHokimTasdiqlash(false);
-                Alert(setAlert, "success", "Barchasi tasdiqlandi");
+                Alert(setAlert, "success", "Все подтверждено");
 
                 setTimeout(() => {
                     history.push("/kiruvchi/maxsusNazorat")
@@ -44,7 +44,7 @@ const OpenAllAccept = ({ setHokimTasdiqlash, alert, setAlert, data, setData }) =
                 console.log(error.response);
             }
         } else {
-            Alert(setAlert, "warning", "Izoh yozish majburiy");
+            Alert(setAlert, "warning", "Требуется комментарий");
             setHokimTasdiqlash(false);
         }
     }
@@ -54,7 +54,7 @@ const OpenAllAccept = ({ setHokimTasdiqlash, alert, setAlert, data, setData }) =
             <div className="modal-dialog">
                 <div className="modal-content">
                     <div className="modal-header bg-primary text-white">
-                        <h6 className="modal-title">Barchasini tasdiqlash oynasi:</h6>
+                        <h6 className="modal-title">Подтвердить все поле:</h6>
                     </div>
                     <div className="modal-body ">
                         <input
@@ -66,13 +66,13 @@ const OpenAllAccept = ({ setHokimTasdiqlash, alert, setAlert, data, setData }) =
                             name=""
                             rows="8"
                             className="form-control closedIjroTextArea"
-                            placeholder="Izoh..."
+                            placeholder="Комментарий..."
                         >
                         </textarea>
                     </div>
                     <div className="modal-footer">
-                        <button type="button" className="btn btn-link bekorQilish" onClick={() => setHokimTasdiqlash(false)}>Yopish</button>
-                        <button type="button" className="btn btn-success" onClick={() => acceptFunc()}>Tasdiqlash</button>
+                        <button type="button" className="btn btn-link bekorQilish" onClick={() => setHokimTasdiqlash(false)}>Закрити</button>
+                        <button type="button" className="btn btn-success" onClick={() => acceptFunc()}> Подтверждение</button>
                     </div>
                 </div>
             </div>

@@ -7,11 +7,11 @@ const XodimRollariContent = ({ currentUser }) => {
     let chk = document.getElementById('kiruvchi')
     let txt = document.getElementById('context')
     if (chk.checked) {
-      alert("Siz ushbu funksiyani yoqmoqchimisiz")
-      txt.innerHTML = "<p>Yoqilgan</p>"
+      alert("Вы хотите включить эту функцию?")
+      txt.innerHTML = "<p>Включено</p>"
     } else {
-      alert("Siz ushbu funksiyani o'chirmoqchimisiz")
-      txt.innerHTML = "<p style='color:red'>O'chirilgan</p>"
+      alert("Вы хотите отключить эту функцию?")
+      txt.innerHTML = "<p style='color:red'>Выключенный</p>"
     }
   }
 
@@ -19,17 +19,17 @@ const XodimRollariContent = ({ currentUser }) => {
     let chk = document.getElementById('chiquvchi')
     let txt = document.getElementById('chiquvchii')
     if (chk.checked) {
-      alert("Siz ushbu funksiyani yoqmoqchimisiz")
-      txt.innerHTML = "<p>Yoqilgan</p>"
+      alert("Вы хотите включить эту функцию?")
+      txt.innerHTML = "<p>Включено</p>"
     } else {
-      alert("Siz ushbu funksiyani o'chirmoqchimisiz")
-      txt.innerHTML = "<p style='color:red'>O'chirilgan</p>"
+      alert("Вы хотите отключить эту функцию?")
+      txt.innerHTML = "<p style='color:red'>Выключенный</p>"
     }
   }
 
   return (
     <div className="content mb-5">
-      <h3 style={{ margin: "10px 0 0 20px", fontWeight: "bold", textTransform: "upperCase" }}>Rollar</h3>
+      <h3 style={{ margin: "10px 0 0 20px", fontWeight: "bold", textTransform: "upperCase" }}>Роли</h3>
       <div className="card-body">
         <ul className="nav nav-tabs nav-tabs-solid nav-tabs-solid-custom bg-primary NavLink" style={{ borderTopRightRadius: "5px", borderTopLeftRadius: "5px" }}>
           <RollarNavbar />
@@ -43,9 +43,9 @@ const XodimRollariContent = ({ currentUser }) => {
                   <thead>
                     <tr className="bg-dark text-white NavLink text-center">
                       <th style={{ width: "5%", borderRadius: "10px 0 0 0" }}>№</th>
-                      <th style={{ width: "45%" }}>Xujjat</th>
-                      <th style={{ width: "40%" }}>Xolat</th>
-                      <th style={{ width: "5%" }}>Sozlamalar</th>
+                      <th style={{ width: "45%" }}>Документ</th>
+                      <th style={{ width: "40%" }}>Положение</th>
+                      <th style={{ width: "5%" }}>Настройки</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -53,8 +53,8 @@ const XodimRollariContent = ({ currentUser }) => {
                       <td>
                         <input type="number" style={{ border: "none", backgroundColor: "transparent", outline: "none", width: "60%" }} defaultValue="1" />
                       </td>
-                      <td>Kiruvchi hujjat</td>
-                      <td id="context" className="text-center"><p>Yoqilgan</p></td>
+                      <td>Входящий документ</td>
+                      <td id="context" className="text-center"><p>Включено</p></td>
                       <td>
                         <div style={{ height: "40px" }} className="custom-control d-flex align-items-center justify-content-center custom-switch custom-control-inline">
                           <input type="checkbox" className="custom-control-input" onClick={myfun} id="kiruvchi" defaultChecked />
@@ -66,8 +66,8 @@ const XodimRollariContent = ({ currentUser }) => {
                       <td>
                         <input type="number" style={{ border: "none", backgroundColor: "transparent", outline: "none", width: "60%" }} defaultValue="2" />
                       </td>
-                      <td>Chiquvchi hujjat</td>
-                      <td id="chiquvchi" className="text-center"><p>Yoqilgan</p></td>
+                      <td>Исходящий документ</td>
+                      <td id="chiquvchi" className="text-center"><p>Включено</p></td>
                       <td>
                         <div style={{ height: "40px" }} className="custom-control d-flex align-items-center  justify-content-center custom-switch custom-control-inline">
                           <input type="checkbox" className="custom-control-input" onClick={myfun2} id="chiquvchi" defaultChecked />
@@ -79,8 +79,8 @@ const XodimRollariContent = ({ currentUser }) => {
                       <td>
                         <input type="number" style={{ border: "none", backgroundColor: "transparent", outline: "none", width: "60%" }} defaultValue="3" />
                       </td>
-                      <td>Fuqaro murojaati</td>
-                      <td id="chiquvchi" className="text-center"><p>Yoqilgan</p></td>
+                      <td>Обращение граждан</td>
+                      <td id="chiquvchi" className="text-center"><p>Включено</p></td>
                       <td>
                         <div style={{ height: "40px" }} className="custom-control d-flex align-items-center  justify-content-center custom-switch custom-control-inline">
                           <input type="checkbox" className="custom-control-input" onClick={myfun2} id="chiquvchi" defaultChecked />
@@ -92,8 +92,8 @@ const XodimRollariContent = ({ currentUser }) => {
                       <td>
                         <input type="number" style={{ border: "none", backgroundColor: "transparent", outline: "none", width: "60%" }} defaultValue="4" />
                       </td>
-                      <td>Qaror</td>
-                      <td id="chiquvchi" className="text-center"><p>Yoqilgan</p></td>
+                      <td>Решение</td>
+                      <td id="chiquvchi" className="text-center"><p>Включено</p></td>
                       <td>
                         <div style={{ height: "40px" }} className="custom-control d-flex align-items-center  justify-content-center custom-switch custom-control-inline">
                           <input type="checkbox" className="custom-control-input" onClick={myfun2} id="chiquvchi" defaultChecked />
@@ -105,8 +105,8 @@ const XodimRollariContent = ({ currentUser }) => {
                       <td>
                         <input type="number" style={{ border: "none", backgroundColor: "transparent", outline: "none", width: "60%" }} defaultValue="5" />
                       </td>
-                      <td>Farmoyish</td>
-                      <td id="chiquvchi" className="text-center"><p>Yoqilgan</p></td>
+                      <td>Заказ</td>
+                      <td id="chiquvchi" className="text-center"><p>Включено</p></td>
                       <td>
                         <div style={{ height: "40px" }} className="custom-control d-flex align-items-center  justify-content-center custom-switch custom-control-inline">
                           <input type="checkbox" className="custom-control-input" onClick={myfun2} id="chiquvchi" defaultChecked />
@@ -118,8 +118,8 @@ const XodimRollariContent = ({ currentUser }) => {
                       <td>
                         <input type="number" style={{ border: "none", backgroundColor: "transparent", outline: "none", width: "60%" }} defaultValue="6" />
                       </td>
-                      <td>Buyruq</td>
-                      <td id="chiquvchi" className="text-center"><p>Yoqilgan</p></td>
+                      <td>Команда</td>
+                      <td id="chiquvchi" className="text-center"><p>Включено</p></td>
                       <td>
                         <div style={{ height: "40px" }} className="custom-control d-flex align-items-center  justify-content-center custom-switch custom-control-inline">
                           <input type="checkbox" className="custom-control-input" onClick={myfun2} id="chiquvchi" defaultChecked />

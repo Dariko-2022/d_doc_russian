@@ -61,7 +61,7 @@ const InformationInputsElements = ({ setData, setSelected }) => {
                 type="text"
                 className="form-control form-control-lg"
                 id="xujjat"
-                placeholder="Korrespondent"
+                placeholder="Корреспондент"
                 ref={korrespondentref}
               />
               <div className="form-control-feedback form-control-feedback-lg">
@@ -75,7 +75,7 @@ const InformationInputsElements = ({ setData, setSelected }) => {
                 type="text"
                 className="form-control form-control-lg"
                 id="korrespondent2"
-                placeholder="Qisqacha Ma'lumot"
+                placeholder="Краткая информация"
                 ref={shortDescref}
               />
               <div className="form-control-feedback form-control-feedback-lg">
@@ -90,7 +90,7 @@ const InformationInputsElements = ({ setData, setSelected }) => {
                 <input
                   type="text"
                   className="first qisqacha1"
-                  placeholder="REG №"
+                  placeholder="РЕГ №"
                   id="qisqacha1"
                   ref={regNumref}
                 />
@@ -110,7 +110,7 @@ const InformationInputsElements = ({ setData, setSelected }) => {
                     isClearable
                     showYearDropdown
                     scrollableMonthYearDropdown
-                    placeholderText="Sana"
+                    placeholderText="Дата"
                     name="datSanakiruvchi"
                   />
                 </div>
@@ -124,10 +124,10 @@ const InformationInputsElements = ({ setData, setSelected }) => {
             <div
               className="form-group form-group-feedback form-group-feedback-left inp buttonsinput inp-sm-none">
               <button className="btn btn-primary mr-2 table-sm-full"
-                onClick={SearchData}>Search
+                onClick={SearchData}>Поиск
               </button>
               <button className="btn btn-primary mr-2 mobile-table-none"
-                onClick={All}>Barchasi
+                onClick={All}>Все
               </button>
               <button className="btn btn-primary mobile-table-none"
                 data-toggle="dropdown"><i className="icon-menu9"
@@ -140,22 +140,22 @@ const InformationInputsElements = ({ setData, setSelected }) => {
                   name="id" value="Id" />
                 <input type="submit"
                   className="btn btn-white dropdown-item  w-100 myBtn"
-                  name="xujjat" value="Xijjat Turi" />
+                  name="xujjat" value="Тип документ" />
                 <input type="submit"
                   className="btn btn-white dropdown-item  w-100 myBtn"
-                  name="korres" value="Korrespondent" />
+                  name="korres" value="Корреспондент" />
                 <input type="submit"
                   className="btn btn-white dropdown-item  w-100 myBtn"
-                  name="qisqacha" value="Qisqacha Ma'lumot" />
+                  name="qisqacha" value="Краткая информация" />
                 <input type="submit"
                   className="btn btn-white dropdown-item  w-100 myBtn"
-                  name="reg" value="Chiquvchi № / Sana" />
+                  name="reg" value="Исходящий № / Дата" />
                 <input type="submit"
                   className="btn btn-white dropdown-item  w-100 myBtn"
-                  name="ijrochi" value="Reg № / Sana" />
+                  name="ijrochi" value="Рег № / Дата" />
                 <input type="submit"
                   className="btn btn-white dropdown-item  w-100 myBtn"
-                  name="harakat" value="Harakatlar" />
+                  name="harakat" value="Действия" />
               </div>
             </div>
           </th>

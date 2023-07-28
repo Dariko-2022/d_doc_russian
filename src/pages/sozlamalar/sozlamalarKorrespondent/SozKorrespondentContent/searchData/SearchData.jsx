@@ -37,18 +37,19 @@ const SearchData = ({ currentUser, setAlert, setStirData, setOrgNameId, pageId, 
             document.querySelector('.email').value = res.data?.orgEmail;
             document.querySelector('.exat').value = res.data?.orgExat;
             setStirData(res.data);
-            Alert(setAlert, "success", "Ma'lumot muvaffaqiyatli topildi");
+            Alert(setAlert, "success", "Информация успешно найдена");
           } else {
-            Alert(setAlert, "warning", "Xatolik bor")
+            Alert(setAlert, "warning", "Ошибка")
           }
         } catch (error) {
           Alert(setAlert, "warning", error.response?.data);
         }
       } else {
-        Alert(setAlert, "warning", "Sitr xato kiritilgan");
+        Alert(setAlert, "warning", "STIR был введен ошибочно");
       }
     } else {
-      Alert(setAlert, "warning", "Sitr kiritilmagan");
+      Alert(setAlert, "warning", "СТИРи не включены");
+      Alert(setAlert, "warning", "СТИРи не включены");
     }
   }
 
@@ -71,14 +72,14 @@ const SearchData = ({ currentUser, setAlert, setStirData, setOrgNameId, pageId, 
               maxLength={11}
               onKeyDown={(e) => enter(e)}
             />
-            <label className="label-floating">Tashkilot sitri</label>
+            <label className="label-floating">Организация СТИР</label>
           </div>
         </div>
       </div>
       <div className="col-lg-4">
         <div className="form-group form-group-floating">
           <div className="position-relative">
-            <button type="button" onClick={qidirish} className="btn btn-primary form-control">Qidirish </button>
+            <button type="button" onClick={qidirish} className="btn btn-primary form-control">Поиск </button>
           </div>
         </div>
       </div>

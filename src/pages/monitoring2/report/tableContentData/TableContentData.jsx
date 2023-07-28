@@ -30,7 +30,7 @@ const TableContentData = ({ data }) => {
             <thead className="myTableHead theadSticky">
                 <tr className="bg-dark tableHeader">
                     <th style={{ width: "40px" }} rowSpan={3}>№</th>
-                    <th rowSpan={3}>Hujjat turi</th>
+                    <th rowSpan={3}>Тип документа</th>
                     <th>{data.header?.orgName}</th>
                     {data.header?.departments?.length > 0 && data.header.departments.map((dat, index) => (
                         <th key={index} className="rotateTd" style={{ writingMode: "vertical-lr", padding: "15px", height: "350px", wordBreak: "break-word" }}>{dat.name}</th>
@@ -45,7 +45,7 @@ const TableContentData = ({ data }) => {
                 <tr className="bg-dark tableHeader ">
                     <th>Soni</th>
                     {data.header?.departments?.length > 0 && data.header.departments.map((dat, index) => (
-                        <th key={index}>Soni</th>
+                        <th key={index}>Число</th>
                     ))}
                 </tr>
             </thead>
@@ -54,7 +54,7 @@ const TableContentData = ({ data }) => {
                 <>
                     <tbody key={Math.random() * 100000 + index}  >
                         <tr className="table-color-inline">
-                            <td style={{ textAlign: "center" }} colSpan={2}>Nazorat kartochkasi {dat.parentCardTypeName} | <strong>Jami:</strong></td>
+                            <td style={{ textAlign: "center" }} colSpan={2}>Контрольная карта {dat.parentCardTypeName} | <strong>Общий:</strong></td>
                             {dat.departmentDocumentCounts?.length > 0 && dat.departmentDocumentCounts.map((s) => (
                                 <td style={{ textAlign: "center" }}>{s.count}</td>
                             ))}

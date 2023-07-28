@@ -24,7 +24,7 @@ const UpdateYunalish = ({ updateYunalish, setUpdateYunalish, currentUser, tumanl
           }
           return d;
         })
-        Alert(setAlert, 'success', `Yo'nalish muvoffaqqiyatli uzgartirildi`);
+        Alert(setAlert, 'success', `Направление успешно изменено`);
         sortNullishValues(arr1);
         setTumanlar(arr1);
       } catch (error) {
@@ -33,7 +33,7 @@ const UpdateYunalish = ({ updateYunalish, setUpdateYunalish, currentUser, tumanl
       }
       setUpdateYunalish({ open: false, obj: {} });
     } else {
-      Alert(setAlert, 'success', `Yo'nalish kiritilmagan`);
+      Alert(setAlert, 'success', `Не введено направление`);
     }
   }
 
@@ -43,14 +43,14 @@ const UpdateYunalish = ({ updateYunalish, setUpdateYunalish, currentUser, tumanl
         <div className="modal-dialog modal-lg">
           <div className="modal-content">
             <div className="modal-header btn-primary p-2">
-              <h5 className="modal-title">O'zgartirish oynasi</h5>
+              <h5 className="modal-title">Изменить окно</h5>
               <button type="button" className="close"
                 onClick={() => setUpdateYunalish({ open: false, obj: {} })}>×
               </button>
             </div>
 
             <form className="modal-body form-inline justify-content-center">
-              <label>Yo'nalish:</label>
+              <label>Направление:</label>
               <input
                 type="text"
                 placeholder="Yo'nalish nomi"
@@ -59,7 +59,7 @@ const UpdateYunalish = ({ updateYunalish, setUpdateYunalish, currentUser, tumanl
                 ref={directionref}
               />
               <button type="button" onClick={() => yunalishUzgartirish(updateYunalish.obj)} className="btn btn-primary ml-sm-2 mb-sm-0" style={{ textTransform: "capitalize" }}>
-                O'zgartirish
+              Изменять
               </button>
             </form>
           </div>

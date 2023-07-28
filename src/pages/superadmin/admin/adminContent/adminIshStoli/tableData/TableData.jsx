@@ -138,13 +138,13 @@ const TableData = ({ data, currentUser, setData, setSelected, selected, setSelec
         <thead>
           <tr className="bg-dark text-white NavLink text-center">
             <th style={{ width: "5%" }}>№</th>
-            <th style={{ width: "25%" }}>Bo'lim</th>
-            <th style={{ width: "20%" }}>Lavozim</th>
-            <th style={{ width: "20%" }}>F.I.SH</th>
-            <th style={{ width: "10%" }}>RANK</th>
-            <th style={{ width: "10%" }}>Unik-kodi</th>
-            <th style={{ width: "5%" }}>Biriktirilgan</th>
-            <td style={{ width: "5%" }}>Harakatlar</td>
+            <th style={{ width: "25%" }}>Отделение</th>
+            <th style={{ width: "20%" }}>Позиция</th>
+            <th style={{ width: "20%" }}>Ф.И.Ш</th>
+            <th style={{ width: "10%" }}>РАНК</th>
+            <th style={{ width: "10%" }}>Unik-kod</th>
+            <th style={{ width: "5%" }}>Уникальный код</th>
+            <td style={{ width: "5%" }}>Действия</td>
           </tr>
         </thead>
         <tbody>

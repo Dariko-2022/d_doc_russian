@@ -20,7 +20,7 @@ const UpdateModal = ({ updateModal, setUpdateModal, currentUser, data, setData, 
         }
         return d;
       })
-      Alert(setAlert, 'success', `Ma'lumot muvaffaqiyatli o'zgartirildi`);
+      Alert(setAlert, 'success', `Информация успешно изменена`);
       sortNullishValues(arr);
       setData(arr);
       setUpdateModal({ open: false, obj: {} });
@@ -36,7 +36,7 @@ const UpdateModal = ({ updateModal, setUpdateModal, currentUser, data, setData, 
         <div className="updateDataWindowWrapper">
           <form>
             <div className="updateDataWindowTop">
-              <h3>O'zgartirish oynasi</h3>
+              <h3>Изменить окно</h3>
               <span onClick={() => setUpdateModal({ open: false, obj: {} })}>&times;</span>
             </div>
             <div className="updateDataWindowCenter">
@@ -49,7 +49,7 @@ const UpdateModal = ({ updateModal, setUpdateModal, currentUser, data, setData, 
             </div>
             <hr />
             <div className="updateDataWindowBottom">
-              <button type={'button'} className="btn btn-primary" onClick={() => updatedData(updateModal.obj)}>O'zgartirish</button>
+              <button type={'button'} className="btn btn-primary" onClick={() => updatedData(updateModal.obj)}>Изменять</button>
             </div>
           </form>
         </div>

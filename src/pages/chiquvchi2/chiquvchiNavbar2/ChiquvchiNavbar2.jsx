@@ -38,14 +38,14 @@ const ChiquvchiNavbar2 = ({ permission, ranks, currentUser }) => {
             <li className="nav-item chiquvchi-nav">
                 <NavLink to="/chiquvchi2/yangi" className="nav-link"
                     style={{ marginLeft: "20px" }}>
-                    <i className="icon-plus2 mr-1 sx-none"></i> Yangi Qo'shish
+                    <i className="icon-plus2 mr-1 sx-none"></i> Добавить новое
                 </NavLink>
             </li>
             {
                 count.length > 0 && count?.filter((t) => t?.tabCode === 1)[0]?.count > 0 &&
                 <li className="nav-item chiquvchi-nav" style={{ marginLeft: "20px", display: "block" }}>
                     <NavLink to="/chiquvchi2/tab/xomaki" className="nav-link">
-                        <i className="icon-user-plus mr-1 sx-none"></i> Xomaki
+                        <i className="icon-user-plus mr-1 sx-none"></i> Временное
                     </NavLink>
                     <span className="badge1">{count?.filter((t) => t?.tabCode === 1)[0]?.count}</span>
                 </li>
@@ -54,7 +54,7 @@ const ChiquvchiNavbar2 = ({ permission, ranks, currentUser }) => {
                 count.length > 0 && count?.filter((t) => t?.tabCode === 2)[0]?.count > 0 &&
                 <li className="nav-item chiquvchi-nav" style={{ marginLeft: "20px", display: "block" }}>
                     <NavLink to="/chiquvchi2/tab/jarayonda" className="nav-link">
-                        <i className="icon-pen mr-1 sx-none"></i> Jarayonda
+                        <i className="icon-pen mr-1 sx-none"></i> Прогресси
                     </NavLink>
                     {
                         count?.filter((t) => t?.tabCode === 2)[0]?.count !== 0 &&
@@ -66,7 +66,7 @@ const ChiquvchiNavbar2 = ({ permission, ranks, currentUser }) => {
                 count.length > 0 && count?.filter((t) => t?.tabCode === 3)[0]?.count > 0 &&
                 <li className="nav-item chiquvchi-nav" style={{ display: "block", marginLeft: "20px" }}>
                     <NavLink to="/chiquvchi2/tab/tasdiqlash_uchun" className="nav-link">
-                        <i className="icon-laptop mr-1 sx-none"></i> Tasdiqlash uchun
+                        <i className="icon-laptop mr-1 sx-none"></i> Для подтвердить
                     </NavLink>
                     {
                         count?.filter((t) => t?.tabCode === 3)[0]?.count !== 0 &&
@@ -78,7 +78,7 @@ const ChiquvchiNavbar2 = ({ permission, ranks, currentUser }) => {
                 count.length > 0 && count?.filter((t) => t?.tabCode === 5)[0]?.count > 0 &&
                 <li className="nav-item chiquvchi-nav" style={{ display: "block", marginLeft: "20px" }}>
                     <NavLink to="/chiquvchi2/tab/imzolash_uchun" className="nav-link">
-                        <i className="icon-laptop mr-1 sx-none"></i> Imzolash uchun
+                        <i className="icon-laptop mr-1 sx-none"></i> Для подписывать
                     </NavLink>
                     {
                         count?.filter((t) => t?.tabCode === 5)[0]?.count !== 0 &&
@@ -90,7 +90,7 @@ const ChiquvchiNavbar2 = ({ permission, ranks, currentUser }) => {
                 count.length > 0 && count?.filter((t) => t?.tabCode === 6)[0]?.count > 0 &&
                 <li className="nav-item chiquvchi-nav" style={{ display: "block", marginLeft: "20px" }}>
                     <NavLink to="/chiquvchi2/tab/imzolangan" className="nav-link">
-                        <i className="icon-laptop mr-1 sx-none"></i> Imzolangan
+                        <i className="icon-laptop mr-1 sx-none"></i> Подписано
                     </NavLink>
                     {
                         count?.filter((t) => t?.tabCode === 6)[0]?.count !== 0 &&
@@ -102,7 +102,7 @@ const ChiquvchiNavbar2 = ({ permission, ranks, currentUser }) => {
                 count.length > 0 && count?.filter((t) => t?.tabCode === 4)[0]?.count > 0 &&
                 <li className="nav-item chiquvchi-nav" style={{ display: "block", marginLeft: "20px" }}>
                     <NavLink to="/chiquvchi2/tab/tasdiqlangan" className="nav-link">
-                        <i className="icon-laptop mr-1 sx-none"></i> Tasdiqlangan
+                        <i className="icon-laptop mr-1 sx-none"></i> Подтвержденный
                     </NavLink>
                     {
                         count?.filter((t) => t?.tabCode === 4)[0]?.count !== 0 &&
@@ -113,7 +113,7 @@ const ChiquvchiNavbar2 = ({ permission, ranks, currentUser }) => {
             {
                 count.length > 0 && count?.filter((t) => t?.tabCode === 7)[0]?.count > 0 && (<li className="nav-item chiquvchi-nav" style={{ display: "block", marginLeft: "20px" }}>
                     <NavLink to="/chiquvchi2/tab/yuborilgan" className="nav-link">
-                        <i className="icon-laptop mr-1 sx-none"></i> Yuborilgan
+                        <i className="icon-laptop mr-1 sx-none"></i> Отправил
                     </NavLink>
                     {
                         count?.filter((t) => t?.tabCode === 7)[0]?.count !== 0 &&
@@ -124,7 +124,7 @@ const ChiquvchiNavbar2 = ({ permission, ranks, currentUser }) => {
             {
                 count.length > 0 && count?.filter((t) => t?.tabCode === 8)[0]?.count > 0 && (<li className="nav-item chiquvchi-nav" style={{ display: "block", marginLeft: "20px" }}>
                     <NavLink to="/chiquvchi2/tab/rad_etilgan" className="nav-link">
-                        <i className="icon-laptop mr-1 sx-none"></i> Rad etilgan
+                        <i className="icon-laptop mr-1 sx-none"></i> Отклоненный
                     </NavLink>
                     {
                         count?.filter((t) => t?.tabCode === 8)[0]?.count !== 0 &&

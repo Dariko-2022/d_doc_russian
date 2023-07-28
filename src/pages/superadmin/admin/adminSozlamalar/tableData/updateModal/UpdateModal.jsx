@@ -36,7 +36,7 @@ const UpdateModal = ({ setUpdateModal, updateModal, allBulimSelect, setAlert, cu
               }
               return dat;
             })
-            Alert(setAlert, "success", "Ma'lumot muvaffaqitayli o'zgartirildi");
+            Alert(setAlert, "success", "Информация успешно изменена!");
             setData(arr);
             setUpdateModal({ open: false, obj: {} });
           } catch (error) {
@@ -44,15 +44,15 @@ const UpdateModal = ({ setUpdateModal, updateModal, allBulimSelect, setAlert, cu
             setUpdateModal({ open: false, obj: {} });
           }
         } else {
-          Alert(setAlert, "warning", "Qisqacha tasnif kiritilmagan");
+          Alert(setAlert, "warning", "Краткая классификация не включена");
           setUpdateModal({ open: false, obj: {} });
         }
       } else {
-        Alert(setAlert, "warning", "Bo'limning ruscha nomi kiritilmagan");
+        Alert(setAlert, "warning", "Русское название кафедры не указано");
         setUpdateModal({ open: false, obj: {} });
       }
     } else {
-      Alert(setAlert, "warning", "Bo'lim nomi kiritilmagan");
+      Alert(setAlert, "warning", "Не введено название раздела");
       setUpdateModal({ open: false, obj: {} });
     }
   }
@@ -62,7 +62,7 @@ const UpdateModal = ({ setUpdateModal, updateModal, allBulimSelect, setAlert, cu
       <div className="modal-dialog modal-xl">
         <div className="modal-content">
           <div className="modal-header bg-primary text-white">
-            <h6 className="modal-title">Bo'lim qo'shish
+            <h6 className="modal-title">Добавить раздел
             </h6>
             <button type="button" className="close close2" onClick={() => setUpdateModal({ open: false, obj: {} })}>&times;</button>
           </div>
@@ -80,7 +80,7 @@ const UpdateModal = ({ setUpdateModal, updateModal, allBulimSelect, setAlert, cu
                           ref={uzNameref}
                         />
                         <label
-                          className="label-floating">Nomlanishi</label>
+                          className="label-floating">Именование</label>
                       </div>
                     </div>
                   </div>
@@ -96,8 +96,8 @@ const UpdateModal = ({ setUpdateModal, updateModal, allBulimSelect, setAlert, cu
                           defaultValue={updateModal.obj.ruName}
                           ref={ruNameref}
                         />
-                        <label className="label-floating">Tarjimalar
-                          (ruscha)</label>
+                        <label className="label-floating">Переводы
+                          (Русский)</label>
                       </div>
                     </div>
                   </div>
@@ -112,13 +112,13 @@ const UpdateModal = ({ setUpdateModal, updateModal, allBulimSelect, setAlert, cu
                           defaultValue={updateModal.obj.description}
                           ref={shortDescref}
                         />
-                        <label className="label-floating">Tavsif</label>
+                        <label className="label-floating">Описание</label>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div className="col-lg-12">
-                  <span className='text-muted' style={{ fontSize: "11px" }}>Asosiy kategoriyani tanlang:</span>
+                  <span className='text-muted' style={{ fontSize: "11px" }}>Выберите основную категорию:</span>
                   <div className="form-group">
                     <Select
                       defaultValue={{
@@ -126,7 +126,7 @@ const UpdateModal = ({ setUpdateModal, updateModal, allBulimSelect, setAlert, cu
                         label: updateModal.obj.upperDepartmentName
                       }}
                       options={allBulimSelect.filter((d) => d.label !== updateModal.obj.uzName)}
-                      placeholder="Bosh bo'lim"
+                      placeholder="Основной раздел"
                       className='boshBulimUpdate'
                       ref={departmentref}
                     />
@@ -145,7 +145,7 @@ const UpdateModal = ({ setUpdateModal, updateModal, allBulimSelect, setAlert, cu
                             width: "100%",
                             height: "40px"
                           }}>
-                          <i className="fas fa-save" style={{ fontSize: "18px" }}></i> Saqlash
+                          <i className="fas fa-save" style={{ fontSize: "18px" }}></i> Сохранять
                         </button>
                       </div>
                     </div>

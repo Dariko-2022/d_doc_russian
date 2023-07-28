@@ -129,10 +129,10 @@ const ResolutionInputsElements = ({ setData, setSelected }) => {
             <div
               className="form-group form-group-feedback form-group-feedback-left inp buttonsinput inp-sm-none">
               <button className="btn btn-primary mr-2 table-sm-full"
-                onClick={(e) => SearchData(e)}>Search
+                onClick={(e) => SearchData(e)}>Поиск
               </button>
               <button className="btn btn-primary mr-2 mobile-table-none"
-                onClick={All}>Barchasi
+                onClick={All}>Все
               </button>
               <button className="btn btn-primary mobile-table-none"
                 data-toggle="dropdown"><i className="icon-menu9"
@@ -144,22 +144,22 @@ const ResolutionInputsElements = ({ setData, setSelected }) => {
                   name="id" value="Id" />
                 <input type="submit"
                   className="btn btn-white dropdown-item  w-100 myBtn"
-                  name="xujjat" value="Xijjat Turi" />
+                  name="xujjat" value="Тип документ" />
                 <input type="submit"
                   className="btn btn-white dropdown-item  w-100 myBtn"
-                  name="korres" value="Korrespondent" />
+                  name="korres" value="Корреспондент" />
                 <input type="submit"
                   className="btn btn-white dropdown-item  w-100 myBtn"
-                  name="qiqacha" value="Qisqacha Ma'lumot" />
+                  name="qiqacha" value="Краткая информация" />
                 <input type="submit"
                   className="btn btn-white dropdown-item  w-100 myBtn"
-                  name="chiquvchi" value="Chiquvchi № / Sana" />
+                  name="chiquvchi" value="Исходящий № / Дата" />
                 <input type="submit"
                   className="btn btn-white dropdown-item  w-100 myBtn"
-                  name="reg" value="Reg № / Sana" />
+                  name="reg" value="Рег № / Дата" />
                 <input type="submit"
                   className="btn btn-white dropdown-item  w-100 myBtn"
-                  name="harakat" value="Harakatlar" />
+                  name="harakat" value="Действия" />
               </div>
             </div>
           </th>

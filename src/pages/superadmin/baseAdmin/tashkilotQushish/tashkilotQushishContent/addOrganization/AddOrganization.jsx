@@ -162,7 +162,7 @@ const AddOrganization = ({ currentUser, setAlert, yunalishlar }) => {
               passiveOrganizationId: qushimchaBoshTash ? qushimchaBoshTash.value : null,
             }
             await axiosInstance.post("organization", sendingData)
-            Alert(setAlert, "success", "Muvaffaqiyatli qo'shildi");
+            Alert(setAlert, "success", "Добавлено успешно");
             clearAllInputData();
             closeOrgModalref.current.click();
           } catch (error) {
@@ -172,13 +172,13 @@ const AddOrganization = ({ currentUser, setAlert, yunalishlar }) => {
             }
           }
         } else {
-          Alert(setAlert, "warning", "Yo'nalish tanlanmagan");
+          Alert(setAlert, "warning", "Направление не выбрано");
         }
       } else {
-        Alert(setAlert, "warning", "Email xato kiritilgan");
+        Alert(setAlert, "warning", "Электронная почта была введена неправильно");
       }
     } else {
-      Alert(setAlert, "warning", "Viloyat tanlanmagan");
+      Alert(setAlert, "warning", "Регион не выбран");
     }
   }
 
@@ -190,7 +190,7 @@ const AddOrganization = ({ currentUser, setAlert, yunalishlar }) => {
     <div className="modal-dialog modal-xl">
       <div className="modal-content">
         <div className="modal-header bg-primary text-white">
-          <h5 className="modal-title" style={{ textTransform: "capitalize" }}>Tashkilot qo'shish</h5>
+          <h5 className="modal-title" style={{ textTransform: "capitalize" }}>Добавить организацию</h5>
           <button type="button" className="close" ref={closeOrgModalref} data-dismiss="modal" onClick={exit}>&times;</button>
         </div>
 
@@ -225,7 +225,7 @@ const AddOrganization = ({ currentUser, setAlert, yunalishlar }) => {
                       placeholder="Placeholder"
                       ref={orgNameref}
                     />
-                    <label className="label-floating">Korxona Nomi</label>
+                    <label className="label-floating">Название компании</label>
                   </div>
                 </div>
               </div>
@@ -238,7 +238,7 @@ const AddOrganization = ({ currentUser, setAlert, yunalishlar }) => {
                       placeholder="Placeholder"
                       ref={shortDescref}
                     />
-                    <label className="label-floating">Qisqacha nomi</label>
+                    <label className="label-floating">Короткое имя</label>
                   </div>
                 </div>
               </div>
@@ -310,7 +310,7 @@ const AddOrganization = ({ currentUser, setAlert, yunalishlar }) => {
                         label: "Toshkent shahar"
                       }
                     ]}
-                    placeholder="Viloyat"
+                    placeholder="Провинция"
                     className="Viloyat"
                     ref={provinceref}
                   />
@@ -328,7 +328,7 @@ const AddOrganization = ({ currentUser, setAlert, yunalishlar }) => {
                     //     { value: "Jondor Tuman", label: "Jondor Tuman" },
                     // ]}
                     // onChange={logChange12}
-                    placeholder="Tuman (Shahar)"
+                    placeholder="Район (Город)"
                     className="tuman"
                     isClearable={true}
                     ref={cityref}
@@ -345,7 +345,7 @@ const AddOrganization = ({ currentUser, setAlert, yunalishlar }) => {
                       placeholder="Placeholder"
                       ref={addressref}
                     />
-                    <label className="label-floating">Manzil</label>
+                    <label className="label-floating">Адрес</label>
                   </div>
                 </div>
               </div>
@@ -360,7 +360,7 @@ const AddOrganization = ({ currentUser, setAlert, yunalishlar }) => {
                       disabled
                       ref={sitr2ref}
                     />
-                    <label className="label-floating">Stir</label>
+                    <label className="label-floating">СТИР</label>
                   </div>
                 </div>
               </div>
@@ -373,7 +373,7 @@ const AddOrganization = ({ currentUser, setAlert, yunalishlar }) => {
                       placeholder="placeholder"
                       ref={fullNameref}
                     />
-                    <label className="label-floating">F.I.O</label>
+                    <label className="label-floating">Ф.И.О</label>
                   </div>
                 </div>
               </div>
@@ -386,7 +386,7 @@ const AddOrganization = ({ currentUser, setAlert, yunalishlar }) => {
                       placeholder="Placeholder"
                       ref={phoneref}
                     />
-                    <label className="label-floating">Telefon </label>
+                    <label className="label-floating">Телефон </label>
                   </div>
                 </div>
               </div>
@@ -421,7 +421,7 @@ const AddOrganization = ({ currentUser, setAlert, yunalishlar }) => {
                   <div className="position-relative">
                     <Select
                       options={iteratinYunalishlar}
-                      placeholder="Yo'nalish"
+                      placeholder="Направление"
                       className="yunalish"
                       onChange={changeYunalish}
                       isClearable={true}
@@ -436,7 +436,7 @@ const AddOrganization = ({ currentUser, setAlert, yunalishlar }) => {
                   <div className="position-relative">
                     <Select
                       options={yunalishTashkilotlar}
-                      placeholder="Bosh tashkilot"
+                      placeholder="Основная организация"
                       className="asosiyBoshTash"
                       isClearable={true}
                       ref={mainOrgref}
@@ -451,7 +451,7 @@ const AddOrganization = ({ currentUser, setAlert, yunalishlar }) => {
                       options={iteratinYunalishlar}
                       onChange={logChange123}
                       isClearable={true}
-                      placeholder="Yo'nalish"
+                      placeholder="Направление"
                       ref={direction2ref}
                     />
                   </div>
@@ -462,7 +462,7 @@ const AddOrganization = ({ currentUser, setAlert, yunalishlar }) => {
                   <div className="position-relative">
                     <Select
                       options={yunalishTashkilotlar1}
-                      placeholder="Qo'shimcha bosh tashkilot"
+                      placeholder="Дополнительная головная организация"
                       className="qushimchaBoshTash"
                       isClearable={true}
                       ref={passiveOrgref}
@@ -476,7 +476,7 @@ const AddOrganization = ({ currentUser, setAlert, yunalishlar }) => {
                   <div className="position-relative">
                     <Select
                       options={iteratinYunalishlar}
-                      placeholder="Yo'nalish"
+                      placeholder="направление"
                       className="yunalishO"
                       // onChange={orgTypeId}
                       isClearable={true}
@@ -496,7 +496,7 @@ const AddOrganization = ({ currentUser, setAlert, yunalishlar }) => {
                       height: "20px",
                       padding: "20px"
                     }} />
-                  <label htmlFor="checkboxInput" style={{ color: "blue", marginLeft: "20px" }}>Asosiy bosh tashkiloti</label>
+                  <label htmlFor="checkboxInput" style={{ color: "blue", marginLeft: "20px" }}>Основная головная организация</label>
                 </div>
 
                 {openInput ?
@@ -507,7 +507,7 @@ const AddOrganization = ({ currentUser, setAlert, yunalishlar }) => {
                           <div className="position-relative">
                             <Select
                               options={iteratinYunalishlar}
-                              placeholder="Yo'nalish"
+                              placeholder="Направление"
                               className="yunalish"
                               onChange={changeYunalishF}
                               isClearable={true}
@@ -523,7 +523,7 @@ const AddOrganization = ({ currentUser, setAlert, yunalishlar }) => {
                           <div className="position-relative">
                             <Select
                               options={yunalishTashkilotlarF}
-                              placeholder="Bosh tashkilot"
+                              placeholder="Основная организация"
                               className="asosiyBoshTashCheckBox"
                               isClearable={true}
                               ref={mainOrg2ref}
@@ -550,7 +550,7 @@ const AddOrganization = ({ currentUser, setAlert, yunalishlar }) => {
                         { value: "Toshkent", label: "Toshkent" },
                         { value: "Andijon", label: "Andijon" },
                       ]}
-                      placeholder="Tuman tashkilot"
+                      placeholder="Районная организация"
                     />
                   </div>
                 </div>
@@ -559,7 +559,7 @@ const AddOrganization = ({ currentUser, setAlert, yunalishlar }) => {
             <div className="row d-flex justify-content-end">
               <div className="col-lg-2 text-right">
                 <button type="submit" className="btn btn-primary">
-                  <i className="icon-floppy-disk"></i>Saqlash
+                  <i className="icon-floppy-disk"></i>Сохранять
                 </button>
               </div>
             </div>

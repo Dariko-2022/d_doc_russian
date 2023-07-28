@@ -242,7 +242,7 @@ const IjroContent = ({ currentUser, permission, ranks }) => {
           repeatExecutePeriod: period[0]?.value,
           deadline: deadLine ? deadLine : data.inExecutorInformationList.find((item) => item.workPlaceId === Number(localStorage.getItem("ids"))).deadline,
           description: izohCol1,
-          executorStatusName: letter === "N" ? "Nazorat uchun" : letter === "U" ? "Umumlashtiruvchi" : letter === "M" ? "Ma'lumot uchun" : "Bajarish uchun",
+          executorStatusName: letter === "N" ? "Для контроля" : letter === "U" ? "Генерализатор" : letter === "M" ? "Для справки" : "Для выполнения",
           isResponsible: index1 === idCheckbox ? true : false
         }
         inExecutorResolution.push(obj);
@@ -270,7 +270,7 @@ const IjroContent = ({ currentUser, permission, ranks }) => {
                 serialNumber: imzo[0]?.name
               }
             })
-            Alert(setAlert, 'success', "Ma'lumot muvaffaqiyatli saqlandi");
+            Alert(setAlert, 'success', "Данные успешно сохранены");
             setTimeout(() => {
               history.push("/kiruvchi/resolution");
             }, 1500);
@@ -297,7 +297,7 @@ const IjroContent = ({ currentUser, permission, ranks }) => {
                 serialNumber: imzo[0]?.name
               }
             })
-            Alert(setAlert, 'success', "Ma'lumot muvaffaqiyatli saqlandi");
+            Alert(setAlert, 'success', "Данные успешно сохранены");
             setTimeout(() => {
               history.push("/kiruvchi/resolution");
             }, 1500);
@@ -325,7 +325,7 @@ const IjroContent = ({ currentUser, permission, ranks }) => {
                   serialNumber: imzo[0]?.name
                 }
               })
-              Alert(setAlert, 'success', "Ma'lumot muvaffaqiyatli saqlandi");
+              Alert(setAlert, 'success', "Данные успешно сохранены");
               setTimeout(() => {
                 history.push("/kiruvchi/resolution");
               }, 1500);
@@ -333,7 +333,7 @@ const IjroContent = ({ currentUser, permission, ranks }) => {
               Alert(setAlert, 'warning', error.response.data);
             }
           } else {
-            Alert(setAlert, 'warning', "Qo'shimcha bajaruvchilardagi sana tanlanmagan bo'lishi mumkin");
+            Alert(setAlert, 'warning', "Дата по дополнительным исполнителям может быть не выбрана");
           }
         }
         if (params.name === "nazorat") {
@@ -355,7 +355,7 @@ const IjroContent = ({ currentUser, permission, ranks }) => {
                 serialNumber: imzo[0]?.name
               }
             })
-            Alert(setAlert, 'success', "Ma'lumot muvaffaqiyatli saqlandi");
+            Alert(setAlert, 'success', "Данные успешно сохранены");
             setTimeout(() => {
               history.push("/kiruvchi/resolution");
             }, 1500);
@@ -382,7 +382,7 @@ const IjroContent = ({ currentUser, permission, ranks }) => {
                 serialNumber: imzo[0]?.name
               }
             })
-            Alert(setAlert, 'success', "Ma'lumot muvaffaqiyatli saqlandi");
+            Alert(setAlert, 'success', "Данные успешно сохранены");
             setTimeout(() => {
               history.push("/kiruvchi/resolution");
             }, 1500);
@@ -399,7 +399,7 @@ const IjroContent = ({ currentUser, permission, ranks }) => {
         }
       }
     } else {
-      Alert(setAlert, 'warning', "Bajaruvchi bo'limdagi xodim tanlanmagan");
+      Alert(setAlert, 'warning', "Сотрудник в исполнительный отдел не выбран");
     }
   }
 
@@ -431,7 +431,7 @@ const IjroContent = ({ currentUser, permission, ranks }) => {
     try {
       const res = await axiosInstance.patch(`superVisor/takeControlOfTheLeader/${params.id}/${JSON.parse(localStorage.getItem('ids'))}`)
       if (res.data) {
-        Alert(setAlert, 'success', "Nazoratdan olindi");
+        Alert(setAlert, 'success', "Вышел из-под контроля");
       }
       // setTimeout(() => {
       //   history.push(`/kiruvchi/resolution`);
@@ -449,7 +449,7 @@ const IjroContent = ({ currentUser, permission, ranks }) => {
   const receptionSuccess = () => {
     axiosInstance.put(`superVisor/super-visor-for-director-success?documentId=${params?.id}`)
       .then((res) => {
-        Alert(setAlert, 'success', "Muvofaqqiyatli tasdiqlandi");
+        Alert(setAlert, 'success', "Успешно проверено");
         setTimeout(() => {
           history.push(`/kiruvchi/maxsusNazoratdanOlish`);
         }, 2000);
@@ -459,13 +459,13 @@ const IjroContent = ({ currentUser, permission, ranks }) => {
 
   return (
     <div className="content content-mobile" style={{ marginBottom: "130px" }}>
-      <h3 style={{ margin: "10px 0 0 0", fontWeight: "bold", textTransform: "uppercase" }}>Ko'rish</h3>
+      <h3 style={{ margin: "10px 0 0 0", fontWeight: "bold", textTransform: "uppercase" }}>Вид</h3>
       <div className="card-body card-body-mobile p-0">
         <ul className="nav nav-tabs nav-tabs-solid nav-tabs-solid-custom bg-primary NavLink" style={{ paddingTop: "2px", minHeight: "52px" }}>
           <ContentNavbar currentUser={currentUser} permission={permission} ranks={ranks} />
           <li className="nav-item">
             <NavLink to={`/kiruvchi_bajarish_ijro/${params.id}/${params.name}`} className="nav-link" activeClassName="NavLinkLi">
-              <i className="icon-eye2 mr-1"></i>Topshiriqlar
+              <i className="icon-eye2 mr-1"></i>Задания
             </NavLink>
           </li>
         </ul>
@@ -476,7 +476,7 @@ const IjroContent = ({ currentUser, permission, ranks }) => {
               <div className="card-body card-body-mobile w-100 ccc mx-0 px-2">
                 <button className="btn btn-primary mb-3 w-100"
                   onClick={() => setFull(!full)}>
-                  {full ? "Ekranni qisqartirish" : "To'liq ekran"}
+                  {full ? "Свернуть экран" : "Полноэкранный"}
                 </button>
                 <Fishka
                   data={data}
@@ -559,7 +559,7 @@ const IjroContent = ({ currentUser, permission, ranks }) => {
                   <div className="card-box my-2" style={{ display: ((params.name === "bajarish" || params.name === "umumlashtiruvchi" || params.name === "bajarilmagan" || params.name === "radEtilgan" || params.name === "nazorat") && (data?.hasPermissionForDirect)) ? "block" : "none" }}>
                     <div className="col-lg-12 w-100 d-flex justify-content-end">
                       {/* <button className="btn btn-danger" onClick={cancelEimzo}>Bekor qilish</button> */}
-                      <button className="btn btn-primary ml-1" onClick={saveAllData}>Saqlash</button>
+                      <button className="btn btn-primary ml-1" onClick={saveAllData}>Сохранять</button>
                     </div>
                   </div>
                 )}
@@ -587,11 +587,11 @@ const IjroContent = ({ currentUser, permission, ranks }) => {
                     <div className="col-lg-12 w-100 d-flex justify-content-end">
                       <button className="btn btn-danger"
                         onClick={() => setHokimRadEtish(true)}>
-                        Barchasini rad qilish
+                        Отклонить все
                       </button>
                       <button className="btn btn-success ml-1"
                         onClick={() => setHokimTasdiqlash(true)}>
-                        Barchasini tasdiqlash
+                        Подтвердить все
                       </button>
                     </div>
                   </div>
@@ -603,11 +603,11 @@ const IjroContent = ({ currentUser, permission, ranks }) => {
                     <div className="col-lg-12 w-100 d-flex justify-content-end">
                       <button className="btn btn-danger"
                         onClick={() => setHokimRadEtish(true)}>
-                        Barchasini rad qilish
+                       Отклонить все
                       </button>
                       <button className="btn btn-success ml-1"
                         onClick={() => receptionSuccess()}>
-                        Tasdiqlash
+                        Подтверждение
                       </button>
                     </div>
                   </div>

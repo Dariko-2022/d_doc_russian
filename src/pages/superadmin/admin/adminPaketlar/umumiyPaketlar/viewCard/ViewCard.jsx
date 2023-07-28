@@ -44,23 +44,23 @@ const ViewCard = ({ cardKurish, setCardKurish, setAlert, currentUser, setBoshTas
                 }
                 return d;
               })
-              Alert(setAlert, "success", "Muvaffaqiyatli o'zgartirildi");
+              Alert(setAlert, "success", "Изменено успешно");
               setBoshTashkilotlar(arr);
               setCardKurish({ open: false, obj: {} });
             } catch (error) {
               console.log(error.response);
             }
           } else {
-            Alert(setAlert, "warning", "Bajarish muddati kiritilmagan");
+            Alert(setAlert, "warning", "Срок не указан");
           }
         } else {
-          Alert(setAlert, "warning", "Card nomi kiritilmagan");
+          Alert(setAlert, "warning", "Имя карты не введено");
         }
       } else {
-        Alert(setAlert, "warning", "Card tanlanishi kerak");
+        Alert(setAlert, "warning", "Карта должна быть выбрана");
       }
     } else {
-      Alert(setAlert, "warning", "Card turi tanlanishi kerak");
+      Alert(setAlert, "warning", "Тип карты должен быть выбран");
     }
   }
 
@@ -69,7 +69,7 @@ const ViewCard = ({ cardKurish, setCardKurish, setAlert, currentUser, setBoshTas
       <div className="modal-dialog modal-xl">
         <div className="modal-content">
           <div className="modal-header bg-primary text-white">
-            <h5 className="modal-title" style={{ textTransform: "capitalize" }}>Kartochkani o'zgartirish</h5>
+            <h5 className="modal-title" style={{ textTransform: "capitalize" }}>Сменить карту</h5>
             <button type="button" className="close closeSave"
               onClick={() => setCardKurish({ open: false, obj: {} })}>&times;</button>
           </div>
@@ -126,7 +126,7 @@ const ViewCard = ({ cardKurish, setCardKurish, setAlert, currentUser, setBoshTas
                         defaultValue={cardKurish.obj.cardName}
                         ref={cardnameref}
                       />
-                      <label className="label-floating">Kartochka nomi</label>
+                      <label className="label-floating">Название карты</label>
                     </div>
                   </div>
                 </div>
@@ -141,7 +141,7 @@ const ViewCard = ({ cardKurish, setCardKurish, setAlert, currentUser, setBoshTas
                           defaultValue={cardKurish.obj.expireDate}
                           ref={expiredateref}
                         />
-                        <label className="label-floating">Bajarilish muddati</label>
+                        <label className="label-floating">Срок оплаты</label>
                       </div>
                     </div>
                   </div>
@@ -150,7 +150,7 @@ const ViewCard = ({ cardKurish, setCardKurish, setAlert, currentUser, setBoshTas
               <div className="row">
                 <div className="col-lg-2">
                   <button type="button" onClick={() => kartochkaUzgartirish(cardKurish.obj)} className="btn btn-primary">
-                    <i className="icon-floppy-disk mr-1"></i> O'zgartirish
+                    <i className="icon-floppy-disk mr-1"></i> Изменять
                   </button>
                 </div>
               </div>

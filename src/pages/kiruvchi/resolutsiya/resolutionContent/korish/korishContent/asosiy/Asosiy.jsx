@@ -9,7 +9,7 @@ const Asosiy = ({ data, startDate1, setStartDate1 }) => {
       <div className="col-lg-12">
         <div className="card">
           <div className="card-header bg-primary text-white header-elements-inline">
-            <h6 className="card-title" style={{ fontWeight: "bold", textTransform: "upperCase" }}>Asosiy</h6>
+            <h6 className="card-title" style={{ fontWeight: "bold", textTransform: "upperCase" }}>Основной</h6>
           </div>
           <div className="card-body px-2 pb-0">
             <div className="row px-0">
@@ -24,7 +24,7 @@ const Asosiy = ({ data, startDate1, setStartDate1 }) => {
                         defaultValue={data[0]?.document?.card?.cardName}
                         disabled
                       />
-                      <label className="label-floating">Hujjat turi</label>
+                      <label className="label-floating">Тип документа</label>
                     </div>
                   </div>
                 </div>
@@ -53,7 +53,7 @@ const Asosiy = ({ data, startDate1, setStartDate1 }) => {
                         onChange={(date) => setStartDate1(date)}
                         dateFormat={'dd.MM.yyyy'}
                         isClearable
-                        placeholderText="Muddat/sana"
+                        placeholderText="Срок/дата"
                         showYearDropdown
                         scrollableMonthYearDropdown
                       />
@@ -72,7 +72,7 @@ const Asosiy = ({ data, startDate1, setStartDate1 }) => {
                         defaultValue={data[0]?.document?.journalNumber}
                         disabled
                       />
-                      <label className="label-floating">Jurnal nomer</label>
+                      <label className="label-floating">Номер журнал</label>
                     </div>
                   </div>
                 </div>

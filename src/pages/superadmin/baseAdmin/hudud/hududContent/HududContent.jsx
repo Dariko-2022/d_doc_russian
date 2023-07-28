@@ -103,7 +103,7 @@ const HududContent = ({ currentUser }) => {
               districtId: tuman ? tuman.value : null,
               sectorCode: sector ? sector.value : -1
             })
-            Alert(setAlert, 'success', `Ma'lumot muvaffaqiyatli qo'shildi`)
+            Alert(setAlert, 'success', `Информация успешно добавлена`)
             mahRef.current.value = "";
             cityRef.current?.props?.value && cityRef.current?.removeValue(cityRef.current.props?.value);
             provinceRef.current?.props?.value && provinceRef.current?.removeValue(provinceRef.current.props?.value);
@@ -113,19 +113,19 @@ const HududContent = ({ currentUser }) => {
             Alert(setAlert, 'warning', `${error?.response?.data?.error?.message}`)
           }
         } else {
-          Alert(setAlert, 'warning', `Mahalla nomi kiritilmagan`);
+          Alert(setAlert, 'warning', `Название района не указано`);
         }
       } else {
-        Alert(setAlert, 'warning', `Sektor tanlanmagan`);
+        Alert(setAlert, 'warning', `Сектор не выбран`);
       }
     } else {
-      Alert(setAlert, 'warning', `Tuman (Shahar) tanlanmagan`);
+      Alert(setAlert, 'warning', `Район (Город) не выбран`);
     }
   }
 
   return (
     <div className="content mb-5">
-      <h3 style={{ margin: "10px 0 0 0", fontWeight: "bold", textTransform: "upperCase" }}>Hudud</h3>
+      <h3 style={{ margin: "10px 0 0 0", fontWeight: "bold", textTransform: "upperCase" }}>Территория</h3>
       <div className="card-body p-0">
         <ul className="nav nav-tabs nav-tabs-solid nav-tabs-solid-custom bg-primary NavLink">
           <HududNavbar />
@@ -141,7 +141,7 @@ const HududContent = ({ currentUser }) => {
                         <Select
                           options={notParentsCard1}
                           onChange={notParentsCardClick1}
-                          placeholder="Viloyat"
+                          placeholder="Провинция"
                           className="cardTypeId"
                           isClearable={true}
                           ref={provinceRef}
@@ -152,7 +152,7 @@ const HududContent = ({ currentUser }) => {
                       <div className="form-group text-left">
                         <Select
                           options={notParentsCard2}
-                          placeholder="Tuman (Shahar)"
+                          placeholder="Район (Город)"
                           className="cardTypeId"
                           isClearable={true}
                           ref={cityRef}
@@ -163,7 +163,7 @@ const HududContent = ({ currentUser }) => {
                       <div className="form-group text-left">
                         <Select
                           options={notParentsCard3}
-                          placeholder="Sector"
+                          placeholder="Сектор"
                           className="cardTypeId"
                           isClearable={true}
                           ref={sectorRef}
@@ -177,7 +177,7 @@ const HududContent = ({ currentUser }) => {
                             type="text"
                             style={{ height: '56px' }}
                             className="form-control form-control-outline mahallaName"
-                            placeholder="Mahalla"
+                            placeholder="Махалля"
                             ref={mahRef}
                           />
                         </div>
@@ -185,7 +185,7 @@ const HududContent = ({ currentUser }) => {
                     </div>
                     <div className="col-lg-2">
                       <button type="button" className="btn btn-primary w-100" style={{ padding: "1rem" }} onClick={() => saveData()}>
-                        <i className="icon-floppy-disk mr-1"></i> Saqlash
+                        <i className="icon-floppy-disk mr-1"></i> Сохранять
                       </button>
                     </div>
                   </div>

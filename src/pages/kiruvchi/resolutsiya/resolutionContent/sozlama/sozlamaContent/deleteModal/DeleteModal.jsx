@@ -11,13 +11,13 @@ const DeleteModal = ({ deleteModal, setDeleteModal, params, currentUser, data, s
       let arr = data?.files?.filter((d) => {
         return d.id !== res.data;
       })
-      Alert(setAlert, "success", "Muvaffaqiyatli o'chirildi");
+      Alert(setAlert, "success", "Удалено успешно");
       setDeleteModal({ open: false, obj: {} });
       setData({ data, files: arr });
     } catch (error) {
       console.log(error.response);
       setDeleteModal({ open: false, obj: {} });
-      Alert(setAlert, "warning", "Fayl topilmadi");
+      Alert(setAlert, "warning", "файл не найден");
     }
   }
 
@@ -26,23 +26,22 @@ const DeleteModal = ({ deleteModal, setDeleteModal, params, currentUser, data, s
       <div className="modal-dialog">
         <div className="modal-content">
           <div className="modal-header bg-primary text-white">
-            <h6 className="modal-title">O'chirish oynasi</h6>
+            <h6 className="modal-title">Окна удалить</h6>
             <button type="button" className="close close1"
               onClick={() => setDeleteModal({ open: false, obj: {} })}>×
             </button>
           </div>
           <div className="modal-body text-center">
             <h3 style={{ textTransform: "upperCase", fontWeight: "bold" }}
-              className="text-danger">Ogoh bo'ling!</h3>
-            <h5>Ushbu ma'lumotni o'chirmoqchimisiz?</h5>
+              className="text-danger">Будьте в курсе!</h3>
+            <h5>Вы хотите удалить эту информацию?</h5>
           </div>
           <div className="modal-footer">
             <button type="button" className="btn btn-link bekorQilish"
-              onClick={() => setDeleteModal({ open: false, obj: {} })}>Bekor
-              qilish
+              onClick={() => setDeleteModal({ open: false, obj: {} })}>Отмена
             </button>
             <button type="button" className="btn btn-primary"
-              onClick={() => Uchirish(deleteModal.obj)}>O'chirish
+              onClick={() => Uchirish(deleteModal.obj)}>Удалить
             </button>
           </div>
         </div>

@@ -294,7 +294,7 @@ const TashkilotKurishContent = ({ currentUser }) => {
                 employeePlanId: employeePlan1 ? employeePlan1.value : organization?.orgEmployeePlan ? organization?.orgEmployeePlan?.id : null,
               })
               if (response.data === "Update organization") {
-                Alert(setAlert, "success", "Ma'lumotlaringiz muvaffaqiyatli o'zgartirildi!");
+                Alert(setAlert, "success", "Ваша информация была успешно изменена!");
                 setTimeout(() => {
                   history.push("/super_base_admin_tashkilot-qushish");
                 }, 1000);
@@ -304,22 +304,22 @@ const TashkilotKurishContent = ({ currentUser }) => {
               Alert(setAlert, "warning", error?.response?.data);
             }
           } else {
-            Alert(setAlert, "warning", "Exat xato kiritilgan");
+            Alert(setAlert, "warning", "Введена ошибка Exat");
           }
         } else {
-          Alert(setAlert, "warning", "Email xato kiritilgan");
+          Alert(setAlert, "warning", "Электронная почта была введена неправильно");
         }
       } else {
-        Alert(setAlert, "warning", "Viloyat tanlanmagan");
+        Alert(setAlert, "warning", "Регион не выбран");
       }
     } else {
-      Alert(setAlert, "warning", "Yo'nalish tanlanmagan");
+      Alert(setAlert, "warning", "Направление не выбрано");
     }
   }
 
   return (
     <div className="content mb-5">
-      <h3 style={{ margin: "10px 0 0 0", fontWeight: "bold", textTransform: "upperCase" }}>Tashkilot tuzulishi</h3>
+      <h3 style={{ margin: "10px 0 0 0", fontWeight: "bold", textTransform: "upperCase" }}>Структура организации</h3>
       <div className="card-body p-0">
         <ul className="nav nav-tabs nav-tabs-solid nav-tabs-solid-custom bg-primary NavLink">
           <TashkilotKurishNavbar params={params.id} />
@@ -341,7 +341,7 @@ const TashkilotKurishContent = ({ currentUser }) => {
                               placeholder="Placeholder"
                               ref={orgNameref}
                             />
-                            <label className="label-floating">Korxona Nomi</label>
+                            <label className="label-floating">Название компании</label>
                           </div>
                         </div>
                       </div>
@@ -356,7 +356,7 @@ const TashkilotKurishContent = ({ currentUser }) => {
                               placeholder="Placeholder"
                               ref={orgShortNameref}
                             />
-                            <label className="label-floating">Qisqacha nomi</label>
+                            <label className="label-floating">Короткое имя</label>
                           </div>
                         </div>
                       </div>
@@ -366,7 +366,7 @@ const TashkilotKurishContent = ({ currentUser }) => {
                         <div className="col-lg-12">
                           <Select
                             options={status}
-                            placeholder="Status"
+                            placeholder="Статус"
                             className="status"
                             isClearable={true}
                             ref={statusref}
@@ -420,7 +420,7 @@ const TashkilotKurishContent = ({ currentUser }) => {
                                   label: "Toshkent viloyati"
                                 },
                               ]}
-                              placeholder="Viloyat"
+                              placeholder="Провинция"
                               className="viloyat"
                               ref={provinceref}
                             />
@@ -438,7 +438,7 @@ const TashkilotKurishContent = ({ currentUser }) => {
                               placeholder="Placeholder"
                               ref={orgDistrictref}
                             />
-                            <label className="label-floating">Tuman(Shahar)</label>
+                            <label className="label-floating">Район (Город)</label>
                           </div>
                         </div>
                       </div>
@@ -453,7 +453,7 @@ const TashkilotKurishContent = ({ currentUser }) => {
                               placeholder="Placeholder"
                               ref={addressref}
                             />
-                            <label className="label-floating">Manzil</label>
+                            <label className="label-floating">Адрес</label>
                           </div>
                         </div>
                       </div>
@@ -470,7 +470,7 @@ const TashkilotKurishContent = ({ currentUser }) => {
                               disabled={!organization.fake}
                               ref={stirref}
                             />
-                            <label className="label-floating">Stir</label>
+                            <label className="label-floating">СТИР</label>
                           </div>
                         </div>
                       </div>
@@ -485,7 +485,7 @@ const TashkilotKurishContent = ({ currentUser }) => {
                               placeholder="placeholder"
                               ref={fullNameref}
                             />
-                            <label className="label-floating">F.I.O</label>
+                            <label className="label-floating">Ф.И.О</label>
                           </div>
                         </div>
                       </div>
@@ -500,7 +500,7 @@ const TashkilotKurishContent = ({ currentUser }) => {
                               placeholder="Placeholder"
                               ref={phoneref}
                             />
-                            <label className="label-floating">Telefon </label>
+                            <label className="label-floating">Телефон</label>
                           </div>
                         </div>
                       </div>
@@ -560,7 +560,7 @@ const TashkilotKurishContent = ({ currentUser }) => {
                             <Select
                               options={yunalishlar}
                               onChange={changeYunalish}
-                              placeholder="Yo'nalish"
+                              placeholder="Направление"
                               className="yunalish"
                               isClearable={true}
                               ref={direction1ref}
@@ -613,7 +613,7 @@ const TashkilotKurishContent = ({ currentUser }) => {
                             <Select
                               options={yunalishlar}
                               onChange={changeYunalish1}
-                              placeholder="Yo'nalish"
+                              placeholder="Направление"
                               className="yunalish11"
                               isClearable={true}
                               ref={direction2ref}
@@ -628,7 +628,7 @@ const TashkilotKurishContent = ({ currentUser }) => {
                           <div className="position-relative">
                             <Select
                               options={yunalishTashkilotlar}
-                              placeholder="Bosh tashkilotlar"
+                              placeholder="Основные организации"
                               className="asosiyTash"
                               isClearable={true}
                               ref={mainOrgref}
@@ -644,7 +644,7 @@ const TashkilotKurishContent = ({ currentUser }) => {
                             <Select
                               options={yunalishlar}
                               onChange={logChange123}
-                              placeholder="Yo'nalish"
+                              placeholder="Направление"
                               className="yunalish1"
                               isClearable={true}
                               ref={direction3ref}
@@ -659,7 +659,7 @@ const TashkilotKurishContent = ({ currentUser }) => {
                           <div className="position-relative">
                             <Select
                               options={yunalishTashkilotlar1}
-                              placeholder="Qo'shimcha bosh tashkilot"
+                              placeholder="Дополнительная головная организация"
                               className="qushimchaTash"
                               isClearable={true}
                               ref={passiveMainOrgref}
@@ -675,7 +675,7 @@ const TashkilotKurishContent = ({ currentUser }) => {
                           <div className="position-relative">
                             <Select
                               options={employeePlan}
-                              placeholder="Ishchilar soni"
+                              placeholder="Количество рабочих"
                               className="employeePlan"
                               isClearable={true}
                               ref={employeeCountref}
@@ -693,7 +693,7 @@ const TashkilotKurishContent = ({ currentUser }) => {
                         onClick={(e) => checked(e.target.checked)}
                         className="checkboxInput cursor-pointer "
                         style={{ width: '20px', height: "20px", padding: "20px" }} />
-                      <label htmlFor="checkboxInput" style={{ color: "blue", marginLeft: "20px" }}>Asosiy bosh tashkiloti</label>
+                      <label htmlFor="checkboxInput" style={{ color: "blue", marginLeft: "20px" }}>Основная головная организация</label>
                     </div>
 
                     {/* checkbox checked */}
@@ -703,7 +703,7 @@ const TashkilotKurishContent = ({ currentUser }) => {
                           <div className="position-relative">
                             <Select
                               options={yunalishlar}
-                              placeholder="Yo'nalish"
+                              placeholder="Направление"
                               className="yunalishCheckBox"
                               onChange={changeYunalishF}
                               isClearable={true}
@@ -717,7 +717,7 @@ const TashkilotKurishContent = ({ currentUser }) => {
                           <div className="position-relative">
                             <Select
                               options={yunalishTashkilotlarF}
-                              placeholder="Bosh tashkilot"
+                              placeholder="Основная организация"
                               className="asosiyBoshTashCheckBox"
                               isClearable={true}
                               ref={mainOrgNameCheckboxref}
@@ -730,7 +730,7 @@ const TashkilotKurishContent = ({ currentUser }) => {
                   <div className="row d-flex justify-content-end">
                     <div className="col-lg-2 text-right">
                       <button type="submit" className="btn btn-primary mt-1"><i
-                        className="icon-floppy-disk mr-1"></i> Saqlash
+                        className="icon-floppy-disk mr-1"></i> Сохранять
                       </button>
                     </div>
                   </div>

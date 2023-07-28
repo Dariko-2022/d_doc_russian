@@ -9,45 +9,45 @@ const ForExcelTable = ({ forExcelData }) => {
                         <strong>№</strong>
                     </td>
                     <td width="600" rowSpan="3" bgcolor="#363A41" style={{ color: "#fff", border: "1px solid silver", textAlign: "center" }}>
-                        <strong>Bo'lim nomlanishi</strong>
+                        <strong>Название раздела</strong>
                     </td>
                     <td width="192" colSpan="2" rowSpan="2" bgcolor="#363A41" style={{ color: "#fff", border: "1px solid silver", textAlign: "center" }}>
-                        <strong>Barchasi</strong>
+                        <strong>Все</strong>
                     </td>
                     <td width="192" colSpan="2" rowSpan="2" bgcolor="#363A41" style={{ color: "#fff", border: "1px solid silver", textAlign: "center" }}>
-                        <strong>Bajarilgan</strong>
+                        <strong>Сделанный</strong>
                     </td>
                     <td width="576" height="25" colSpan="6" bgcolor="#363A41" style={{ color: "#fff", border: "1px solid silver", textAlign: "center" }}>
-                        <strong>Muddatidan kech bajarilgan</strong>
+                        <strong>Сделано поздно</strong>
                     </td>
                     <td width="192" colSpan="2" rowSpan="2" bgcolor="#363A41" style={{ color: "#fff", border: "1px solid silver", textAlign: "center" }}>
-                        <strong>Bajarilmagan</strong>
+                        <strong>Не выполнено</strong>
                     </td>
                     <td width="192" colSpan="2" rowSpan="2" bgcolor="#363A41" style={{ color: "#fff", border: "1px solid silver", textAlign: "center" }}>
-                        <strong>Jarayonda</strong>
+                        <strong>в Процесси</strong>
                     </td>
                     <td width="576" colSpan="6" bgcolor="#363A41" style={{ color: "#fff", border: "1px solid silver", textAlign: "center" }}>
-                        <strong>Muddati bor</strong>
+                        <strong>Есть крайний срок</strong>
                     </td>
                     <td width="192" colSpan="2" rowSpan="2" bgcolor="#363A41" style={{ color: "#fff", border: "1px solid silver", textAlign: "center" }}>
-                        <strong>Rad etilgan</strong>
+                        <strong>Отклоненный</strong>
                     </td>
                 </tr>
                 <tr style={{ textAlign: "center" }}>
                     <td height="25" colSpan="2" bgcolor="#363A41" style={{ color: "#fff", border: "1px solid silver", textAlign: "center" }}>
-                        <strong>1 kun</strong>
+                        <strong>1 день</strong>
                     </td>
                     <td colSpan="2" bgcolor="#363A41" style={{ color: "#fff", border: "1px solid silver", textAlign: "center" }}>
-                        <strong>2-3 kun</strong>
+                        <strong>2-3 день</strong>
                     </td>
                     <td colSpan="2" bgcolor="#363A41" style={{ color: "#fff", border: "1px solid silver", textAlign: "center" }}>
                         <strong>4 (~)</strong>
                     </td>
                     <td colSpan="2" bgcolor="#363A41" style={{ color: "#fff", border: "1px solid silver", textAlign: "center" }}>
-                        <strong>1 kun</strong>
+                        <strong>1 день</strong>
                     </td>
                     <td colSpan="2" bgcolor="#363A41" style={{ color: "#fff", border: "1px solid silver", textAlign: "center" }}>
-                        <strong>2-3 kun</strong>
+                        <strong>2-3 день</strong>
                     </td>
                     <td colSpan="2" bgcolor="#363A41" style={{ color: "#fff", border: "1px solid silver", textAlign: "center" }}>
                         <strong>4 (~)</strong>
@@ -55,64 +55,64 @@ const ForExcelTable = ({ forExcelData }) => {
                 </tr>
                 <tr style={{ textAlign: "center" }}>
                     <td height="25" bgcolor="#363A41" colSpan="2" style={{ color: "#fff", border: "1px solid silver", textAlign: "center" }}>
-                        <strong>Soni</strong>
+                        <strong>Число</strong>
                     </td>
                     <td bgcolor="#363A41" style={{ color: "#fff", border: "1px solid silver", textAlign: "center" }}>
-                        <strong>Soni</strong>
-                    </td>
-                    <td bgcolor="#363A41" style={{ color: "#fff", border: "1px solid silver", textAlign: "center" }}>
-                        <strong>%</strong>
-                    </td>
-                    <td bgcolor="#363A41" style={{ color: "#fff", border: "1px solid silver", textAlign: "center" }}>
-                        <strong>Soni</strong>
+                        <strong>Число</strong>
                     </td>
                     <td bgcolor="#363A41" style={{ color: "#fff", border: "1px solid silver", textAlign: "center" }}>
                         <strong>%</strong>
                     </td>
                     <td bgcolor="#363A41" style={{ color: "#fff", border: "1px solid silver", textAlign: "center" }}>
-                        <strong>Soni</strong>
+                        <strong>Число</strong>
                     </td>
                     <td bgcolor="#363A41" style={{ color: "#fff", border: "1px solid silver", textAlign: "center" }}>
                         <strong>%</strong>
                     </td>
                     <td bgcolor="#363A41" style={{ color: "#fff", border: "1px solid silver", textAlign: "center" }}>
-                        <strong>Soni</strong>
+                        <strong>Число</strong>
                     </td>
                     <td bgcolor="#363A41" style={{ color: "#fff", border: "1px solid silver", textAlign: "center" }}>
                         <strong>%</strong>
                     </td>
                     <td bgcolor="#363A41" style={{ color: "#fff", border: "1px solid silver", textAlign: "center" }}>
-                        <strong>Soni</strong>
+                        <strong>Число</strong>
                     </td>
                     <td bgcolor="#363A41" style={{ color: "#fff", border: "1px solid silver", textAlign: "center" }}>
                         <strong>%</strong>
                     </td>
                     <td bgcolor="#363A41" style={{ color: "#fff", border: "1px solid silver", textAlign: "center" }}>
-                        <strong>Soni</strong>
+                        <strong>Число</strong>
                     </td>
                     <td bgcolor="#363A41" style={{ color: "#fff", border: "1px solid silver", textAlign: "center" }}>
                         <strong>%</strong>
                     </td>
                     <td bgcolor="#363A41" style={{ color: "#fff", border: "1px solid silver", textAlign: "center" }}>
-                        <strong>Soni</strong>
+                        <strong>Число</strong>
                     </td>
                     <td bgcolor="#363A41" style={{ color: "#fff", border: "1px solid silver", textAlign: "center" }}>
                         <strong>%</strong>
                     </td>
                     <td bgcolor="#363A41" style={{ color: "#fff", border: "1px solid silver", textAlign: "center" }}>
-                        <strong>Soni</strong>
+                        <strong>Число</strong>
                     </td>
                     <td bgcolor="#363A41" style={{ color: "#fff", border: "1px solid silver", textAlign: "center" }}>
                         <strong>%</strong>
                     </td>
                     <td bgcolor="#363A41" style={{ color: "#fff", border: "1px solid silver", textAlign: "center" }}>
-                        <strong>Soni</strong>
+                        <strong>Число</strong>
                     </td>
                     <td bgcolor="#363A41" style={{ color: "#fff", border: "1px solid silver", textAlign: "center" }}>
                         <strong>%</strong>
                     </td>
                     <td bgcolor="#363A41" style={{ color: "#fff", border: "1px solid silver", textAlign: "center" }}>
-                        <strong>Soni</strong>
+                        <strong>Число</strong>
+                    </td>
+                    <td bgcolor="#363A41" style={{ color: "#fff", border: "1px solid silver", textAlign: "center" }}>
+                        <strong>%</strong>
+                    </td>
+                    <td bgcolor="#363A41" style={{ color: "#fff", border: "1px solid silver", textAlign: "center" }}>
+                        <strong>Число</strong>
                     </td>
                     <td bgcolor="#363A41" style={{ color: "#fff", border: "1px solid silver", textAlign: "center" }}>
                         <strong>%</strong>

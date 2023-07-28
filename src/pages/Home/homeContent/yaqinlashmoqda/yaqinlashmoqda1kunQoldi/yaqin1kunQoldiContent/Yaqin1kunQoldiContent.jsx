@@ -38,7 +38,7 @@ const Yaqin1kunQoldiContent = ({ permission, currentUser }) => {
 
   return (
     <div className="content content-mobile mb-5">
-      <h3 style={{ margin: "10px 0 0 0", fontWeight: "bold", textTransform: "uppercase" }}>1 kun qoldi</h3>
+      <h3 style={{ margin: "10px 0 0 0", fontWeight: "bold", textTransform: "uppercase" }}>Остался 1 день</h3>
       <div className="card-body card-body-mobile p-0">
         <ul className="nav nav-tabs nav-tabs-solid nav-tabs-solid-custom bg-primary NavLink" style={{ paddingTop: "2px" }}>
           <YaqinlashmoqdaNavbar currentUser={currentUser} />

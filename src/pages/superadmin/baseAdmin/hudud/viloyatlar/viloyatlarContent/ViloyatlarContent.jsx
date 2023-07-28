@@ -89,7 +89,7 @@ const ViloyatlarContent = ({ currentUser }) => {
       const res = await axiosInstanceFq.post('province/create', {
         name: nameref.current.value
       })
-      Alert(setAlert, 'success', `Ma'lumot muvaffaqiyatli qo'shildi`);
+      Alert(setAlert, 'success', `Информация успешно добавлена`); 
       if (res?.data?.data)
         setData(prev => [...prev, res?.data?.data]);
       nameref.current.value = "";
@@ -101,7 +101,7 @@ const ViloyatlarContent = ({ currentUser }) => {
 
   return (
     <div className="content mb-5">
-      <h3 style={{ margin: "10px 0 0 0", fontWeight: "bold", textTransform: "upperCase" }}>Viloyatlar</h3>
+      <h3 style={{ margin: "10px 0 0 0", fontWeight: "bold", textTransform: "upperCase" }}>Провинции</h3>
       <div className="card-body p-0">
         <ul className="nav nav-tabs nav-tabs-solid nav-tabs-solid-custom bg-primary NavLink">
           <HududNavbar />
@@ -120,13 +120,13 @@ const ViloyatlarContent = ({ currentUser }) => {
                           placeholder="Placeholder"
                           ref={nameref}
                         />
-                        <label className="label-floating">Nomlanishi</label>
+                        <label className="label-floating">Именование</label>
                       </div>
                     </div>
                   </div>
                   <div className="col-lg-4">
                     <button type="button" style={{ width: "150px", height: "55px" }} className="btn btn-primary" onClick={(e) => clickEnter(e)}>
-                      <i className="icon-floppy-disk mr-1"></i> Saqlash
+                      <i className="icon-floppy-disk mr-1"></i> Сохранять
                     </button>
                   </div>
                 </div>
@@ -135,8 +135,8 @@ const ViloyatlarContent = ({ currentUser }) => {
                   <thead>
                     <tr className="bg-dark text-white NavLink text-center">
                       <th style={{ width: "5%" }}>№</th>
-                      <th style={{ width: "40%" }}>Nomlanishi</th>
-                      <th style={{ width: "15%" }}>Harakatlar</th>
+                      <th style={{ width: "40%" }}>Именование</th>
+                      <th style={{ width: "15%" }}>Действия</th>
                     </tr>
                   </thead>
                   <tbody>

@@ -141,22 +141,22 @@ const CompleteInputsElements = ({ setData, setSelected }) => {
                   name="id" value="Id" />
                 <input type="submit"
                   className="btn btn-white dropdown-item  w-100 myBtn"
-                  name="xujjat" value="Xijjat Turi" />
+                  name="xujjat" value="Тип документ" />
                 <input type="submit"
                   className="btn btn-white dropdown-item  w-100 myBtn"
-                  name="korres" value="Korrespondent" />
+                  name="korres" value="Корреспондент" />
                 <input type="submit"
                   className="btn btn-white dropdown-item  w-100 myBtn"
-                  name="qisqacha" value="Qisqacha Ma'lumot" />
+                  name="qisqacha" value="Краткая информация" />
                 <input type="submit"
                   className="btn btn-white dropdown-item  w-100 myBtn"
-                  name="reg" value="Chiquvchi № / Sana" />
+                  name="reg" value="Исходящий  № / Дата" />
                 <input type="submit"
                   className="btn btn-white dropdown-item  w-100 myBtn"
-                  name="ijrochi" value="Reg № / Sana" />
+                  name="ijrochi" value="Рег № / Дата" />
                 <input type="submit"
                   className="btn btn-white dropdown-item  w-100 myBtn"
-                  name="harakat" value="Harakatlar" />
+                  name="harakat" value="Действия" />
               </div>
             </div>
           </th>

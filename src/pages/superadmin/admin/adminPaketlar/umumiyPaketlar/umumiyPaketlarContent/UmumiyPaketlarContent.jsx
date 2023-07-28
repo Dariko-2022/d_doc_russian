@@ -92,7 +92,7 @@ const UmumiyPaketlarContent = ({ currentUser }) => {
 
   return (
     <div className="content mb-5 ">
-      <h3 style={{ margin: "10px 0 0 0", fontWeight: "bold", textTransform: "upperCase" }}>Umumiy Paketlar</h3>
+      <h3 style={{ margin: "10px 0 0 0", fontWeight: "bold", textTransform: "upperCase" }}>Общие пакеты</h3>
       <div className="">
         <div className="card-body p-0" >
           <ul className="nav nav-tabs nav-tabs-solid nav-tabs-solid-custom bg-primary NavLink d-flex align-items-center justify-content-between">
@@ -102,7 +102,7 @@ const UmumiyPaketlarContent = ({ currentUser }) => {
               textTransform: "upperCase",
               color: "#fff",
               padding: "0 5px 5px 0"
-            }}>Kartochkalar boshqaruv paneli</h5></li>
+            }}>Панель управления картами</h5></li>
           </ul>
 
           {/* directions */}

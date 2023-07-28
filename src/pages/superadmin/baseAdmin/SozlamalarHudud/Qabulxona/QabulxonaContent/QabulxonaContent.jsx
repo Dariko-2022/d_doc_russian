@@ -106,7 +106,7 @@ const QabulxonaContent = ({ currentUser }) => {
         if (d.id !== res.data.id) arr.push(d)
       })
       setData(arr);
-      Alert(setAlert, 'warning', `Muvoffaqiyatli o'chirdingiz`)
+      Alert(setAlert, 'warning', `Вы успешно удалили`)
     } catch (error) {
       console.log(error);
       Alert(setAlert, 'warning', `${error.response.data}`)
@@ -129,7 +129,7 @@ const QabulxonaContent = ({ currentUser }) => {
 
   return (
     <div className="content mb-5">
-      <h3 style={{ margin: "10px 0 0 20px", fontWeight: "bold", textTransform: "upperCase" }}>Murojaat Turi</h3>
+      <h3 style={{ margin: "10px 0 0 20px", fontWeight: "bold", textTransform: "upperCase" }}> Тип приложения</h3>
       <div className="card-body">
         <ul className="nav nav-tabs nav-tabs-solid nav-tabs-solid-custom bg-primary NavLink"
           style={{ borderTopRightRadius: "5px", borderTopLeftRadius: "5px" }}>
@@ -148,7 +148,7 @@ const QabulxonaContent = ({ currentUser }) => {
                             className="form-control form-control-outline name"
                             placeholder="Placeholder" />
                           <label className="label-floating"
-                          >Nomlanishi</label>
+                          >Именование</label>
                         </div>
                       </div>
                     </div>
@@ -156,7 +156,7 @@ const QabulxonaContent = ({ currentUser }) => {
                   <div className="col-lg-4">
                     <button type="button" style={{ width: "150px", height: "55px" }}
                       className="btn btn-primary" onClick={() => clickEnter()}><i
-                        className="icon-floppy-disk"></i> Saqlash
+                        className="icon-floppy-disk"></i> Сохранять
                     </button>
                   </div>
                 </div>
@@ -165,8 +165,8 @@ const QabulxonaContent = ({ currentUser }) => {
                   <thead>
                     <tr className="bg-dark text-white NavLink text-center">
                       <th style={{ width: "5%" }}>№</th>
-                      <th style={{ width: "40%" }}>Nomlanishi</th>
-                      <th style={{ width: "15%" }}>Harakatlar</th>
+                      <th style={{ width: "40%" }}>Именование</th>
+                      <th style={{ width: "15%" }}>действия</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -230,7 +230,7 @@ const QabulxonaContent = ({ currentUser }) => {
                     <div className="updateDataWindowWrapper">
                       <form>
                         <div className="updateDataWindowTop">
-                          <h3>O'zgartirish oynasi</h3>
+                          <h3>Изменить окно</h3>
                           <span onClick={() => setUpdateModal({
                             open: false,
                             obj: {}
@@ -246,11 +246,11 @@ const QabulxonaContent = ({ currentUser }) => {
                         <hr />
                         <div className="updateDataWindowBottom">
                           <button type={'button'} className="btn btn-danger"
-                            onClick={() => setUpdateModal({ open: false, obj: {} })}>Bekor
-                            qilish
+                            onClick={() => setUpdateModal({ open: false, obj: {} })}> Отмена 
+
                           </button>
                           <button type={'button'} className="btn btn-primary"
-                            onClick={() => updatedData(updateModal.obj)}>O'zgartirish
+                            onClick={() => updatedData(updateModal.obj)}>Изменять
                           </button>
                         </div>
                       </form>

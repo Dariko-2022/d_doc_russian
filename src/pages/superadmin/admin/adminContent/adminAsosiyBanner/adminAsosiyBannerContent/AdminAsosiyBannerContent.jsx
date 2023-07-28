@@ -4,7 +4,7 @@ import AdminContentNavbar from "../../adminContentNavbar/AdminContentNavbar";
 const AdminAsosiyBannerContent = ({ currentUser }) => {
   return (
     <div className="content">
-      <h3 style={{ margin: "10px 0 0 0", fontWeight: "bold", textTransform: "upperCase" }}>Asosiy Banner</h3>
+      <h3 style={{ margin: "10px 0 0 0", fontWeight: "bold", textTransform: "upperCase" }}>Главный баннер</h3>
       <div className="">
         <ul className="nav nav-tabs nav-tabs-solid nav-tabs-solid-custom bg-primary NavLink" >
           <AdminContentNavbar />
@@ -18,7 +18,7 @@ const AdminAsosiyBannerContent = ({ currentUser }) => {
                   <div className="col-lg-8">
                     <div className="card ">
                       <div className="card-header bg-primary text-white header-elements-inline">
-                        <h6 className="card-title" style={{ fontWeight: "bold", fontSize: "18px" }}> 1-pozitsiya</h6>
+                        <h6 className="card-title" style={{ fontWeight: "bold", fontSize: "18px" }}> Позиция 1</h6>
                       </div>
                       <div className="d-flex justify-content-center">
                         <img src="/style/images/farmoyish.png" style={{ width: "70%" }} alt="" />
@@ -27,12 +27,12 @@ const AdminAsosiyBannerContent = ({ currentUser }) => {
                         <div className="row">
                           <div className="col-lg-12 d-flex justify-content-center">
                             <button className="btn btn-primary"
-                              style={{ width: "60%" }}>Pozitsiya uchun banner
-                              tanlash</button>
+                              style={{ width: "60%" }}>Выбрать баннер для 
+                              позиции</button>
                           </div>
                           <div className="col-lg-12 mt-2 d-flex justify-content-center">
                             <button className="btn btn-primary"
-                              style={{ width: "15%" }}>Yuborish</button>
+                              style={{ width: "15%" }}>Отправка</button>
                           </div>
                         </div>
                       </div>
@@ -46,7 +46,7 @@ const AdminAsosiyBannerContent = ({ currentUser }) => {
                       <div
                         className="card-header bg-primary text-white header-elements-inline">
                         <h6 className="card-title" style={{ fontWeight: "bold", fontSize: "18px" }}>
-                          2-pozitsiya</h6>
+                         позиция 2</h6>
                       </div>
                       <div className="d-flex justify-content-center">
                         <img src="/style/images/hokimlikapparati.png" style={{ width: "70%" }}
@@ -56,12 +56,11 @@ const AdminAsosiyBannerContent = ({ currentUser }) => {
                         <div className="row">
                           <div className="col-lg-12 d-flex justify-content-center">
                             <button className="btn btn-primary"
-                              style={{ width: "60%" }}>Pozitsiya uchun banner
-                              tanlash</button>
+                              style={{ width: "60%" }}>Выбрать баннер для позиции</button>
                           </div>
                           <div className="col-lg-12 mt-2 d-flex justify-content-center">
                             <button className="btn btn-primary"
-                              style={{ width: "15%" }}>Yuborish</button>
+                              style={{ width: "15%" }}>Отправка</button>
                           </div>
                         </div>
                       </div>

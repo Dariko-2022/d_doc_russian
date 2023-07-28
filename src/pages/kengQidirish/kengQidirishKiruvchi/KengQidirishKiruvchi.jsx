@@ -145,7 +145,7 @@ const KengQidirishKiruvchi = ({ user, setAlert, selected, currentUser, setSelect
     } catch (error) {
       setTimeout(() => {
         // loader.current.style.display = "none";
-        Alert(setAlert, "warning", "Ma'lumot kelishda xatolik yuz berdi");
+        Alert(setAlert, "warning", "Произошла ошибка при получении данных");
       }, 4000);
       console.log(error);
     }
@@ -200,7 +200,7 @@ const KengQidirishKiruvchi = ({ user, setAlert, selected, currentUser, setSelect
         })
         if (res.data.content.length > 0) {
           loader.current.style.display = "none";
-          Alert(setAlert, "success", "Ma'lumot muvaffaqiyatli topildi");
+          Alert(setAlert, "success", "Информация успешно найдена");
           dispatch(ALL_SEARCH_DATA(res.data));
           extensiveSearchAllData(res.data)
           let obj = {
@@ -227,7 +227,7 @@ const KengQidirishKiruvchi = ({ user, setAlert, selected, currentUser, setSelect
           extensiveSearchSendData(obj)
         } else {
           loader.current.style.display = "none";
-          Alert(setAlert, "warning", "Hech qanday ma'lumot topilmadi");
+          Alert(setAlert, "warning", "Информация не найдена");
           dispatch(ALL_SEARCH_DATA([]));
           extensiveSearchAllData([])
           // dispatch(SEND_DATA({}));
@@ -235,7 +235,7 @@ const KengQidirishKiruvchi = ({ user, setAlert, selected, currentUser, setSelect
       } catch (error) {
         setTimeout(() => {
           loader.current.style.display = "none";
-          Alert(setAlert, "warning", "Ma'lumot kelishda xatolik yuz berdi");
+          Alert(setAlert, "warning", "Произошла ошибка при получении данных");
         }, 4000);
         console.log(error);
       }
@@ -286,34 +286,34 @@ const KengQidirishKiruvchi = ({ user, setAlert, selected, currentUser, setSelect
                         <Select
                           defaultValue={{ value: user?.inputData.select, label: user?.inputData.select }}
                           options={[
-                            { value: "Xujjat Turi", label: "Xujjat Turi", isDisabled: true },
+                            { value: "Xujjat turi", label: "Xujjat turi", isDisabled: true },
                             { value: "Kiruvchi", label: "Kiruvchi" },
                             { value: "Chiquvchi", label: "Chiquvchi" },
                           ]}
                           onChange={changeFun}
-                          placeholder="Xujjat Turi"
+                          placeholder="Тип документа"
                         />
                       ) : (
                         user?.inputData.select === "Chiquvchi" ? (
                           <Select
                             defaultValue={{ value: user?.inputData.select, label: user?.inputData.select }}
                             options={[
-                              { value: "Xujjat Turi", label: "Xujjat Turi", isDisabled: true },
-                              { value: "Kiruvchi", label: "Kiruvchi" },
-                              { value: "Chiquvchi", label: "Chiquvchi" },
+                            {value: "Xujjat turi", label: "Xujjat turi", isDisabled: true },
+                            { value: "Kiruvchi", label: "Kiruvchi" },
+                            { value: "Chiquvchi", label: "Chiquvchi" },
                             ]}
                             onChange={changeFun}
-                            placeholder="Xujjat Turi"
+                            placeholder="Тип документа"
                           />
                         ) : (
                           <Select
                             options={[
-                              { value: "Xujjat Turi", label: "Xujjat Turi", isDisabled: true },
+                              {value: "Xujjat turi", label: "Xujjat turi", isDisabled: true },
                               { value: "Kiruvchi", label: "Kiruvchi" },
                               { value: "Chiquvchi", label: "Chiquvchi" },
                             ]}
                             onChange={changeFun}
-                            placeholder="Xujjat Turi"
+                            placeholder="Тип документа"
                           />
                         )
                       )}
@@ -327,7 +327,7 @@ const KengQidirishKiruvchi = ({ user, setAlert, selected, currentUser, setSelect
                           className="btn btn-primary form-control"
                           ref={searchBtn}
                         >
-                          <i className='fas fa-search mr-1'></i>Qidirish
+                          <i className='fas fa-search mr-1'></i>Поиск
                         </button>
                       </div>
                     </div>
@@ -340,7 +340,7 @@ const KengQidirishKiruvchi = ({ user, setAlert, selected, currentUser, setSelect
                           className="btn btn-primary form-control"
                           onClick={clearAllData}
                         >
-                          <i className='fas fa-eraser mr-1'></i>Tozalash
+                          <i className='fas fa-eraser mr-1'></i>Очистить
                         </button>
                       </div>
                     </div>
@@ -354,7 +354,7 @@ const KengQidirishKiruvchi = ({ user, setAlert, selected, currentUser, setSelect
                             className="btn btn-primary form-control"
                             ref={exportBtn}
                           >
-                            <i className='fas fa-file-export mr-1'></i>Export
+                            <i className='fas fa-file-export mr-1'></i>Экспорт
                           </button>
                         </div>
                       </div>
@@ -366,7 +366,7 @@ const KengQidirishKiruvchi = ({ user, setAlert, selected, currentUser, setSelect
                         <Select
                           defaultValue={user?.inputData?.executorsId}
                           options={ijrochi}
-                          placeholder="Ijrochi"
+                          placeholder="Исполнительный"
                           className="Ijrochi"
                           isClearable={true}
                           styles={colourStyles}

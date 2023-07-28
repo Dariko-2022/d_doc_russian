@@ -477,7 +477,7 @@ const TashqiBajaruvchilarKurish = ({
         });
         if (arr.length > 0) {
           if (d.querySelector('.inputTashqiTash').value === "") {
-            Alert(setAlert, "warning", "Yo'nalish ichidagi barcha tashkilot tanlangan holatda, qisqacha tavsif kiritilishi majburiy, aks holda tashkilotlar tanlanmagan holatda yuboriladi");
+            Alert(setAlert, "warning", "Все организации в маршруте должны быть выбраны, необходимо ввести краткое описание, иначе организации будут отправлены не выбранными");
           } else {
             result.push({
               id: index,
@@ -509,7 +509,7 @@ const TashqiBajaruvchilarKurish = ({
           <button className="btn btn-dark w-100" onClick={() => setOpenModal(true)}>
             <i className="icon-plus2"></i>
             <span style={{ position: "relative" }}>
-              Tashqi Bajaruvchilar
+            Внешние исполнители
               {(results?.length > 0) && (
                 <span className="badge2">{results.length}</span>
               )}
@@ -522,7 +522,7 @@ const TashqiBajaruvchilarKurish = ({
         <div className="kurishModalBajaruvchi">
           <div className="modal-content">
             <div className="modal-header bg-primary text-white">
-              <h5 className="modal-title">Tashqi bajaruvchilar</h5>
+              <h5 className="modal-title">Внешние исполнители</h5>
               <button type="button" className="close" onClick={() => setOpenModal(false)}>&times;</button>
             </div>
             <div className="modal-body bodyModal"
@@ -566,20 +566,20 @@ const TashqiBajaruvchilarKurish = ({
                         </div>
                       </li>
                       <div className="tashqiBajUlInline" style={{ display: "none" }} idorg={dt?.id}>
-                        <span className="allChecked mr-2">Barchasini tanlash</span>
+                        <span className="allChecked mr-2">Выбрать все</span>
                         <input
                           type="text"
                           className="inputTashqiTash"
-                          placeholder="Qisqacha tavsif"
+                          placeholder="Краткое описание"
                           required
                           minLength={10}
-                          defaultValue="Tuman va shahar hokimliklariga"
+                          defaultValue="В районные и городские администрации"
                         />
                         <br />
                         <input
                           type="text"
                           className="form-control inputChange1"
-                          placeholder="Qidiruv..."
+                          placeholder="Поиск..."
                           onChange={(e) => changeInputChange1(e.target.value, index)}
                         />
                         {dt?.organizations?.length > 0 && dt.organizations.map((d, index1) => (
@@ -594,10 +594,10 @@ const TashqiBajaruvchilarKurish = ({
                               <div style={{ fontSize: "13px" }}>{d?.orgName}</div>
                             </div>
                             <div className="inlineContent2" style={{ display: "none" }}>
-                              <span className="allChecked1">Barchasini tanlash</span>
+                              <span className="allChecked1">Выбрать все</span>
                               <br />
                               <input type="text" className="form-control inputChange2"
-                                placeholder="Qidiruv..."
+                                placeholder="Поиск..."
                                 onChange={(e) => changeInputChange2(e.target.value, index)} />
                               {d?.organizations?.length > 0 && d.organizations.map((d1, index2) => (
                                 <div key={index2} className="inlineContent3">
@@ -619,7 +619,7 @@ const TashqiBajaruvchilarKurish = ({
               </form>
               <div className="d-flex justify-content-end" style={{ position: "sticky", top: "0px" }}>
                 <button type="button" className="btn btn-primary" onClick={saveAllSelectOrganizations}>
-                  <i className="fas fa-save mr-2"></i>Saqlash
+                  <i className="fas fa-save mr-2"></i>Сохранять
                 </button>
               </div>
             </div>

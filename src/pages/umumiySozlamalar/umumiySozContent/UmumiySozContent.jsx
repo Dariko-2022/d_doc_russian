@@ -10,7 +10,7 @@ export default function UmumiySozContent({ currentUser }) {
                         <div className="card">
                             <div className="card-header  bg-primary">
                                 <h1 className="card-title text-light ">
-                                    Umumiy Sozlamalar
+                                общие настройки
                                 </h1>
                             </div>
                             <div className="card-body">
@@ -19,7 +19,7 @@ export default function UmumiySozContent({ currentUser }) {
                                         <div className="card-header">
                                             <h4 className="card-title">
                                                 <a className="collapsed text-body" data-toggle="collapse"
-                                                    href="#accordion-item-default2">Umumiy Sozlamalar</a>
+                                                    href="#accordion-item-default2">общие настройки</a>
                                             </h4>
                                         </div>
 
@@ -36,7 +36,7 @@ export default function UmumiySozContent({ currentUser }) {
                                                                     <i className="icon-qrcode icon-2x text-primary border-primary border-3 rounded-pill p-3 mr-2"></i>
                                                                     {/* <h5 className="card-title"></h5> */}
                                                                     <Link to="/umumiySozlamalar_tashkiliy-tuzilma" className="btn btn-primary">
-                                                                        Tashkiliy Tuzilma
+                                                                    Организационная структура
                                                                     </Link>
                                                                     {/* <a href="./tashkiliytuzilma.html"
                                                                         className="btn btn-primary">Tashkiliy Tuzilma
@@ -50,7 +50,7 @@ export default function UmumiySozContent({ currentUser }) {
                                                                 <div className="d-flex align-items-center justify-content-center">
                                                                     <i className="icon-stack2 icon-2x text-primary border-primary border-3 rounded-pill p-3 mr-2"></i>
                                                                     {/* <h5 className="card-title"></h5> */}
-                                                                    <button className="btn btn-primary">AdminSozlamalar</button>
+                                                                    <button className="btn btn-primary">Настройки администратора</button>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -60,7 +60,7 @@ export default function UmumiySozContent({ currentUser }) {
                                                                 <div className="d-flex align-items-center justify-content-center">
                                                                     <i className="icon-stack icon-2x text-primary border-primary border-3 rounded-pill p-3 mr-2"></i>
                                                                     {/* <h5 className="card-title"></h5> */}
-                                                                    <Link to="/umumiySozlamalar_modul-sozlamalari" className="btn btn-primary">Modul Sozlamalar</Link>
+                                                                    <Link to="/umumiySozlamalar_modul-sozlamalari" className="btn btn-primary">Настройки модуля</Link>
                                                                     {/* <a href="./modulSozlamalari.html" className="btn btn-primary">Modul Sozlamalar</a> */}
                                                                 </div>
                                                             </div>
@@ -72,7 +72,7 @@ export default function UmumiySozContent({ currentUser }) {
                                                                     <i
                                                                         className="icon-user icon-2x text-primary border-primary border-3 rounded-pill p-3 mr-2"></i>
                                                                     {/* <h5 className="card-title"></h5> */}
-                                                                    <Link to="/umumiySozlamalar_foydalanuvchi-sozlamalari" className="btn btn-primary">Foydalauvchi Sozlamalar</Link>
+                                                                    <Link to="/umumiySozlamalar_foydalanuvchi-sozlamalari" className="btn btn-primary">Пользовательские настройки</Link>
                                                                     {/* <a href="./foydlanuvchiBirktirish.html" className="btn btn-primary">Foydalauvchi Sozlamalar</a> */}
                                                                 </div>
                                                             </div>
@@ -87,7 +87,7 @@ export default function UmumiySozContent({ currentUser }) {
                                                                 <div className="d-flex align-items-center justify-content-center">
                                                                     <i className="icon-qrcode icon-2x text-primary border-primary border-3 rounded-pill p-3 mr-2"></i>
                                                                     {/* <h5 className="card-title"></h5> */}
-                                                                    <button className="btn btn-primary">Tashkiliy Tuzilma</button>
+                                                                    <button className="btn btn-primary">Организационная структура</button>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -97,7 +97,7 @@ export default function UmumiySozContent({ currentUser }) {
                                                                 <div className="d-flex align-items-center justify-content-center">
                                                                     <i className="icon-stack2 icon-2x text-primary border-primary border-3 rounded-pill p-3 mr-2"></i>
                                                                     {/* <h5 className="card-title"></h5> */}
-                                                                    <button className="btn btn-primary">Admin Sozlamalar</button>
+                                                                    <button className="btn btn-primary">Настройки администратора</button>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -107,7 +107,7 @@ export default function UmumiySozContent({ currentUser }) {
                                                                 <div className="d-flex align-items-center justify-content-center">
                                                                     <i className="icon-stack icon-2x text-primary border-primary border-3 rounded-pill p-3 mr-2"></i>
                                                                     {/* <h5 className="card-title"></h5> */}
-                                                                    <button className="btn btn-primary">Modul Sozlamalar</button>
+                                                                    <button className="btn btn-primary">Настройки модуля</button>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -117,7 +117,7 @@ export default function UmumiySozContent({ currentUser }) {
                                                                 <div className="d-flex align-items-center justify-content-center">
                                                                     <i className="icon-user icon-2x text-primary border-primary border-3 rounded-pill p-3 mr-2"></i>
                                                                     {/* <h5 className="card-title"></h5> */}
-                                                                    <button className="btn btn-primary">Foydalauvchi Sozlamalar</button>
+                                                                    <button className="btn btn-primary">Пользовательские настройки</button>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -132,7 +132,7 @@ export default function UmumiySozContent({ currentUser }) {
                                         <div className="card-header">
                                             <h4 className="card-title">
                                                 <a className="collapsed text-body" data-toggle="collapse"
-                                                    href="#accordion-item-default3">Ma'lumotlar Bazasi Sozlamalar
+                                                    href="#accordion-item-default3">Настройки базы данных
                                                 </a>
                                             </h4>
                                         </div>
@@ -148,7 +148,7 @@ export default function UmumiySozContent({ currentUser }) {
                                                                 <div className="d-flex align-items-center justify-content-center">
                                                                     <i className="icon-qrcode icon-2x text-primary border-primary border-3 rounded-pill p-3 mr-2"></i>
                                                                     {/* <h5 className="card-title"></h5> */}
-                                                                    <button className="btn btn-primary">Tashkiliy Tuzilma</button>
+                                                                    <button className="btn btn-primary">Организационная структура</button>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -158,7 +158,7 @@ export default function UmumiySozContent({ currentUser }) {
                                                                 <div className="d-flex align-items-center justify-content-center">
                                                                     <i className="icon-stack2 icon-2x text-primary border-primary border-3 rounded-pill p-3 mr-2"></i>
                                                                     {/* <h5 className="card-title"></h5> */}
-                                                                    <button className="btn btn-primary">Admin Sozlamalar</button>
+                                                                    <button className="btn btn-primary">Настройки администратора</button>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -168,7 +168,7 @@ export default function UmumiySozContent({ currentUser }) {
                                                                 <div className="d-flex align-items-center justify-content-center">
                                                                     <i className="icon-stack icon-2x text-primary border-primary border-3 rounded-pill p-3 mr-2"></i>
                                                                     {/* <h5 className="card-title"></h5> */}
-                                                                    <button className="btn btn-primary">Modul Sozlamalar</button>
+                                                                    <button className="btn btn-primary">Настройки модуля</button>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -178,7 +178,7 @@ export default function UmumiySozContent({ currentUser }) {
                                                                 <div className="d-flex align-items-center justify-content-center">
                                                                     <i className="icon-user icon-2x text-primary border-primary border-3 rounded-pill p-3 mr-2"></i>
                                                                     {/* <h5 className="card-title"></h5> */}
-                                                                    <button className="btn btn-primary">Foydalauvchi Sozlamalar</button>
+                                                                    <button className="btn btn-primary">Пользовательские настройки </button>
                                                                 </div>
                                                             </div>
                                                         </div>

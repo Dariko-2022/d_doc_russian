@@ -20,8 +20,8 @@ const Fishka = ({ data, params }) => {
       <div className="text-center">
         {(data.document?.isDirect && data.document?.hasMainFishka) ?
           !isMainFishka ?
-            <button className="btn btn-success ml-3 mb-3" onClick={() => setIsMainFishka(!isMainFishka)}>{"Asosiy rezolutsiyani ko'rish"} </button> :
-            <button className="btn btn-danger ml-3 mb-3" onClick={() => setIsMainFishka(!isMainFishka)}>{"Asosiy rezolutsiyani yopish"} </button> : ""}
+            <button className="btn btn-success ml-3 mb-3" onClick={() => setIsMainFishka(!isMainFishka)}>{"Посмотреть основное разрешение"} </button> :
+            <button className="btn btn-danger ml-3 mb-3" onClick={() => setIsMainFishka(!isMainFishka)}>{"Закрыть основное разрешение"} </button> : ""}
       </div>
       {isMainFishka && (
         <div className="ml-3 mr-3">

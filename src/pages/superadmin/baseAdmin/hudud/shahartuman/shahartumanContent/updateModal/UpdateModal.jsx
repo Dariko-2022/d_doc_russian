@@ -42,7 +42,7 @@ const UpdateModal = ({ updateModal, setUpdateModal, currentUser, setAlert, data,
         <div className="updateDataWindowWrapper">
           <form>
             <div className="updateDataWindowTop">
-              <h3>O'zgartirish oynasi</h3>
+              <h3>Изменить окно</h3>
               <span onClick={() => setUpdateModal({
                 open: false,
                 obj: {}
@@ -66,7 +66,7 @@ const UpdateModal = ({ updateModal, setUpdateModal, currentUser, setAlert, data,
                   }}
                   options={notParentsCard}
                   // onChange={notParentsCardClick1}
-                  placeholder="Yo'nalish:"
+                  placeholder="Направление:"
                   className="cardTypeId"
                   ref={cardTyperef}
                 />
@@ -79,10 +79,10 @@ const UpdateModal = ({ updateModal, setUpdateModal, currentUser, setAlert, data,
                   open: false,
                   obj: {}
                 })}>
-                Bekor qilish
+               Отмена
               </button>
               <button type={'button'} className="btn btn-primary"
-                onClick={() => updatedData(updateModal.obj)}>O'zgartirish
+                onClick={() => updatedData(updateModal.obj)}> Изменять
               </button>
             </div>
           </form>

@@ -70,13 +70,13 @@ const TableData = ({ data, currentUser, setData, name, setAlert }) => {
         <thead>
           <tr className="bg-dark text-white NavLink text-center">
             <th style={{ width: "5%" }}>№</th>
-            <th style={{ width: "25%" }}>Bo'lim</th>
-            <th style={{ width: "15%" }}>Lavozim</th>
-            <th style={{ width: "15%" }}>F.I.SH</th>
-            <th style={{ width: "15%" }}>Telefon</th>
+            <th style={{ width: "25%" }}>Отделение</th>
+            <th style={{ width: "15%" }}>Позиция</th>
+            <th style={{ width: "15%" }}>Ф.И.Ш</th>
+            <th style={{ width: "15%" }}>Телефон</th>
             <th style={{ width: "10%" }}>E-mail</th>
-            <th style={{ width: "10%" }}>PinFL</th>
-            <th style={{ width: "5%" }}>Harakatlar</th>
+            <th style={{ width: "10%" }}>ПНФЛ</th>
+            <th style={{ width: "5%" }}>Действия</th>
           </tr>
         </thead>
         <tbody>

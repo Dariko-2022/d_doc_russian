@@ -21,17 +21,17 @@ const IchkiTopshiriqlar = ({ data, dateFormat }) => {
         <div className="col-lg-12">
           <div className="card">
             <div className="card-header bg-primary text-white header-elements-inline">
-              <h6 className="card-title" style={{ fontWeight: "bold", textTransform: "upperCase" }}>Ichki Topshiriqlar</h6>
+              <h6 className="card-title" style={{ fontWeight: "bold", textTransform: "upperCase" }}>Внутренние задания</h6>
             </div>
             <div className="card-body">
               <div className="table-responsive">
                 <table className="table table-striped table-bordered table-hover Tab">
                   <thead className="bg-dark text-white NavLink text-center">
                     <tr>
-                      <th style={{ width: "15%" }}>Topshiriq</th>
-                      <th style={{ width: "20%" }}>Muddat/holat</th>
-                      <th style={{ width: "30%" }}>Qo'shimcha izoh</th>
-                      <th style={{ width: "40%" }}>Ijro</th>
+                      <th style={{ width: "15%" }}>Присвоение</th>
+                      <th style={{ width: "20%" }}>Срок/статус</th>
+                      <th style={{ width: "30%" }}>Дополнительный комментарий</th>
+                      <th style={{ width: "40%" }}>Производительность</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -39,7 +39,7 @@ const IchkiTopshiriqlar = ({ data, dateFormat }) => {
                       <tr key={index} className="text-center trNumber">
                         <td>
                           <p>{(dat?.firstName && dat?.firstName?.length > 1) ? ((((dat?.firstName[0].toUpperCase() === "S" || dat?.firstName[0].toUpperCase() === "C") && dat?.firstName[1].toUpperCase() === "H")) ? dat?.firstName?.substring(0, 2) + ". " : dat?.firstName?.substring(0, 1) + ". ") : ""}{dat?.lastName}</p>
-                          <p className="badge badge-primary">REG № {data?.document?.journalNumber}</p>
+                          <p className="badge badge-primary">РЕГ № {data?.document?.journalNumber}</p>
 
                           <p>{dateFormat(dat?.documentStatusAtTheMoment)}</p>
                         </td>
@@ -64,12 +64,12 @@ const IchkiTopshiriqlar = ({ data, dateFormat }) => {
                               <span className="mb-1">
                                 <span style={{ fontWeight: "400" }}>
                                   <span onClick={() => setOpenStrFunc(index, "n")} style={{ display: "none" }} className="cursor-pointer IzohIchkiTopshiriqNone" >
-                                    <strong>Izoh:</strong>&nbsp; {dat?.executeDocument?.comment}<span style={{ color: "blue", fontSize: "11px" }}>&nbsp; yashirish</span>
+                                    <strong>Izoh:</strong>&nbsp; {dat?.executeDocument?.comment}<span style={{ color: "blue", fontSize: "11px" }}>&nbsp; Скрывать</span>
                                   </span>
                                   <span onClick={() => setOpenStrFunc(index, "b")} style={{ display: "block" }} className="cursor-pointer IzohIchkiTopshiriqBlock">
                                     <strong>Izoh:</strong>&nbsp; {dat?.executeDocument?.comment?.substring(0, 50)}...
                                     {dat?.executeDocument?.comment?.length > 50 ? (
-                                      <span style={{ color: "blue", fontSize: "11px" }}>&nbsp; davomi</span>
+                                      <span style={{ color: "blue", fontSize: "11px" }}>&nbsp; продолжение</span>
                                     ) : (
                                       <span></span>
                                     )}
@@ -141,7 +141,7 @@ const IchkiTopshiriqlar = ({ data, dateFormat }) => {
                           <tr key={index} className="text-center trNumberRedirect" >
                             <td>
                               <p>{(user?.firstName && user?.firstName?.length > 1) ? ((((user?.firstName[0].toUpperCase() === "S" || user?.firstName[0].toUpperCase() === "C") && user?.firstName[1].toUpperCase() === "H")) ? user?.firstName?.substring(0, 2) + ". " : user?.firstName?.substring(0, 1) + ". ") : ""}{user?.lastName}</p>
-                              <p className="badge badge-primary">REG № {data?.document?.journalNumber}</p>
+                              <p className="badge badge-primary">РЕГ № {data?.document?.journalNumber}</p>
                               <p>{dateFormat(user?.documentStatusAtTheMoment)}</p>
                             </td>
                             <td className="py-2 px-0">
@@ -164,12 +164,12 @@ const IchkiTopshiriqlar = ({ data, dateFormat }) => {
                                     <span className="mb-1">
                                       <span style={{ fontWeight: "400" }}>
                                         <span style={{ display: "none" }} className="cursor-pointer IzohIchkiTopshiriqNoneY" >
-                                          <strong>Izoh:</strong>&nbsp; {user?.executeDocument?.comment} <span style={{ color: "blue", fontSize: "11px" }}>&nbsp; yashirish</span>
+                                          <strong>Izoh:</strong>&nbsp; {user?.executeDocument?.comment} <span style={{ color: "blue", fontSize: "11px" }}>&nbsp; Скрывать</span>
                                         </span>
                                         <span style={{ display: "block" }} className="cursor-pointer IzohIchkiTopshiriqBlockY">
                                           <strong>Izoh:</strong>&nbsp; {user?.executeDocument?.comment?.substring(0, 50)}...
                                           {user?.executeDocument?.comment?.length > 50 ? (
-                                            <span style={{ color: "blue", fontSize: "11px" }}>&nbsp; davomi</span>
+                                            <span style={{ color: "blue", fontSize: "11px" }}>&nbsp; продолжение</span>
                                           ) : (
                                             <span></span>
                                           )}

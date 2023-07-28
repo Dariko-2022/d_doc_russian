@@ -84,7 +84,7 @@ const SozlamalarContent = () => {
 
   return (
     <div className="content mb-5">
-      <h3 style={{ margin: "10px 0 0 20px", fontWeight: "bold", textTransform: "upperCase" }}>Kartochka</h3>
+      <h3 style={{ margin: "10px 0 0 20px", fontWeight: "bold", textTransform: "upperCase" }}>Карта</h3>
       <div className="card-body ">
         <ul className="nav nav-tabs nav-tabs-solid nav-tabs-solid-custom bg-primary NavLink">
           <ContentNavbarSozlamalar />
@@ -121,7 +121,7 @@ const SozlamalarContent = () => {
                                         <div className="card">
                                           <div className="card-header bg-dark" onClick={() => getKartochkalar(tash.id)}>
                                             <h6 className="card-title">
-                                              <a data-toggle="collapse" className="text-white" href={`#bTashkilot${index}`}>Kartochkalar</a>
+                                              <a data-toggle="collapse" className="text-white" href={`#bTashkilot${index}`}>Карты</a>
                                             </h6>
                                           </div>
 
@@ -132,7 +132,7 @@ const SozlamalarContent = () => {
                                                   <tr className="bg-dark text-white NavLink text-center">
                                                     <th style={{ width: "3%" }}>№</th>
                                                     <th style={{ width: "15%" }}>Kartochka nomi</th>
-                                                    <th style={{ width: "20%" }}>Bajarilish muddati</th>
+                                                    <th style={{ width: "20%" }}>Срок оплаты</th>
                                                   </tr>
                                                 </thead>
                                                 <tbody id="viloyat">

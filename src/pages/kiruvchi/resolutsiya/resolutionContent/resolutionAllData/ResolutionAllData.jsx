@@ -12,12 +12,12 @@ const ResolutionAllData = ({ data, ranks, linkFunc }) => {
       <thead className="theadSticky">
         <tr className="bg-dark text-white NavLink text-center" style={{ height: "45px" }}>
           <th style={{ width: "5%" }} className="id">№</th>
-          <th style={{ width: "10%" }} className="xujjat mobile-table-none">Fayl</th>
-          <th style={{ width: "20%" }} className="korres">Korrespondent</th>
-          <th style={{ width: "30%" }} className="qiqacha mobile-table-none">Qisqacha Ma'lumot</th>
-          <th style={{ width: "15%" }} className="chiquvchi mobile-table-none">Chiquvchi № / Sana</th>
-          <th style={{ width: "15%" }} className="reg">Reg № / Sana</th>
-          <th style={{ width: "5%" }} className="text-center harakat mobile-table-none">Harakatlar</th>
+          <th style={{ width: "10%" }} className="xujjat mobile-table-none">Файл</th>
+          <th style={{ width: "20%" }} className="korres">Корреспондент</th>
+          <th style={{ width: "30%" }} className="qiqacha mobile-table-none">Краткая информация</th>
+          <th style={{ width: "15%" }} className="chiquvchi mobile-table-none">Исходяший № / Дата</th>
+          <th style={{ width: "15%" }} className="reg">РЕГ № / Дата</th>
+          <th style={{ width: "5%" }} className="text-center harakat mobile-table-none">Действия</th>
         </tr>
       </thead>
       <tbody>

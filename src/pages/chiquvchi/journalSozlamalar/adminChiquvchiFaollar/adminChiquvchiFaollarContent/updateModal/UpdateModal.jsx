@@ -53,7 +53,7 @@ export default function UpdateModal({ setUpdateModal, updateModal, setAlert, cur
                 }
                 return d;
               })
-              Alert(setAlert, "success", "Ma'lumot muvaffaqiyatli o'zgartirildi");
+              Alert(setAlert, "success", "Информация успешно изменена");
               setUpdateModal({ open: false, obj: {} });
               setData({ ...data, content: arr });
             } catch (error) {
@@ -61,19 +61,19 @@ export default function UpdateModal({ setUpdateModal, updateModal, setAlert, cur
               setUpdateModal({ open: false, obj: {} });
             }
           } else {
-            Alert(setAlert, "warning", "Boshlang'ich raqam kiritilmagan");
+            Alert(setAlert, "warning", "Не введен стартовый номер");
             setUpdateModal({ open: false, obj: {} });
           }
         } else {
-          Alert(setAlert, "warning", "Qisqacha tasnif kiritilmagan")
+          Alert(setAlert, "warning", "Краткая классификация не включена")
           setUpdateModal({ open: false, obj: {} });
         }
       } else {
-        Alert(setAlert, "warning", "Ruscha nom kiritilmagan");
+        Alert(setAlert, "warning", "Русское имя не указано");
         setUpdateModal({ open: false, obj: {} });
       }
     } else {
-      Alert(setAlert, "warning", "O'zbekcha nom kiritilmagan");
+      Alert(setAlert, "warning", "Узбекское имя не указано");
       setUpdateModal({ open: false, obj: {} });
     }
     setUpdateModal({ open: false, obj: {} })
@@ -85,7 +85,7 @@ export default function UpdateModal({ setUpdateModal, updateModal, setAlert, cur
         <div className="modal-dialog modal-xl">
           <div className="modal-content">
             <div className="modal-header bg-primary text-white">
-              <h6 className="modal-title">O'zgartirish</h6>
+              <h6 className="modal-title">Изменять</h6>
               <button type="button" className="close" onClick={() => setUpdateModal({ open: false, obj: {} })}>&times;</button>
             </div>
 
@@ -103,7 +103,7 @@ export default function UpdateModal({ setUpdateModal, updateModal, setAlert, cur
                             defaultValue={updateModal.obj?.uzName}
                             ref={uznameref}
                           />
-                          <label className="label-floating">O'zbekcha nomi</label>
+                          <label className="label-floating">Русское имя</label>
                         </div>
                       </div>
                     </div>
@@ -119,7 +119,7 @@ export default function UpdateModal({ setUpdateModal, updateModal, setAlert, cur
                             defaultValue={updateModal.obj?.ruName}
                             ref={runameref}
                           />
-                          <label className="label-floating">Ruscha nomi</label>
+                          <label className="label-floating">Узбекское имя</label>
                         </div>
                       </div>
                     </div>
@@ -136,8 +136,7 @@ export default function UpdateModal({ setUpdateModal, updateModal, setAlert, cur
                             defaultValue={updateModal.obj?.shortDescription}
                             ref={shortDescref}
                           />
-                          <label className="label-floating">Qisqacha
-                            tasnifi</label>
+                          <label className="label-floating">Краткая классификация </label>
                         </div>
                       </div>
                     </div>
@@ -154,8 +153,8 @@ export default function UpdateModal({ setUpdateModal, updateModal, setAlert, cur
                             defaultValue={updateModal.obj?.beginNumber}
                             ref={beginNumberref}
                           />
-                          <label className="label-floating">Boshlang'ich
-                            raqam</label>
+                          <label className="label-floating">Стартовый номер 
+                          </label>
                         </div>
                       </div>
                     </div>
@@ -172,8 +171,7 @@ export default function UpdateModal({ setUpdateModal, updateModal, setAlert, cur
                             defaultValue={updateModal.obj?.journalPrefix}
                             ref={prefixref}
                           />
-                          <label className="label-floating">Jurnal
-                            prefiksi</label>
+                          <label className="label-floating">Префикс журнала </label>
                         </div>
                       </div>
                     </div>
@@ -191,8 +189,7 @@ export default function UpdateModal({ setUpdateModal, updateModal, setAlert, cur
                             defaultValue={updateModal.obj?.journalPostfix}
                             ref={postfixref}
                           />
-                          <label className="label-floating">Jurnal
-                            postfiksi</label>
+                          <label className="label-floating">Постфикс журнала </label>
                         </div>
                       </div>
                     </div>
@@ -205,7 +202,7 @@ export default function UpdateModal({ setUpdateModal, updateModal, setAlert, cur
                     <button type="button"
                       onClick={() => Uzgartirish(updateModal.obj)}
                       className="btn btn-primary">
-                      <i className="icon-floppy-disk"></i> Saqlash
+                      <i className="icon-floppy-disk"></i> Сохранять
                     </button>
                   </div>
                 </div>

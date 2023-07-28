@@ -79,7 +79,7 @@ const SvodkaContent = ({ currentUser }) => {
 
   return (
     <div className="content mb-5">
-      <h3 style={{ margin: "10px 0 0 20px", fontWeight: "bold", textTransform: "uppercase" }}>Umumiy hisobot</h3>
+      <h3 style={{ margin: "10px 0 0 20px", fontWeight: "bold", textTransform: "uppercase" }}>Общий отчет</h3>
       <div className="card-body pt-1">
         <ul className="nav nav-tabs nav-tabs-solid nav-tabs-solid-custom bg-primary NavLink">
           <NavbarContentMonitoring />
@@ -142,8 +142,8 @@ const SvodkaContent = ({ currentUser }) => {
                   </div>
 
                   <div className="col-lg-4 d-flex align-items-center justify-content-end" style={{ gap: "5px" }}>
-                    <button className="btn btn-primary h-100" style={{ width: "33.333%" }} onClick={search}>Izlash</button>
-                    <button className="btn btn-primary h-100" style={{ width: "33.333%" }} onClick={all}>Barchasi</button>
+                    <button className="btn btn-primary h-100" style={{ width: "33.333%" }} onClick={search}>Поиск</button>
+                    <button className="btn btn-primary h-100" style={{ width: "33.333%" }} onClick={all}>Dct</button>
                     <div className="btn-group h-100" style={{ width: "33.333%" }}>
                       <button type="button" className="btn btn-primary dropdown-toggle btn-lg" styl={{ width: "100%" }} data-toggle="dropdown">Export</button>
                       <div className="dropdown-menu dropdown-menu-right">
@@ -166,13 +166,13 @@ const SvodkaContent = ({ currentUser }) => {
                       <tr className="tr text-black text-center tr">
                         <th className="foiz tr" rowSpan="5" style={{ background: "#DCE6F0" }}>№</th>
                         <th rowSpan="5" className="Name tr"
-                          style={{ width: "400px", background: "#DCE6F0" }}>Kotibiyatlar
+                          style={{ width: "400px", background: "#DCE6F0" }}>Секретариаты
                         </th>
-                        <th rowSpan="3" className="tr" style={{ background: "#DCE6F0" }}>Jami kelgan
+                        <th rowSpan="3" className="tr" style={{ background: "#DCE6F0" }}>Всего прибыло
                           hujjatlar
                         </th>
                         <th className="tr" colSpan={allData?.umumiyMonitoring?.count}
-                          style={{ background: "#DCE6F0" }}>SH U N D A N
+                          style={{ background: "#DCE6F0" }}>ПОЭТОМУ
                         </th>
                       </tr>
                       <tr className="text-black text-center tr">
@@ -186,14 +186,13 @@ const SvodkaContent = ({ currentUser }) => {
                                 background: "#DA9695"
                               }}>{element.name}</th>
                               <th className="jami-foiz tr" rowSpan="2"
-                                style={{ width: "150px", background: "#DCE6F0" }}>Jamiga
-                                nisbatan % hisobida
+                                style={{ width: "150px", background: "#DCE6F0" }}>В % от общего
                               </th>
                               <th className="tr" colSpan={element.childCard.length * 2}
                                 style={{
                                   width: `${element.childCard.length * 250}px`,
                                   background: "#DCE6F0"
-                                }}>Shu jumladan
+                                }}>Включая
                               </th>
                             </>
                           )

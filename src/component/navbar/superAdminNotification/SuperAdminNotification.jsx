@@ -7,7 +7,7 @@ const SuperAdminNotification = ({ openModalData, history, setAlert, setOpenModal
     if (data.stir) {
       history.push(`/super_base_admin_tashkilot-qushish/${data.stir}`)
     } else {
-      Alert(setAlert, "warning", "Tashkilot sitri mavjud emas")
+      Alert(setAlert, "warning", "Сайт организации СТИР недоступен")
     }
   }
 
@@ -16,7 +16,7 @@ const SuperAdminNotification = ({ openModalData, history, setAlert, setOpenModal
       <div style={{ width: "70%", margin: "auto" }}>
         <div className="modal-content">
           <div className="modal-header bg-primary text-white">
-            <h5 className="modal-title">Qo'shilishi kerak bo'lgan ...</h5>
+            <h5 className="modal-title">Быть добавленным... </h5>
             <button type="button" className="close" data-dismiss="modal" onClick={() => setOpenModal(false)}>&times;</button>
           </div>
 

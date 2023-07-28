@@ -546,13 +546,13 @@ const ChiquvchiTabEdit = ({ currentUser, permission, ranks }) => {
                         console.log(error.response);
                     }
                 } else {
-                    Alert(setAlert, "warning", "Hamkorlar tanlanmagan");
+                    Alert(setAlert, "warning", "Партнеры не выбраны");
                 }
             } else {
-                Alert(setAlert, "warning", "Tasdiqlovchilar tanlanmagan");
+                Alert(setAlert, "warning", "Валидаторы не выбраны");
             }
         } else {
-            Alert(setAlert, "warning", "Tashqi yoki ichki tashkilotlar tanlanmagan");
+            Alert(setAlert, "warning", "Не выбраны ни внешние, ни внутренние организации");
         }
 
         console.log({
@@ -640,7 +640,7 @@ const ChiquvchiTabEdit = ({ currentUser, permission, ranks }) => {
                                                     <Select
                                                         defaultValue={[rahbariyat?.find((d) => d?.value === allData[0]?.signatoryWorkPlace)]}
                                                         options={rahbariyat}
-                                                        placeholder="Imzolovchilar"
+                                                        placeholder="Подписавшиеся стороны"
                                                         // onChange={(e) => setRahbar(e)}
                                                         ref={rahbariyatRef}
                                                         onMenuOpen={closeOptions}
@@ -654,7 +654,7 @@ const ChiquvchiTabEdit = ({ currentUser, permission, ranks }) => {
 
                                             <div className="col-lg-6 mb-3">
                                                 <MultiSelect selectData={tashqiTashkilotlar}
-                                                    placeholder='Tashqi tashkilotlar'
+                                                    placeholder='Внешние организации'
                                                     inputRef={tashqiRef}
                                                     index={1}
                                                     defaultData={allData[0]?.outReceivers}
@@ -705,7 +705,7 @@ const ChiquvchiTabEdit = ({ currentUser, permission, ranks }) => {
                                                     popupHeight='500px'
                                                     fields={fields1}
                                                     dataSource={hamkorlar}
-                                                    placeholder="Kelishilgan xodimlar"
+                                                    placeholder="Согласованный персонал"
                                                     mode="CheckBox"
                                                     ref={Hamkor}
                                                     enableGroupCheckBox="true"
@@ -713,7 +713,7 @@ const ChiquvchiTabEdit = ({ currentUser, permission, ranks }) => {
                                                     unSelectAllText="unSelect All"
                                                     selectAllText="Select All"
                                                     showSelectAll="true"
-                                                    filterBarPlaceholder="Qidirish">
+                                                    filterBarPlaceholder="Поиск">
                                                     <Inject services={[CheckBoxSelection]} />
                                                 </MultiSelectComponent>
                                             </div>
@@ -727,8 +727,8 @@ const ChiquvchiTabEdit = ({ currentUser, permission, ranks }) => {
                                                         id="customFile"
                                                         onClick={closeOptions}
                                                     />
-                                                    <label className="custom-file-label" htmlFor="customFile">Fayl
-                                                        yuklash</label>
+                                                    <label className="custom-file-label" htmlFor="customFile">Файл 
+                                                    загружен</label>
                                                 </div>
                                             </div>
 
@@ -760,7 +760,7 @@ const ChiquvchiTabEdit = ({ currentUser, permission, ranks }) => {
                                             <div className="col-lg-12 d-flex mt-3 d-flex justify-content-end">
                                                 <button type={'button'} className="btn btn-primary mb-3 "
                                                     onClick={() => saveAllData()}>
-                                                    Saqlash
+                                                   Сохранять
                                                 </button>
                                             </div>
                                         </div>
@@ -852,7 +852,7 @@ const ChiquvchiTabEdit = ({ currentUser, permission, ranks }) => {
                                         <div className="col-lg-12 text-center w-100 px-0">
                                             <div className="btn btn-primary w-100"
                                                 onClick={() => setIlovalar([...ilovalar, { type: "kitob", content: "" }])}>
-                                                Ilova qo'shish
+                                                Добавить приложение
                                             </div>
                                         </div>
                                     </div>
@@ -863,7 +863,7 @@ const ChiquvchiTabEdit = ({ currentUser, permission, ranks }) => {
                                 <div className={'mt-3'}>
                                     <div className="card-header bg-primary text-white header-elements-inline">
                                         <h6 className="card-title"
-                                            style={{ fontWeight: "bold", textTransform: "upperCase" }}>Shablonlar</h6>
+                                            style={{ fontWeight: "bold", textTransform: "upperCase" }}>Шаблоны</h6>
                                     </div>
                                     <div className="card-body border row" style={{ cursor: 'pointer' }}>
                                         <div className="col-lg-12">
@@ -875,13 +875,13 @@ const ChiquvchiTabEdit = ({ currentUser, permission, ranks }) => {
                                                             className="id file_kor_short_not">№
                                                         </th>
                                                         <th id='tabRow' style={{ width: '10 %' }}
-                                                            className="qabul file_kor_short">Rasmi
+                                                            className="qabul file_kor_short">Фотки
                                                         </th>
                                                         <th id='tabRow' style={{ width: '20 %' }}
-                                                            className="ariza file_kor_short_not">Nomlanishi
+                                                            className="ariza file_kor_short_not">Именование
                                                         </th>
                                                         <th id='tabRow' style={{ width: '20%' }}
-                                                            className="text-center harakat file_kor_short_not">Sana
+                                                            className="text-center harakat file_kor_short_not">Дата
                                                         </th>
                                                     </tr>
                                                 </thead>
@@ -940,20 +940,20 @@ const ChiquvchiTabEdit = ({ currentUser, permission, ranks }) => {
                                             backgroundColor: "lightgray"
                                         }}>
                                             <h3 className="font-weight-semibold py-1 px-1 "
-                                                style={{ borderRadius: '5px', fontSize: "20px", color: "#000" }}>Yangi
-                                                chiquvchi
-                                                hujjat
-                                                kiritildi</h3>
+                                                style={{ borderRadius: '5px', fontSize: "20px", color: "#000" }}>Вставлен
+                                                 новый 
+                                                 исходящий
+                                                 документ</h3>
                                         </div>
 
                                         <div className="modal-footer d-flex justify-content-center">
                                             <button type={'button'} onClick={() => goToYangi()}
                                                 className="btn btn-success"
-                                                style={{ width: "150px" }}>Yangi
+                                                style={{ width: "150px" }}>Новый
                                             </button>
                                             <button type={'button'} onClick={() => saveAllData()}
                                                 className="btn btn-success"
-                                                style={{ width: "150px" }}>Xomaki
+                                                style={{ width: "150px" }}>Временное
                                             </button>
                                         </div>
                                     </div>

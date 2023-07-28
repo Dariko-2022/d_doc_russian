@@ -36,19 +36,19 @@ const ChiquvchiShablonNavbar = ({ currentUser }) => {
         <>
             <li className="nav-item" >
                 <NavLink to="/chiquvchi2/shablon/yaratish" className="nav-link " activeClassName='NavLinkLi' style={{ marginLeft: "20px" }}>
-                    <i className="icon-plus2 mr-1 sx-none"></i> Yangi Qo'shish
+                    <i className="icon-plus2 mr-1 sx-none"></i> Добавить новое
                 </NavLink>
             </li>
 
             {data?.length > 0 && <li className="nav-item" >
                 <NavLink to="/chiquvchi2/shablon/mavjud" className="nav-link " activeClassName='NavLinkLi'>
-                    <i className="icon-file-check mr-1 sx-none"></i> Mavjud shablonlar
+                    <i className="icon-file-check mr-1 sx-none"></i> Доступные шаблоны
                 </NavLink>
             </li>}
 
             {isEdit === "edit" && <li className="nav-item" >
                 <NavLink to="/chiquvchi2/shablon/edit" className="nav-link " activeClassName='NavLinkLi'>
-                    <i className="icon-pencil5 mr-1 sx-none"></i> O'zgartirish
+                    <i className="icon-pencil5 mr-1 sx-none"></i> Изменять
                 </NavLink>
             </li>}
         </>

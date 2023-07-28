@@ -127,7 +127,7 @@ const MavjudTashkilotlarContent = (currentUser) => {
           }
           return d;
         })
-        Alert(setAlert, "success", "Yunalish nomi muvaffaqiyatli o'zgartirildi")
+        Alert(setAlert, "success", "Маршрутизация успешно переименована")
         setYunalishlar(arr);
         setUpdateYunalish({ open: false, obj: {} });
         let orgNames = document.querySelectorAll('.cardAccordion');
@@ -145,17 +145,17 @@ const MavjudTashkilotlarContent = (currentUser) => {
         console.log(error?.response);
       }
     } else {
-      Alert(setAlert, "warning", "Yunalish nomi kiritilishi kerak")
+      Alert(setAlert, "warning", "Необходимо ввести имя пункта назначения.")
     }
   }
 
   return (
     <div className="content mb-5 " >
-      <h3 style={{ margin: "10px 0 0 0", fontWeight: "bold", textTransform: "upperCase" }}>Mavjud tashkilotlar</h3>
+      <h3 style={{ margin: "10px 0 0 0", fontWeight: "bold", textTransform: "upperCase" }}>Существующие организации</h3>
       <div className="">
         <div className="card-body p-0">
           <ul className="nav nav-tabs nav-tabs-solid nav-tabs-solid-custom bg-primary NavLink d-flex align-items-center justify-content-between">
-            <li className="nav-item"><h5 style={{ margin: "10px 0 0 20px", fontWeight: "bold", textTransform: "upperCase", color: "#fff", padding: "0 5px 5px 0" }}>Tashkilotlar boshqaruv paneli</h5></li>
+            <li className="nav-item"><h5 style={{ margin: "10px 0 0 20px", fontWeight: "bold", textTransform: "upperCase", color: "#fff", padding: "0 5px 5px 0" }}>Панель управления организациями</h5></li>
           </ul>
 
           <div className="tab-content">
@@ -222,7 +222,7 @@ const MavjudTashkilotlarContent = (currentUser) => {
                                               <div className="card-header bg-dark" onClick={() => getTashBoshTashkilot(tash.id)}>
 
                                                 <h6 className="card-title">
-                                                  <a data-toggle="collapse" className="text-white" href={`#bTashkilot${index}`}>Bosh tashkilot</a>
+                                                  <a data-toggle="collapse" className="text-white" href={`#bTashkilot${index}`}>Основная организация</a>
                                                 </h6>
                                               </div>
 
@@ -232,10 +232,10 @@ const MavjudTashkilotlarContent = (currentUser) => {
                                                     <thead>
                                                       <tr className="bg-dark text-white NavLink text-center">
                                                         <th style={{ width: "3%" }}>№</th>
-                                                        <th style={{ width: "15%" }}>logo</th>
-                                                        <th style={{ width: "20%" }}>Tuman (shahar)</th>
-                                                        <th style={{ width: "25%" }}>Qisqacha Nomi</th>
-                                                        <th style={{ width: "25%" }}>Rahbari</th>
+                                                        <th style={{ width: "15%" }}>Лого</th>
+                                                        <th style={{ width: "20%" }}>Район (город)</th>
+                                                        <th style={{ width: "25%" }}>Короткое имя</th>
+                                                        <th style={{ width: "25%" }}>Директор</th>
                                                         {/*<td style={{ width: "8%" }}>Harakatlar</td>*/}
                                                       </tr>
                                                     </thead>
@@ -294,7 +294,7 @@ const MavjudTashkilotlarContent = (currentUser) => {
                                             <div className="card mb-0">
                                               <div className="card-header bg-dark" onClick={() => getTashQuyiTashkilot(tash.id)}>
                                                 <h6 className="card-title">
-                                                  <a className="collapsed text-white" data-toggle="collapse" href={`#qTashkilot${index}`}>Quyi tashkilotlar</a>
+                                                  <a className="collapsed text-white" data-toggle="collapse" href={`#qTashkilot${index}`}>Низшие организации</a>
                                                 </h6>
                                               </div>
 
@@ -304,10 +304,10 @@ const MavjudTashkilotlarContent = (currentUser) => {
                                                     <thead>
                                                       <tr className="bg-dark text-white NavLink text-center">
                                                         <th style={{ width: "3%" }}>№</th>
-                                                        <th style={{ width: "15%" }}>logo</th>
-                                                        <th style={{ width: "20%" }}>Tuman (shahar)</th>
-                                                        <th style={{ width: "25%" }}>Qisqacha Nomi</th>
-                                                        <th style={{ width: "25%" }}>Rahbari</th>
+                                                        <th style={{ width: "15%" }}>Лого</th>
+                                                        <th style={{ width: "20%" }}>Район (город)</th>
+                                                        <th style={{ width: "25%" }}>Короткое имя</th>
+                                                        <th style={{ width: "25%" }}>Директор</th>
                                                         {/*<td style={{ width: "8%" }}>Harakatlar</td>*/}
                                                       </tr>
                                                     </thead>
@@ -387,14 +387,14 @@ const MavjudTashkilotlarContent = (currentUser) => {
           <div className="modal-dialog modal-lg">
             <div className="modal-content">
               <div className="modal-header btn-primary p-2">
-                <h5 className="modal-title">O'zgartirish oynasi</h5>
+                <h5 className="modal-title">Изменить окно</h5>
                 <button type="button" className="close" onClick={() => setUpdateYunalish({ open: false, obj: {} })}>×</button>
               </div>
 
               <form className="modal-body form-inline justify-content-center">
-                <label>Yo'nalish:</label>
-                <input type="text" placeholder="Yo'nalish nomi" className="form-control mb-2 mr-sm-2 ml-sm-2 mb-sm-0 w-75 yunalishName" defaultValue={updateYunalish.obj?.name} />
-                <button type="button" onClick={() => yunalishUzgartirish(updateYunalish.obj)} className="btn btn-primary ml-sm-2 mb-sm-0" style={{ textTransform: "capitalize" }} >O'zgartirish</button>
+                <label>Направление:</label>
+                <input type="text" placeholder="Название маршрута" className="form-control mb-2 mr-sm-2 ml-sm-2 mb-sm-0 w-75 yunalishName" defaultValue={updateYunalish.obj?.name} />
+                <button type="button" onClick={() => yunalishUzgartirish(updateYunalish.obj)} className="btn btn-primary ml-sm-2 mb-sm-0" style={{ textTransform: "capitalize" }} >Изменять</button>
               </form>
             </div>
           </div>

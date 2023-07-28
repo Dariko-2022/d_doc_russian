@@ -118,9 +118,9 @@ const TaskNewInputsElementsHome = ({ setTableData, currentUser, dateFormatSet, k
             <div
               className="form-group form-group-feedback form-group-feedback-left inp-sm-none inp buttonsinput">
               <button className="btn btn-primary mr-2 table-sm-full"
-                onClick={SearchData}>Search
+                onClick={SearchData}>Поиск
               </button>
-              <button className="btn btn-primary mr-2 table-sm-full" onClick={All}>Barchasi
+              <button className="btn btn-primary mr-2 table-sm-full" onClick={All}>Все
               </button>
               <button className="btn btn-primary mobile-table-none"
                 data-toggle="dropdown"><i className="icon-menu9" style={{ fontSize: "18px" }}></i>

@@ -25,7 +25,7 @@ const VazifalarNavbar = ({ currentUser }) => {
     <>
       <li className="nav-item">
         <NavLink exact to="/vazifalar_barchasi" className="nav-link " activeClassName='NavLinkLi' style={{ marginLeft: "20px" }}>
-          <i className="icon-plus2 mr-1 sx-none" /> Barchasi
+          <i className="icon-plus2 mr-1 sx-none" /> Все
         </NavLink>
         {data.allMyTask !== 0 && data.allMyTask !== null && data.allMyTask !== undefined && (
           <span className="badge1">{data.allMyTask}</span>
@@ -33,7 +33,7 @@ const VazifalarNavbar = ({ currentUser }) => {
       </li>
       <li className="nav-item">
         <NavLink to="/vazifalar_yangi" className="nav-link" activeClassName='NavLinkLi'>
-          <i className="icon-newspaper mr-1 sx-none" /> Yangi
+          <i className="icon-newspaper mr-1 sx-none" /> Новый
         </NavLink>
         {data.newTaskCount !== 0 && data.newTaskCount !== null && data.newTaskCount !== undefined && (
           <span className="badge1">{data.newTaskCount}</span>
@@ -41,7 +41,7 @@ const VazifalarNavbar = ({ currentUser }) => {
       </li>
       <li className="nav-item">
         <NavLink to="/vazifalar_jarayonda" className="nav-link" activeClassName='NavLinkLi'>
-          <i className="icon-user-plus mr-1 sx-none" /> Jarayonda
+          <i className="icon-user-plus mr-1 sx-none" /> В Процесс
         </NavLink>
         {data.inProcessTaskCount !== 0 && data.inProcessTaskCount !== null && data.inProcessTaskCount !== undefined && (
           <span className="badge1">{data.inProcessTaskCount}</span>
@@ -49,7 +49,7 @@ const VazifalarNavbar = ({ currentUser }) => {
       </li>
       <li className="nav-item">
         <NavLink to="/vazifalar_nazoratda" className="nav-link" activeClassName='NavLinkLi'>
-          <i className="icon-pen mr-1 sx-none" /> Nazoratda
+          <i className="icon-pen mr-1 sx-none" /> Под контролем
         </NavLink>
         {data.inControlTaskCount !== 0 && data.inControlTaskCount !== null && data.inControlTaskCount !== undefined && (
           <span className="badge1">{data.inControlTaskCount}</span>

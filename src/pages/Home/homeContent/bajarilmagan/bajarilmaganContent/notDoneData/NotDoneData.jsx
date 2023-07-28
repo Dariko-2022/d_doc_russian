@@ -46,12 +46,12 @@ const NotDoneData = ({ dateFormatSet, data, setData, permission, currentUser, ko
         <thead>
           <tr className="bg-dark text-white NavLink text-center" style={{ height: "45px" }}>
             <th style={{ width: "5%" }} className="id">№</th>
-            <th style={{ width: "10%" }} className="xujjat mobile-table-none">Fayl</th>
-            <th style={{ width: "20%" }} className="korres">Korrespondent</th>
-            <th style={{ width: "25%" }} className="qisqacha mobile-table-none">Qisqacha Ma'lumot</th>
-            <th style={{ width: "15%" }} className="reg">Reg № / Muddati</th>
-            <th style={{ width: "20%" }} className="ijrochi mobile-table-none">Ijrochi</th>
-            <th style={{ width: "5%" }} className="text-center harakat mobile-table-none">Harakatlar</th>
+            <th style={{ width: "10%" }} className="xujjat mobile-table-none">Файл</th>
+            <th style={{ width: "20%" }} className="korres">Корреспондент</th>
+            <th style={{ width: "25%" }} className="qisqacha mobile-table-none">Краткая информация</th>
+            <th style={{ width: "15%" }} className="reg">Рег № / Срок</th>
+            <th style={{ width: "20%" }} className="ijrochi mobile-table-none">Исполнительный</th>
+            <th style={{ width: "5%" }} className="text-center harakat mobile-table-none">Действия</th>
           </tr>
         </thead>
         <tbody>
@@ -120,7 +120,7 @@ const NotDoneData = ({ dateFormatSet, data, setData, permission, currentUser, ko
               <td className="harakat mobile-table-none">
                 <div className="icon d-flex justify-content-center align-items-center ">
                   <Link to={permission ? `/bosh_sahifa_ko'rish/${tableItem?.id}/bajarilmagan` : `/kiruvchi_bajarish_ijro/${tableItem?.id}/bajarilmagan`}
-                    className="infoBtn bg-dark" title="Ko'rish"
+                    className="infoBtn bg-dark" title="Вид"
                     data-bs-toggle="tooltip" data-popup="tooltip"
                     data-bs-placement="top">
                     <span><i className="icon-eye2" /></span>

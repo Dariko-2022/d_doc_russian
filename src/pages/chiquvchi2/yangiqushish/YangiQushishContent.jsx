@@ -583,7 +583,7 @@ const YangiQushishContent = ({ currentUser, permission, ranks }) => {
                                                 <div className="chiquvchiSelect" style={{ width: '100%' }}>
                                                     <Select
                                                         // defaultValue={[colourOptions[2], colourOptions[3]]}
-                                                        placeholder="Ichki tashkilotlar"
+                                                        placeholder="Внутренние организации"
                                                         isMulti
                                                         styles={colourStyles}
                                                         isClearable={true}
@@ -629,7 +629,7 @@ const YangiQushishContent = ({ currentUser, permission, ranks }) => {
                                                 <div className="w-100">
                                                     <Select
                                                         options={rahbariyat}
-                                                        placeholder="Imzolovchilar"
+                                                        placeholder="Подписанты"
                                                         onChange={(e) => setRahbar(e)}
                                                         ref={rahbariyatRef}
                                                         onMenuOpen={closeOptions}
@@ -642,7 +642,7 @@ const YangiQushishContent = ({ currentUser, permission, ranks }) => {
                                             <div className="col-lg-6 mb-3 chiquvchiSelect">
                                                 <Select
                                                     // defaultValue={[colourOptions[2], colourOptions[3]]}
-                                                    placeholder="Tashqi tashkilotlar"
+                                                    placeholder="Внешние организации"
                                                     isMulti
                                                     styles={colourStyles}
                                                     isClearable={true}
@@ -706,7 +706,7 @@ const YangiQushishContent = ({ currentUser, permission, ranks }) => {
                                             <div className="col-lg-6 mb-3">
                                                 <Select
                                                     options={fishka}
-                                                    placeholder="Fishka"
+                                                    placeholder="Фишка"
                                                     // onChange={(e) => setFishkas(e)}
                                                     ref={fishkaRef}
                                                     onMenuOpen={closeOptions}
@@ -744,11 +744,11 @@ const YangiQushishContent = ({ currentUser, permission, ranks }) => {
                                                         id="customFile"
                                                     // onClick={closeOptions}
                                                     />
-                                                    <label className="custom-file-label" htmlFor="customFile">Fayl
-                                                        yuklash</label>
+                                                    <label className="custom-file-label" htmlFor="customFile">Файл 
+                                                    загружен</label>
                                                 </div>
 
-                                                <span>Ruxsat etilgan formatlar: doc, docx, xls,xlsx, ppt, pptx, pdf, .zip, .rar</span>
+                                                <span>Фиксированные форматы: doc, docx, xls,xlsx, ppt, pptx, pdf, .zip, .rar</span>
                                             </div>
                                             <div className="col-lg-12 mt-3">
                                                 <ul>
@@ -765,7 +765,7 @@ const YangiQushishContent = ({ currentUser, permission, ranks }) => {
                                             <div className="col-lg-12 d-flex mt-3 d-flex justify-content-end">
                                                 <button type={'button'} className="btn btn-primary mb-3 "
                                                     onClick={() => saveAllData()} disabled={isDisebled}>
-                                                    Saqlash
+                                                    Сохранять
                                                 </button>
                                             </div>
                                         </div>
@@ -841,7 +841,7 @@ const YangiQushishContent = ({ currentUser, permission, ranks }) => {
                                         <div className="col-lg-12 text-center w-100 px-0">
                                             <div className="btn btn-primary w-100"
                                                 onClick={() => setIlovalar([...ilovalar, { type: "kitob", content: "" }])}>
-                                                Ilova qo'shish
+                                                Добавить приложение
                                             </div>
                                         </div>
 
@@ -853,7 +853,7 @@ const YangiQushishContent = ({ currentUser, permission, ranks }) => {
                                     <div className={'mt-3 px-2'}>
                                         <div className="card-header bg-primary text-white header-elements-inline">
                                             <h6 className="card-title"
-                                                style={{ fontWeight: "bold", textTransform: "upperCase" }}>Shablonlar</h6>
+                                                style={{ fontWeight: "bold", textTransform: "upperCase" }}>Шаблоны</h6>
                                         </div>
                                         <div className="card-body border row px-2" style={{ cursor: 'pointer' }}>
                                             <div className="col-lg-12">
@@ -865,16 +865,16 @@ const YangiQushishContent = ({ currentUser, permission, ranks }) => {
                                                                 className="id file_kor_short_not">№
                                                             </th>
                                                             <th id='tabRow' style={{ width: '35 %' }}
-                                                                className="qabul file_kor_short">Rasmi
+                                                                className="qabul file_kor_short">Фотки
                                                             </th>
                                                             <th id='tabRow' style={{ width: '35 %' }}
-                                                                className="ariza file_kor_short_not">Nomlanishi
+                                                                className="ariza file_kor_short_not">Именование
                                                             </th>
                                                             <th id='tabRow' style={{ width: '30 %' }}
-                                                                className="ariza file_kor_short_not">Qisqacha
+                                                                className="ariza file_kor_short_not">Краткая
                                                             </th>
                                                             <th id='tabRow' style={{ width: '20%' }}
-                                                                className="text-center harakat file_kor_short_not">Sana
+                                                                className="text-center harakat file_kor_short_not">Дата
                                                             </th>
                                                         </tr>
                                                     </thead>
@@ -934,7 +934,7 @@ const YangiQushishContent = ({ currentUser, permission, ranks }) => {
                                                                             borderRadius: '5px',
                                                                             fontSize: "20px",
                                                                             color: "#000"
-                                                                        }}>Shablonni o'chirishni tasdiqlaysizmi?</h3>
+                                                                        }}>Вы уверены, что хотите удалить шаблон?</h3>
                                                                 </div>
 
                                                                 <div className="modal-footer d-flex justify-content-center">
@@ -944,12 +944,12 @@ const YangiQushishContent = ({ currentUser, permission, ranks }) => {
                                                                             obj: {}
                                                                         })}
                                                                         className="btn btn-danger"
-                                                                        style={{ width: "150px" }}>Bekor qilish
+                                                                        style={{ width: "150px" }}>Отмена
                                                                     </button>
                                                                     <button type={'button'}
                                                                         // onClick={() => deleteShablon(openModal.obj)}
                                                                         className="btn btn-success"
-                                                                        style={{ width: "150px" }}>Tasdiqlash
+                                                                        style={{ width: "150px" }}>Подтверждение
                                                                     </button>
                                                                 </div>
                                                             </div>
@@ -981,20 +981,20 @@ const YangiQushishContent = ({ currentUser, permission, ranks }) => {
                                             backgroundColor: "lightgray"
                                         }}>
                                             <h3 className="font-weight-semibold py-1 px-1 "
-                                                style={{ borderRadius: '5px', fontSize: "20px", color: "#000" }}>Yangi
-                                                chiquvchi
-                                                hujjat
-                                                kiritildi</h3>
+                                                style={{ borderRadius: '5px', fontSize: "20px", color: "#000" }}>Новый
+                                                Введен
+                                                исходящий
+                                                документ</h3>
                                         </div>
 
                                         <div className="modal-footer d-flex justify-content-center">
                                             <button type={'button'} onClick={() => goToYangi()}
                                                 className="btn btn-success"
-                                                style={{ width: "150px" }}>Yangi
+                                                style={{ width: "150px" }}>Новый
                                             </button>
                                             <button type={'button'} onClick={() => goToXomaki()}
                                                 className="btn btn-success"
-                                                style={{ width: "150px" }}>Xomaki
+                                                style={{ width: "150px" }}>Временное
                                             </button>
                                         </div>
                                     </div>

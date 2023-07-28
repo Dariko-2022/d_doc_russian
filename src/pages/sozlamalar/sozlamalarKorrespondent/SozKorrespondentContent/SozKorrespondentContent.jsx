@@ -145,7 +145,7 @@ const SozlamalarKorrespondentContent = ({ currentUser }) => {
                   }
                   return d;
                 })
-                Alert(setAlert, "success", "Ma'lumot muvaffaqiyatli o'zgartirildi");
+                Alert(setAlert, "success", "Информация успешно изменена");
                 setData(arr);
                 setUpdateModal({ open: false, obj: {} });
               } catch (error) {
@@ -153,19 +153,19 @@ const SozlamalarKorrespondentContent = ({ currentUser }) => {
                 Alert(setAlert, "warning", error.response.data);
               }
             } else {
-              Alert(setAlert, "warning", "Email xato kiritilgan");
+              Alert(setAlert, "warning", "Электронная почта была введена неправильно");
             }
           } else {
-            Alert(setAlert, "warning", "Email xato kiritilgan");
+            Alert(setAlert, "warning", "Электронная почта была введена неправильно");
           }
         } else {
-          Alert(setAlert, "warning", "Telefon nomer xato kiritilgan");
+          Alert(setAlert, "warning", "Номер телефона был введен неверно");
         }
       } else {
-        Alert(setAlert, "warning", "Manzil kiritilmagan");
+        Alert(setAlert, "warning", "Адрес не введен");
       }
     } else {
-      Alert(setAlert, "warning", "Tashkilot nomi kiritilmagan");
+      Alert(setAlert, "warning", "Не введено название организации");
     }
   }
 
@@ -184,7 +184,7 @@ const SozlamalarKorrespondentContent = ({ currentUser }) => {
 
   return (
     <div className="content content-mobile mb-5">
-      <h3 style={{ margin: "10px 0 0 0", fontWeight: "bold", textTransform: "upperCase" }}>Korrespondent</h3>
+      <h3 style={{ margin: "10px 0 0 0", fontWeight: "bold", textTransform: "upperCase" }}>Корреспондент</h3>
       <div className="card-body-mobile">
         <ul className="nav nav-tabs nav-tabs-solid nav-tabs-solid-custom bg-primary NavLink">
           <ContentNavbarSozlamalar />
@@ -252,15 +252,15 @@ const SozlamalarKorrespondentContent = ({ currentUser }) => {
                     <thead>
                       <tr className="bg-dark text-white NavLink text-center">
                         <th style={{ width: "3%" }}>№</th>
-                        <th style={{ width: "15%" }}>logo</th>
-                        <th style={{ width: "20%" }}>Tuman
+                        <th style={{ width: "15%" }}>логотип</th>
+                        <th style={{ width: "20%" }}>Район
                           (shahar)
                         </th>
-                        <th style={{ width: "25%" }}>Tashkilot
-                          Nomi
+                        <th style={{ width: "25%" }}>Название 
+                        организации
                         </th>
-                        <th style={{ width: "25%" }}>Rahbari</th>
-                        <td style={{ width: "8%" }}>Stir</td>
+                        <th style={{ width: "25%" }}>Директор</th>
+                        <td style={{ width: "8%" }}>СТИР</td>
                       </tr>
                     </thead>
                     <tbody

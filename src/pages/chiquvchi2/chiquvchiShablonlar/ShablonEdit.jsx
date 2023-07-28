@@ -93,7 +93,7 @@ const ShablonEdit = ({ currentUser, permission, ranks }) => {
                                 id="korrespondent2"
                                 ref={dataNameref}
                                 defaultValue={item?.state?.name}
-                                placeholder="Nomi" />
+                                placeholder="Имя" />
                         </div>
                         <div className="col-lg-12 mb-3 px-0 templateCkeditor">
                             <CKEditor
@@ -138,12 +138,12 @@ const ShablonEdit = ({ currentUser, permission, ranks }) => {
                                     checked={isGlobal}
                                     style={{ width: "30px", height: "20px" }}>
                                 </input>
-                                <p className={'mr-2 p-0 mb-0'} style={{ fontSize: "18px" }}>Boshqalarga ruxsat</p>
+                                <p className={'mr-2 p-0 mb-0'} style={{ fontSize: "18px" }}>Разрешение другим</p>
                             </div>
 
                             <div className="col-lg-3 mb-3">
                                 <button type={'button'} className={'btn btn-success w-100'}
-                                    onClick={() => saveShablon()}>O'zgartirish
+                                    onClick={() => saveShablon()}>Изменять
                                 </button>
                             </div>
                         </div>

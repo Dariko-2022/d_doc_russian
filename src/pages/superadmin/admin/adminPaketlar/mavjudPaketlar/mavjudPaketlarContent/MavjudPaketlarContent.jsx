@@ -128,11 +128,11 @@ const MavjudPaketlarContent = ({ currentUser }) => {
 
   return (
     <div className="content mb-5">
-      <h3 style={{ margin: "10px 0 0 0", fontWeight: "bold", textTransform: "upperCase" }}>Paketlar</h3>
+      <h3 style={{ margin: "10px 0 0 0", fontWeight: "bold", textTransform: "upperCase" }}>Пакеты</h3>
       <div className="">
         <div className="card-body p-0">
           <ul className="nav nav-tabs nav-tabs-solid nav-tabs-solid-custom bg-primary NavLink d-flex align-items-center justify-content-between" style={{ borderTopRightRadius: "5px", borderTopLeftRadius: "5px" }}>
-            <li className="nav-item"><h5 style={{ margin: "10px 0 0 20px", fontWeight: "bold", textTransform: "upperCase", color: "#fff", padding: "0 5px 5px 0" }}>Kartochkalar boshqaruv paneli</h5></li>
+            <li className="nav-item"><h5 style={{ margin: "10px 0 0 20px", fontWeight: "bold", textTransform: "upperCase", color: "#fff", padding: "0 5px 5px 0" }}>Панель управления картами</h5></li>
           </ul>
           <div className="tab-content">
             <div id="accordion-styled">
@@ -166,7 +166,7 @@ const MavjudPaketlarContent = ({ currentUser }) => {
                                           <div className="card mb-0">
                                             <div className="card-header bg-dark" onClick={() => getKartochkalar(tash.id)}>
                                               <h6 className="card-title">
-                                                <a data-toggle="collapse" className="text-white" href={`#bTashkilot${index}`}>Kartochkalar</a>
+                                                <a data-toggle="collapse" className="text-white" href={`#bTashkilot${index}`}>Карты</a>
                                               </h6>
                                             </div>
 
@@ -176,9 +176,9 @@ const MavjudPaketlarContent = ({ currentUser }) => {
                                                   <thead>
                                                     <tr className="bg-dark text-white NavLink text-center">
                                                       <th style={{ width: "3%" }}>№</th>
-                                                      <th style={{ width: "15%" }}>Kartochka nomi</th>
-                                                      <th style={{ width: "20%" }}>Bajarilish muddati</th>
-                                                      <td style={{ width: "8%" }}>Harakatlar</td>
+                                                      <th style={{ width: "15%" }}>Название карты</th>
+                                                      <th style={{ width: "20%" }}>Срок исполнение</th>
+                                                      <td style={{ width: "8%" }}>Действия</td>
                                                     </tr>
                                                   </thead>
                                                   <tbody id="viloyat">
@@ -193,14 +193,14 @@ const MavjudPaketlarContent = ({ currentUser }) => {
                                                             onClick={() => visible(dat)}
                                                             style={{ backgroundColor: dat.isVisible ? "green" : "crimson" }}
                                                           >
-                                                            Visible
+                                                            Видимый
                                                           </button>
                                                           <button
                                                             className="mavjudPaketlarButton1"
                                                             style={{ backgroundColor: dat.isReported ? "green" : "crimson" }}
                                                             onClick={() => report(dat)}
                                                           >
-                                                            Hisobot uchun
+                                                            Для отчета
                                                           </button>
                                                         </td>
                                                       </tr>

@@ -3,18 +3,18 @@ import React from "react";
 export default function TashkiliyTuzilmaContent({ currentUser }) {
     return (
         <div className="content">
-            <h1 style={{ margin: "10px 0 0 20px", fontWeight: "bold", textTransform: "upperCase;" }} >Tashkilotlar boshqaruv paneli</h1>
+            <h1 style={{ margin: "10px 0 0 20px", fontWeight: "bold", textTransform: "upperCase;" }} >Панель управления организациями</h1>
             <div className="card-body">
                 <ul className="nav nav-tabs nav-tabs-solid nav-tabs-solid-custom bg-primary NavLink d-flex align-items-center justify-content-between">
-                    <li className="nav-item"><h3 style={{ margin: "10px 0 0 20px", fontWeight: "bold", textTransform: "upperCase", color: "#fff", padding: "0 5px 5px 0" }}>Tashkilotlar boshqaruv paneli</h3></li>
+                    <li className="nav-item"><h3 style={{ margin: "10px 0 0 20px", fontWeight: "bold", textTransform: "upperCase", color: "#fff", padding: "0 5px 5px 0" }}>Панель управления организациями</h3></li>
                     <li className="nav-item mr-3">
-                        <a href="#1" data-toggle="modal" data-target="#yonalish" style={{ fontWeight: "bold", textTransform: "upperCase", color: "#fff" }}><i className="icon-plus2"></i> Yo'nalish Qo'shish</a>
-                        <a href="#1" data-toggle="modal" className="ml-2" data-target="#modal_theme_primary" style={{ fontWeight: "bold", textTransform: "upperCase", color: "#fff" }}><i className="icon-plus2"></i> Tashkilot Qo'shish</a>
+                        <a href="#1" data-toggle="modal" data-target="#yonalish" style={{ fontWeight: "bold", textTransform: "upperCase", color: "#fff" }}><i className="icon-plus2"></i> Добавить направление</a>
+                        <a href="#1" data-toggle="modal" className="ml-2" data-target="#modal_theme_primary" style={{ fontWeight: "bold", textTransform: "upperCase", color: "#fff" }}><i className="icon-plus2"></i> Добавить организацию</a>
                         <div id="yonalish" className="modal fade" tabIndex="-1">
                             <div className="modal-dialog modal-lg ">
                                 <div className="modal-content">
                                     <div className="modal-header bg-primary text-white">
-                                        <h1 className="modal-title">Yo'nalish qo'shish</h1>
+                                        <h1 className="modal-title">Добавить направление</h1>
                                         <button type="button" className="close" data-dismiss="modal">&times;</button>
                                     </div>
 
@@ -26,13 +26,13 @@ export default function TashkiliyTuzilmaContent({ currentUser }) {
                                                         <div className="col-lg-12">
                                                             <div className="position-relative">
                                                                 <input type="text" className="form-control form-control-outline" placeholder="Placeholder" />
-                                                                <label className="label-floating">Yo'nalish</label>
+                                                                <label className="label-floating">Направление</label>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div className="col-lg-4">
-                                                    <button className="btn btn-primary">Saqlash</button>
+                                                    <button className="btn btn-primary">Сохранять</button>
                                                 </div>
                                             </div>
                                         </form>
@@ -47,7 +47,7 @@ export default function TashkiliyTuzilmaContent({ currentUser }) {
                             <div className="modal-dialog modal-lg ">
                                 <div className="modal-content">
                                     <div className="modal-header bg-primary text-white">
-                                        <h1 className="modal-title">Tashkilot qo'shish</h1>
+                                        <h1 className="modal-title">Добавить организацию</h1>
                                         <button type="button" className="close" data-dismiss="modal">&times;</button>
                                     </div>
 
@@ -60,7 +60,7 @@ export default function TashkiliyTuzilmaContent({ currentUser }) {
                                                         <div className="col-lg-12">
                                                             <div className="position-relative">
                                                                 <input type="text" data-mask="999-999-999" className="form-control form-control-outline" placeholder="Placeholder" />
-                                                                <label className="label-floating">Tashkilot sitri</label>
+                                                                <label className="label-floating">Организация СТИР</label>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -69,7 +69,7 @@ export default function TashkiliyTuzilmaContent({ currentUser }) {
                                                     <div className="form-group form-group-floating row">
                                                         <div className="col-lg-12">
                                                             <div className="position-relative">
-                                                                <button type="button" className="btn btn-primary form-control form-control-outline">Olish</button>
+                                                                <button type="button" className="btn btn-primary form-control form-control-outline">Получать</button>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -85,7 +85,7 @@ export default function TashkiliyTuzilmaContent({ currentUser }) {
                                                         <div className="col-lg-12">
                                                             <div className="position-relative">
                                                                 <input type="text" className="form-control form-control-outline" placeholder="Placeholder" />
-                                                                <label className="label-floating">Korxona Nomi</label>
+                                                                <label className="label-floating">Название компании</label>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -95,7 +95,7 @@ export default function TashkiliyTuzilmaContent({ currentUser }) {
                                                         <div className="col-lg-12">
                                                             <div className="position-relative">
                                                                 <input type="text" className="form-control form-control-outline" placeholder="Placeholder" />
-                                                                <label className="label-floating">Qisqacha nomi</label>
+                                                                <label className="label-floating">Короткое имя</label>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -106,9 +106,9 @@ export default function TashkiliyTuzilmaContent({ currentUser }) {
                                                             <select data-placeholder="Viloyat" className="form-control select-search  form-control-outlin select">
                                                                 <option></option>
                                                                 <optgroup label="Viloyat">
-                                                                    <option value="AZ">Buxoro</option>
-                                                                    <option value="CO">Navoiy</option>
-                                                                    <option value="ID">Samarqand</option>
+                                                                    <option value="AZ">Бухара</option>
+                                                                    <option value="CO">Навои</option>
+                                                                    <option value="ID">Самарканд</option>
                                                                 </optgroup>
                                                             </select>
                                                         </div>
@@ -120,9 +120,9 @@ export default function TashkiliyTuzilmaContent({ currentUser }) {
                                                             <select data-placeholder="Tuman(Shahar)" className="form-control select-search  form-control-outlin select" >
                                                                 <option></option>
                                                                 <optgroup label="Tuman(Shahar)">
-                                                                    <option value="AZ">Buxor Shahar</option>
-                                                                    <option value="CO">Buxoro Tuman</option>
-                                                                    <option value="ID">Jondor Tuman</option>
+                                                                    <option value="AZ">г. Бухара</option>
+                                                                    <option value="CO">Бухарский район</option>
+                                                                    <option value="ID">Жондор Туман</option>
                                                                 </optgroup>
                                                             </select>
                                                         </div>
@@ -133,7 +133,7 @@ export default function TashkiliyTuzilmaContent({ currentUser }) {
                                                         <div className="col-lg-12">
                                                             <div className="position-relative">
                                                                 <input type="text" className="form-control form-control-outline" placeholder="Placeholder" />
-                                                                <label className="label-floating">Manzil</label>
+                                                                <label className="label-floating">Адрес</label>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -143,7 +143,7 @@ export default function TashkiliyTuzilmaContent({ currentUser }) {
                                                         <div className="col-lg-12">
                                                             <div className="position-relative">
                                                                 <input type="text" data-mask="999-999-999" className="form-control InputCard form-control-outline" placeholder="Placeholder" />
-                                                                <label className="label-floating">Stir</label>
+                                                                <label className="label-floating">СТИР</label>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -153,7 +153,7 @@ export default function TashkiliyTuzilmaContent({ currentUser }) {
                                                         <div className="col-lg-12">
                                                             <div className="position-relative">
                                                                 <input type="text" className="form-control form-control-outline" placeholder="placeholder" />
-                                                                <label className="label-floating">F.I.O</label>
+                                                                <label className="label-floating">Ф.И.О</label>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -163,7 +163,7 @@ export default function TashkiliyTuzilmaContent({ currentUser }) {
                                                         <div className="col-lg-12">
                                                             <div className="position-relative">
                                                                 <input type="text" data-mask="+998(99) 999-99-99" className="form-control form-control-outline InputCard" placeholder="Placeholder" />
-                                                                <label className="label-floating">Telefon </label>
+                                                                <label className="label-floating">Телефон </label>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -183,7 +183,7 @@ export default function TashkiliyTuzilmaContent({ currentUser }) {
                                                         <div className="col-lg-12">
                                                             <div className="position-relative">
                                                                 <input type="email" className="form-control form-control-outline" placeholder="Placeholder" />
-                                                                <label className="label-floating">E-xat</label>
+                                                                <label className="label-floating">E-xaт</label>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -195,10 +195,10 @@ export default function TashkiliyTuzilmaContent({ currentUser }) {
                                                                 <select data-placeholder="Yo'nalish" className="form-control select-search  form-control-outlin select" >
                                                                     <option></option>
                                                                     <optgroup label="Yo'nalish">
-                                                                        <option value="AZ">Buxoro</option>
-                                                                        <option value="CO">Navoiy</option>
-                                                                        <option value="ID">Toshkent</option>
-                                                                        <option value="WY">Andijon</option>
+                                                                        <option value="AZ">Бухара</option>
+                                                                        <option value="CO">Навои</option>
+                                                                        <option value="ID">Ташкент</option>
+                                                                        <option value="WY">Андижан</option>
                                                                     </optgroup>
                                                                 </select>
                                                             </div>
@@ -212,10 +212,10 @@ export default function TashkiliyTuzilmaContent({ currentUser }) {
                                                                 <select data-placeholder="Asosiy bosh tashkilot" className="form-control select-search  form-control-outlin select">
                                                                     <option></option>
                                                                     <optgroup label="Bosh tashkilot">
-                                                                        <option value="AZ">Buxoro</option>
-                                                                        <option value="CO">Navoiy</option>
-                                                                        <option value="ID">Toshkent</option>
-                                                                        <option value="WY">Andijon</option>
+                                                                    <option value="AZ">Бухара</option>
+                                                                        <option value="CO">Навои</option>
+                                                                        <option value="ID">Ташкент</option>
+                                                                        <option value="WY">Андижан</option>
                                                                     </optgroup>
                                                                 </select>
                                                             </div>
@@ -229,10 +229,10 @@ export default function TashkiliyTuzilmaContent({ currentUser }) {
                                                                 <select data-placeholder="Qo'shimcha bosh tashkilot" className="form-control select-search form-control-outlin select">
                                                                     <option></option>
                                                                     <optgroup label="Bosh tashkilot">
-                                                                        <option value="AZ">Buxoro</option>
-                                                                        <option value="CO">Navoiy</option>
-                                                                        <option value="ID">Toshkent</option>
-                                                                        <option value="WY">Andijon</option>
+                                                                    <option value="AZ">Бухара</option>
+                                                                        <option value="CO">Навои</option>
+                                                                        <option value="ID">Ташкент</option>
+                                                                        <option value="WY">Андижан</option>
                                                                     </optgroup>
                                                                 </select>
                                                             </div>
@@ -242,7 +242,7 @@ export default function TashkiliyTuzilmaContent({ currentUser }) {
                                                 <div className="col-lg-12">
                                                     <div className="custom-control custom-checkbox mb-2">
                                                         <input type="checkbox" className="custom-control-input" id="qTash" />
-                                                        <label className="custom-control-label" for="qTash">Quyi tashkilot qo'shish</label>
+                                                        <label className="custom-control-label" for="qTash">Добавить дочернюю организацию</label>
                                                     </div>
                                                 </div>
                                                 <div className="col-lg-12 mt-3" id="passposrtMalumotlari" style={{ display: "none;" }}>
@@ -252,10 +252,10 @@ export default function TashkiliyTuzilmaContent({ currentUser }) {
                                                                 <select data-placeholder="Tuman tashkilot" className="form-control select-search  form-control-outlin select">
                                                                     <option></option>
                                                                     <optgroup label="Tuman tashkilot">
-                                                                        <option value="AZ">Buxoro</option>
-                                                                        <option value="CO">Navoiy</option>
-                                                                        <option value="ID">Toshkent</option>
-                                                                        <option value="WY">Andijon</option>
+                                                                    <option value="AZ">Бухара</option>
+                                                                        <option value="CO">Навои</option>
+                                                                        <option value="ID">Ташкент</option>
+                                                                        <option value="WY">Андижан</option>
                                                                     </optgroup>
                                                                 </select>
                                                             </div>
@@ -266,7 +266,7 @@ export default function TashkiliyTuzilmaContent({ currentUser }) {
                                             {/* <!-- end card1 --> */}
                                             <div className="row">
                                                 <div className="col-lg-2">
-                                                    <button type="submit" className="btn btn-primary"><i className="icon-floppy-disk"></i> Saqlash</button>
+                                                    <button type="submit" className="btn btn-primary"><i className="icon-floppy-disk"></i> Сохранять</button>
                                                 </div>
                                             </div>
                                         </form>
@@ -287,7 +287,7 @@ export default function TashkiliyTuzilmaContent({ currentUser }) {
                                 <div className="card">
                                     <div className="card-header" style={{ height: "60px;" }}>
                                         <h6 className="card-title" style={{ paddingTop: "10px;" }}>
-                                            <a className="collapsed text-body NavLink ml-2" style={{ color: "#0056B8 !important;" }} data-toggle="collapse" href="#hokimlik">Hokimliklar</a>
+                                            <a className="collapsed text-body NavLink ml-2" style={{ color: "#0056B8 !important;" }} data-toggle="collapse" href="#hokimlik">Власти</a>
                                         </h6>
                                     </div>
 
@@ -297,7 +297,7 @@ export default function TashkiliyTuzilmaContent({ currentUser }) {
                                             <div className="card">
                                                 <div className="card-header" style={{ height: "60px;" }}>
                                                     <h6 className="card-title" style={{ paddingTop: "10px;" }}>
-                                                        <a className="collapsed text-body NavLink ml-2" data-toggle="collapse" href="#vHokimlik">Viloyat hokimligi</a>
+                                                        <a className="collapsed text-body NavLink ml-2" data-toggle="collapse" href="#vHokimlik">Провинциальная администрация</a>
                                                     </h6>
                                                 </div>
 
@@ -309,7 +309,7 @@ export default function TashkiliyTuzilmaContent({ currentUser }) {
                                                             <div className="card">
                                                                 <div className="card-header bg-dark">
                                                                     <h6 className="card-title">
-                                                                        <a data-toggle="collapse" className="text-white" href="#bTashkilot">Bosh tashkilot</a>
+                                                                        <a data-toggle="collapse" className="text-white" href="#bTashkilot">Основная организация</a>
                                                                     </h6>
                                                                 </div>
 
@@ -322,11 +322,11 @@ export default function TashkiliyTuzilmaContent({ currentUser }) {
                                                                                 <tr className="bg-dark text-white NavLink text-center">
                                                                                     <th style={{ width: "5%" }}>№</th>
                                                                                     {/* <!-- 58.73X60--> */}
-                                                                                    <th style={{ width: " 20%;" }}>logo</th>
-                                                                                    <th style={{ width: " 20%;" }}>Tuman (shahar)</th>
-                                                                                    <th style={{ width: " 25%;" }}>Qisqacha Nomi</th>
-                                                                                    <th style={{ width: " 25%;" }}>Rahbari</th>
-                                                                                    <td style={{ width: " 5%;" }}>Harakatlar</td>
+                                                                                    <th style={{ width: " 20%;" }}>Лого</th>
+                                                                                    <th style={{ width: " 20%;" }}>Район (город)</th>
+                                                                                    <th style={{ width: " 25%;" }}>Короткое имя</th>
+                                                                                    <th style={{ width: " 25%;" }}>Директор</th>
+                                                                                    <td style={{ width: " 5%;" }}>действия</td>
                                                                                 </tr>
                                                                             </thead>
                                                                             <tbody id="viloyat">
@@ -341,7 +341,7 @@ export default function TashkiliyTuzilmaContent({ currentUser }) {
                                                             <div className="card mb-0">
                                                                 <div className="card-header bg-dark">
                                                                     <h6 className="card-title">
-                                                                        <a className="collapsed text-white" data-toggle="collapse" href="#qTashkilot">Quyi tashkilotlar</a>
+                                                                        <a className="collapsed text-white" data-toggle="collapse" href="#qTashkilot">Низшие организации</a>
                                                                     </h6>
                                                                 </div>
 
@@ -362,7 +362,7 @@ export default function TashkiliyTuzilmaContent({ currentUser }) {
                                             <div className="card">
                                                 <div className="card-header" style={{ height: "60px;" }}>
                                                     <h6 className="card-title" style={{ paddingTop: "10px;" }}>
-                                                        <a className="collapsed text-body NavLink ml-2" data-toggle="collapse" href="#ab">Parent accordion item #2</a>
+                                                        <a className="collapsed text-body NavLink ml-2" data-toggle="collapse" href="#ab">Родительская гармошка №2</a>
                                                     </h6>
                                                 </div>
 
@@ -373,7 +373,7 @@ export default function TashkiliyTuzilmaContent({ currentUser }) {
                                                             <div className="card">
                                                                 <div className="card-header bg-dark">
                                                                     <h6 className="card-title">
-                                                                        <a data-toggle="collapse" className="text-white" href="#accordion-item-nested-child3">Child accordion item #1</a>
+                                                                        <a data-toggle="collapse" className="text-white" href="#accordion-item-nested-child3">Детский аккордеон №1</a>
                                                                     </h6>
                                                                 </div>
 
@@ -387,7 +387,7 @@ export default function TashkiliyTuzilmaContent({ currentUser }) {
                                                             <div className="card mb-0">
                                                                 <div className="card-header bg-dark">
                                                                     <h6 className="card-title">
-                                                                        <a className="collapsed text-white" data-toggle="collapse" href="#accordion-item-nested-child4">Child accordion item #2</a>
+                                                                        <a className="collapsed text-white" data-toggle="collapse" href="#accordion-item-nested-child4">Детский аккордеон №2</a>
                                                                     </h6>
                                                                 </div>
 
@@ -411,7 +411,7 @@ export default function TashkiliyTuzilmaContent({ currentUser }) {
                                 <div className="card">
                                     <div className="card-header" style={{ height: "60px;" }}>
                                         <h6 className="card-title" style={{ paddingTop: "10px;" }}>
-                                            <a className="collapsed text-body NavLink" style={{ color: "#0056B8 !important;" }} data-toggle="collapse" href="#iqtisodiyot">Iqtisodiyot</a>
+                                            <a className="collapsed text-body NavLink" style={{ color: "#0056B8 !important;" }} data-toggle="collapse" href="#iqtisodiyot">Эконом</a>
                                         </h6>
                                     </div>
 
@@ -421,7 +421,7 @@ export default function TashkiliyTuzilmaContent({ currentUser }) {
                                             <div className="card">
                                                 <div className="card-header" style={{ height: "60px;" }}>
                                                     <h6 className="card-title" style={{ paddingTop: "10px;" }}>
-                                                        <a className="collapsed text-body NavLink ml-2" data-toggle="collapse" href="#vHokimlik">Viloyat hokimligi</a>
+                                                        <a className="collapsed text-body NavLink ml-2" data-toggle="collapse" href="#vHokimlik">Провинциальная администрация</a>
                                                     </h6>
                                                 </div>
 
@@ -433,7 +433,7 @@ export default function TashkiliyTuzilmaContent({ currentUser }) {
                                                             <div className="card">
                                                                 <div className="card-header bg-dark">
                                                                     <h6 className="card-title">
-                                                                        <a data-toggle="collapse" className="text-white" href="#bTashkilot">Viloyat tashkiloti</a>
+                                                                        <a data-toggle="collapse" className="text-white" href="#bTashkilot">Региональная организация</a>
                                                                     </h6>
                                                                 </div>
 
@@ -446,11 +446,11 @@ export default function TashkiliyTuzilmaContent({ currentUser }) {
                                                                                 <tr className="bg-dark text-white NavLink text-center">
                                                                                     <th style={{ width: "5%" }}>№</th>
                                                                                     {/* <!-- 58.73X60--> */}
-                                                                                    <th style={{ width: "15%;" }}>logo</th>
-                                                                                    <th style={{ width: "15%;" }}>Tuman (shahar)</th>
-                                                                                    <th style={{ width: "15%;" }}>Qisqacha Nomi</th>
-                                                                                    <th style={{ width: "15%;" }}>Nomi</th>
-                                                                                    <td style={{ width: "5%;" }} >Harakatlar</td>
+                                                                                    <th style={{ width: "15%;" }}>Лого</th>
+                                                                                    <th style={{ width: "15%;" }}>Район (город)</th>
+                                                                                    <th style={{ width: "15%;" }}>Короткое имя</th>
+                                                                                    <th style={{ width: "15%;" }}>Имя</th>
+                                                                                    <td style={{ width: "5%;" }} >действия</td>
                                                                                 </tr>
                                                                             </thead>
                                                                             <tbody id="viloyat">
@@ -467,7 +467,7 @@ export default function TashkiliyTuzilmaContent({ currentUser }) {
                                                             <div className="card">
                                                                 <div className="card-header bg-dark">
                                                                     <h6 className="card-title">
-                                                                        <a data-toggle="collapse" className="text-white" href="#bTashkilot">Tuman (shahar) tashkiloti</a>
+                                                                        <a data-toggle="collapse" className="text-white" href="#bTashkilot">Районная (городская) организация</a>
                                                                     </h6>
                                                                 </div>
 
@@ -480,13 +480,13 @@ export default function TashkiliyTuzilmaContent({ currentUser }) {
                                                                                 <tr className="bg-dark text-white NavLink text-center">
                                                                                     <th style={{ width: "5%" }}>№</th>
                                                                                     {/* <!-- 58.73X60--> */}
-                                                                                    <th style={{ width: "15%;" }}>logo</th>
-                                                                                    <th style={{ width: "15%;" }}>Tashkilot Nomi</th>
-                                                                                    <th style={{ width: "15%;" }}>Qisqacha Nomi</th>
-                                                                                    <th style={{ width: "15%;" }}>Mazili</th>
-                                                                                    <th style={{ width: "15%;" }}>Lavozimi</th>
-                                                                                    <th style={{ width: "15%;" }}>Nomi</th>
-                                                                                    <td style={{ width: "5%;" }}>Harakatlar</td>
+                                                                                    <th style={{ width: "15%;" }}>Лого</th>
+                                                                                    <th style={{ width: "15%;" }}>Название организации</th>
+                                                                                    <th style={{ width: "15%;" }}>Короткое имя</th>
+                                                                                    <th style={{ width: "15%;" }}>Это весело</th>
+                                                                                    <th style={{ width: "15%;" }}>Позиция</th>
+                                                                                    <th style={{ width: "15%;" }}>Имя</th>
+                                                                                    <td style={{ width: "5%;" }}>Действия</td>
                                                                                 </tr>
                                                                             </thead>
                                                                             <tbody id="viloyat">
@@ -502,7 +502,7 @@ export default function TashkiliyTuzilmaContent({ currentUser }) {
                                                             <div className="card mb-0">
                                                                 <div className="card-header bg-dark">
                                                                     <h6 className="card-title">
-                                                                        <a className="collapsed text-white" data-toggle="collapse" href="#qTashkilot">Quyi tashkilot</a>
+                                                                        <a className="collapsed text-white" data-toggle="collapse" href="#qTashkilot">Подорганизация</a>
                                                                     </h6>
                                                                 </div>
 
@@ -523,7 +523,7 @@ export default function TashkiliyTuzilmaContent({ currentUser }) {
                                             <div className="card">
                                                 <div className="card-header" style={{ height: "60px;" }}>
                                                     <h6 className="card-title" style={{ paddingTop: "10px;" }}>
-                                                        <a className="collapsed text-body" data-toggle="collapse" href="#ab">Parent accordion item #2</a>
+                                                        <a className="collapsed text-body" data-toggle="collapse" href="#ab">Родительская гармошка №2</a>
                                                     </h6>
                                                 </div>
 
@@ -535,7 +535,7 @@ export default function TashkiliyTuzilmaContent({ currentUser }) {
                                                             <div className="card">
                                                                 <div className="card-header bg-dark">
                                                                     <h6 className="card-title">
-                                                                        <a data-toggle="collapse" className="text-white" href="#accordion-item-nested-child3">Child accordion item #1</a>
+                                                                        <a data-toggle="collapse" className="text-white" href="#accordion-item-nested-child3">Детский аккордеон №1</a>
                                                                     </h6>
                                                                 </div>
 
@@ -549,7 +549,7 @@ export default function TashkiliyTuzilmaContent({ currentUser }) {
                                                             <div className="card mb-0">
                                                                 <div className="card-header bg-dark">
                                                                     <h6 className="card-title">
-                                                                        <a className="collapsed text-white" data-toggle="collapse" href="#accordion-item-nested-child4">Child accordion item #2</a>
+                                                                        <a className="collapsed text-white" data-toggle="collapse" href="#accordion-item-nested-child4">Детский аккордеон №2</a>
                                                                     </h6>
                                                                 </div>
 

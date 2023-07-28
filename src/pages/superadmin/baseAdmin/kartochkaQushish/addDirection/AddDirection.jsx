@@ -21,9 +21,9 @@ const AddDirection = ({ notParentsCard, yunalishlar, currentUser, setAlert, setY
           parentCardTypeId: kartochkalar ? kartochkalar.value : null
         })
         if (res.data?.parentCardType) {
-          Alert(setAlert, "success", "Yo'nalish muvaffaqiyatli qo'shildi");
+          Alert(setAlert, "success", "Маршрут успешно добавлен");
         } else {
-          Alert(setAlert, "success", "Yo'nalish muvaffaqiyatli qo'shildi");
+          Alert(setAlert, "success", "Маршрут успешно добавлен");
           setYunalishlar(prev => [...prev, res.data]);
         }
         directionNameref.current.value = "";
@@ -34,7 +34,7 @@ const AddDirection = ({ notParentsCard, yunalishlar, currentUser, setAlert, setY
       }
       document.querySelector('.close11').click();
     } else {
-      Alert(setAlert, "warning", "Yunalish nomi kiritilmagan");
+      Alert(setAlert, "warning", "Не введено название направления");
     }
   }
 
@@ -43,7 +43,7 @@ const AddDirection = ({ notParentsCard, yunalishlar, currentUser, setAlert, setY
       <div className="modal-dialog modal-lg ">
         <div className="modal-content">
           <div className="modal-header bg-primary text-white">
-            <h5 className="modal-title" style={{ textTransform: "capitalize" }}>Kartochkalar boshqaruv oynasi</h5>
+            <h5 className="modal-title" style={{ textTransform: "capitalize" }}>Окно управления картами</h5>
             <button type="button" className="close close11" data-dismiss="modal">&times;</button>
           </div>
 
@@ -57,11 +57,11 @@ const AddDirection = ({ notParentsCard, yunalishlar, currentUser, setAlert, setY
                         <input
                           type="text"
                           className="form-control form-control-outline yunalishNomi"
-                          placeholder="Yo'nalish nomini kiriting"
+                          placeholder="Введите название пункта назначения"
                           autoFocus
                           ref={directionNameref}
                         />
-                        <label className="label-floating">Yo'nalish nomini kiriting</label>
+                        <label className="label-floating">Введите название пункта назначения</label>
                       </div>
                     </div>
                   </div>
@@ -71,7 +71,7 @@ const AddDirection = ({ notParentsCard, yunalishlar, currentUser, setAlert, setY
                       <div className="form-group form-group-floating">
                         <Select
                           options={notParentsCard}
-                          placeholder="Yo'nalish"
+                          placeholder="Направление"
                           className="kartochkalar"
                           isClearable={true}
                           ref={cardref}
@@ -88,7 +88,7 @@ const AddDirection = ({ notParentsCard, yunalishlar, currentUser, setAlert, setY
                             autoFocus
                             ref={directionNameref}
                           />
-                          <label className="label-floating">Yo'nalish nomini kiriting</label>
+                          <label className="label-floating">Введите название пункта назначения</label>
                         </div>
                       </div>
                     </div>
@@ -100,7 +100,7 @@ const AddDirection = ({ notParentsCard, yunalishlar, currentUser, setAlert, setY
                     type="submit"
                     className="btn btn-primary"
                   >
-                    <i className="fas fa-save mr-1"></i> Saqlash
+                    <i className="fas fa-save mr-1"></i> Сохранять
                   </button>
                 </div>
               </div>

@@ -44,11 +44,11 @@ const ChiquvchiBarchasiDetailContent = ({ currentUser }) => {
   const closeJournal = async () => {
     try {
       const res = await axiosInstanceOut.patch("journal/close/" + params.id, {})
-      Alert(setAlert, "success", "Jurnal yopildi");
+      Alert(setAlert, "success", "Журнал закрыт");
       setData(res.data);
     } catch (error) {
       console.log(error.response);
-      Alert(setAlert, "warning", "Jurnal yopib bo'lingan");
+      Alert(setAlert, "warning", "Журнал закрыта");
     }
   }
 
@@ -66,24 +66,24 @@ const ChiquvchiBarchasiDetailContent = ({ currentUser }) => {
   const openJournal = async () => {
     try {
       const res = await axiosInstanceOut.patch("journal/open/" + params.id, {})
-      Alert(setAlert, "success", "Jurnal ochildi");
+      Alert(setAlert, "success", "Журнал открыт");
       setData(res.data);
     } catch (error) {
       console.log(error.response);
-      Alert(setAlert, "warning", "Jurnal ochilgan");
+      Alert(setAlert, "warning", "Журнал открыт");
     }
   }
 
   return (
     <div className="content mb-5">
-      <h3 style={{ margin: "10px 0 0 0", fontWeight: "bold", textTransform: "upperCase" }}>Ko'rish</h3>
+      <h3 style={{ margin: "10px 0 0 0", fontWeight: "bold", textTransform: "upperCase" }}>Вид</h3>
       <div className="">
         <ul className="nav nav-tabs nav-tabs-solid nav-tabs-solid-custom bg-primary NavLink">
           <AdminElektronKitobNavbar />
           <li className="nav-item">
             <NavLink exact to={`/chiquvchi/elektron-kitob-ko'rish/${params.id}`}
               className="nav-link align-items-center" activeClassName="NavLinkLi">
-              <i className="icon-eye2 mr-1"></i> Ko'rish
+              <i className="icon-eye2 mr-1"></i> Вид
             </NavLink>
           </li>
         </ul>
@@ -96,21 +96,21 @@ const ChiquvchiBarchasiDetailContent = ({ currentUser }) => {
                     <div className="col-lg-6">
                       <div className="card">
                         <div className="card-title bg-dark text-light text-center">
-                          <h1>Ma'lumotlar</h1>
+                          <h1>Информация</h1>
                         </div>
                         <div className="card-body pt-0">
                           <table className="table mt-2 table-bordered table-striped table-hover Tab">
                             <tbody>
                               <tr style={{ height: "66px" }}>
-                                <td style={{ width: "50%" }}>O'zbekcha nomi:</td>
+                                <td style={{ width: "50%" }}>Русское имя:</td>
                                 <td className="uzbekchaNomi"></td>
                               </tr>
                               <tr style={{ height: "66px" }}>
-                                <td style={{ width: "50%" }}>Ruscha nomi:</td>
+                                <td style={{ width: "50%" }}>Узбекское имя:</td>
                                 <td className="ruschaNomi"></td>
                               </tr>
                               <tr style={{ height: "66px" }}>
-                                <td style={{ width: "50%" }}>Qisqacha tasnifi:</td>
+                                <td style={{ width: "50%" }}>Краткая классификация:</td>
                                 <td className="tasnif"></td>
                               </tr>
                             </tbody>
@@ -121,7 +121,7 @@ const ChiquvchiBarchasiDetailContent = ({ currentUser }) => {
                     <div className="col-lg-6">
                       <div className="card">
                         <div className="card-title bg-dark text-light text-center">
-                          <h1>Jurnalni Boshqarish</h1>
+                          <h1>Управление журналом</h1>
                         </div>
                         <div className="card-body pt-0">
                           <table
@@ -131,19 +131,17 @@ const ChiquvchiBarchasiDetailContent = ({ currentUser }) => {
                                 <td>
                                   {data?.closed ? (
                                     <button className="btn btn-success"
-                                      onClick={openJournal}>Jurnalni
-                                      ochish</button>
+                                      onClick={openJournal}>Откройте журнал </button>
                                   ) : (
                                     <button className="btn btn-danger"
-                                      onClick={closeJournal}>Jurnalni yopib
-                                      qo'yish</button>
+                                      onClick={closeJournal}> Закрыть журнал </button>
                                   )}
                                 </td>
                               </tr>
                               <tr className="text-center">
                                 <td>
                                   <button className="btn btn-success"
-                                    onClick={sendArchive}>Arxivga jo'natish
+                                    onClick={sendArchive}> Отправить в архив
                                   </button>
                                 </td>
                               </tr>
@@ -174,12 +172,12 @@ const ChiquvchiBarchasiDetailContent = ({ currentUser }) => {
                   <thead>
                     <tr className="bg-dark text-white NavLink text-center">
                       <th style={{ width: "5%" }}>№</th>
-                      <th style={{ width: "10%" }}>Fayl</th>
-                      <th style={{ width: "20%" }}>Korrespondent</th>
-                      <th style={{ width: "25%" }}>Qisqacha Ma'lumot</th>
-                      <th style={{ width: "15%" }}>Reg № / Muddati</th>
-                      <th style={{ width: "20%" }}>Ijrochi</th>
-                      <th style={{ width: "5%" }} className="text-center">Harakatlar</th>
+                      <th style={{ width: "10%" }}>Файл</th>
+                      <th style={{ width: "20%" }}>Корреспондент</th>
+                      <th style={{ width: "25%" }}>Краткая информация</th>
+                      <th style={{ width: "15%" }}>№ регистрации / продолжительность</th>
+                      <th style={{ width: "20%" }}>Исполнительный</th>
+                      <th style={{ width: "5%" }} className="text-center">Действия</th>
                     </tr>
                   </thead>
                   <tbody id="data">
@@ -188,7 +186,7 @@ const ChiquvchiBarchasiDetailContent = ({ currentUser }) => {
                         <tr key={index}>
                           <td className="text-center id">{dat.id}</td>
                           <td className="text-color Fayl">{dat.hujjatTuri}</td>
-                          <td className="korres">O'zbekiston Respublikasi Prezidenti</td>
+                          <td className="korres">Президент Республики Узбекистан</td>
                           {/* <!-- so'zlar 200ta chiqadi --> */}
                           <td style={{ textAlign: "justify" }} className="qisqacha">
                             {dat.malumot}
@@ -200,10 +198,10 @@ const ChiquvchiBarchasiDetailContent = ({ currentUser }) => {
                           </td>
                           <td className="text-center ijrochi">
                             <p style={{ margin: "0", borderBottomStyle: "dashed", borderColor: "#ddd", paddingBottom: "20px" }}>D.Sodiqov
-                              <span className="badge badge-danger ml-1">Bajarilmagan</span>
+                              <span className="badge badge-danger ml-1">Не выполнено</span>
                             </p>
                             <p style={{ margin: "0", paddingTop: "20px" }}>D.Sodiqov
-                              <span className="badge badge-primary ml-1">Bajarilgan</span>
+                              <span className="badge badge-primary ml-1">Сделанный</span>
                             </p>
                           </td>
                           <td className="harakat">

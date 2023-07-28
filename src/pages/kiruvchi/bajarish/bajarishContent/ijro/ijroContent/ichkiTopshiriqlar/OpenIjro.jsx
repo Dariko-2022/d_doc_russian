@@ -36,7 +36,7 @@ const OpenIjro = ({ setOpenIjro, openIjro, setAlert, params, setData }) => {
       <div className="modal-dialog">
         <div className="modal-content">
           <div className="modal-header bg-primary text-white">
-            <h6 className="modal-title">Tasdiqlash oynasi:</h6>
+            <h6 className="modal-title">Окно подтверждения:</h6>
           </div>
           <div className="modal-body ">
             <input
@@ -52,8 +52,8 @@ const OpenIjro = ({ setOpenIjro, openIjro, setAlert, params, setData }) => {
             </textarea>
           </div>
           <div className="modal-footer">
-            <button type="button" className="btn btn-link bekorQilish" onClick={() => setOpenIjro({ open: false, obj: {} })}>Yopish</button>
-            <button type="button" className="btn btn-success" onClick={() => tasdiqlash(openIjro.obj)}>Tasdiqlash</button>
+            <button type="button" className="btn btn-link bekorQilish" onClick={() => setOpenIjro({ open: false, obj: {} })}>Закрывать</button>
+            <button type="button" className="btn btn-success" onClick={() => tasdiqlash(openIjro.obj)}>Подтверждение</button>
           </div>
         </div>
       </div>

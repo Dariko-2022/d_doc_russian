@@ -55,7 +55,7 @@ export default function FuqaroJavoblariContent() {
   return (
     <div className="content mb-5">
 
-      <h3 style={{ margin: "10px 0 0 20px", fontWeight: "bold", textTransform: "upperCase" }}>Murojat Javoblari</h3>
+      <h3 style={{ margin: "10px 0 0 20px", fontWeight: "bold", textTransform: "upperCase" }}>Ответы приложений</h3>
       <div className="card-body">
         <ul className="nav nav-tabs nav-tabs-solid nav-tabs-solid-custom bg-primary NavLink" style={{ borderTopRightRadius: "5px", borderTopLeftRadius: "5px" }}>
           <MurojaatNavbar />
@@ -71,13 +71,13 @@ export default function FuqaroJavoblariContent() {
                         <div className="col-lg-12">
                           <div className="position-relative">
                             <input type="text" className="form-control form-control-outline" placeholder="Placeholder" />
-                            <label className="label-floating">Nomalnishi</label>
+                            <label className="label-floating">Именование</label>
                           </div>
                         </div>
                       </div>
                     </div>
                     <div className="col-lg-4">
-                      <button type="submit" style={{ width: "150px", height: "55px" }} className="btn btn-primary"><i className="icon-floppy-disk"></i> Saqlash</button>
+                      <button type="submit" style={{ width: "150px", height: "55px" }} className="btn btn-primary"><i className="icon-floppy-disk"></i> Сохранять</button>
                     </div>
                   </div>
                 </form>
@@ -85,8 +85,8 @@ export default function FuqaroJavoblariContent() {
                   <thead>
                     <tr className="bg-dark text-white NavLink text-center">
                       <th style={{ width: "5%" }} >№</th>
-                      <th style={{ width: "45%" }}>Sarlavha (O'zbek tilida)</th>
-                      <td style={{ width: "45%" }}>Sarlavha (Rus Tilida)</td>
+                      <th style={{ width: "45%" }}>Название (на русском языке)</th>
+                      <td style={{ width: "45%" }}>Название (на узбекском языке)</td>
                       <th style={{ width: "5%" }}>Harakatlar</th>
                     </tr>
                   </thead>
@@ -122,17 +122,17 @@ export default function FuqaroJavoblariContent() {
                   <div className="modal-dialog">
                     <div className="modal-content">
                       <div className="modal-header bg-primary text-white">
-                        <h6 className="modal-title">Primary header</h6>
+                        <h6 className="modal-title">Основной заголовок</h6>
                         <button type="button" className="close" data-dismiss="modal">×</button>
                       </div>
 
                       <div className="modal-body">
-                        Ma'lumotni o'chirishni xoxlaysizmi?
+                      Вы хотите удалить информацию?
                       </div>
 
                       <div className="modal-footer">
-                        <button type="button" className="btn btn-link" data-dismiss="modal">Bekor qilish</button>
-                        <button type="button" className="btn btn-primary" >O'chirish</button>
+                        <button type="button" className="btn btn-link" data-dismiss="modal">Отмена</button>
+                        <button type="button" className="btn btn-primary" >Выключать</button>
                       </div>
                     </div>
                   </div>

@@ -38,7 +38,7 @@ const NewMultiSelect = ({ selectData,
             // classes={orgClass}
             />
             {/*<span>{item.name}</span>*/}
-          </span>Home</li>
+          </span>Домашняя страница</li>
           <li className={'input_checkbox_item'}> <span className='checked_input'>
             <input
               type="checkbox"
@@ -48,7 +48,7 @@ const NewMultiSelect = ({ selectData,
             // classes={orgClass}
             />
             {/*<span>{item.name}</span>*/}
-          </span>About</li>
+          </span>О нас</li>
           <li className={'input_checkbox_item'}> <span className='checked_input'>
             <input
               type="checkbox"
@@ -58,7 +58,7 @@ const NewMultiSelect = ({ selectData,
             // classes={orgClass}
             />
             {/*<span>{item.name}</span>*/}
-          </span>Contact</li>
+          </span>Контакт</li>
         </div>
       </ul>
     </>

@@ -104,7 +104,7 @@ const MultiSelect = ({
                             disabled={isDisabled}
                             ref={inputRef}
                             onClick={openFuncOption}
-                            value={orgNames.length === 0 ? placeholder : orgNames.length + " ta tashkilot tanlangan"}
+                            value={orgNames.length === 0 ? placeholder : orgNames.length + " выбрана организация"}
                         />
                         {openOption ? (
                             <i className="material-icons downIcon closeIconMultiSelect">&#xe5cd;</i>
@@ -124,7 +124,7 @@ const MultiSelect = ({
                                 onClick={(e) => changeHandler(e)}
 
                             />
-                            <span>Hammasini tanlash</span>
+                            <span>Выбрать все</span>
                         </div>
                         {selectData.map((item, index) => (
                             <li key={index} className='input_checkbox_item'

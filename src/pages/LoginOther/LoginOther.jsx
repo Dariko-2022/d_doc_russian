@@ -34,7 +34,7 @@ const LoginOther = ({ setSimpleUser, setUserAdmin }) => {
             let access_token = token1.access_token;
             let roleBool = JSON.parse(token1?.supperAdmin)?.userRoles?.length;
             if (roleBool === 0 && JSON.parse(token1.workPlaces)?.length === 0) {
-              Alert(setAlert, "warning", "Sizda hozircha hech qanday rol mavjud emas")
+              Alert(setAlert, "warning", "У вас еще нет рабочих столов")
               axios.post(`https://sso.egov.uz/sso/oauth/Authorization.do/?grant_type=one_log_out&client_id=new_d-doc_uz&client_secret=CPi8Y3SatfyeGwpT5AL7bc9q&access_token=${encodeURIComponent(access_token)}&scope=new_d-doc_uz`)
                 .then(res => {
                 })
@@ -49,7 +49,7 @@ const LoginOther = ({ setSimpleUser, setUserAdmin }) => {
                 setUserRoles(JSON.parse(token1?.supperAdmin).userRoles);
                 setWorkPlace(JSON.parse(token1.workPlaces));
               } else {
-                Alert(setAlert, 'warning', "Sizda hozircha hech qanday ish stoli mavjud emas");
+                Alert(setAlert, 'warning', "У вас еще нет рабочих столов");
                 axios.post(`https://sso.egov.uz/sso/oauth/Authorization.do/?grant_type=one_log_out&client_id=new_d-doc_uz&client_secret=CPi8Y3SatfyeGwpT5AL7bc9q&access_token=${encodeURIComponent(access_token)}&scope=new_d-doc_uz`)
                   .then(res => {
                     // console.log(res.data);
@@ -64,7 +64,7 @@ const LoginOther = ({ setSimpleUser, setUserAdmin }) => {
         .catch(err => {
           const token = jwtDecode(err.response?.data);
           let access_token = token.access_token;
-          Alert(setAlert, 'warning', "Hech qanday foydalanuvchi topilmadi");
+          Alert(setAlert, 'warning', "Пользователи не найдены");
           axios.post(`https://sso.egov.uz/sso/oauth/Authorization.do/?grant_type=one_log_out&client_id=new_d-doc_uz&client_secret=CPi8Y3SatfyeGwpT5AL7bc9q&access_token=${encodeURIComponent(access_token)}&scope=new_d-doc_uz`)
             .then(res => {
               // console.log(res.data);
@@ -139,10 +139,10 @@ const LoginOther = ({ setSimpleUser, setUserAdmin }) => {
           if (bool) {
             setWorkPlace(JSON.parse(jwtDecode(res.data).workPlaces));
           } else {
-            Alert(setAlert, 'warning', 'Sizda hech qanday ish stoli mavjud emas')
+            Alert(setAlert, 'warning', 'У вас нет рабочих столов')
           }
         } else {
-          Alert(setAlert, 'warning', 'Siz hech qaysi tashkilotga biriktirilmagansiz.')
+          Alert(setAlert, 'warning', 'Вы не связаны ни с одной организацией.')
         }
         setUserRoles(JSON.parse(jwtDecode(res.data).supperAdmin)?.userRoles);
       } catch (error) {
@@ -150,7 +150,7 @@ const LoginOther = ({ setSimpleUser, setUserAdmin }) => {
         Alert(setAlert, 'warning', `${error?.response?.data}`)
       }
     } else {
-      Alert(setAlert, 'warning', `Seria kiritilmagan`)
+      Alert(setAlert, 'warning', `Не введена серия паспорта`)
     }
   }
 
@@ -169,7 +169,7 @@ const LoginOther = ({ setSimpleUser, setUserAdmin }) => {
                   {workPlace.length === 1 ? (
                     <>
                       {workPlace[0]?.workPlaces?.map((dat, index) => (
-                        <li key={index} onClick={() => ishStoliKirish(dat, workPlace[0])}>Ish Stoli {index + 1}</li>  //Ish Stoli#{dat?.id}
+                        <li key={index} onClick={() => ishStoliKirish(dat, workPlace[0])}>Рабочий стол {index + 1}</li>  //Ish Stoli#{dat?.id}
                       ))}
                       {workPlace[0]?.userRoles?.length > 0 && workPlace[0]?.userRoles?.map((dat, index) => (
                         <li key={index} onClick={() => UserRolesKirish(dat, workPlace[0])} >
@@ -187,13 +187,13 @@ const LoginOther = ({ setSimpleUser, setUserAdmin }) => {
                 <div>
                   <ul>
                     {openOrg?.obj?.workPlaces?.map((dat, index) => (
-                      <li key={index} onClick={() => ishStoliKirish(dat)}>Ish Stoli {index + 1}</li>
+                      <li key={index} onClick={() => ishStoliKirish(dat)}>Рабочий стол {index + 1}</li>
                     ))}
                     {openOrg?.obj?.userRoles?.map((dat, index) => (
                       <li key={index} onClick={() => UserRolesKirish(dat)}>{dat?.systemName}</li>
                     ))}
                   </ul>
-                  <button type={"button d-block"} className="btn btn-primary" onClick={() => setOpenOrg({ open: false, obj: {} })}><i className="fas fa-angle-double-left text-white"></i> Orqaga</button>
+                  <button type={"button d-block"} className="btn btn-primary" onClick={() => setOpenOrg({ open: false, obj: {} })}><i className="fas fa-angle-double-left text-white"></i> Назад</button>
                 </div>
               )}
             </div>
@@ -210,20 +210,20 @@ const LoginOther = ({ setSimpleUser, setUserAdmin }) => {
                   <h4>
                     <img src="./assets/gerb.png" width="100" alt={"GERB UZBEKISTAN"} />
                   </h4>
-                  <span>Xush kelibsiz</span>
-                  <h3>Idoralararo ijro intizomi <br /> axborot tizimi</h3>
+                  <span>Добро пожаловать!</span>
+                  <h3>Межведомственная исполнительная <br />  дисциплина информационная система</h3>
                   <a href="https://sso.egov.uz/sso/oauth/Authorization.do?response_type=one_code&client_id=new_d-doc_uz&redirect_uri=http://d-doc.uz&scope=new_d-doc_uz&state=testState">
-                    <button type={'button'} className={'btn1'}>Kirish</button>
+                    <button type={'button'} className={'btn1'}>Войти</button>
                   </a>
                   <div className="form-footer">
                     <input
                       type="text"
                       className='seria'
-                      placeholder="Pasport seriyani kiriting"
+                      placeholder="Введите серию паспорта"
                       id="userInput"
                       ref={seriaRef}
                     />
-                    <button type="submit" className="btn2">One id siz kirish</button>
+                    <button type="submit" className="btn2">Войти без единого идентификатора</button>
                   </div>
                 </form>
               </div>

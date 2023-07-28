@@ -6,7 +6,7 @@ const AdminElektronKitobContent = ({ currentUser }) => {
 
   return (
     <div className="content">
-      <h3 style={{ margin: "10px 0 0 0", fontWeight: "bold", textTransform: "upperCase" }}>Barchasi</h3>
+      <h3 style={{ margin: "10px 0 0 0", fontWeight: "bold", textTransform: "upperCase" }}>Все</h3>
       {/* card-body */}
       <div className="">
         <ul className="nav nav-tabs nav-tabs-solid nav-tabs-solid-custom bg-primary NavLink">

@@ -238,7 +238,7 @@ const AdminKorishContent = ({ currentUser }) => {
           }
           return d;
         })
-        Alert(setAlert, "success", "Yunalish nomi muvaffaqiyatli o'zgartirildi")
+        Alert(setAlert, "success", "Маршрутизация успешно переименована")
         setYunalishlar(arr);
         setUpdateYunalish({ open: false, obj: {} });
         let orgNames = document.querySelectorAll('.cardAccordion');
@@ -256,7 +256,7 @@ const AdminKorishContent = ({ currentUser }) => {
         console.log(error?.response);
       }
     } else {
-      Alert(setAlert, "warning", "Yunalish nomi kiritilishi kerak")
+      Alert(setAlert, "warning", "Необходимо ввести имя пункта назначения")
     }
   }
 
@@ -354,7 +354,7 @@ const AdminKorishContent = ({ currentUser }) => {
 
   return (
     <div className="content mb-5 ">
-      <h3 style={{ margin: "10px 0 20px 20px", fontWeight: "bold", textTransform: "upperCase" }}>Ko'rish</h3>
+      <h3 style={{ margin: "10px 0 20px 20px", fontWeight: "bold", textTransform: "upperCase" }}>Вид</h3>
       <Link to={`/super_base_admin_tashkilot-qushish`} className={'goBack d-none'}></Link>
       <ul className="nav nav-tabs nav-tabs-solid nav-tabs-solid-custom bg-primary NavLink"
         style={{ borderTopRightRadius: "5px", borderTopLeftRadius: "5px", marginLeft: "20px" }}>
@@ -373,7 +373,7 @@ const AdminKorishContent = ({ currentUser }) => {
                         <input
                           type="text"
                           className="form-control form-control-outline mb-2"
-                          placeholder="Nomi yoki Stir"
+                          placeholder="Имя или СТИР"
                           onChange={(e) => setSearch(e.target.value)}
                         />
                       </div>
@@ -387,16 +387,16 @@ const AdminKorishContent = ({ currentUser }) => {
                         <thead>
                           <tr className="bg-dark text-white NavLink text-center">
                             <th style={{ width: "3%" }}>№</th>
-                            <th style={{ width: "15%" }}>Nomi</th>
-                            <th style={{ width: "15%" }}>Tuman
-                              (shahar)
+                            <th style={{ width: "15%" }}>Имя</th>
+                            <th style={{ width: "15%" }}>Район
+                              (Город)
                             </th>
-                            <th style={{ width: "25%" }}>Qisqacha
-                              Nomi
+                            <th style={{ width: "25%" }}>Короткое 
+                            имя
                             </th>
-                            <th style={{ width: "25%" }}>Rahbari</th>
-                            <th style={{ width: "10%" }}>Stir</th>
-                            <td style={{ width: "8%" }}>Harakatlar</td>
+                            <th style={{ width: "25%" }}>Директор</th>
+                            <th style={{ width: "10%" }}>СТИР</th>
+                            <td style={{ width: "8%" }}>Действия</td>
                           </tr>
                         </thead>
                         <tbody
@@ -575,15 +575,15 @@ const AdminKorishContent = ({ currentUser }) => {
                                                                     <thead>
                                                                       <tr className="bg-dark text-white NavLink text-center">
                                                                         <th style={{ width: "3%" }}>№</th>
-                                                                        <th style={{ width: "15%" }}>logo</th>
-                                                                        <th style={{ width: "20%" }}>Tuman
-                                                                          (shahar)
+                                                                        <th style={{ width: "15%" }}>Лого</th>
+                                                                        <th style={{ width: "20%" }}>Район
+                                                                          (Город)
                                                                         </th>
-                                                                        <th style={{ width: "25%" }}>Qisqacha
-                                                                          Nomi
+                                                                        <th style={{ width: "25%" }}>Короткое
+                                                                          Имя
                                                                         </th>
-                                                                        <th style={{ width: "25%" }}>Rahbari</th>
-                                                                        <td style={{ width: "8%" }}>Harakatlar</td>
+                                                                        <th style={{ width: "25%" }}>Директор</th>
+                                                                        <td style={{ width: "8%" }}>Действия</td>
                                                                       </tr>
                                                                     </thead>
                                                                     <tbody
@@ -681,7 +681,7 @@ const AdminKorishContent = ({ currentUser }) => {
           <div className="modal-dialog modal-sm">
             <div className="modal-content">
               <div className="modal-header">
-                <h5 className="modal-title text-danger">O'chirmoqchimisiz?</h5>
+                <h5 className="modal-title text-danger">Вы хотите удалить?</h5>
                 <button type="button" className="close close123" onClick={() => setOpenDeleteModal(false)}
                   data-dismiss="modal">&times;</button>
               </div>
@@ -693,9 +693,9 @@ const AdminKorishContent = ({ currentUser }) => {
               <div className="modal-footer">
                 <button
                   type="button"
-                  className="btn btn-link" onClick={() => setOpenDeleteModal(false)}>Bekor qilish
+                  className="btn btn-link" onClick={() => setOpenDeleteModal(false)}>Отмена
                 </button>
-                <button type="button" className="btn btn-primary" onClick={() => deleteDataId()}>O'chirish
+                <button type="button" className="btn btn-primary" onClick={() => deleteDataId()}>Удалить
                 </button>
               </div>
             </div>
@@ -708,7 +708,7 @@ const AdminKorishContent = ({ currentUser }) => {
           <div className="modal-dialog modal-lg">
             <div className="modal-content">
               <div className="modal-header btn-primary p-2">
-                <h5 className="modal-title">O'zgartirish oynasi</h5>
+                <h5 className="modal-title">Изменить окно</h5>
                 <button type="button" className="close"
                   onClick={() => setUpdateYunalish({ open: false, obj: {} })}>×
                 </button>
@@ -716,12 +716,12 @@ const AdminKorishContent = ({ currentUser }) => {
 
               <form className="modal-body form-inline justify-content-center">
                 <label>Yo'nalish:</label>
-                <input type="text" placeholder="Yo'nalish nomi"
+                <input type="text" placeholder="Название маршрута"
                   className="form-control mb-2 mr-sm-2 ml-sm-2 mb-sm-0 w-75 yunalishName"
                   defaultValue={updateYunalish.obj?.name} />
                 <button type="button" onClick={() => yunalishUzgartirish(updateYunalish.obj)}
                   className="btn btn-primary ml-sm-2 mb-sm-0"
-                  style={{ textTransform: "capitalize" }}>O'zgartirish
+                  style={{ textTransform: "capitalize" }}>Изменять
                 </button>
               </form>
             </div>

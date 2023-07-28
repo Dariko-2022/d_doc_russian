@@ -5,7 +5,7 @@ import AdminElektronKitobNavbar from '../../adminElektronKitobNavbar/AdminElektr
 const AdminBarchasiContent = ({ currentUser }) => {
   return (
     <div className="content mb-5">
-      <h3 style={{ margin: "10px 0 0 20px", fontWeight: "bold", textTransform: "upperCase" }}>Barchasi</h3>
+      <h3 style={{ margin: "10px 0 0 20px", fontWeight: "bold", textTransform: "upperCase" }}>Все</h3>
       <div className="card-body">
         <ul className="nav nav-tabs nav-tabs-solid nav-tabs-solid-custom bg-primary NavLink" style={{ borderTopRightRadius: "5px", borderTopLeftRadius: "5px" }}>
           <AdminElektronKitobNavbar />
@@ -19,12 +19,12 @@ const AdminBarchasiContent = ({ currentUser }) => {
                   <thead>
                     <tr className="bg-dark text-white NavLink text-center">
                       <th style={{ width: "5%" }}>№</th>
-                      <th style={{ width: "25%" }}>Jurnal turi/nomi</th>
-                      <th style={{ width: "25%" }}>Qisqacha tasnifi</th>
-                      <th style={{ width: "10%" }}>Jurnal Prefiksi</th>
-                      <th style={{ width: "10%" }}>Jurnal Postfiksi</th>
-                      <th style={{ width: "10%" }}>Boshlang'ich Raqam</th>
-                      <th style={{ width: "15%" }}>Xarakatlar</th>
+                      <th style={{ width: "25%" }}>Тип/название журнала</th>
+                      <th style={{ width: "25%" }}>Краткая классификация</th>
+                      <th style={{ width: "10%" }}>Префикс журнала</th>
+                      <th style={{ width: "10%" }}>Журнал Постфикс</th>
+                      <th style={{ width: "10%" }}>Начальный номер</th>
+                      <th style={{ width: "15%" }}>Действия</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -32,11 +32,11 @@ const AdminBarchasiContent = ({ currentUser }) => {
                       <td>1</td>
 
                       <td className="text-center">
-                        <span className="badge badge-primary">Murojatlar</span>
+                        <span className="badge badge-primary">Обращения</span>
                         <hr />
-                        <p>Fuqaro Murojatlari</p>
+                        <p>Гражданские апелляции</p>
                       </td>
-                      <td>Fuqaro Murojati</td>
+                      <td>Гражданские апелляции</td>
                       <td>1</td>
                       <td>1</td>
                       <td>1</td>
@@ -62,11 +62,11 @@ const AdminBarchasiContent = ({ currentUser }) => {
                     <tr style={{ fontSize: "15px" }} className="text-center">
                       <td>1</td>
                       <td className="text-center">
-                        <span className="badge badge-primary">Murojatlar</span>
+                        <span className="badge badge-primary">Обращения</span>
                         <hr />
-                        <p>Fuqaro Murojatlari</p>
+                        <p>Гражданские апелляции</p>
                       </td>
-                      <td>Fuqaro Murojati</td>
+                      <td>Гражданские апелляции</td>
                       <td>1</td>
                       <td>1</td>
                       <td>1</td>

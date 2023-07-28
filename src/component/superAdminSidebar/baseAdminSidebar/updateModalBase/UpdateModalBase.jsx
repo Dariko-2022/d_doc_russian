@@ -31,7 +31,7 @@ const UpdateModalBase = ({ setAlert, userData, setUpdateModal }) => {
             userName: userName,
           })
           uploaded(res.data)
-          Alert(setAlert, "success", "Ma'lumotingiz muvaffaqiyatli o'zgartirildi");
+          Alert(setAlert, "success", "Ваша информация была успешно изменена");
           setUpdateModal(false);
         } catch (error) {
           Alert(setAlert, "warning", `${error.response?.data}`);
@@ -48,7 +48,7 @@ const UpdateModalBase = ({ setAlert, userData, setUpdateModal }) => {
           userName: userName,
         })
         uploaded(res.data)
-        Alert(setAlert, "success", "Ma'lumotingiz muvaffaqiyatli o'zgartirildi");
+        Alert(setAlert, "success", "Ваша информация была успешно изменена");
         setUpdateModal(false);
       } catch (error) {
         Alert(setAlert, "warning", `${error.response?.data}`);
@@ -64,7 +64,7 @@ const UpdateModalBase = ({ setAlert, userData, setUpdateModal }) => {
             boxShadow: '0 .5rem 1rem rgba(0,0,0,.5)'
           }} >
             <div className="modal-header bg-primary " style={{ color: "#fff" }}>
-              <h5 className="modal-title">Foydalanuvchi sozlamalari</h5>
+              <h5 className="modal-title">Пользовательские настройки</h5>
               <button type="button" className="close" onClick={() => setUpdateModal(false)}>×</button>
             </div>
             <form onSubmit={saveUser}>
@@ -85,7 +85,7 @@ const UpdateModalBase = ({ setAlert, userData, setUpdateModal }) => {
                               disabled={true}
                               defaultValue={userData?.fullName}
                             />
-                            <label className="label-floating">FIO</label>
+                            <label className="label-floating">Ф.И.О</label>
                           </div>
                         </div>
                         <div className="col-lg-3">
@@ -134,7 +134,7 @@ const UpdateModalBase = ({ setAlert, userData, setUpdateModal }) => {
                               placeholder="Placeholder"
                               defaultValue={userData?.email}
                             />
-                            <label className="label-floating">Email</label>
+                            <label className="label-floating">Е-маил</label>
                           </div>
                         </div>
                       </div>
@@ -153,7 +153,7 @@ const UpdateModalBase = ({ setAlert, userData, setUpdateModal }) => {
                               placeholder="Placeholder"
                               defaultValue={userData?.phoneNumber}
                             />
-                            <label className="label-floating">Telefon nomer</label>
+                            <label className="label-floating">Номер телефона</label>
                           </div>
                         </div>
                       </div>
@@ -172,7 +172,7 @@ const UpdateModalBase = ({ setAlert, userData, setUpdateModal }) => {
                             placeholder="Placeholder"
                             defaultValue={userData?.username}
                           />
-                          <label className="label-floating">Username</label>
+                          <label className="label-floating">Имя пользователя</label>
                         </div>
                       </div>
                     </div>
@@ -184,7 +184,7 @@ const UpdateModalBase = ({ setAlert, userData, setUpdateModal }) => {
                       <div className="col-lg-12">
                         <label className="custom-file text-muted" htmlFor={'select'}>
                           <div className={'custom-file-label'}>
-                            {fileType ? file?.name : "Foydalanuvchi rasmi"}
+                            {fileType ? file?.name : "Фото пользователя"}
                           </div>
                         </label>
                         <input
@@ -207,7 +207,7 @@ const UpdateModalBase = ({ setAlert, userData, setUpdateModal }) => {
                     <button
                       type="submit"
                       className="btn btn-primary">
-                      Saqlash
+                      Сохранять
                     </button>
                   </div>
                 </div>

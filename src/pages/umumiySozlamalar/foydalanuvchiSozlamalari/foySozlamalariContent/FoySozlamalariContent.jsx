@@ -5,7 +5,7 @@ export default function FoySozlamalariContent({ currentUser }) {
         <div className="content">
             <div className="card-body">
                 <ul className="nav nav-tabs nav-tabs-solid nav-tabs-solid-custom bg-primary NavLink">
-                    <h1 style={{ color: "#fff", margin: "2px", marginLeft: "2.5%" }}>Biriktirilgan Foydalanuvchilar</h1>
+                    <h1 style={{ color: "#fff", margin: "2px", marginLeft: "2.5%" }}>Добавленные пользователи</h1>
                 </ul>
                 <div className="tab-content">
                     <div className="tab-pane fade show active" id="colored-tab1">
@@ -19,7 +19,7 @@ export default function FoySozlamalariContent({ currentUser }) {
                                                     <div className="col-lg-10">
                                                         <div className="position-relative">
                                                             <input type="text" className="form-control form-control-outline" style={{ height: "40px;" }} placeholder="Placeholder" />
-                                                            <label className="label-floating">Foydalanuvchi Logini (,) bilan kitiring</label>
+                                                            <label className="label-floating">Введите логин пользователя с помощью (,).</label>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -28,7 +28,7 @@ export default function FoySozlamalariContent({ currentUser }) {
                                                 <div className="form-group form-group-floating row">
                                                     <div className="col-lg-10">
                                                         <div className="position-relative">
-                                                            <button className="btn btn-primary">Saqlash</button>
+                                                            <button className="btn btn-primary">Сохранять</button>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -40,9 +40,9 @@ export default function FoySozlamalariContent({ currentUser }) {
                                     <thead>
                                         <tr className="bg-dark text-white NavLink text-center">
                                             <th style={{ width: "5%", borderRadius: "10px 0 0 0" }}>№</th>
-                                            <th style={{ width: "45%" }}>Nomlanishi</th>
-                                            <th style={{ width: "45%" }}>IDS</th>
-                                            <th style={{ width: "5%" }}>Xarakatlar</th>
+                                            <th style={{ width: "45%" }}>Именование</th>
+                                            <th style={{ width: "45%" }}>ИДС</th>
+                                            <th style={{ width: "5%" }}>Действия</th>
                                         </tr>
                                     </thead>
                                     <tbody>

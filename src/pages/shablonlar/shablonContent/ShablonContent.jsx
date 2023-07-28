@@ -35,13 +35,13 @@ export default function ShablonContent() {
 
     return (
         <div className="content mb-5">
-            <h1 style={{ margin: "10px 0 0 20px", fontWeight: "bold", textTransform: "upperCase" }}>Xarakatlar Shablonlar</h1>
+            <h1 style={{ margin: "10px 0 0 20px", fontWeight: "bold", textTransform: "upperCase" }}>Шаблоны действий</h1>
 
             <div className="card-body">
                 <ul className="nav nav-tabs nav-tabs-solid nav-tabs-solid-custom bg-primary NavLink">
                     <li className="nav-item" style={{ marginLeft: "30px" }}>
                         <NavLink to="/shablonlar" activeClassName='NavLinkLi' className="nav-link d-flex align-items-center" >
-                            <i className="icon-file-text mr-1"></i>Xatlar Shablonlar
+                            <i className="icon-file-text mr-1"></i>Письма, Шаблоны
                         </NavLink>
                     </li>
                 </ul>
@@ -50,14 +50,14 @@ export default function ShablonContent() {
                     <div className="tab-pane fade show active" id="colored-tab1">
                         <div className="card">
                             <div className="card-body" style={{ padding: "20px 30px" }}>
-                                <h3>Yangi Shablon Kiritish</h3>
+                                <h3>Вставить новый шаблон </h3>
                                 <div className="form-group">
                                     <div className="form-group form-group-floating row">
                                         <div className="col-lg-12">
                                             <label htmlFor=""></label>
                                             <div className="position-relative">
                                                 <input type="text" className="form-control form-control-outline" placeholder="Placeholder" />
-                                                <label className="label-floating">Nomlanishi</label>
+                                                <label className="label-floating">Именование</label>
                                             </div>
                                         </div>
                                     </div>
@@ -66,7 +66,7 @@ export default function ShablonContent() {
                                 <div className="card">
                                     <div id="toolbar-container" ></div>
                                     <div id="editor" style={{ height: "500px" }}>
-                                        <p>This is the initial editor content.</p>
+                                        <p>Это начальный контент редактора.</p>
                                     </div>
                                 </div>
                                 <div className="form-group">
@@ -82,16 +82,16 @@ export default function ShablonContent() {
                                             {file ? file.name : "Fayl yuklash"}
                                         </span>
                                     </label>
-                                    <span className="form-text text-muted">Fayl Formati: .doc, .xls</span>
+                                    <span className="form-text text-muted">Формат файла: .doc, .xls</span>
                                 </div>
                                 {/* <!-- table --> */}
                                 <table className="table table-bordered datatable-select-single table-striped table-hover Tab" >
                                     <thead>
                                         <tr className="bg-dark text-white NavLink text-center">
                                             <th style={{ width: "5%" }}>№</th>
-                                            <th style={{ width: "20%" }}>Rasmi</th>
-                                            <th style={{ width: "65%" }}>Nomlanishi</th>
-                                            <th style={{ width: "10%" }}>Harakatlar</th>
+                                            <th style={{ width: "20%" }}>Фото</th>
+                                            <th style={{ width: "65%" }}>Именование</th>
+                                            <th style={{ width: "10%" }}>действия</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -118,7 +118,7 @@ export default function ShablonContent() {
                                                         <div className="modal-dialog modal-xl">
                                                             <div className="modal-content">
                                                                 <div className="modal-header bg-primary text-white">
-                                                                    <h6 className="modal-title">O'zgartirish</h6>
+                                                                    <h6 className="modal-title">Изменять</h6>
                                                                     <button type="button" className="close close2" data-dismiss="modal">&times;</button>
                                                                 </div>
 
@@ -137,7 +137,7 @@ export default function ShablonContent() {
                                                                                                     placeholder="Placeholder"
                                                                                                     defaultValue={dat.nomlanishi}
                                                                                                 />
-                                                                                                <label className="label-floating">Nomlanishi</label>
+                                                                                                <label className="label-floating">Именование</label>
                                                                                             </div>
                                                                                         </div>
                                                                                     </div>
@@ -160,7 +160,7 @@ export default function ShablonContent() {
                                                                                                 {file1 ? file1.name : "Fayl yuklash"}
                                                                                             </span>
                                                                                         </label>
-                                                                                        <span className="form-text text-muted mt-0">Fayl Formati: .doc, .xls</span>
+                                                                                        <span className="form-text text-muted mt-0">Формат файла: .doc, .xls</span>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
@@ -171,7 +171,7 @@ export default function ShablonContent() {
                                                                                 <div className="col-lg-12">
                                                                                     <div className="position-relative">
                                                                                         <button type="button" onClick={() => uzgartirish(index)} className="btn btn-primary form-control form-control-outline">
-                                                                                            <i className="fas fa-plus mr-1"></i>Qo'shish
+                                                                                            <i className="fas fa-plus mr-1"></i>Добавлять
                                                                                         </button>
                                                                                     </div>
                                                                                 </div>
@@ -188,16 +188,16 @@ export default function ShablonContent() {
                                                         <div className="modal-dialog">
                                                             <div className="modal-content">
                                                                 <div className="modal-header bg-primary text-white">
-                                                                    <h6 className="modal-title">O'chirish oynasi</h6>
+                                                                    <h6 className="modal-title">Удалить окно</h6>
                                                                     <button type="button" className="close close1" data-dismiss="modal">×</button>
                                                                 </div>
                                                                 <div className="modal-body ">
-                                                                    <h3 style={{ textTransform: "upperCase", fontWeight: "bold" }} className="text-danger">Ogoh bo'ling!</h3>
+                                                                    <h3 style={{ textTransform: "upperCase", fontWeight: "bold" }} className="text-danger">Будьте в курсе!</h3>
                                                                     <h5>Ushbu ma'lumotni o'chirmoqchimisiz?</h5>
                                                                 </div>
                                                                 <div className="modal-footer">
-                                                                    <button type="button" className="btn btn-link bekorQilish" data-dismiss="modal">Bekor qilish</button>
-                                                                    <button type="button" className="btn btn-primary" onClick={() => Uchirish(index)}>O'chirish</button>
+                                                                    <button type="button" className="btn btn-link bekorQilish" data-dismiss="modal">Отмена</button>
+                                                                    <button type="button" className="btn btn-primary" onClick={() => Uchirish(index)}>Выключать</button>
                                                                 </div>
                                                             </div>
                                                         </div>

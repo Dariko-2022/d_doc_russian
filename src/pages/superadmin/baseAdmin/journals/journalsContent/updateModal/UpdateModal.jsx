@@ -22,14 +22,14 @@ const UpdateModal = ({ updateModal, setUpdateModal, currentUser, tasnif3, setTas
           }
           return t;
         })
-        Alert(setAlert, "success", "Ma'lumot muvaffaqiyatli o'zgartirildi");
+        Alert(setAlert, "success", "Информация успешно изменена");
         setUpdateModal({ open: false, obj: {} });
         setTasnif3(arr);
       } catch (error) {
         console.log(error.response)
       }
     } else {
-      Alert(setAlert, "warning", "Tasnif3 maydoni to'ldirilishi shart");
+      Alert(setAlert, "warning", "Поле Классификация3 должно быть заполнено");
     }
   }
 
@@ -39,7 +39,7 @@ const UpdateModal = ({ updateModal, setUpdateModal, currentUser, tasnif3, setTas
         <div className="updateDataWindowWrapper">
           <form>
             <div className="updateDataWindowTop">
-              <h3>O'zgartirish oynasi</h3>
+              <h3>Изменить окно</h3>
               <span onClick={() => setUpdateModal({ open: false, obj: {} })}>&times;</span>
             </div>
             <div className="updateDataWindowCenter">
@@ -48,12 +48,12 @@ const UpdateModal = ({ updateModal, setUpdateModal, currentUser, tasnif3, setTas
                 className="form-control inputNom"
                 defaultValue={updateModal.obj.name}
                 ref={inputRef}
-                placeholder="Tasnif3"
+                placeholder="Классификация3"
               />
             </div>
             {/* <hr /> */}
             <div className="updateDataWindowBottom">
-              <button type={'button'} className="btn btn-primary" onClick={() => updatedData(updateModal.obj)}>O'zgartirish
+              <button type={'button'} className="btn btn-primary" onClick={() => updatedData(updateModal.obj)}>Изменять 
               </button>
             </div>
           </form>

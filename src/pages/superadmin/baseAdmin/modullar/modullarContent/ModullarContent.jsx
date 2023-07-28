@@ -51,7 +51,7 @@ const ModullarContent = ({ currentUser }) => {
       })
       setData(arr);
       setOpenModal({ open: false, id: 0 });
-      Alert(setAlert, "success", "Muvofaqqiyatli o'zgartirildi!")
+      Alert(setAlert, "success", "Изменено успешно!")
 
     } catch (error) {
       Alert(setAlert, "warning", error.response.data)
@@ -106,7 +106,7 @@ const ModullarContent = ({ currentUser }) => {
 
   return (
     <div className="content mb-5">
-      <h3 style={{ margin: "10px 0 0 0", fontWeight: "bold", textTransform: "upperCase" }}>Modul Sozlamalari</h3>
+      <h3 style={{ margin: "10px 0 0 0", fontWeight: "bold", textTransform: "upperCase" }}>Настройки модуля</h3>
       <div className="card-body p-0">
         <ul className="nav nav-tabs nav-tabs-solid nav-tabs-solid-custom bg-primary NavLink">
           <BaseAdminModulNavbar />
@@ -122,9 +122,9 @@ const ModullarContent = ({ currentUser }) => {
                   <thead>
                     <tr className="bg-dark text-white NavLink text-center">
                       <th style={{ width: "5%" }}>№</th>
-                      <th style={{ width: "45%" }}>Xujjat</th>
-                      <th style={{ width: "40%" }}>Xolat</th>
-                      <th style={{ width: "5%" }}>Sozlamalar</th>
+                      <th style={{ width: "45%" }}>Документ</th>
+                      <th style={{ width: "40%" }}>Положение</th>
+                      <th style={{ width: "5%" }}>Настройки</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -141,9 +141,9 @@ const ModullarContent = ({ currentUser }) => {
                         <td className="text-left">{dat?.name}</td>
                         <td id="context" className="text-center">
                           {dat?.active ? (
-                            <p className="text-success">Yoqilgan</p>
+                            <p className="text-success">Включено</p>
                           ) : (
-                            <p className="text-danger">O'chirilgan</p>
+                            <p className="text-danger">Выключенный</p>
                           )}
                         </td>
                         <td>
@@ -163,24 +163,24 @@ const ModullarContent = ({ currentUser }) => {
                     <div className="modal-dialog">
                       <div className="modal-content">
                         <div className="modal-header bg-primary text-white">
-                          <h6 className="modal-title">Modul boshqarish oynasi</h6>
+                          <h6 className="modal-title">Окно управления модулем</h6>
                           {/* <button type="button" className="close close2" >×</button> */}
                         </div>
                         <div className="modal-body text-center">
                           {/* <h3 style={{ textTransform: "upperCase", fontWeight: "bold" }} className="text-danger">Ogoh bo'ling!</h3> */}
-                          <h5 style={{ color: openModal.color }}>Ushbu ma'lumotlarni o'zgartirmoqchimisiz?</h5>
+                          <h5 style={{ color: openModal.color }}>Вы хотите изменить эту информацию?</h5>
                         </div>
                         <div className="modal-footer" style={{ justifyContent: "center" }}>
                           <button type="button" className="btn btn-success"
                             style={{ minWidth: "80px" }}
                             onClick={() => accept(openModal.id)}>
-                            Ha
+                            Да
                           </button>
 
                           <button type="button" className="btn btn-danger"
                             style={{ minWidth: "80px" }}
                             onClick={() => setOpenModal({ open: false, id: 0 })}>
-                            Yo'q
+                            Нет
                           </button>
                         </div>
                       </div>

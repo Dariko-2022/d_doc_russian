@@ -33,7 +33,7 @@ const OpenAllReject = ({ setHokimRadEtish, alert, setAlert, data, setData }) => 
                 const res = await axiosInstance.post("controlling/rejectAll", list)
                 console.log(res.data);
                 setHokimRadEtish(false);
-                Alert(setAlert, "success", "Barcha hujjat rad etildi");
+                Alert(setAlert, "success", "Все документы были отклонены");
 
                 setTimeout(() => {
                     history.push("/kiruvchi/maxsusNazorat")
@@ -43,7 +43,7 @@ const OpenAllReject = ({ setHokimRadEtish, alert, setAlert, data, setData }) => 
                 console.log(error.response);
             }
         } else {
-            Alert(setAlert, "warning", "Izoh yozish majburiy");
+            Alert(setAlert, "warning", "Требуется комментарий");
             setHokimRadEtish(false);
         }
     }
@@ -53,20 +53,20 @@ const OpenAllReject = ({ setHokimRadEtish, alert, setAlert, data, setData }) => 
             <div className="modal-dialog">
                 <div className="modal-content">
                     <div className="modal-header bg-primary text-white">
-                        <h6 className="modal-title">Barchasini rad etish oynasi:</h6>
+                        <h6 className="modal-title">Отклонить все окна:</h6>
                     </div>
                     <div className="modal-body ">
                         <textarea
                             name=""
                             rows="8"
                             className="form-control closedIjroTextArea"
-                            placeholder="Izoh..."
+                            placeholder="Комментарий..."
                         >
                         </textarea>
                     </div>
                     <div className="modal-footer">
-                        <button type="button" className="btn btn-link bekorQilish" onClick={() => setHokimRadEtish(false)}>Yopish</button>
-                        <button type="button" className="btn btn-success" onClick={() => rejectFunc()}>Tasdiqlash</button>
+                        <button type="button" className="btn btn-link bekorQilish" onClick={() => setHokimRadEtish(false)}>Закрыть</button>
+                        <button type="button" className="btn btn-success" onClick={() => rejectFunc()}>Подтверждение</button>
                     </div>
                 </div>
             </div>

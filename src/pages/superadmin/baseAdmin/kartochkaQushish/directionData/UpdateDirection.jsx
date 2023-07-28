@@ -89,7 +89,7 @@ const UpdateDirection = ({ currentUser, notParentsCard, setAlert, yunalishlar, s
         } catch (error) {
           console.log(error?.response);
         }
-        Alert(setAlert, "success", "Yunalish nomi muvaffaqiyatli o'zgartirildi")
+        Alert(setAlert, "success", "Название маршрута успешно изменено")
         setUpdateYunalish({ open: false, obj: {} });
       } catch (error) {
         console.log(error?.response);
@@ -98,7 +98,7 @@ const UpdateDirection = ({ currentUser, notParentsCard, setAlert, yunalishlar, s
       }
     } else {
       setUpdateYunalish({ open: false, obj: {} });
-      Alert(setAlert, "warning", "Yunalish nomi kiritilishi kerak")
+      Alert(setAlert, "warning", "Необходимо ввести название маршрута")
     }
   }
 
@@ -107,7 +107,7 @@ const UpdateDirection = ({ currentUser, notParentsCard, setAlert, yunalishlar, s
       <div className="modal-dialog modal-lg ">
         <div className="modal-content">
           <div className="modal-header bg-primary text-white">
-            <h5 className="modal-title" style={{ textTransform: "capitalize" }}>O'zgartirish oynasi</h5>
+            <h5 className="modal-title" style={{ textTransform: "capitalize" }}>Изменить окно</h5>
             <button type="button" className="close" onClick={() => setUpdateYunalish({ open: false, obj: {} })}>&times;</button>
           </div>
 
@@ -124,7 +124,7 @@ const UpdateDirection = ({ currentUser, notParentsCard, setAlert, yunalishlar, s
                         autoFocus
                         ref={directionNameref}
                       />
-                      <label className="label-floating">Yo'nalish nomini kiriting</label>
+                      <label className="label-floating">Введите название пункта назначения</label>
                     </div>
                   </div>
                 </div>
@@ -133,7 +133,7 @@ const UpdateDirection = ({ currentUser, notParentsCard, setAlert, yunalishlar, s
                   <div className="form-group form-group-floating">
                     <Select
                       options={notParentsCard}
-                      placeholder="Yo'nalish"
+                      placeholder="Направление"
                       isClearable={true}
                       className="kartochkalar1"
                       ref={cardref}
@@ -153,7 +153,7 @@ const UpdateDirection = ({ currentUser, notParentsCard, setAlert, yunalishlar, s
                             autoFocus
                             ref={orderNumberref}
                           />
-                          <label className="label-floating">Tartib raqami</label>
+                          <label className="label-floating">Порядковый номер</label>
                         </div>
                       </div>
                     </div>
@@ -163,7 +163,7 @@ const UpdateDirection = ({ currentUser, notParentsCard, setAlert, yunalishlar, s
                       className="btn btn-primary "
                       onClick={() => yunalishUzgartirish(updateYunalish.obj)}
                     >
-                      O'zgartirish
+                      Изменять
                     </button>
                   </div>
                 </div>

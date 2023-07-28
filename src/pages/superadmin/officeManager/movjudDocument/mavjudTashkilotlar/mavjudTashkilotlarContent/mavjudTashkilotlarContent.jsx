@@ -131,7 +131,7 @@ export default function UmumiyTashkilotlarContent({ currentUser }) {
           id: dat.id,
           orgId: JSON.parse(localStorage.getItem('oi'))
         })
-        Alert(setAlert, "success", "Muvaffaqiyatli qo'shildi")
+        Alert(setAlert, "success", "Добавлено успешно")
       } catch (error) {
         console.log(error?.response);
         Alert(setAlert, "warning", error?.response?.data);
@@ -143,10 +143,10 @@ export default function UmumiyTashkilotlarContent({ currentUser }) {
           id: dat.id,
           orgId: JSON.parse(localStorage.getItem('oi'))
         })
-        Alert(setAlert, "danger", "Muvaffaqiyatli o'chirildi")
+        Alert(setAlert, "danger", "Удалено успешно")
       } catch (error) {
         console.log(error?.response);
-        Alert(setAlert, "warning", "Serverda xatolik yuz berdi");
+        Alert(setAlert, "warning", "Произошла ошибка на сервере");
       }
       setChange(!change);
     }
@@ -155,7 +155,7 @@ export default function UmumiyTashkilotlarContent({ currentUser }) {
   return (
     <>
       <div className="content content-mobile mb-5">
-        <h3 style={{ margin: "10px 0 0 0", fontWeight: "bold", textTransform: "upperCase" }}>Umumiy tashkilotlar</h3>
+        <h3 style={{ margin: "10px 0 0 0", fontWeight: "bold", textTransform: "upperCase" }}>Общие организации</h3>
         <div className="card-body-mobile" >
           <div className="card-body card-body-mobile p-0" >
             <ul className="nav nav-tabs nav-tabs-solid nav-tabs-solid-custom bg-primary NavLink d-flex align-items-center ">
@@ -169,7 +169,7 @@ export default function UmumiyTashkilotlarContent({ currentUser }) {
                     <div id="accordion-default">
                       <button className="btn btn-primary"
                         onClick={() => setAddModal(true)}>
-                        Tashkilot qo'shish
+                        Добавить организацию
                       </button>
 
                       {/* yunalishlar */}
@@ -225,7 +225,7 @@ export default function UmumiyTashkilotlarContent({ currentUser }) {
                                                 <div className="card-header bg-dark" onClick={() => getTashBoshTashkilot(tash.id)}>
 
                                                   <h6 className="card-title">
-                                                    <a data-toggle="collapse" className="text-white" href={`#bTashkilot${index}`}>Bosh tashkilot</a>
+                                                    <a data-toggle="collapse" className="text-white" href={`#bTashkilot${index}`}> Основная организация </a>
                                                   </h6>
                                                 </div>
 
@@ -235,11 +235,11 @@ export default function UmumiyTashkilotlarContent({ currentUser }) {
                                                       <thead>
                                                         <tr className="bg-dark text-white NavLink text-center">
                                                           <th style={{ width: "3%" }}>№</th>
-                                                          <th style={{ width: "15%" }}>logo</th>
-                                                          <th style={{ width: "20%" }}>Tuman (shahar)</th>
-                                                          <th style={{ width: "25%" }}>Qisqacha Nomi</th>
-                                                          <th style={{ width: "25%" }}>Rahbari</th>
-                                                          <td style={{ width: "8%" }}>Harakatlar</td>
+                                                          <th style={{ width: "15%" }}>логотип </th>
+                                                          <th style={{ width: "20%" }}>Район (город))</th>
+                                                          <th style={{ width: "25%" }}>Короткое имя</th>
+                                                          <th style={{ width: "25%" }}> Директор </th>
+                                                          <td style={{ width: "8%" }}>Действия </td>
                                                         </tr>
                                                       </thead>
                                                       <tbody id="viloyat">
@@ -290,7 +290,7 @@ export default function UmumiyTashkilotlarContent({ currentUser }) {
                                               <div className="card mb-0">
                                                 <div className="card-header bg-dark" onClick={() => getTashQuyiTashkilot(tash.id)}>
                                                   <h6 className="card-title">
-                                                    <a className="collapsed text-white" data-toggle="collapse" href={`#qTashkilot${index}`}>Quyi tashkilotlar</a>
+                                                    <a className="collapsed text-white" data-toggle="collapse" href={`#qTashkilot${index}`}>Низшие организации </a>
                                                   </h6>
                                                 </div>
 
@@ -300,11 +300,11 @@ export default function UmumiyTashkilotlarContent({ currentUser }) {
                                                       <thead>
                                                         <tr className="bg-dark text-white NavLink text-center">
                                                           <th style={{ width: "3%" }}>№</th>
-                                                          <th style={{ width: "15%" }}>logo</th>
-                                                          <th style={{ width: "20%" }}>Tuman (shahar)</th>
-                                                          <th style={{ width: "25%" }}>Qisqacha Nomi</th>
-                                                          <th style={{ width: "25%" }}>Rahbari</th>
-                                                          <td style={{ width: "8%" }}>Harakatlar</td>
+                                                          <th style={{ width: "15%" }}>Логотип</th>
+                                                          <th style={{ width: "20%" }}>Район (город)</th>
+                                                          <th style={{ width: "25%" }}>Короткое имя</th>
+                                                          <th style={{ width: "25%" }}>Директор</th>
+                                                          <td style={{ width: "8%" }}>Действия</td>
                                                         </tr>
                                                       </thead>
                                                       <tbody id="viloyat">

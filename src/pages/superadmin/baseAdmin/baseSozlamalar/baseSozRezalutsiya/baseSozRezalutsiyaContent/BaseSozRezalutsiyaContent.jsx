@@ -4,7 +4,7 @@ import BaseSozlamalarNavbar from "../../baseSozlamalarNavbar/BaseSozlamalarNavba
 const BaseSozRezalutsiyaContent = ({ currentUser }) => {
   return (
     <div className="content mb-5">
-      <h3 style={{ margin: "10px 0 0 20px", fontWeight: "bold", textTransform: "upperCase" }}>Tezkor Rezalutsiya</h3>
+      <h3 style={{ margin: "10px 0 0 20px", fontWeight: "bold", textTransform: "upperCase" }}>Быстрое резолюция</h3>
       <div className="card-body">
         <ul className="nav nav-tabs nav-tabs-solid nav-tabs-solid-custom bg-primary NavLink" style={{ borderTopRightRadius: "5px", borderTopLeftRadius: "5px" }}>
           <BaseSozlamalarNavbar />
@@ -21,7 +21,7 @@ const BaseSozRezalutsiyaContent = ({ currentUser }) => {
                         <div className="col-lg-12">
                           <div className="position-relative">
                             <input type="text" className="form-control form-control-outline" placeholder="Placeholder" />
-                            <label className="label-floating">Nomlanishi</label>
+                            <label className="label-floating">Именование</label>
                           </div>
                         </div>
                       </div>
@@ -30,7 +30,7 @@ const BaseSozRezalutsiyaContent = ({ currentUser }) => {
                       <div className="form-group form-group-floating row">
                         <div className="col-lg-5">
                           <div className="position-relative">
-                            <button className="btn btn-primary form-control form-control-outline">Qo'shish</button>
+                            <button className="btn btn-primary form-control form-control-outline">Добавлять</button>
                           </div>
                         </div>
                       </div>
@@ -44,14 +44,14 @@ const BaseSozRezalutsiyaContent = ({ currentUser }) => {
                   <thead>
                     <tr className="bg-dark text-white NavLink text-center">
                       <th style={{ width: "5%" }}>№</th>
-                      <th style={{ width: "90%" }}>Nomlanishi</th>
-                      <th style={{ width: "5%" }}>Harakatlar</th>
+                      <th style={{ width: "90%" }}>Именование</th>
+                      <th style={{ width: "5%" }}>Действия</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr style={{ fontSize: "14px" }}>
                       <td className="text-center">1</td>
-                      <td>O'zbekiston Respublikasi Qonuni</td>
+                      <td>Закон Республики Узбекистан</td>
                       <td className="text-center">
                         <div className="icon d-flex justify-content-center align-items-center ">
                           <button className="infoBtn bg-dark" data-toggle="modal" data-target="#yangilash" data-popup="tooltip" title="O'zgartirish"><i className="icon-pencil5" ></i> </button>
@@ -60,7 +60,7 @@ const BaseSozRezalutsiyaContent = ({ currentUser }) => {
                             <div className="modal-dialog modal-lg ">
                               <div className="modal-content">
                                 <div className="modal-header bg-primary text-white">
-                                  <h1 className="modal-title">Yangilash</h1>
+                                  <h1 className="modal-title">Обновлять</h1>
                                   <button type="button" className="close" data-dismiss="modal">&times;</button>
                                 </div>
 
@@ -73,7 +73,7 @@ const BaseSozRezalutsiyaContent = ({ currentUser }) => {
                                           <div className="col-lg-12">
                                             <div className="position-relative">
                                               <input type="text" className="form-control form-control-outline" placeholder="Placeholder" />
-                                              <label className="label-floating">Nomlanishi</label>
+                                              <label className="label-floating">Именование</label>
                                             </div>
                                           </div>
                                         </div>
@@ -82,7 +82,7 @@ const BaseSozRezalutsiyaContent = ({ currentUser }) => {
                                         <div className="form-group form-group-floating row">
                                           <div className="col-lg-12">
                                             <div className="position-relative">
-                                              <button className="btn btn-primary form-control form-control-outline">Qo'shish</button>
+                                              <button className="btn btn-primary form-control form-control-outline">Добавлять</button>
                                             </div>
                                           </div>
                                         </div>

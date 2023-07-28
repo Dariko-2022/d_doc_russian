@@ -32,7 +32,7 @@ const UpdateDirection = ({ setUpdateYunalish, updateYunalish, currentUser, setAl
             })
           })
         } else {
-          Alert(setAlert, "success", "Yo'nalish muvaffaqiyatli qo'shildi");
+          Alert(setAlert, "success", "Маршрут успешно добавлен");
           setYunalishlar(prev => [...prev, res.data]);
         }
       } catch (error) {
@@ -42,7 +42,7 @@ const UpdateDirection = ({ setUpdateYunalish, updateYunalish, currentUser, setAl
       setYunalishQ("");
       document.querySelector('.close11').click();
     } else {
-      Alert(setAlert, "warning", "Yunalish kiritilmagan");
+      Alert(setAlert, "warning", "Не введено направление");
     }
   }
 
@@ -63,7 +63,7 @@ const UpdateDirection = ({ setUpdateYunalish, updateYunalish, currentUser, setAl
           }
           return c;
         })
-        Alert(setAlert, "success", "Yunalish nomi muvaffaqiyatli o'zgartirildi")
+        Alert(setAlert, "success", "Маршрутизация успешно переименована")
         setYunalishlar(arr1)
         let orgNames = document.querySelectorAll('.cardAccordion');
         orgNames.forEach((org) => {
@@ -84,7 +84,7 @@ const UpdateDirection = ({ setUpdateYunalish, updateYunalish, currentUser, setAl
       }
     } else {
       setUpdateYunalish({ open: false, obj: {} });
-      Alert(setAlert, "warning", "Yunalish nomi kiritilishi kerak")
+      Alert(setAlert, "warning", "Необходимо ввести имя пункта назначения.")
     }
   }
 
@@ -93,7 +93,7 @@ const UpdateDirection = ({ setUpdateYunalish, updateYunalish, currentUser, setAl
       <div className="modal-dialog modal-lg ">
         <div className="modal-content">
           <div className="modal-header bg-primary text-white">
-            <h5 className="modal-title" style={{ textTransform: "capitalize" }}>O'zgartirish oynasi</h5>
+            <h5 className="modal-title" style={{ textTransform: "capitalize" }}>Изменить окно</h5>
             <button type="button" className="close"
               onClick={() => setUpdateYunalish({ open: false, obj: {} })}>&times;</button>
           </div>
@@ -115,7 +115,7 @@ const UpdateDirection = ({ setUpdateYunalish, updateYunalish, currentUser, setAl
                           ref={directionref}
 
                         />
-                        <label className="label-floating">Yo'nalish</label>
+                        <label className="label-floating">Направление</label>
                       </div>
                     </div>
                   </div>
@@ -140,7 +140,7 @@ const UpdateDirection = ({ setUpdateYunalish, updateYunalish, currentUser, setAl
                     className="btn btn-primary"
                     onClick={() => yunalishUzgartirish(updateYunalish.obj)}
                   >
-                    O'zgartirish
+                   Изменять
                   </button>
                 </div>
               </div>

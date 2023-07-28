@@ -90,7 +90,7 @@ const ChiquvchiTabContent = ({ currentUser, permission, ranks }) => {
         axiosInstanceOut.get(`missive/sendMissive/${id}`)
             .then((res) => {
                 console.log(res.data);
-                Alert(setAlert, 'success', "Muvoffaqqiyatli jo'natildi");
+                Alert(setAlert, 'success', "Успешно отправлено");
             })
     }
 
@@ -173,34 +173,34 @@ const ChiquvchiTabContent = ({ currentUser, permission, ranks }) => {
                                             </th>
                                             <th id='tabRow' style={{ width: '15%' }}
                                                 className="qabul file_kor_short">
-                                                Fayl
+                                               Файл
                                             </th>
                                             <th id='tabRow' style={{ width: '15%' }}
                                                 className="ariza file_kor_short_not">
-                                                Bo'lim (Tayyorladi)
+                                                Раздел (Подготовлено)
                                             </th>
                                             <th id='tabRow' style={{ width: '10%' }}
                                                 className="murojaat file_kor_short_not">
-                                                Tasdiqlovchi
+                                                Валидатор
                                             </th>
                                             <th id='tabRow' style={{ width: '20%' }}
                                                 className="mur file_kor_short">
-                                                Korrespondent
+                                               Корреспондент
                                             </th>
                                             <th id='tabRow' style={{ width: '20%' }}
                                                 className="qisqacha file_kor_short">
-                                                Qisqacha mazmuni
+                                                Краткое содержание
                                             </th>
                                             {
                                                 tab === 7 && (
                                                     <th id='tabRow' style={{ width: '10 %' }}
                                                         className="reg">
-                                                        Reg № / Sana
+                                                        Рег № / дата
                                                     </th>
                                                 )}
                                             <th id='tabRow' style={{ width: '5%' }}
                                                 className="text-center harakat file_kor_short_not">
-                                                Harakatlar
+                                                Действия
                                             </th>
                                         </tr>
                                     </thead>

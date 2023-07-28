@@ -119,7 +119,7 @@ const Notifications = ({ currentUser }) => {
       <div className="noticeWrapper">
         <div className='noticeWrapper_left'>
           <img src="/assets/doc.png" alt="" />
-          <h3>Elektron dastur <br /> bo'yicha</h3>
+          <h3>По электронной <br /> программе</h3>
         </div>
         <ul className='noticeWrapper_right'>
           {notice?.length > 0 && notice.map((dat) => (

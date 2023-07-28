@@ -173,7 +173,7 @@ const SvodkaContentQVC = ({ currentUser }) => {
         workPlace: JSON.parse(localStorage.getItem("ids")),
         page: 0
       })
-      Alert(setAlert, "success", "Malumot rezalutsiyaga muvaffaqiyatli yuborildi");
+      Alert(setAlert, "success", "Ссылка успешно отправлена ​​на разрешение");
       setOpenTable(true)
       setAllData(res.data)
       document.querySelector('.newFormFunc').reset();
@@ -226,7 +226,7 @@ const SvodkaContentQVC = ({ currentUser }) => {
 
   return (
     <div className="content mb-5">
-      <h3 style={{ margin: "10px 0 0 20px", fontWeight: "bold", textTransform: "upperCase" }}>Umumiy hisobot</h3>
+      <h3 style={{ margin: "10px 0 0 20px", fontWeight: "bold", textTransform: "upperCase" }}>Общий отчет</h3>
       <div className="card-body pt-1">
         <ul className="nav nav-tabs nav-tabs-solid nav-tabs-solid-custom bg-primary NavLink">
           <NavbarContentMonitoring />
@@ -245,7 +245,7 @@ const SvodkaContentQVC = ({ currentUser }) => {
                               required={true}
                               options={notParentsCard}
                               onChange={notParentsCardClick}
-                              placeholder="Nazorat Kartochkasi"
+                              placeholder="Контрольная карта"
                               className="cardTypeId"
                               isClearable={true}
                             />
@@ -260,7 +260,7 @@ const SvodkaContentQVC = ({ currentUser }) => {
                             <Select
                               required={true}
                               options={cardsName}
-                              placeholder="Xujjat Turi"
+                              placeholder="тип документа"
                               onChange={notParentsCardClick1}
                               className="card1"
                               isClearable={true}
@@ -278,12 +278,12 @@ const SvodkaContentQVC = ({ currentUser }) => {
                           popupHeight='500px'
                           fields={fields1}
                           dataSource={cardsName1}
-                          placeholder="Yo'nalishni tanlang"
+                          placeholder="Выберите направление"
                           mode="CheckBox"
                           enableGroupCheckBox="true"
                           allowFiltering="true"
                           showSelectAll="true"
-                          filterBarPlaceholder="Qidirish">
+                          filterBarPlaceholder="Поиск">
                           <Inject services={[CheckBoxSelection]} />
                         </MultiSelectComponent>
                       </div>
@@ -297,7 +297,7 @@ const SvodkaContentQVC = ({ currentUser }) => {
                           popupHeight='500px'
                           fields={fields1}
                           dataSource={korrespondent}
-                          placeholder="Yo'nalishni tanlang"
+                          placeholder="Выберите направление"
                           mode="CheckBox"
                           enableGroupCheckBox="true"
                           allowFiltering="true"
@@ -374,8 +374,8 @@ const SvodkaContentQVC = ({ currentUser }) => {
                     <div className="col-lg-4"></div>
                     <div className="col-lg-4"></div>
                     <div className="col-lg-4 d-flex align-items-center justify-content-end mt-3" style={{ gap: "5px" }}>
-                      <button className="btn btn-primary h-100" style={{ width: "33.333%" }} type={'submit'}>Izlash </button>
-                      <button type={'button'} className="btn btn-primary h-100" style={{ width: "33.333%" }} onClick={all}>Barchasi</button>
+                      <button className="btn btn-primary h-100" style={{ width: "33.333%" }} type={'submit'}>Поиск </button>
+                      <button type={'button'} className="btn btn-primary h-100" style={{ width: "33.333%" }} onClick={all}>Все</button>
                       <div className="btn-group h-100" style={{ width: "33.333%" }}>
                         <button type="button" className="btn btn-primary dropdown-toggle btn-lg" data-toggle="dropdown">Export</button>
                         <div className="dropdown-menu dropdown-menu-right">
@@ -401,17 +401,16 @@ const SvodkaContentQVC = ({ currentUser }) => {
                         <tr className="tr text-black text-center tr"
                           style={{ background: "#DCE6F0" }}>
                           <th className="foiz tr" rowSpan="5">№</th>
-                          <th rowSpan="5" className="Name tr">Kotibiyatlar</th>
-                          <th rowSpan="3" className={'tr'}>Jami kelgan hujjatlar</th>
+                          <th rowSpan="5" className="Name tr">Секретариаты</th>
+                          <th rowSpan="3" className={'tr'}>Всего входящих документов</th>
                           {/*<th colSpan={allData?.umumiyMonitoring?.parentCard.length * 6}>SH U N D A N</th>*/}
                         </tr>
                         <tr className="text-black text-center tr" style={{ background: "#DCE6F0" }}>
                           <th rowSpan="2"
                             className={'tr'}>{allData?.umumiyMonitoring?.parentCard.name}</th>
-                          <th className="jami-foiz tr" rowSpan="2">Jamiga nisbatan % hisobida</th>
+                          <th className="jami-foiz tr" rowSpan="2">В % от общего</th>
                           <th className={'tr'} style={{ background: '#DCE6F0' }}
-                            colSpan={allData?.umumiyMonitoring?.parentCard.childCard.length * 2}>Shu
-                            jumladan
+                            colSpan={allData?.umumiyMonitoring?.parentCard.childCard.length * 2}>В том числе
                           </th>
                         </tr>
 

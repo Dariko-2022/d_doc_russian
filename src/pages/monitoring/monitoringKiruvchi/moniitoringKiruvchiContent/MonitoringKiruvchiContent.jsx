@@ -60,7 +60,7 @@ const MonitoringKiruvchiContent = ({ currentUser }) => {
         console.log(error);
         setTimeout(() => {
           loader.current.style.display = "none";
-          Alert(setAlert, "warning", "Ma'lumot kelishda xatolik yuz berdi");
+          Alert(setAlert, "warning", "Произошла ошибка при получении данных");
         }, 4000);
       }
     }
@@ -218,7 +218,7 @@ const MonitoringKiruvchiContent = ({ currentUser }) => {
         Alert(setAlert, "warning", error?.response?.data);
       }
     } else {
-      Alert(setAlert, "warning", "Bo'lim ichi ochilmagan. Qidirish uchun bo'lim ichi ochilgan bo'lishi kerak");
+      Alert(setAlert, "warning", "Отсек не открывается. Раздел должен быть открыт для поиска");
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }
@@ -251,7 +251,7 @@ const MonitoringKiruvchiContent = ({ currentUser }) => {
 
   return (
     <div className="content mb-5">
-      <h3 style={{ margin: "10px 0 0 0", fontWeight: "bold", textTransform: "upperCase" }}>Kiruvchi</h3>
+      <h3 style={{ margin: "10px 0 0 0", fontWeight: "bold", textTransform: "upperCase" }}>Входящий</h3>
       <div className="card-body p-0">
         <ul className="nav nav-tabs nav-tabs-solid nav-tabs-solid-custom bg-primary NavLink">
           <NavbarContentMonitoring params={params.id} />
@@ -316,7 +316,7 @@ const MonitoringKiruvchiContent = ({ currentUser }) => {
                           fields={fields1}
                           ref={Correspondent}
                           dataSource={korrespondent1}
-                          placeholder="Korrespondent"
+                          placeholder="Корреспондент"
                           mode="CheckBox"
                           enableGroupCheckBox="true"
                           allowFiltering="true"
@@ -354,7 +354,7 @@ const MonitoringKiruvchiContent = ({ currentUser }) => {
                               onChange={(date) => setStartDate(date)}
                               dateFormat={'dd.MM.yyyy'}
                               isClearable
-                              placeholderText="Boshlanish sana"
+                              placeholderText="Дата начала"
                               showYearDropdown scrollableMonthYearDropdown
                             />
                           </div>
@@ -386,7 +386,7 @@ const MonitoringKiruvchiContent = ({ currentUser }) => {
                               onChange={(date) => setEndDate(date)}
                               dateFormat={'dd.MM.yyyy'}
                               isClearable
-                              placeholderText="Tugash sana"
+                              placeholderText="Дата окончания"
                               showYearDropdown
                               scrollableMonthYearDropdown
                             />

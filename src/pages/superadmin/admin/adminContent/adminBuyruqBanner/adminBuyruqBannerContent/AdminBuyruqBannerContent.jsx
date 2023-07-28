@@ -4,7 +4,7 @@ import AdminContentNavbar from "../../adminContentNavbar/AdminContentNavbar";
 const AdminBuyruqBannerContent = ({ currentUser }) => {
   return (
     <div className="content">
-      <h3 style={{ margin: "10px 0 0 0", fontWeight: "bold", textTransform: "upperCase" }}>Buyruq Banner</h3>
+      <h3 style={{ margin: "10px 0 0 0", fontWeight: "bold", textTransform: "upperCase" }}>Командный баннер</h3>
       <div className="">
         <ul className="nav nav-tabs nav-tabs-solid nav-tabs-solid-custom bg-primary NavLink">
           <AdminContentNavbar />
@@ -19,7 +19,7 @@ const AdminBuyruqBannerContent = ({ currentUser }) => {
                     <div className="card mb-0">
                       <div className="card-header bg-primary text-white header-elements-inline">
                         <h6 className="card-title" style={{ fontWeight: "bold", fontSize: "18px" }}>
-                          1-pozitsiya</h6>
+                        Позиция 1</h6>
                       </div>
                       <div className="d-flex justify-content-center">
                         <img src="/style/images/qaror.png" style={{ width: "70%" }}
@@ -29,12 +29,12 @@ const AdminBuyruqBannerContent = ({ currentUser }) => {
                         <div className="row">
                           <div className="col-lg-12 d-flex justify-content-center">
                             <button className="btn btn-primary"
-                              style={{ width: "60%" }}>Pozitsiya uchun banner
-                              tanlash</button>
+                              style={{ width: "60%" }}>Выбрать баннер для 
+                              позиции</button>
                           </div>
                           <div className="col-lg-12 mt-2 d-flex justify-content-center">
                             <button className="btn btn-primary"
-                              style={{ width: "15%" }}>Yuborish</button>
+                              style={{ width: "15%" }}>Отправка</button>
                           </div>
                         </div>
                       </div>

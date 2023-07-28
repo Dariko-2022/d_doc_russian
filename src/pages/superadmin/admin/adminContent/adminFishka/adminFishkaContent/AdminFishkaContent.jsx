@@ -67,7 +67,7 @@ const AdminFishkaContent = ({ currentUser }) => {
                             console.log(err.response);
                         })
                 } else {
-                    console.log("id kelgani yo'q");
+                    console.log("идентификатор не пришел");
                 }
             }).catch(err => {
                 console.log(err.response);
@@ -102,7 +102,7 @@ const AdminFishkaContent = ({ currentUser }) => {
                                 console.log(err);
                             })
                     } else {
-                        console.log("id kelgani yo'q");
+                        console.log("идентификатор не пришел");
                     }
                 })
                 .catch(err => {
@@ -138,7 +138,7 @@ const AdminFishkaContent = ({ currentUser }) => {
                                 console.log(err.response);
                             })
                     } else {
-                        console.log("id kelgani yo'q");
+                        console.log("идентификатор не пришел");
                     }
                 })
                 .catch(err => {
@@ -174,7 +174,7 @@ const AdminFishkaContent = ({ currentUser }) => {
                                 console.log(err.response);
                             })
                     } else {
-                        console.log("id kelgani yo'q");
+                        console.log("идентификатор не пришел");
                     }
                 })
                 .catch(err => {
@@ -214,7 +214,7 @@ const AdminFishkaContent = ({ currentUser }) => {
                 document.querySelector('.a1').style.display = "none"
                 setFile(e.target.files[0]);
             } else {
-                document.querySelector('.fishka1').textContent = "Rasm hajmi 1200x400 bo'lishi kerak";
+                document.querySelector('.fishka1').textContent = "Размер изображения должен быть 1200x400";
                 document.querySelector('.a1').style.display = "block"
                 setFile(null);
             }
@@ -232,7 +232,7 @@ const AdminFishkaContent = ({ currentUser }) => {
                 document.querySelector('.a2').style.display = "none"
                 setFile2(e.target.files[0]);
             } else {
-                document.querySelector('.fishka2').textContent = "Rasm hajmi 1200x400 bo'lishi kerak";
+                document.querySelector('.fishka2').textContent = "Размер изображения должен быть 1200x400";
                 document.querySelector('.a2').style.display = "block"
                 setFile2(null);
             }
@@ -250,7 +250,7 @@ const AdminFishkaContent = ({ currentUser }) => {
                 document.querySelector('.a3').style.display = "none"
                 setFile3(e.target.files[0]);
             } else {
-                document.querySelector('.fishka3').textContent = "Rasm hajmi 1200x400 bo'lishi kerak";
+                document.querySelector('.fishka3').textContent = "Размер изображения должен быть 1200x400";
                 document.querySelector('.a3').style.display = "block"
                 setFile3(null);
             }
@@ -267,7 +267,7 @@ const AdminFishkaContent = ({ currentUser }) => {
                 document.querySelector('.a4').style.display = "none"
                 setFile4(e.target.files[0]);
             } else {
-                document.querySelector('.fishka4').textContent = "Rasm hajmi 1200x400 bo'lishi kerak";
+                document.querySelector('.fishka4').textContent = "Размер изображения должен быть 1200x400";
                 document.querySelector('.a4').style.display = "block"
                 setFile4(null);
             }
@@ -276,7 +276,7 @@ const AdminFishkaContent = ({ currentUser }) => {
 
     return (
         <div className="content mb-5">
-            <h3 style={{ margin: "10px 0 0 0", fontWeight: "bold", textTransform: "upperCase" }}>Fishka</h3>
+            <h3 style={{ margin: "10px 0 0 0", fontWeight: "bold", textTransform: "upperCase" }}>Фишка</h3>
             <div className="">
                 <ul className="nav nav-tabs nav-tabs-solid nav-tabs-solid-custom bg-primary NavLink">
                     <AdminContentNavbar />
@@ -295,7 +295,7 @@ const AdminFishkaContent = ({ currentUser }) => {
                                                 <div className="col-lg-8">
                                                     <div className="card">
                                                         <div className="card-header bg-primary text-white header-elements-inline">
-                                                            <h6 className="card-title" style={{ fontWeight: "bold", fontSize: "18px" }}>1-pozitsiya</h6>
+                                                            <h6 className="card-title" style={{ fontWeight: "bold", fontSize: "18px" }}>Позиция 1</h6>
                                                         </div>
                                                         <div className="w-100">
                                                             <>
@@ -305,7 +305,7 @@ const AdminFishkaContent = ({ currentUser }) => {
                                                                     <>
                                                                         {getAllPicture.length > 0 && getAllPicture.map((image, i) => (
                                                                             <div key={i}>
-                                                                                {(image?.id && image?.userRoleId === "Rahbar") && (
+                                                                                {(image?.id && image?.userRoleId === "Директор") && (
                                                                                     <img src={`${url}/api/file/view/${image?.generatedName}`} alt="" />
                                                                                 )}
                                                                             </div>
@@ -330,14 +330,14 @@ const AdminFishkaContent = ({ currentUser }) => {
                                                                                         accept=".png, .jpeg, .jpg"
                                                                                     />
                                                                                     <span className="custom-file-label text-muted w-100" >
-                                                                                        {fileType ? file.name : "Faylni tanlash"}
+                                                                                        {fileType ? file.name : "Выберите файл"}
                                                                                     </span>
                                                                                 </label>
                                                                                 <a style={{ display: "none" }} rel="noreferrer noopener" href="https://www.iloveimg.com/resize-image#resize-options,pixels" target="_blank" className="text-success a1">https://www.iloveimg.com/resize-image</a>
                                                                             </div>
                                                                             <div className="col-lg-2">
                                                                                 <button type="button" onClick={() => submitHandlerFile1(dat)} style={{ width: "130px" }} className="btn btn-primary">
-                                                                                    <i className="fas fa-save mr-1" style={{ fontSize: "16px" }}></i>Saqlash
+                                                                                    <i className="fas fa-save mr-1" style={{ fontSize: "16px" }}></i>Сохранять
                                                                                 </button>
                                                                             </div>
                                                                         </div>
@@ -360,7 +360,7 @@ const AdminFishkaContent = ({ currentUser }) => {
                                                 <div className="col-lg-8">
                                                     <div className="card">
                                                         <div className="card-header bg-primary text-white header-elements-inline">
-                                                            <h6 className="card-title" style={{ fontWeight: "bold", fontSize: "18px" }}>2-pozitsiya</h6>
+                                                            <h6 className="card-title" style={{ fontWeight: "bold", fontSize: "18px" }}>Позиция 2</h6>
                                                         </div>
                                                         <div className="d-flex justify-content-center">
                                                             <>
@@ -370,7 +370,7 @@ const AdminFishkaContent = ({ currentUser }) => {
                                                                     <>
                                                                         {getAllPicture.length > 0 && getAllPicture.map((image, i) => (
                                                                             <div key={i}>
-                                                                                {image.userRoleId === "1 - o'rinbosar" && (
+                                                                                {image.userRoleId === "Первый заместитель" && (
                                                                                     // <img src={'data:image/png;base64,' + image.picture} alt="" style={{ width: "100%", height: "400px", objectFit: "cover", objectPosition: "bottom" }} />
                                                                                     <img src={`${url}/api/file/view/${image?.generatedName}`} alt="" />
                                                                                 )}
@@ -397,14 +397,14 @@ const AdminFishkaContent = ({ currentUser }) => {
                                                                                         accept=".png, .jpeg, .jpg"
                                                                                     />
                                                                                     <span className="custom-file-label text-muted w-100">
-                                                                                        {fileType1 ? file2.name : "Faylni tanlash"}
+                                                                                        {fileType1 ? file2.name : "Позиция 1"}
                                                                                     </span>
                                                                                 </label>
                                                                                 <a style={{ display: "none" }} rel="noreferrer noopener" href="https://www.iloveimg.com/resize-image#resize-options,pixels" target="_blank" className="text-success a2">https://www.iloveimg.com/resize-image</a>
                                                                             </div>
                                                                             <div className="col-lg-2">
                                                                                 <button type="button" onClick={() => submitHandlerFile2(dat)} style={{ width: "130px" }} className="btn btn-primary">
-                                                                                    <i className="fas fa-save mr-1" style={{ fontSize: "16px" }}></i>Saqlash
+                                                                                    <i className="fas fa-save mr-1" style={{ fontSize: "16px" }}></i>Сохранять
                                                                                 </button>
                                                                             </div>
                                                                         </div>
@@ -427,7 +427,7 @@ const AdminFishkaContent = ({ currentUser }) => {
                                                 <div className="col-lg-8">
                                                     <div className="card">
                                                         <div className="card-header bg-primary text-white header-elements-inline">
-                                                            <h6 className="card-title" style={{ fontWeight: "bold", fontSize: "18px" }}>3-pozitsiya</h6>
+                                                            <h6 className="card-title" style={{ fontWeight: "bold", fontSize: "18px" }}>Позиция 3</h6>
                                                         </div>
                                                         <div className="d-flex justify-content-center w-100">
                                                             {blobBoss3.id ? (
@@ -436,7 +436,7 @@ const AdminFishkaContent = ({ currentUser }) => {
                                                                 <>
                                                                     {getAllPicture.length > 0 && getAllPicture.map((image, i) => (
                                                                         <div key={i}>
-                                                                            {image.userRoleId === "O'rinbosar" && (
+                                                                            {image.userRoleId === "Заместитель" && (
                                                                                 <img src={`${url}/api/file/view/${image?.generatedName}`} alt="" />
                                                                             )}
                                                                         </div>
@@ -460,14 +460,14 @@ const AdminFishkaContent = ({ currentUser }) => {
                                                                                         accept=".png, .jpeg, .jpg"
                                                                                     />
                                                                                     <span className="custom-file-label text-muted w-100">
-                                                                                        {fileType2 ? file3.name : "Faylni tanlash"}
+                                                                                        {fileType2 ? file3.name : "Выберите файл"}
                                                                                     </span>
                                                                                 </label>
                                                                                 <a style={{ display: "none" }} rel="noreferrer noopener" href="https://www.iloveimg.com/resize-image#resize-options,pixels" target="_blank" className="text-success a3">https://www.iloveimg.com/resize-image</a>
                                                                             </div>
                                                                             <div className="col-lg-2">
                                                                                 <button type="button" onClick={() => submitHandlerFile3(dat)} style={{ width: "130px" }} className="btn btn-primary">
-                                                                                    <i className="fas fa-save mr-1" style={{ fontSize: "16px" }}></i>Saqlash
+                                                                                    <i className="fas fa-save mr-1" style={{ fontSize: "16px" }}></i>Сохранять
                                                                                 </button>
                                                                             </div>
                                                                         </div>
@@ -490,7 +490,7 @@ const AdminFishkaContent = ({ currentUser }) => {
                                                 <div className="col-lg-8">
                                                     <div className="card mb-0">
                                                         <div className="card-header bg-primary text-white header-elements-inline">
-                                                            <h6 className="card-title" style={{ fontWeight: "bold", fontSize: "18px" }}>4-pozitsiya</h6>
+                                                            <h6 className="card-title" style={{ fontWeight: "bold", fontSize: "18px" }}>Позиция 4</h6>
                                                         </div>
                                                         <div className="d-flex justify-content-center w-100">
                                                             {blobBoss4.id ? (
@@ -499,7 +499,7 @@ const AdminFishkaContent = ({ currentUser }) => {
                                                                 <>
                                                                     {getAllPicture.length > 0 && getAllPicture.map((image, i) => (
                                                                         <div key={i}>
-                                                                            {image.userRoleId === "Guruh Rahbari" && (
+                                                                            {image.userRoleId === "Лидер группы" && (
                                                                                 <img src={`${url}/api/file/view/${image?.generatedName}`} alt="" />
                                                                             )}
                                                                         </div>
@@ -524,14 +524,14 @@ const AdminFishkaContent = ({ currentUser }) => {
                                                                                     // size={}
                                                                                     />
                                                                                     <span className="custom-file-label text-muted w-100">
-                                                                                        {fileType3 ? file4.name : "Faylni tanlash"}
+                                                                                        {fileType3 ? file4.name : "Выберите файл"}
                                                                                     </span>
                                                                                 </label>
                                                                                 <a style={{ display: "none" }} rel="noreferrer noopener" href="https://www.iloveimg.com/resize-image#resize-options,pixels" target="_blank" className="text-success a4">https://www.iloveimg.com/resize-image</a>
                                                                             </div>
                                                                             <div className="col-lg-2">
                                                                                 <button type="button" onClick={() => submitHandlerFile4(dat)} style={{ width: "130px" }} className="btn btn-primary">
-                                                                                    <i className="fas fa-save mr-1" style={{ fontSize: "16px" }}></i>Saqlash
+                                                                                    <i className="fas fa-save mr-1" style={{ fontSize: "16px" }}></i>Сохранять
                                                                                 </button>
                                                                             </div>
                                                                         </div>

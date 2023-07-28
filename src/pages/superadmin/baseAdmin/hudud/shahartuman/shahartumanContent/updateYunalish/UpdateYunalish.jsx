@@ -21,7 +21,7 @@ export default function UpdateYunalish({ updateYunalish, setUpdateYunalish, curr
       arr1.push(res.data.data);
       sortNullishValues(arr1);
       setTumanlar(arr1);
-      Alert(setAlert, 'success', `Muvoffaqqiyatli uzgartirdiz`)
+      Alert(setAlert, 'success', `Вы успешно изменили`)
     } catch (error) {
       console.log(error.response)
       Alert(setAlert, 'warning', `${error.response.data}`)
@@ -41,11 +41,11 @@ export default function UpdateYunalish({ updateYunalish, setUpdateYunalish, curr
         <div className="modal-dialog modal-lg">
           <div className="modal-content">
             <div className="modal-header btn-primary p-2">
-              <h5 className="modal-title">O'zgartirish oynasi</h5>
+              <h5 className="modal-title">Удалить окно</h5>
               <button type="button" className="close" onClick={() => setUpdateYunalish({ open: false, obj: {} })}>×</button>
             </div>
             <form className="modal-body form-inline justify-content-center">
-              <label>Yo'nalish:</label>
+              <label>Направление:</label>
               <input
                 type="text"
                 placeholder="Yo'nalish nomi"
@@ -60,7 +60,7 @@ export default function UpdateYunalish({ updateYunalish, setUpdateYunalish, curr
                 className="btn btn-primary ml-sm-2 mb-sm-0"
                 style={{ textTransform: "capitalize" }}
               >
-                O'zgartirish
+                Изменять
               </button>
             </form>
           </div>

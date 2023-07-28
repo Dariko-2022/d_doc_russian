@@ -403,7 +403,7 @@ const TashqiBajaruvchilar = ({ results, setAlert, setResults, currentUser }) => 
         <div className="kurishModalBajaruvchi">
           <div className="modal-content">
             <div className="modal-header bg-primary text-white">
-              <h5 className="modal-title">Tashqi bajaruvchilar</h5>
+              <h5 className="modal-title">Внешние исполнители</h5>
               <button type="button" className="close" onClick={() => setOpenModal(false)}>&times;</button>
             </div>
             <div className="modal-body bodyModal" style={{ display: "flex", justifyContent: "center", alignItems: "start", gap: "10px" }}>
@@ -427,7 +427,7 @@ const TashqiBajaruvchilar = ({ results, setAlert, setResults, currentUser }) => 
                       </div>
                     </li>
                     <div className="tashqiBajUlInline" style={{ display: "none" }}>
-                      <span className="allChecked mr-2">Barchasini tanlash</span>
+                      <span className="allChecked mr-2">Выбрать все</span>
                       <input type="text" className="inputTashqiTash" placeholder="Qisqacha tavsif..." />
                       <br />
                       <input
@@ -447,7 +447,7 @@ const TashqiBajaruvchilar = ({ results, setAlert, setResults, currentUser }) => 
                             <div style={{ fontSize: "13px" }}>{d?.orgName}</div>
                           </div>
                           <div className="inlineContent2" style={{ display: "none" }}>
-                            <span className="allChecked1">Barchasini tanlash</span> <br />
+                            <span className="allChecked1">Выбрать все</span> <br />
                             <input type="text" className="form-control inputChange2" placeholder="Qidiruv..." onChange={(e) => changeInputChange2(e.target.value, index)} />
                             {d?.organizations?.map((d1, index2) => (
                               <div key={index2} className="inlineContent3">
@@ -468,7 +468,7 @@ const TashqiBajaruvchilar = ({ results, setAlert, setResults, currentUser }) => 
               </ul>
               <div className="d-flex justify-content-end" style={{ position: "sticky", top: "0px" }}>
                 <button type="button" className="btn btn-primary" onClick={saveAllSelectOrganizations}>
-                  <i className="fas fa-save mr-2"></i>Saqlash
+                  <i className="fas fa-save mr-2"></i>Сохранять
                 </button>
               </div>
             </div>

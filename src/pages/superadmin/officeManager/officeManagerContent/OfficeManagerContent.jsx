@@ -7,8 +7,7 @@ export default function OfficeManagerContent() {
         <div className="col-lg-3">
           <div className="card cardHome">
             <div className="card-header header-elements-inline bg-primary">
-              <h4 className="card-title text-white text-center fw-bold w-100 text-uppercase">Mening
-                Vazifalarim</h4>
+              <h4 className="card-title text-white text-center fw-bold w-100 text-uppercase">Мои обязанности</h4>
             </div>
 
             <div className="card-body">
@@ -16,28 +15,28 @@ export default function OfficeManagerContent() {
                 <tbody className='border-0'>
                   <tr>
                     <th className="TableLink" style={{ width: "98%" }}>
-                      <a href="#1">Barchasi</a>
+                      <a href="#1">Все</a>
                     </th>
                     <th className="TableLink" style={{ width: "2%", textAlign: "center", fontSize: "15px" }}>
                       405846</th>
                   </tr>
                   <tr>
                     <th className="TableLink" style={{ width: "98%" }}>
-                      <a href="#1">Yangi</a>
+                      <a href="#1">Новый</a>
                     </th>
                     <th className="TableLink" style={{ width: "2%", textAlign: "center", fontSize: "15px" }}>
                       20</th>
                   </tr>
                   <tr>
                     <th className="TableLink" style={{ width: "98%" }}>
-                      <a href="#1">Jarayonda</a>
+                      <a href="#1">В Процесси</a>
                     </th>
                     <th className="TableLink" style={{ width: "2%", textAlign: "center", fontSize: "15px" }}>
                       20</th>
                   </tr>
                   <tr>
                     <th className="TableLink" style={{ width: "98%" }}>
-                      <a href="#1">Nazoratda</a>
+                      <a href="#1">Под контролем</a>
                     </th>
                     <th className="TableLink" style={{ width: "2%", textAlign: "center", fontSize: "15px" }}>
                       10</th>
@@ -54,7 +53,7 @@ export default function OfficeManagerContent() {
           <div className="card cardHome">
             <div className="card-header header-elements-inline bg-primary">
               <h4 className="card-title text-white text-center fw-bold w-100 text-uppercase">
-                Yaqinlashmoqda</h4>
+              Приближается</h4>
             </div>
 
             <div className="card-body">
@@ -62,28 +61,28 @@ export default function OfficeManagerContent() {
                 <tbody className='border-0'>
                   <tr>
                     <th className="TableLink" style={{ width: "98%" }}>
-                      <a href="#1">Barchasi</a>
+                      <a href="#1">Все</a>
                     </th>
                     <th className="TableLink" style={{ width: "2%", textAlign: "center", fontSize: "15px" }}>0
                     </th>
                   </tr>
                   <tr>
                     <th className="TableLink" style={{ width: "98%" }}>
-                      <a href="#1">1 kun qoldi</a>
+                      <a href="#1">Остался 1 день</a>
                     </th>
                     <th className="TableLink" style={{ width: "2%", textAlign: "center", fontSize: "15px" }}>0
                     </th>
                   </tr>
                   <tr>
                     <th className="TableLink" style={{ width: "98%" }}>
-                      <a href="#1">2-3 kun qoldi</a>
+                      <a href="#1">осталось 2-3 дня</a>
                     </th>
                     <th className="TableLink" style={{ width: "2%", textAlign: "center", fontSize: "15px" }}>0
                     </th>
                   </tr>
                   <tr>
                     <th className="TableLink" style={{ width: "98%" }}>
-                      <a href="#1">4 (~) kun qoldi</a>
+                      <a href="#1">Осталось 4 (~) дня</a>
                     </th>
                     <th className="TableLink" style={{ width: "2%", textAlign: "center", fontSize: "15px" }}>0
                     </th>
@@ -98,7 +97,7 @@ export default function OfficeManagerContent() {
           <div className="card cardHome">
             <div className="card-header header-elements-inline bg-primary">
               <h4 className="card-title text-white text-center fw-bold w-100 text-uppercase">
-                Bajarilmagan</h4>
+              Не выполнено</h4>
             </div>
 
             <div className="card-body">
@@ -106,28 +105,28 @@ export default function OfficeManagerContent() {
                 <tbody className='border-0'>
                   <tr>
                     <th className="TableLink" style={{ width: "98%" }}>
-                      <a href="#1">Barchasi</a>
+                      <a href="#1">Все</a>
                     </th>
                     <th className="TableLink" style={{ width: "2%", textAlign: "center", fontSize: "15px" }}>7
                     </th>
                   </tr>
                   <tr>
                     <th className="TableLink" style={{ width: "98%" }}>
-                      <a href="#1">1 kun kechikkan</a>
+                      <a href="#1">Опоздание на 1 день</a>
                     </th>
                     <th className="TableLink" style={{ width: "2%", textAlign: "center", fontSize: "15px" }}>0
                     </th>
                   </tr>
                   <tr>
                     <th className="TableLink" style={{ width: "98%" }}>
-                      <a href="#1">2-3 kun kechikkan</a>
+                      <a href="#1">Опоздание на 2-3 дня</a>
                     </th>
                     <th className="TableLink" style={{ width: "2%", textAlign: "center", fontSize: "15px" }}>0
                     </th>
                   </tr>
                   <tr>
                     <th className="TableLink" style={{ width: "98%" }}>
-                      <a href="#1">4 (~) kun kechikkan</a>
+                      <a href="#1">Опоздание на 4 (~) дня</a>
                     </th>
                     <th className="TableLink" style={{ width: "2%", textAlign: "center", fontSize: "15px" }}>7
                     </th>
@@ -141,7 +140,7 @@ export default function OfficeManagerContent() {
           <div className="card cardHome">
             <div className="card-header header-elements-inline bg-primary">
               <h4 className="card-title text-white text-center fw-bold w-100 text-uppercase">
-                Bajarilgan</h4>
+              Сделанный</h4>
             </div>
 
             <div className="card-body">
@@ -149,28 +148,28 @@ export default function OfficeManagerContent() {
                 <tbody className='border-0'>
                   <tr>
                     <th className="TableLink" style={{ width: "98%" }}>
-                      <a href="#1">Barchasi</a>
+                      <a href="#1">Все</a>
                     </th>
                     <th className="TableLink" style={{ width: "2%", textAlign: "center", fontSize: "15px" }}>4
                     </th>
                   </tr>
                   <tr>
                     <th className="TableLink" style={{ width: "98%" }}>
-                      <a href="#1">Bajarilgan</a>
+                      <a href="#1">Сделанный</a>
                     </th>
                     <th className="TableLink" style={{ width: "2%", textAlign: "center", fontSize: "15px" }}>4
                     </th>
                   </tr>
                   <tr>
                     <th className="TableLink" style={{ width: "98%" }}>
-                      <a href="#1">Kechiktirib berilgan</a>
+                      <a href="#1">Отправлено с опозданием</a>
                     </th>
                     <th className="TableLink" style={{ width: "2%", textAlign: "center", fontSize: "15px" }}>4
                     </th>
                   </tr>
                   <tr>
                     <th className="TableLink" style={{ width: "98%" }}>
-                      <a href="#1">Bajarilmagan</a>
+                      <a href="#1">Не выполнено</a>
                     </th>
                     <th className="TableLink" style={{ width: "2%", textAlign: "center", fontSize: "15px" }}>4
                     </th>
@@ -189,17 +188,17 @@ export default function OfficeManagerContent() {
         <div className="card">
           <div className="card-header">
             <h6 className="card-title" style={{ margin: "10px", fontWeight: "bold", textTransform: "uppercase" }}>
-              Ish oqimi statistikasi</h6>
+            Статистика рабочего процесса</h6>
           </div>
 
           <div className="card-body">
             <ul className="nav nav-pills nav-pills-bordered  nav-pills-toolbar nav-justified">
               <li className="nav-item"><a href="#solid-justified-tab1" className="nav-link active"
-                data-toggle="tab">3b Nazorat kartochkasi</a></li>
+                data-toggle="tab">3b Контрольная карта</a></li>
               <li className="nav-item"><a href="#solid-justified-tab2" className="nav-link"
-                data-toggle="tab">Standartniy prostoy kartochka</a></li>
+                data-toggle="tab">Стандартная простая карта</a></li>
               <li className="nav-item"><a href="#solid-justified-tab3" className="nav-link"
-                data-toggle="tab">1a Nazorat kartochkasi</a></li>
+                data-toggle="tab">1a Контрольная карта</a></li>
             </ul>
 
             <div className="tab-content">
@@ -207,16 +206,16 @@ export default function OfficeManagerContent() {
                 <table className="table table-bordered datatable-select-single table-striped table-hover Tab mt-4">
                   <thead>
                     <tr className="bg-dark text-white NavLink text-center">
-                      <th style={{ borderRadius: "10px 0 0 0" }}>Xujjat Turi</th>
-                      <th>kechikkan</th>
-                      <th>Kiruvchi</th>
-                      <th>Jarayonda</th>
-                      <th>Muddati o'tgan</th>
+                      <th style={{ borderRadius: "10px 0 0 0" }}>Тип документа</th>
+                      <th>Поздно</th>
+                      <th>Входящий</th>
+                      <th>В процесси</th>
+                      <th>Истекший</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr className="text-center">
-                      <td>Viloyat Hokimi topshiqirlari</td>
+                      <td>Задачи губернатора области</td>
                       <td></td>
                       <td>0</td>
                       <td>4</td>
@@ -232,15 +231,15 @@ export default function OfficeManagerContent() {
                   <thead>
                     <tr className="bg-dark text-white NavLink text-center">
                       <th style={{ borderRadius: "10px 0 0 0" }}>Xujjat Turi</th>
-                      <th>kechikkan</th>
-                      <th>Kiruvchi</th>
-                      <th>Jarayonda</th>
-                      <th>Muddati o'tgan</th>
+                      <th>Поздно</th>
+                      <th>Входящий</th>
+                      <th>В процесси</th>
+                      <th>Истекший</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr className="text-center">
-                      <td>Respublika Tashkilotlari</td>
+                      <td>Республиканские организации</td>
                       <td></td>
                       <td>0</td>
                       <td>4</td>
@@ -255,15 +254,15 @@ export default function OfficeManagerContent() {
                   <thead>
                     <tr className="bg-dark text-white NavLink text-center">
                       <th style={{ borderRadius: "10px 0 0 0" }}>Xujjat Turi</th>
-                      <th>kechikkan</th>
-                      <th>Kiruvchi</th>
-                      <th>Jarayonda</th>
-                      <th>Muddati o'tgan</th>
+                      <th>Поздно</th>
+                      <th>Входящий</th>
+                      <th>В процесси</th>
+                      <th>Истекший</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr className="text-center">
-                      <td>O'zbekiston Respublikasi Prezidenti qarori</td>
+                      <td>Постановление Президента Республики Узбекистан</td>
                       <td></td>
                       <td>0</td>
                       <td>4</td>

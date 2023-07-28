@@ -210,7 +210,7 @@ const ChiquvchiFishkaContent = ({ currentUser }) => {
 
     return (
         <div className="content mb-5">
-            <h3 style={{ margin: "10px 0 0 0", fontWeight: "bold", textTransform: "upperCase" }}>Fishka</h3>
+            <h3 style={{ margin: "10px 0 0 0", fontWeight: "bold", textTransform: "upperCase" }}>Фишка</h3>
             <div className="">
                 <ul className="nav nav-tabs nav-tabs-solid nav-tabs-solid-custom bg-primary NavLink">
                     <ChiquvchiNavbar />
@@ -233,7 +233,7 @@ const ChiquvchiFishkaContent = ({ currentUser }) => {
                                                     <h6 className="card-title" style={{
                                                         fontWeight: "bold",
                                                         fontSize: "18px"
-                                                    }}>Rahbar</h6>
+                                                    }}>Директор</h6>
                                                 </div>
                                                 <div className="w-100">
                                                     <>
@@ -309,7 +309,7 @@ const ChiquvchiFishkaContent = ({ currentUser }) => {
                                                                             style={{ width: "130px" }}
                                                                             className="btn btn-primary">
                                                                             <i className="fas fa-save mr-1"
-                                                                                style={{ fontSize: "16px" }}></i>Saqlash
+                                                                                style={{ fontSize: "16px" }}></i>Сохранять
                                                                         </button>
                                                                     </div>
                                                                 </div>
@@ -336,7 +336,7 @@ const ChiquvchiFishkaContent = ({ currentUser }) => {
                                                     <h6 className="card-title" style={{
                                                         fontWeight: "bold",
                                                         fontSize: "18px"
-                                                    }}>Aparat 1</h6>
+                                                    }}> Аппрат 1 </h6>
                                                 </div>
                                                 <div className="w-100">
                                                     <>
@@ -396,7 +396,7 @@ const ChiquvchiFishkaContent = ({ currentUser }) => {
                                                                             />
                                                                             <span
                                                                                 className="custom-file-label text-muted w-100">
-                                                                                {fileType1 ? file2.name : "Faylni tanlash"}
+                                                                                {fileType1 ? file2.name : "Выберите файл"}
                                                                             </span>
                                                                         </label>
                                                                         <a style={{ display: "none" }}
@@ -411,7 +411,7 @@ const ChiquvchiFishkaContent = ({ currentUser }) => {
                                                                             style={{ width: "130px" }}
                                                                             className="btn btn-primary">
                                                                             <i className="fas fa-save mr-1"
-                                                                                style={{ fontSize: "16px" }}></i>Saqlash
+                                                                                style={{ fontSize: "16px" }}></i>Сохранять
                                                                         </button>
                                                                     </div>
                                                                 </div>
@@ -498,7 +498,7 @@ const ChiquvchiFishkaContent = ({ currentUser }) => {
                                                                             />
                                                                             <span
                                                                                 className="custom-file-label text-muted w-100">
-                                                                                {fileType2 ? file3.name : "Faylni tanlash"}
+                                                                                {fileType2 ? file3.name : "Выберите файл"}
                                                                             </span>
                                                                         </label>
                                                                         <a style={{ display: "none" }}
@@ -513,7 +513,7 @@ const ChiquvchiFishkaContent = ({ currentUser }) => {
                                                                             style={{ width: "130px" }}
                                                                             className="btn btn-primary">
                                                                             <i className="fas fa-save mr-1"
-                                                                                style={{ fontSize: "16px" }}></i>Saqlash
+                                                                                style={{ fontSize: "16px" }}></i> Сохранять
                                                                         </button>
                                                                     </div>
                                                                 </div>
@@ -540,7 +540,7 @@ const ChiquvchiFishkaContent = ({ currentUser }) => {
                                                     <h6 className="card-title" style={{
                                                         fontWeight: "bold",
                                                         fontSize: "18px"
-                                                    }}>Aparat 3</h6>
+                                                    }}> Аппрат 3</h6>
                                                 </div>
                                                 <div className="w-100">
                                                     <>
@@ -601,7 +601,7 @@ const ChiquvchiFishkaContent = ({ currentUser }) => {
                                                                             />
                                                                             <span
                                                                                 className="custom-file-label text-muted w-100">
-                                                                                {fileType3 ? file4.name : "Faylni tanlash"}
+                                                                                {fileType3 ? file4.name : "Выберите файл"}
                                                                             </span>
                                                                         </label>
                                                                         <a style={{ display: "none" }}
@@ -616,7 +616,7 @@ const ChiquvchiFishkaContent = ({ currentUser }) => {
                                                                             style={{ width: "130px" }}
                                                                             className="btn btn-primary">
                                                                             <i className="fas fa-save mr-1"
-                                                                                style={{ fontSize: "16px" }}></i>Saqlash
+                                                                                style={{ fontSize: "16px" }}></i>Сохранять
                                                                         </button>
                                                                     </div>
                                                                 </div>

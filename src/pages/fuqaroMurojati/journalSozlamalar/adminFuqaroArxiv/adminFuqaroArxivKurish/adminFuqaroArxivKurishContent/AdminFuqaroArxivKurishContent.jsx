@@ -45,7 +45,7 @@ const FuqaroArxivKurishContent = ({currentUser}) => {
 
     return (
         <div className="content mb-5">
-            <h3 style={{margin: "10px 0 0 20px", fontWeight: "bold", textTransform: "upperCase"}}>Barchasi</h3>
+            <h3 style={{margin: "10px 0 0 20px", fontWeight: "bold", textTransform: "upperCase"}}>Все</h3>
             <div className="card-body">
                 <ul className="nav nav-tabs nav-tabs-solid nav-tabs-solid-custom bg-primary NavLink"
                     style={{borderTopRightRadius: "5px", borderTopLeftRadius: "5px"}}>
@@ -54,7 +54,7 @@ const FuqaroArxivKurishContent = ({currentUser}) => {
                     <li className="nav-item">
                         <NavLink to={`/fuqaro/murojat/elektron-kitob-arxiv-ko'rish/${params.id}`}
                                  className="nav-link align-items-center" activeClassName="NavLinkLi">
-                            <i className="icon-eye2 mr-1"></i> Ko'rish
+                            <i className="icon-eye2 mr-1"></i> Вид
                         </NavLink>
                     </li>
                 </ul>
@@ -67,14 +67,14 @@ const FuqaroArxivKurishContent = ({currentUser}) => {
                                         <div className="col-lg-6">
                                             <div className="card">
                                                 <div className="card-title bg-dark text-light text-center">
-                                                    <h1>Ma'lumotlar</h1>
+                                                    <h1>Информация</h1>
                                                 </div>
                                                 <div className="card-body">
                                                     <table
                                                         className="table mt-2 table-bordered table-striped table-hover Tab">
                                                         <tbody>
                                                         <tr style={{height: "66px"}}>
-                                                            <td>O'zbekcha nomi:</td>
+                                                            <td>Ўзбекское имя:</td>
                                                             <td className="uzbekchaNomi"></td>
                                                         </tr>
                                                         {/*<tr style={{ height: "66px" }}>*/}
@@ -82,7 +82,7 @@ const FuqaroArxivKurishContent = ({currentUser}) => {
                                                         {/*    <td className="ruschaNomi">Заявление гражданина</td>*/}
                                                         {/*</tr>*/}
                                                         <tr style={{height: "66px"}}>
-                                                            <td>Qisqacha tasnifi:</td>
+                                                            <td>Краткая классификация:</td>
                                                             <td className="tasnif"></td>
                                                         </tr>
                                                         </tbody>
@@ -93,7 +93,7 @@ const FuqaroArxivKurishContent = ({currentUser}) => {
                                         <div className="col-lg-6">
                                             <div className="card">
                                                 <div className="card-title bg-dark text-light text-center">
-                                                    <h1>Jurnalni Boshqarish</h1>
+                                                    <h1>Управление журналом</h1>
                                                 </div>
                                                 <div className="card-body">
                                                     <table
@@ -107,7 +107,7 @@ const FuqaroArxivKurishContent = ({currentUser}) => {
                                                         <tr className="text-center">
                                                             <td>
                                                                 <button className="btn btn-primary"
-                                                                        onClick={openArchive}>Arxivdan chiqarish
+                                                                        onClick={openArchive}> Разархивировать
                                                                 </button>
                                                             </td>
                                                         </tr>

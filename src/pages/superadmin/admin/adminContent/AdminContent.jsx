@@ -65,7 +65,7 @@ const AdminContent = () => {
 
   return (
     <div className="content mb-5">
-      <h3 style={{ margin: "10px 0 0 20px", fontWeight: "bold", textTransform: "upperCase" }}>Bo'lim</h3>
+      <h3 style={{ margin: "10px 0 0 20px", fontWeight: "bold", textTransform: "upperCase" }}>Отделение</h3>
       <div className="card-body mt-2">
         <ul className="nav nav-tabs nav-tabs-solid nav-tabs-solid-custom bg-primary NavLink">
           <AdminContentNavbar />
@@ -84,7 +84,7 @@ const AdminContent = () => {
                             <input type="text"
                               className="form-control form-control-outline"
                               placeholder="Placeholder" />
-                            <label className="label-floating">Nomlanishi</label>
+                            <label className="label-floating">Именование</label>
                           </div>
                         </div>
                       </div>
@@ -96,7 +96,7 @@ const AdminContent = () => {
                             <input type="text"
                               className="form-control form-control-outline"
                               placeholder="Placeholder" />
-                            <label className="label-floating">Ruscha nomi</label>
+                            <label className="label-floating">Русское имя</label>
                           </div>
                         </div>
                       </div>
@@ -108,14 +108,14 @@ const AdminContent = () => {
                             <input type="text"
                               className="form-control form-control-outline"
                               placeholder="Placeholder" />
-                            <label className="label-floating">Tavsif</label>
+                            <label className="label-floating">Описание</label>
                           </div>
                         </div>
                       </div>
                     </div>
                     <div className="col-lg-3">
                       <button type="submit" className="btn btn-primary w-100" style={{ height: "56px" }}>
-                        <i className="fas fa-save" style={{ fontSize: "18px" }}></i> Saqlash
+                        <i className="fas fa-save" style={{ fontSize: "18px" }}></i> Сохранять 
                       </button>
                     </div>
                   </div>
@@ -123,7 +123,7 @@ const AdminContent = () => {
                     <div className="col-lg-6">
                       <div className="mb-2 d-flex align-items-center">
                         <input type="checkbox" className='mr-1 cursor-pointer' id="bulimFunc" style={{ width: "20px", height: "20px" }} />
-                        Asosiy kategoriyani tanlash
+                        Выберите основную категорию
                       </div>
                     </div>
                   </div>
@@ -133,10 +133,10 @@ const AdminContent = () => {
                         <select data-placeholder="Buxoro" className="form-control select-search  form-control-outlin select" data-fouc>
                           <option></option>
                           <optgroup label="Viloyatlar">
-                            <option value="AZ">Kiruvchi</option>
-                            <option value="CO">Chiquvchi</option>
-                            <option value="ID">Buyruqlar</option>
-                            <option value="WY">Fuaqaro Murojatlari</option>
+                            <option value="AZ">Входящий</option>
+                            <option value="CO">исходящий</option>
+                            <option value="ID">Команды</option>
+                            <option value="WY">Гражданские апелляции</option>
                           </optgroup>
                         </select>
                       </div>
@@ -148,12 +148,12 @@ const AdminContent = () => {
                   <thead>
                     <tr className="bg-dark text-white NavLink text-center">
                       <th>№</th>
-                      <th>Nomlanishi</th>
-                      <th>Asosiy Kategoriya</th>
-                      <th>Tarjimalar</th>
-                      <th>Xodimlar</th>
-                      <th>Tashkilot Nomi</th>
-                      <th>Harakatlar</th>
+                      <th>Именование</th>
+                      <th>Главная категория</th>
+                      <th>Переводы</th>
+                      <th>Сотрудники</th>
+                      <th>Название организации</th>
+                      <th>Действия</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -176,7 +176,7 @@ const AdminContent = () => {
                         <div className="modal-dialog modal-xl">
                           <div className="modal-content">
                             <div className="modal-header bg-primary text-white">
-                              <h6 className="modal-title">Bo'lim qo'shish
+                              <h6 className="modal-title">Добавить раздел
                               </h6>
                               <button type="button" className="close close2" onClick={() => setOpenUpdate({ open: false, obj: {} })}>&times;</button>
                             </div>
@@ -191,7 +191,7 @@ const AdminContent = () => {
                                             className="form-control form-control-outline"
                                             placeholder="Placeholder" />
                                           <label
-                                            className="label-floating">Nomlanishi</label>
+                                            className="label-floating">Именование</label>
                                         </div>
                                       </div>
                                     </div>
@@ -207,7 +207,7 @@ const AdminContent = () => {
                                             placeholder="Placeholder"
                                           // defaultValue={dat.tarjimalar}
                                           />
-                                          <label className="label-floating">Tarjimalar (ruscha)</label>
+                                          <label className="label-floating">Переводы (русский)</label>
                                         </div>
                                       </div>
                                     </div>
@@ -222,7 +222,7 @@ const AdminContent = () => {
                                             className="form-control form-control-outline"
                                             placeholder="Placeholder" />
                                           <label
-                                            className="label-floating">Tavsif</label>
+                                            className="label-floating">Описание</label>
                                         </div>
                                       </div>
                                     </div>
@@ -236,13 +236,13 @@ const AdminContent = () => {
                                         <optgroup
                                           label="Bosh bo'lim">
                                           <option value="AZ">
-                                            Buxoro</option>
+                                          Бухара</option>
                                           <option value="CO">
-                                            Chiquvchi</option>
+                                          Исходящий</option>
                                           <option value="ID">
-                                            Buyruqlar</option>
+                                          Команды</option>
                                           <option value="WY">
-                                            Fuaqaro Murojatlari
+                                          Гражданские апелляции
                                           </option>
                                         </optgroup>
                                       </select>
@@ -251,18 +251,18 @@ const AdminContent = () => {
                                   <div className="col-lg-12">
                                     <div className="form-group">
                                       <select
-                                        data-placeholder="Tanlash"
+                                        data-placeholder="Выбирать"
                                         className="form-control select-search  form-control-outlin select">
                                         <option></option>
                                         <optgroup label="Tanlash">
                                           <option value="AZ">
-                                            Buxoro</option>
+                                          Бухара</option>
                                           <option value="CO">
-                                            Chiquvchi</option>
+                                            Исходящий</option>
                                           <option value="ID">
-                                            Buyruqlar</option>
+                                          Команды</option>
                                           <option value="WY">
-                                            Fuaqaro Murojatlari
+                                          Гражданские апелляции
                                           </option>
                                         </optgroup>
                                       </select>
@@ -275,7 +275,7 @@ const AdminContent = () => {
                                       <div className="col-lg-12">
                                         <div className="position-relative">
                                           <button type="button" onClick={() => UzgartirishlarniSaqlash(openUpdate.obj)} className="btn btn-primary" style={{ width: "100%", height: "40px" }}>
-                                            <i className="fas fa-save" style={{ fontSize: "18px" }}></i> Saqlash
+                                            <i className="fas fa-save" style={{ fontSize: "18px" }}></i> Сохранять
                                           </button>
                                         </div>
                                       </div>
@@ -287,7 +287,7 @@ const AdminContent = () => {
                           </div>
                           <div className="modal-footer">
                             <button type="button" className="btn btn-link"
-                              data-dismiss="modal">Yopish</button>
+                              data-dismiss="modal">Закрывать</button>
                           </div>
                         </div>
                       </div>
@@ -298,16 +298,16 @@ const AdminContent = () => {
                         <div className="modal-dialog">
                           <div className="modal-content">
                             <div className="modal-header bg-primary text-white">
-                              <h6 className="modal-title">O'chirish oynasi</h6>
+                              <h6 className="modal-title">Удалить окно</h6>
                               <button type="button" className="close" onClick={() => setOpenDelete({ open: false, obj: {} })}>×</button>
                             </div>
                             <div className="modal-body ">
-                              <h3 style={{ textTransform: "upperCase", fontWeight: "bold" }} className="text-danger">Ogoh bo'ling!</h3>
-                              <h5>Ushbu ma'lumotni o'chirmoqchimisiz?</h5>
+                              <h3 style={{ textTransform: "upperCase", fontWeight: "bold" }} className="text-danger">Будьте в курсе!</h3>
+                              <h5>Вы хотите удалить эту информацию?</h5>
                             </div>
                             <div className="modal-footer">
                               <button type="button" className="btn btn-link bekorQilish" data-dismiss="modal">Bekor qilish</button>
-                              <button type="button" className="btn btn-primary" onClick={() => Uchirish(openDelete.obj)}>O'chirish</button>
+                              <button type="button" className="btn btn-primary" onClick={() => Uchirish(openDelete.obj)}>Отмена</button>
                             </div>
                           </div>
                         </div>

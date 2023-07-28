@@ -72,26 +72,26 @@ const UpdateModal = ({ updateModal, setUpdateModal, currentUser, data, setData, 
                 return d;
               })
               setData({ ...data, content: arr1 });
-              Alert(setAlert, "success", "Ma'lumot muvaffaqiyatli o'zgartirildi");
+              Alert(setAlert, "success", "Информация успешно изменена");
               setUpdateModal({ open: false, obj: {} });
             } catch (error) {
               Alert(setAlert, "warning", error.response?.data);
               setUpdateModal({ open: false, obj: {} });
             }
           } else {
-            Alert(setAlert, "warning", "Boshlang'ich raqam kiritilmagan");
+            Alert(setAlert, "warning", "Не введен стартовый номер");
             setUpdateModal({ open: false, obj: {} });
           }
         } else {
-          Alert(setAlert, "warning", "Qisqacha tasnif kiritilmagan")
+          Alert(setAlert, "warning", "Краткая классификация не включена")
           setUpdateModal({ open: false, obj: {} });
         }
       } else {
-        Alert(setAlert, "warning", "O'zbekcha nom kiritilmagan");
+        Alert(setAlert, "warning", "Узбекское имя не указано");
         setUpdateModal({ open: false, obj: {} });
       }
     } else {
-      Alert(setAlert, "warning", "Kartochka turi tanlanmagan");
+      Alert(setAlert, "warning", "Тип карты не выбран");
       setUpdateModal({ open: false, obj: {} });
     }
   }
@@ -102,7 +102,7 @@ const UpdateModal = ({ updateModal, setUpdateModal, currentUser, data, setData, 
         <div className="modal-dialog modal-xl">
           <div className="modal-content">
             <div className="modal-header bg-primary text-white">
-              <h6 className="modal-title">O'zgartirish</h6>
+              <h6 className="modal-title">Изменять</h6>
               <button type="button" className="close" onClick={() => setUpdateModal({ open: false, obj: {} })}>&times;</button>
             </div>
 
@@ -115,7 +115,7 @@ const UpdateModal = ({ updateModal, setUpdateModal, currentUser, data, setData, 
                         defaultValue={{ value: updateModal.obj?.generalModule?.name, label: updateModal.obj?.generalModule?.name }}
                         options={modul}
                         isClearable={true}
-                        placeholder="Kartochka turini tanlang"
+                        placeholder="Выберите тип карты"
                         ref={modulref}
                       />
                     </div>
@@ -131,7 +131,7 @@ const UpdateModal = ({ updateModal, setUpdateModal, currentUser, data, setData, 
                             defaultValue={updateModal.obj?.uzName}
                             ref={uzbekNameref}
                           />
-                          <label className="label-floating">O'zbekcha nomi</label>
+                          <label className="label-floating">Русское имя</label>
                         </div>
                       </div>
                     </div>
@@ -147,7 +147,7 @@ const UpdateModal = ({ updateModal, setUpdateModal, currentUser, data, setData, 
                             defaultValue={updateModal.obj?.ruName}
                             ref={russianNameref}
                           />
-                          <label className="label-floating">Rushcha nomi</label>
+                          <label className="label-floating">Узбекское имя</label>
                         </div>
                       </div>
                     </div>
@@ -163,7 +163,7 @@ const UpdateModal = ({ updateModal, setUpdateModal, currentUser, data, setData, 
                             defaultValue={updateModal.obj?.shortDescription}
                             ref={shortDescref}
                           />
-                          <label className="label-floating">Qisqacha tasnifi</label>
+                          <label className="label-floating">Краткая классификация</label>
                         </div>
                       </div>
                     </div>
@@ -181,7 +181,7 @@ const UpdateModal = ({ updateModal, setUpdateModal, currentUser, data, setData, 
                             defaultValue={updateModal.obj?.journalPrefix}
                             ref={prefixref}
                           />
-                          <label className="label-floating">Jurnal prefiksi</label>
+                          <label className="label-floating">Префикс журнала</label>
                         </div>
                       </div>
                     </div>
@@ -198,7 +198,7 @@ const UpdateModal = ({ updateModal, setUpdateModal, currentUser, data, setData, 
                             defaultValue={updateModal.obj?.journalPostfix}
                             ref={postfixref}
                           />
-                          <label className="label-floating">Jurnal postfiksi</label>
+                          <label className="label-floating">Постфикс журнала</label>
                         </div>
                       </div>
                     </div>
@@ -214,7 +214,7 @@ const UpdateModal = ({ updateModal, setUpdateModal, currentUser, data, setData, 
                             defaultValue={updateModal.obj?.beginNumber}
                             ref={beginNumref}
                           />
-                          <label className="label-floating">Boshlang'ich raqam</label>
+                          <label className="label-floating">Стартовый номер</label>
                         </div>
                       </div>
                     </div>
@@ -224,7 +224,7 @@ const UpdateModal = ({ updateModal, setUpdateModal, currentUser, data, setData, 
                 <div className="row d-flex justify-content-center">
                   <div className="col-lg-6 d-flex justify-content-center">
                     <button type="button" onClick={() => Uzgartirish(updateModal.obj)} className="btn btn-primary">
-                      <i className="icon-floppy-disk"></i> Saqlash
+                      <i className="icon-floppy-disk"></i> Сохранять
                     </button>
                   </div>
                 </div>

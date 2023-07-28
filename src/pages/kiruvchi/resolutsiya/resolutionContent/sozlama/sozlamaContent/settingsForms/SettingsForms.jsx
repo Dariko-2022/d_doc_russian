@@ -283,25 +283,25 @@ const SettingsForms = ({ data, setAlert, currentUser, startDate1, setStartDate1,
                       Alert(setAlert, "warning", error.response?.data);
                     }
                   } else {
-                    Alert(setAlert, "warning", "ahifalar soni kiritilmagan")
+                    Alert(setAlert, "warning", "Количество страниц не включено")
                   }
                 } else {
-                  Alert(setAlert, "warning", "Ro'yxatdan o'tish sanasi tanlanmagan")
+                  Alert(setAlert, "warning", "Дата регистрации не выбрана")
                 }
               } else {
-                Alert(setAlert, "warning", "Tasdiqlovchi tanlanmagan")
+                Alert(setAlert, "warning", "Валидатор не выбран")
               }
             } else {
-              Alert(setAlert, "warning", "Card nomi tanlanmagan")
+              Alert(setAlert, "warning", "Имя карты не выбрано")
             }
           } else {
-            Alert(setAlert, "warning", "Card tanlanmagan")
+            Alert(setAlert, "warning", "Карта не выбрана")
           }
         } else {
-          Alert(setAlert, "warning", "Jurnal nomeri kiritilmagan")
+          Alert(setAlert, "warning", "Номер журнала не указан")
         }
       } else {
-        Alert(setAlert, "warning", "Jurnal tanlanmagan")
+        Alert(setAlert, "warning", "Журнал не выбран")
       }
     } else {
       if (data.files?.length > 0 || fileId?.length > 0) {
@@ -341,40 +341,40 @@ const SettingsForms = ({ data, setAlert, currentUser, startDate1, setStartDate1,
                                 Alert(setAlert, "warning", error.response?.data);
                               }
                             } else {
-                              Alert(setAlert, "warning", "ahifalar soni kiritilmagan")
+                              Alert(setAlert, "warning", "Количество страниц не включено")
                             }
                           } else {
-                            Alert(setAlert, "warning", "Ro'yxatdan o'tish sanasi tanlanmagan")
+                            Alert(setAlert, "warning", "Дата регистрации не выбрана")
                           }
                         } else {
-                          Alert(setAlert, "warning", "Chiquvchi sana tanlanmagan")
+                          Alert(setAlert, "warning", "Дата выезда не выбрана")
                         }
                       } else {
-                        Alert(setAlert, "warning", "Chiquvchi raqam kiritilmagan")
+                        Alert(setAlert, "warning", "Не введен исходящий номер")
                       }
                     } else {
-                      Alert(setAlert, "warning", "Korrespondent tanlanmagan")
+                      Alert(setAlert, "warning", "Корреспондент не выбран")
                     }
                   } else {
-                    Alert(setAlert, "warning", "Tasdiqlovchi tanlanmagan")
+                    Alert(setAlert, "warning", "Валидатор не выбран")
                   }
                 } else {
-                  Alert(setAlert, "warning", "Taqdim etish formasi tanlanmagan")
+                  Alert(setAlert, "warning", "Форма отправки не выбрана")
                 }
               } else {
-                Alert(setAlert, "warning", "Card nomi tanlanmagan")
+                Alert(setAlert, "warning", "Имя карты не выбрано")
               }
             } else {
-              Alert(setAlert, "warning", "Card tanlanmagan")
+              Alert(setAlert, "warning", "Карта не выбрана")
             }
           } else {
-            Alert(setAlert, "warning", "Jurnal nomeri kiritilmagan")
+            Alert(setAlert, "warning", "Номер журнала не указан")
           }
         } else {
-          Alert(setAlert, "warning", "Jurnal tanlanmagan")
+          Alert(setAlert, "warning", "Журнал не выбран")
         }
       } else {
-        Alert(setAlert, "warning", "Fayl tanlanmagan")
+        Alert(setAlert, "warning", "Файл не выбран")
       }
     }
   }
@@ -388,7 +388,7 @@ const SettingsForms = ({ data, setAlert, currentUser, startDate1, setStartDate1,
               <Select
                 options={card}
                 onChange={clickCard}
-                placeholder="Jurnali"
+                placeholder="Журнал"
                 className='jurnali'
                 isClearable={true}
                 ref={journalref}
@@ -417,7 +417,7 @@ const SettingsForms = ({ data, setAlert, currentUser, startDate1, setStartDate1,
               <Select
                 options={notParentsCard}
                 onChange={notParentsCardClick}
-                placeholder="Card turi"
+                placeholder="Тип карты"
                 className="cardTypeId"
                 isClearable={true}
                 ref={cardTyperef}
@@ -430,7 +430,7 @@ const SettingsForms = ({ data, setAlert, currentUser, startDate1, setStartDate1,
             <div className="position-relative">
               <Select
                 options={cardsName}
-                placeholder="Card nomi"
+                placeholder="Имя карты"
                 className="cardName"
                 isClearable={true}
                 ref={cardNameref}
@@ -447,7 +447,7 @@ const SettingsForms = ({ data, setAlert, currentUser, startDate1, setStartDate1,
                 <input
                   type="text"
                   className='taqdimForma form-control'
-                  placeholder="Taqdim etish formasi"
+                  placeholder="Форма представления"
                   defaultValue={data?.submissionForm?.name}
                   disabled
                   style={{ width: "100%", height: "56px", paddingLeft: "10px" }}
@@ -455,7 +455,7 @@ const SettingsForms = ({ data, setAlert, currentUser, startDate1, setStartDate1,
               ) : (
                 <Select
                   options={taqdimForma}
-                  placeholder="Taqdim etish formasi"
+                  placeholder="Форма представления"
                   className='taqdimForma'
                   isClearable={true}
                   ref={submissionFormref}
@@ -469,7 +469,7 @@ const SettingsForms = ({ data, setAlert, currentUser, startDate1, setStartDate1,
             <div className="position-relative">
               <Select
                 options={tasdiqlovchi}
-                placeholder="Tasdiqlovchi"
+                placeholder="Валидатор"
                 className='tasdiqlovchi'
                 isClearable={true}
                 ref={confirmerref}
@@ -484,7 +484,7 @@ const SettingsForms = ({ data, setAlert, currentUser, startDate1, setStartDate1,
                 <input
                   type="text"
                   className='korrespondent  form-control'
-                  placeholder="Korrespondent"
+                  placeholder="Корреспондент"
                   defaultValue={data?.correspondent?.orgName}
                   disabled
                   style={{ width: "100%", height: "56px", paddingLeft: "10px" }}
@@ -492,7 +492,7 @@ const SettingsForms = ({ data, setAlert, currentUser, startDate1, setStartDate1,
               ) : (
                 <Select
                   options={korrespondent}
-                  placeholder="Korrespondent"
+                  placeholder="Корреспондент"
                   className='korrespondent'
                   isClearable={true}
                   ref={korrespondentref}
@@ -512,12 +512,12 @@ const SettingsForms = ({ data, setAlert, currentUser, startDate1, setStartDate1,
                     type="text"
                     className="form-control form-control-outline chiquvchiRaqam"
                     id="chiquvchiRaqam"
-                    placeholder="Placeholder"
+                    placeholder="Исходящий номер"
                     disabled
                     defaultValue={data?.outNumber}
                     style={{ width: "100%", height: "56px", paddingLeft: "10px" }}
                   />
-                  <label className="label-floating">Chiquvchi raqami</label>
+                  <label className="label-floating">Исходящий номер</label>
                 </>
               ) : (
                 <>
@@ -525,10 +525,10 @@ const SettingsForms = ({ data, setAlert, currentUser, startDate1, setStartDate1,
                     type="text"
                     className="form-control form-control-outline chiquvchiRaqam"
                     id="chiquvchiRaqam"
-                    placeholder="Placeholder"
+                    placeholder="Исходящий номер"
                     ref={outNumref}
                   />
-                  <label className="label-floating">Chiquvchi raqami</label>
+                  <label className="label-floating">Исходящий номер</label>
                 </>
               )}
             </div>
@@ -561,7 +561,7 @@ const SettingsForms = ({ data, setAlert, currentUser, startDate1, setStartDate1,
                     isClearable
                     showYearDropdown
                     scrollableMonthYearDropdown
-                    placeholderText="Chiquvchi № /sana"
+                    placeholderText="Исходящий № /Дата"
                   // showTimeSelect
                   />
                 </div>
@@ -587,7 +587,7 @@ const SettingsForms = ({ data, setAlert, currentUser, startDate1, setStartDate1,
                   isClearable
                   showYearDropdown
                   scrollableMonthYearDropdown
-                  placeholderText="Ro'yxatdan o'tish sanasi"
+                  placeholderText="Дата регистрации"
                 />
               </div>
             </div>
@@ -600,10 +600,10 @@ const SettingsForms = ({ data, setAlert, currentUser, startDate1, setStartDate1,
                 type="number"
                 className="form-control form-control-outline sahifalarSoni"
                 id="sahifalarSoni"
-                placeholder="Placeholder"
+                placeholder="Количество страниц"
                 ref={pageCountref}
               />
-              <label className="label-floating">Sahifalar soni</label>
+              <label className="label-floating">Количество страниц</label>
             </div>
           </div>
         </div>
@@ -617,11 +617,11 @@ const SettingsForms = ({ data, setAlert, currentUser, startDate1, setStartDate1,
                 id="malumot"
                 maxLength="300"
                 className="form-control form-control-outline qisqachaMalumot"
-                placeholder="Placeholder"
+                placeholder="Количество страниц"
                 ref={shortDescref}
               />
-              <label className="label-floating">Qisqacha ma'lumot</label>
-              <span className="mt-5 text-muted">Qisqacha ma'lumot 300 ta belgidan oshmaydi</span>
+              <label className="label-floating">Краткая информация</label>
+              <span className="mt-5 text-muted">Краткая информация не превышает 300 символов</span>
             </div>
           </div>
         </div>
@@ -646,7 +646,7 @@ const SettingsForms = ({ data, setAlert, currentUser, startDate1, setStartDate1,
                   {file?.length > 0 ? `${file?.length} ta fayl tanlandi` : "Faylni tanlash"}
                 </label>
               </div>
-              <label className="d-block text-muted mb-0">Ruxsat etilgan formatlar:
+              <label className="d-block text-muted mb-0">Фиксированные форматы:
                 doc, docx, xls,xlsx, ppt, pptx, pdf, .zip, .rar</label>
             </div>
           </div>
@@ -665,11 +665,11 @@ const SettingsForms = ({ data, setAlert, currentUser, startDate1, setStartDate1,
       <div className="row mb-2 d-flex align-items-center justify-content-between">
         <div className="ml-2">
           <button type="submit" className="btn btn-primary mr-2"><i
-            className="fa fa-edit mr-2"></i>O'zgartirish
+            className="fa fa-edit mr-2"></i>Изменять
           </button>
           <Link to={`${params.name === "resolution" ? "/kiruvchi/resolution" : "kiruvchi/yangi"}`}>
             <button type="button" className="btn btn-primary"><i
-              className="fa fa-arrow-left mr-2"></i>Orqaga qaytish
+              className="fa fa-arrow-left mr-2"></i>Возвращаться
             </button>
           </Link>
         </div>

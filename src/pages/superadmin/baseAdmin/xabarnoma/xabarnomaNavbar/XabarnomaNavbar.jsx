@@ -10,12 +10,12 @@ export default function XabarnomaNavbar() {
       </li>
       <li className="nav-item">
         <a href="#1" className="nav-link" activeClassName='NavLinkLi'>
-          Telegram Bot
+          Телеграм бот
         </a>
       </li>
       <li className="nav-item">
         <a href="#1" className="nav-link" activeClassName='NavLinkLi'>
-          SMS
+          СМС
         </a>
       </li>
     </>

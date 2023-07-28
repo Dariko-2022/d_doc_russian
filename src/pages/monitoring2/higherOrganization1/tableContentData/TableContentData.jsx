@@ -74,15 +74,15 @@ const TableContentData = ({ data, setSelected, setData, inlineDoc, setInlineDoc,
                 <thead className="myTableHead">
                     <tr className="bg-dark tableHeader ">
                         <th rowSpan={5} style={{ width: "3%" }}>№</th>
-                        <th rowSpan={5} style={{ width: "25%" }}>Kotibiyatlar</th>
-                        <th rowSpan={3} style={{ width: "8%" }}>Jami kelgan hujjatlar</th>
-                        <th colSpan={data.cardTypeIncludesCardsDTOs?.length * 2 + countColumn * 2}>SHUNDAN</th>
+                        <th rowSpan={5} style={{ width: "25%" }}>Секретариаты</th>
+                        <th rowSpan={3} style={{ width: "8%" }}>Всего входящих документов</th>
+                        <th colSpan={data.cardTypeIncludesCardsDTOs?.length * 2 + countColumn * 2}>ПОЭТОМУ</th>
                     </tr>
                     <tr className="bg-dark tableHeader">
                         {data.cardTypeIncludesCardsDTOs?.length > 0 && data.cardTypeIncludesCardsDTOs.map((dat, index) => (
                             <>
                                 <th key={index} rowSpan={2} style={{ width: "8%" }}>{dat.cardTypeName}</th>
-                                <th rowSpan={2} style={{ width: "8%" }}>Jamiga nisbatan % hisobidan</th>
+                                <th rowSpan={2} style={{ width: "8%" }}>В % от общего</th>
                                 {/* <th colSpan={countColumn * 2}>Shu jumladan</th> */}
                                 {dat.cardShortInfoDTOs?.length > 0 && dat.cardShortInfoDTOs.map((d) => (
                                     <th key={Math.random() * 10000} className="rotateTd" colSpan={2} style={{ writingMode: "vertical-lr", padding: "15px", height: "350px", wordBreak: "break-word" }}>{d.cardName}</th>
@@ -103,11 +103,11 @@ const TableContentData = ({ data, setSelected, setData, inlineDoc, setInlineDoc,
                         <th rowSpan={2}>Soni</th>
                         {data.cardTypeIncludesCardsDTOs?.length > 0 && data.cardTypeIncludesCardsDTOs.map((dat) => (
                             <>
-                                <th key={Math.random() * 10000} rowSpan={2}>Soni</th>
+                                <th key={Math.random() * 10000} rowSpan={2}>Число</th>
                                 <th key={Math.random() * 10000} rowSpan={2}>%</th>
                                 {dat.cardShortInfoDTOs?.length > 0 && dat.cardShortInfoDTOs.map((d, i) => (
                                     <>
-                                        <th key={Math.random() * 10000} rowSpan={2}>Soni</th>
+                                        <th key={Math.random() * 10000} rowSpan={2}>Число</th>
                                         <th key={Math.random() * 10000} rowSpan={2}>%</th>
                                     </>
                                 ))}

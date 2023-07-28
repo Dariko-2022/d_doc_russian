@@ -4,7 +4,7 @@ import BaseSozlamalarNavbar from "../../baseSozlamalarNavbar/BaseSozlamalarNavba
 const BaseSozKorresContent = ({ currentUser }) => {
   return (
     <div className="content mb-5">
-      <h3 style={{ margin: "10px 0 0 20px", fontWeight: "bold", textTransform: "upperCase" }}>Korrespondent</h3>
+      <h3 style={{ margin: "10px 0 0 20px", fontWeight: "bold", textTransform: "upperCase" }}>Корреспондент</h3>
       <div className="card-body">
         <ul className="nav nav-tabs nav-tabs-solid nav-tabs-solid-custom bg-primary NavLink" style={{ borderTopRightRadius: "5px", borderTopLeftRadius: "5px" }}>
           <BaseSozlamalarNavbar />
@@ -21,7 +21,7 @@ const BaseSozKorresContent = ({ currentUser }) => {
                         <div className="col-lg-12">
                           <div className="position-relative">
                             <input type="text" data-mask="999-999-999" className="form-control form-control-outline" placeholder="Placeholder" />
-                            <label className="label-floating">Tashkilot sitri</label>
+                            <label className="label-floating">СТИР организации</label>
                           </div>
                         </div>
                       </div>
@@ -30,7 +30,7 @@ const BaseSozKorresContent = ({ currentUser }) => {
                       <div className="form-group form-group-floating row">
                         <div className="col-lg-12">
                           <div className="position-relative">
-                            <button className="btn btn-primary form-control">Qidirish</button>
+                            <button className="btn btn-primary form-control">Поиск</button>
                           </div>
                         </div>
                       </div>
@@ -45,7 +45,7 @@ const BaseSozKorresContent = ({ currentUser }) => {
                         <div className="col-lg-12">
                           <div className="position-relative">
                             <input type="text" className="form-control form-control-outline" placeholder="Placeholder" />
-                            <label className="label-floating">Tashkilot nomi</label>
+                            <label className="label-floating">Название организации</label>
                           </div>
                         </div>
                       </div>
@@ -55,7 +55,7 @@ const BaseSozKorresContent = ({ currentUser }) => {
                         <div className="col-lg-12">
                           <div className="position-relative">
                             <input type="text" className="form-control form-control-outline" placeholder="Placeholder" />
-                            <label className="label-floating">Mazili</label>
+                            <label className="label-floating">Адрес</label>
                           </div>
                         </div>
                       </div>
@@ -65,7 +65,7 @@ const BaseSozKorresContent = ({ currentUser }) => {
                         <div className="col-lg-12">
                           <div className="position-relative">
                             <input type="text" data-mask="+998(99) 999-99-99" className="form-control form-control-outline" placeholder="Placeholder" />
-                            <label className="label-floating">Telefon</label>
+                            <label className="label-floating">Телефон</label>
                           </div>
                         </div>
                       </div>
@@ -75,7 +75,7 @@ const BaseSozKorresContent = ({ currentUser }) => {
                         <div className="col-lg-12">
                           <div className="position-relative">
                             <input type="email" className="form-control form-control-outline" placeholder="Placeholder" />
-                            <label className="label-floating">E-pochta</label>
+                            <label className="label-floating">E-почта</label>
                           </div>
                         </div>
                       </div>
@@ -85,7 +85,7 @@ const BaseSozKorresContent = ({ currentUser }) => {
                         <div className="col-lg-12">
                           <div className="position-relative">
                             <input type="email" className="form-control form-control-outline" placeholder="Placeholder" />
-                            <label className="label-floating">E-xat</label>
+                            <label className="label-floating">E-хат</label>
                           </div>
                         </div>
                       </div>
@@ -94,7 +94,7 @@ const BaseSozKorresContent = ({ currentUser }) => {
                       <div className="form-group form-group-floating row">
                         <div className="col-lg-12">
                           <div className="position-relative">
-                            <button className="btn btn-primary form-control form-control-outline">Qo'shish</button>
+                            <button className="btn btn-primary form-control form-control-outline">Добавлять</button>
                           </div>
                         </div>
                       </div>
@@ -108,7 +108,7 @@ const BaseSozKorresContent = ({ currentUser }) => {
                       <div className="col-lg-12">
                         <div className="position-relative">
                           <input type="search" className="form-control form-control-outline" placeholder="Placeholder" />
-                          <label className="label-floating">Qidirish</label>
+                          <label className="label-floating">Поиск</label>
                         </div>
                       </div>
                     </div>
@@ -120,19 +120,19 @@ const BaseSozKorresContent = ({ currentUser }) => {
                   <thead>
                     <tr className="bg-dark text-white NavLink text-center">
                       <th style={{ width: "5%" }}>№</th>
-                      <th style={{ width: "30%" }}>Tashkilot nomi</th>
-                      <th style={{ width: "20%" }}>Manzil</th>
-                      <th style={{ width: "10%" }}>Telefon raqam</th>
-                      <th style={{ width: "15%" }}>E-pochta</th>
-                      <th style={{ width: "15%" }}>E-xat</th>
-                      <th style={{ width: "5%" }}>Harakatlar</th>
+                      <th style={{ width: "30%" }}>Название организации</th>
+                      <th style={{ width: "20%" }}>Адрес</th>
+                      <th style={{ width: "10%" }}>Номер телефона</th>
+                      <th style={{ width: "15%" }}>E-Почта</th>
+                      <th style={{ width: "15%" }}>E-хат</th>
+                      <th style={{ width: "5%" }}>Действия</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr style={{ fontSize: "14px" }}>
                       <td className="text-center">1</td>
-                      <td>O'zbekiston Respublikasi Qonuni</td>
-                      <td>Buxoro Shahar</td>
+                      <td>Закон Республики Узбекистан</td>
+                      <td>г. Бухара</td>
                       <td className="text-center">
                         98-888-89-60
                       </td>
@@ -147,7 +147,7 @@ const BaseSozKorresContent = ({ currentUser }) => {
                             <div className="modal-dialog modal-lg ">
                               <div className="modal-content">
                                 <div className="modal-header bg-primary text-white">
-                                  <h1 className="modal-title">Yangilash</h1>
+                                  <h1 className="modal-title">Обновлять</h1>
                                   <button type="button" className="close" data-dismiss="modal">&times;</button>
                                 </div>
 
@@ -160,7 +160,7 @@ const BaseSozKorresContent = ({ currentUser }) => {
                                           <div className="col-lg-12">
                                             <div className="position-relative">
                                               <input type="text" className="form-control form-control-outline" placeholder="Placeholder" />
-                                              <label className="label-floating">Tashkilot nomi</label>
+                                              <label className="label-floating">Название организации</label>
                                             </div>
                                           </div>
                                         </div>
@@ -170,7 +170,7 @@ const BaseSozKorresContent = ({ currentUser }) => {
                                           <div className="col-lg-12">
                                             <div className="position-relative">
                                               <input type="text" className="form-control form-control-outline" placeholder="Placeholder" />
-                                              <label className="label-floating">Mazili</label>
+                                              <label className="label-floating">Адрес</label>
                                             </div>
                                           </div>
                                         </div>
@@ -180,7 +180,7 @@ const BaseSozKorresContent = ({ currentUser }) => {
                                           <div className="col-lg-12">
                                             <div className="position-relative">
                                               <input type="text" data-mask="+998(99) 999-99-99" className="form-control form-control-outline" placeholder="Placeholder" />
-                                              <label className="label-floating">Telefon</label>
+                                              <label className="label-floating">Телефон</label>
                                             </div>
                                           </div>
                                         </div>
@@ -190,7 +190,7 @@ const BaseSozKorresContent = ({ currentUser }) => {
                                           <div className="col-lg-12">
                                             <div className="position-relative">
                                               <input type="email" className="form-control form-control-outline" placeholder="Placeholder" />
-                                              <label className="label-floating">E-pochta</label>
+                                              <label className="label-floating">E-почта</label>
                                             </div>
                                           </div>
                                         </div>
@@ -200,7 +200,7 @@ const BaseSozKorresContent = ({ currentUser }) => {
                                           <div className="col-lg-12">
                                             <div className="position-relative">
                                               <input type="email" className="form-control form-control-outline" placeholder="Placeholder" />
-                                              <label className="label-floating">E-xat</label>
+                                              <label className="label-floating">E-xaт</label>
                                             </div>
                                           </div>
                                         </div>
@@ -209,7 +209,7 @@ const BaseSozKorresContent = ({ currentUser }) => {
                                         <div className="form-group form-group-floating row">
                                           <div className="col-lg-12">
                                             <div className="position-relative">
-                                              <button className="btn btn-primary form-control form-control-outline">Qo'shish</button>
+                                              <button className="btn btn-primary form-control form-control-outline">Добавлять</button>
                                             </div>
                                           </div>
                                         </div>

@@ -103,13 +103,13 @@ const Tasnif1Content = ({ currentUser }) => {
       desc1ref.current.value = "";
       desc1ref.current.focus();
     } else {
-      Alert(setAlert, 'warning', `Tasnif matni kiritilmagan`);
+      Alert(setAlert, 'warning', `Текст классификации не включен`);
     }
   }
 
   return (
     <div className="content mb-5">
-      <h3 style={{ margin: "10px 0 0 0", fontWeight: "bold", textTransform: "upperCase" }}>Tasnif1</h3>
+      <h3 style={{ margin: "10px 0 0 0", fontWeight: "bold", textTransform: "upperCase" }}>Классификация1</h3>
       <div className="card-body p-0">
         <ul className="nav nav-tabs nav-tabs-solid nav-tabs-solid-custom bg-primary NavLink">
           <HududNavbar />
@@ -128,13 +128,13 @@ const Tasnif1Content = ({ currentUser }) => {
                           autoFocus
                           ref={desc1ref}
                         />
-                        <label className="label-floating">Tasnif1</label>
+                        <label className="label-floating">Классификация1</label>
                       </div>
                     </div>
                   </div>
                   <div className="col-lg-4">
                     <button type="button" style={{ width: "150px", height: "55px" }} className="btn btn-primary" onClick={() => clickEnter()}>
-                      <i className="icon-floppy-disk"></i> Saqlash
+                      <i className="icon-floppy-disk"></i> Сохранять
                     </button>
                   </div>
                 </div>
@@ -142,8 +142,8 @@ const Tasnif1Content = ({ currentUser }) => {
                   <thead>
                     <tr className="bg-dark text-white NavLink text-center">
                       <th style={{ width: "5%" }}>№</th>
-                      <th style={{ width: "40%" }}>Nomlanishi</th>
-                      <th style={{ width: "15%" }}>Harakatlar</th>
+                      <th style={{ width: "40%" }}>Именование</th>
+                      <th style={{ width: "15%" }}>Действия</th>
                     </tr>
                   </thead>
                   <tbody>

@@ -155,7 +155,7 @@ const AddModal = ({ currentUser, setAlert, yunalishlar, setAddModal, setYunalish
             console.log(sendingData);
 
             await axiosInstance.post("organization/addCorrespondentByDevon", sendingData)
-            Alert(setAlert, "success", "Muvaffaqiyatli qo'shildi");
+            Alert(setAlert, "success", "Добавлено успешно");
 
             try {
                 const res = await axiosInstance.get("orgType/all")
@@ -190,7 +190,7 @@ const AddModal = ({ currentUser, setAlert, yunalishlar, setAddModal, setYunalish
             }}>
             <div className="modal-content">
                 <div className="modal-header bg-primary text-white">
-                    <h5 className="modal-title" style={{ textTransform: "capitalize" }}>Tashkilot qo'shish</h5>
+                    <h5 className="modal-title" style={{ textTransform: "capitalize" }}>Добавить организацию</h5>
                     <button type="button" className="close" ref={closeOrgModalref} data-dismiss="modal" onClick={() => setAddModal(false)}>&times;</button>
                 </div>
 
@@ -225,7 +225,7 @@ const AddModal = ({ currentUser, setAlert, yunalishlar, setAddModal, setYunalish
                                             placeholder="Placeholder"
                                             ref={orgNameref}
                                         />
-                                        <label className="label-floating">Korxona Nomi</label>
+                                        <label className="label-floating"> Название компании </label>
                                     </div>
                                 </div>
                             </div>
@@ -238,7 +238,7 @@ const AddModal = ({ currentUser, setAlert, yunalishlar, setAddModal, setYunalish
                                             placeholder="Placeholder"
                                             ref={shortDescref}
                                         />
-                                        <label className="label-floating">Qisqacha nomi</label>
+                                        <label className="label-floating">Короткое имя</label>
                                     </div>
                                 </div>
                             </div>
@@ -249,8 +249,8 @@ const AddModal = ({ currentUser, setAlert, yunalishlar, setAddModal, setYunalish
                                         isClearable={true}
                                         options={[
                                             {
-                                                value: "Viloyat",
-                                                label: "Viloyat",
+                                                value: "область",
+                                                label: "область",
                                                 isDisabled: true
                                             },
                                             {
@@ -310,8 +310,8 @@ const AddModal = ({ currentUser, setAlert, yunalishlar, setAddModal, setYunalish
                                                 label: "Toshkent shahar"
                                             }
                                         ]}
-                                        placeholder="Viloyat"
-                                        className="Viloyat"
+                                        placeholder="Область"
+                                        className="Область"
                                         ref={provinceref}
                                     />
                                 </div>
@@ -328,8 +328,8 @@ const AddModal = ({ currentUser, setAlert, yunalishlar, setAddModal, setYunalish
                                         //     { value: "Jondor Tuman", label: "Jondor Tuman" },
                                         // ]}
                                         // onChange={logChange12}
-                                        placeholder="Tuman (Shahar)"
-                                        className="tuman"
+                                        placeholder="Район (Город)"
+                                        className="Район"
                                         isClearable={true}
                                         ref={cityref}
                                     />
@@ -345,7 +345,7 @@ const AddModal = ({ currentUser, setAlert, yunalishlar, setAddModal, setYunalish
                                             placeholder="Placeholder"
                                             ref={addressref}
                                         />
-                                        <label className="label-floating">Manzil</label>
+                                        <label className="label-floating">Адрес</label>
                                     </div>
                                 </div>
                             </div>
@@ -360,7 +360,7 @@ const AddModal = ({ currentUser, setAlert, yunalishlar, setAddModal, setYunalish
                                             disabled
                                             ref={sitr2ref}
                                         />
-                                        <label className="label-floating">Stir</label>
+                                        <label className="label-floating">СТИР </label>
                                     </div>
                                 </div>
                             </div>
@@ -374,7 +374,7 @@ const AddModal = ({ currentUser, setAlert, yunalishlar, setAddModal, setYunalish
                                             disabled
                                             ref={fullNameref}
                                         />
-                                        <label className="label-floating">F.I.O</label>
+                                        <label className="label-floating">Ф.И.О</label>
                                     </div>
                                 </div>
                             </div>
@@ -387,7 +387,7 @@ const AddModal = ({ currentUser, setAlert, yunalishlar, setAddModal, setYunalish
                                             placeholder="Placeholder"
                                             ref={phoneref}
                                         />
-                                        <label className="label-floating">Telefon </label>
+                                        <label className="label-floating">Телефон </label>
                                     </div>
                                 </div>
                             </div>
@@ -413,7 +413,7 @@ const AddModal = ({ currentUser, setAlert, yunalishlar, setAddModal, setYunalish
                                             placeholder="Placeholder"
                                             ref={exatref}
                                         />
-                                        <label className="label-floating">E-xat</label>
+                                        <label className="label-floating">E-хат</label>
                                     </div>
                                 </div>
                             </div>
@@ -421,7 +421,7 @@ const AddModal = ({ currentUser, setAlert, yunalishlar, setAddModal, setYunalish
                         <div className="row d-flex justify-content-end">
                             <div className="col-lg-2 text-right">
                                 <button type="submit" className="btn btn-primary">
-                                    <i className="icon-floppy-disk"></i>Saqlash
+                                    <i className="icon-floppy-disk"></i>Сохранять
                                 </button>
                             </div>
                         </div>

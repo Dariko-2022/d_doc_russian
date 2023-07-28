@@ -20,7 +20,7 @@ const UpdateDirection = ({ setUpdateYunalish, updateYunalish, currentUser, setYu
           }
           return d;
         })
-        Alert(setAlert, "success", "Yunalish nomi muvaffaqiyatli o'zgartirildi")
+        Alert(setAlert, "success", "Маршрутизация успешно переименована")
         setYunalishlar(arr);
         setUpdateYunalish({ open: false, obj: {} });
         let orgNames = document.querySelectorAll('.cardAccordion');
@@ -39,7 +39,7 @@ const UpdateDirection = ({ setUpdateYunalish, updateYunalish, currentUser, setYu
         console.log(error?.response);
       }
     } else {
-      Alert(setAlert, "warning", "Yunalish nomi kiritilishi kerak")
+      Alert(setAlert, "warning", "Необходимо ввести имя пункта назначения")
     }
   }
 
@@ -48,24 +48,24 @@ const UpdateDirection = ({ setUpdateYunalish, updateYunalish, currentUser, setYu
       <div className="modal-dialog modal-lg">
         <div className="modal-content">
           <div className="modal-header btn-primary p-2">
-            <h5 className="modal-title">O'zgartirish oynasi</h5>
+            <h5 className="modal-title">Изменить окно</h5>
             <button type="button" className="close"
               onClick={() => setUpdateYunalish({ open: false, obj: {} })}>×
             </button>
           </div>
 
           <form className="modal-body form-inline justify-content-center">
-            <label>Yo'nalish:</label>
+            <label>Направление:</label>
             <input
               type="text"
-              placeholder="Yo'nalish nomi"
+              placeholder="Название маршрута"
               className="form-control mb-2 mr-sm-2 ml-sm-2 mb-sm-0 w-75 yunalishName"
               defaultValue={updateYunalish.obj?.name}
               ref={directionref1}
             />
             <button type="button" onClick={() => yunalishUzgartirish(updateYunalish.obj)}
               className="btn btn-primary ml-sm-2 mb-sm-0"
-              style={{ textTransform: "capitalize" }}>O'zgartirish
+              style={{ textTransform: "capitalize" }}>Изменять
             </button>
           </form>
         </div>

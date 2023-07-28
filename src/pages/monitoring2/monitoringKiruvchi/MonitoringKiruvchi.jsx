@@ -60,7 +60,7 @@ const MonitoringKiruvchi = ({ currentUser }) => {
                 console.log(error);
                 setTimeout(() => {
                     loader.current.style.display = "none";
-                    Alert(setAlert, "warning", "Ma'lumot kelishda xatolik yuz berdi");
+                    Alert(setAlert, "warning", "Произошла ошибка при получении данных");
                 }, 4000);
             }
         }
@@ -218,7 +218,7 @@ const MonitoringKiruvchi = ({ currentUser }) => {
                 Alert(setAlert, "warning", error?.response?.data);
             }
         } else {
-            Alert(setAlert, "warning", "Bo'lim ichi ochilmagan. Qidirish uchun bo'lim ichi ochilgan bo'lishi kerak");
+            Alert(setAlert, "warning", "Отсек не открывается. Раздел должен быть открыт для поиска");
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }
@@ -251,7 +251,7 @@ const MonitoringKiruvchi = ({ currentUser }) => {
 
     return (
         <div className="content mb-5">
-            <h3 style={{ margin: "10px 0 0 0", fontWeight: "bold", textTransform: "upperCase" }}>Kiruvchi</h3>
+            <h3 style={{ margin: "10px 0 0 0", fontWeight: "bold", textTransform: "upperCase" }}>Входящий</h3>
             <div className="card-body p-0">
                 <ul className="nav nav-tabs nav-tabs-solid nav-tabs-solid-custom bg-primary NavLink">
                     <MonitoringNavbar params={params.id} />
@@ -272,14 +272,14 @@ const MonitoringKiruvchi = ({ currentUser }) => {
                                                     fields={fields1}
                                                     ref={CardType}
                                                     dataSource={notParentsCard}
-                                                    placeholder="Nazorat Kartochkasi"
+                                                    placeholder="Контрольная карта"
                                                     mode="CheckBox"
                                                     enableGroupCheckBox="true"
                                                     allowFiltering="true"
                                                     showSelectAll="true"
                                                     unSelectAllText="unSelect All"
                                                     selectAllText="Select All"
-                                                    filterBarPlaceholder="Qidirish">
+                                                    filterBarPlaceholder="Поиск">
                                                     <Inject services={[CheckBoxSelection]} />
                                                 </MultiSelectComponent>
                                             </div>
@@ -294,14 +294,14 @@ const MonitoringKiruvchi = ({ currentUser }) => {
                                                     fields={fields1}
                                                     ref={DocumentType}
                                                     dataSource={hujjatTuri}
-                                                    placeholder="Xujjat turi"
+                                                    placeholder="Контрольная карта"
                                                     mode="CheckBox"
                                                     enableGroupCheckBox="true"
                                                     allowFiltering="true"
                                                     unSelectAllText="unSelect All"
                                                     selectAllText="Select All"
                                                     showSelectAll="true"
-                                                    filterBarPlaceholder="Qidirish">
+                                                    filterBarPlaceholder="Поиск">
                                                     <Inject services={[CheckBoxSelection]} />
                                                 </MultiSelectComponent>
                                             </div>
@@ -316,7 +316,7 @@ const MonitoringKiruvchi = ({ currentUser }) => {
                                                     fields={fields1}
                                                     ref={Correspondent}
                                                     dataSource={korrespondent1}
-                                                    placeholder="Korrespondent"
+                                                    placeholder="Корреспонднт"
                                                     mode="CheckBox"
                                                     enableGroupCheckBox="true"
                                                     allowFiltering="true"
@@ -354,7 +354,7 @@ const MonitoringKiruvchi = ({ currentUser }) => {
                                                             onChange={(date) => setStartDate(date)}
                                                             dateFormat={'dd.MM.yyyy'}
                                                             isClearable
-                                                            placeholderText="Boshlanish sana"
+                                                            placeholderText="Дата начала"
                                                             showYearDropdown scrollableMonthYearDropdown
                                                         />
                                                     </div>
@@ -386,7 +386,7 @@ const MonitoringKiruvchi = ({ currentUser }) => {
                                                             onChange={(date) => setEndDate(date)}
                                                             dateFormat={'dd.MM.yyyy'}
                                                             isClearable
-                                                            placeholderText="Tugash sana"
+                                                            placeholderText="Дата окончания"
                                                             showYearDropdown
                                                             scrollableMonthYearDropdown
                                                         />
@@ -402,10 +402,10 @@ const MonitoringKiruvchi = ({ currentUser }) => {
                                                 style={{ width: "33%" }}
                                                 className="btn btn-primary mr-1 hujQush h-100"
                                             >
-                                                Izlash
+                                                Поиск
                                             </button>
                                             <button type={'button'} className="btn btn-primary mr-1 h-100"
-                                                style={{ width: "33%" }} onClick={() => allDocumemts()}>Barchasi
+                                                style={{ width: "33%" }} onClick={() => allDocumemts()}>Все
                                             </button>
                                             <div className="btn-group h-100" style={{ width: "33%" }}>
                                                 <button type="button" className="btn btn-primary  btn-lg d-flex align-items-center justify-content-center" data-toggle="dropdown">

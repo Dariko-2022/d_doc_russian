@@ -42,16 +42,16 @@ const OpenButtonClick = ({ setOpenButtonClick, params, history, setAlert }) => {
       <div className="modal-dialog">
         <div className="modal-content">
           <div className="modal-header bg-primary text-white">
-            <h6 className="modal-title">Statusga o'tish oynasi</h6>
+            <h6 className="modal-title">Окно переключения состояния</h6>
             <button type="button" className="close" onClick={() => setOpenButtonClick(false)}>×</button>
           </div>
           <div className="modal-body text-center">
-            <h3 style={{ textTransform: "upperCase", fontWeight: "bold" }} className="text-danger">Ogoh bo'ling!</h3>
-            <h5>Bajarilgan statusini qabul qilasizmi?</h5>
+            <h3 style={{ textTransform: "upperCase", fontWeight: "bold" }} className="text-danger">Будьте в курсе!</h3>
+            <h5>Принять статус «сделано»?</h5>
           </div>
           <div className="modal-footer">
-            <button type="button" className="btn btn-danger" onClick={() => setOpenButtonClick(false)}>Yo'q</button>
-            <button type="button" className="btn btn-primary ml-1" onClick={passedPage}>Ha</button>
+            <button type="button" className="btn btn-danger" onClick={() => setOpenButtonClick(false)}>Нет</button>
+            <button type="button" className="btn btn-primary ml-1" onClick={passedPage}>да</button>
           </div>
         </div>
       </div>

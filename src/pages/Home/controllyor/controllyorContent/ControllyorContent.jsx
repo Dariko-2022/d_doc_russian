@@ -108,7 +108,7 @@ const IjroContent = ({ currentUser }) => {
 
   return (
     <div className="content" style={{ marginBottom: "130px" }}>
-      <h3 style={{ margin: "10px 0 0 0", fontWeight: "bold", textTransform: "uppercase" }}>Ko'rish</h3>
+      <h3 style={{ margin: "10px 0 0 0", fontWeight: "bold", textTransform: "uppercase" }}>Вид</h3>
       <div className="card-body p-0">
         <ul className="nav nav-tabs nav-tabs-solid nav-tabs-solid-custom bg-primary NavLink" style={{ paddingTop: "2px" }}>
           {params.name === "bajarilgan" ? (
@@ -126,7 +126,7 @@ const IjroContent = ({ currentUser }) => {
           )}
           <li className="nav-item">
             <NavLink to={`/bosh_sahifa_ko'rish/${params.id}/${params.name}`} className="nav-link" activeClassName="NavLinkLi">
-              <i className="icon-eye2 mr-1"></i>Topshiriqlar
+              <i className="icon-eye2 mr-1"></i>Задания
             </NavLink>
           </li>
         </ul>

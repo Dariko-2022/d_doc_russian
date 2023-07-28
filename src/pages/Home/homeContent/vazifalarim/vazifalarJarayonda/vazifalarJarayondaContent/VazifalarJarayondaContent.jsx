@@ -38,7 +38,7 @@ const VazifalarJarayondaContent = ({ permission, currentUser }) => {
 
   return (
     <div className="content content-mobile mb-5">
-      <h3 style={{ margin: "10px 0 0 0", fontWeight: "bold", textTransform: "upperCase" }}>Jarayonda</h3>
+      <h3 style={{ margin: "10px 0 0 0", fontWeight: "bold", textTransform: "upperCase" }}> В Процесси</h3>
       <div className="card-body card-body-mobile p-0">
         <ul className="nav nav-tabs nav-tabs-solid nav-tabs-solid-custom bg-primary NavLink"
           style={{ paddingTop: "2px" }}>

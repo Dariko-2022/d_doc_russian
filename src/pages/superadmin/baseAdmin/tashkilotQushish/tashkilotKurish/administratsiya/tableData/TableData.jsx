@@ -101,7 +101,7 @@ const TableData = ({ organization, currentUser, setAlert, organizationId, params
                       }
                       return o;
                     })
-                    Alert(setAlert, "success", "Ma'lumot muvaffaqiyatli o'zgartirildi");
+                    Alert(setAlert, "success", "Информация успешно изменена");
                     setOrganization(arr);
                     purposeref.current?.props?.value && purposeref.current.removeValue(purposeref.current.props.value);
                     nameref.current.value = "";
@@ -118,31 +118,31 @@ const TableData = ({ organization, currentUser, setAlert, organizationId, params
                     Alert(setAlert, "warning", error?.response?.data);
                   }
                 } else {
-                  Alert(setAlert, "warning", "Faoliyat statusi tanlanmagan");
+                  Alert(setAlert, "warning", "Статус активности не выбран");
                   setUpdateModal({ open: false, obj: {} });
                 }
               } else {
-                Alert(setAlert, "warning", "Email kiritilmagan");
+                Alert(setAlert, "warning", "Электронная почта не введена");
                 setUpdateModal({ open: false, obj: {} });
               }
             } else {
-              Alert(setAlert, "warning", "Telefon raqam xato kiritilgan");
+              Alert(setAlert, "warning", "Номер телефона был введен неверно");
               setUpdateModal({ open: false, obj: {} });
             }
           } else {
-            Alert(setAlert, "warning", "Otasi nomi kiritilmagan");
+            Alert(setAlert, "warning", "Имя отца не указано");
             setUpdateModal({ open: false, obj: {} });
           }
         } else {
-          Alert(setAlert, "warning", "Familiya kiritilmagan");
+          Alert(setAlert, "warning", "Фамилия не введена ");
           setUpdateModal({ open: false, obj: {} });
         }
       } else {
-        Alert(setAlert, "warning", "Ism kamida 3 ta harfdan iborat bo'lishi kerak");
+        Alert(setAlert, "warning", "Имя должно содержать не менее 3 букв");
         setUpdateModal({ open: false, obj: {} });
       }
     } else {
-      Alert(setAlert, "warning", "Ism kiritilmagan");
+      Alert(setAlert, "warning", "Имя не введено");
       setUpdateModal({ open: false, obj: {} });
     }
   }
@@ -165,9 +165,9 @@ const TableData = ({ organization, currentUser, setAlert, organizationId, params
         <thead>
           <tr className="bg-dark text-white NavLink text-center">
             <th style={{ width: "5%" }}>№</th>
-            <th style={{ width: "45%" }}>FISH</th>
-            <th style={{ width: "45%" }}>Telefon Raqami</th>
-            <th style={{ width: "5%" }} className="text-center">Xarakatlar</th>
+            <th style={{ width: "45%" }}>ФИШ</th>
+            <th style={{ width: "45%" }}>Номер телефона</th>
+            <th style={{ width: "5%" }} className="text-center">Действия</th>
           </tr>
         </thead>
         <tbody>
@@ -198,16 +198,16 @@ const TableData = ({ organization, currentUser, setAlert, organizationId, params
           <div className="modal-dialog">
             <div className="modal-content">
               <div className="modal-header bg-primary text-white">
-                <h6 className="modal-title">O'chirish oynasi</h6>
+                <h6 className="modal-title">Удалить окно</h6>
                 <button type="button" className="close" onClick={() => setDeleteModal({ open: false, obj: {} })}>×</button>
               </div>
               <div className="modal-body text-center">
-                <h3 style={{ textTransform: "upperCase", fontWeight: "bold" }} className="text-danger">Ogoh bo'ling!</h3>
-                <h5>Ushbu ma'lumotni o'chirmoqchimisiz?</h5>
+                <h3 style={{ textTransform: "upperCase", fontWeight: "bold" }} className="text-danger">Будьте в курсе!</h3>
+                <h5>Вы хотите удалить эту информацию? </h5>
               </div>
               <div className="modal-footer">
-                <button type="button" className="btn btn-link bekorQilish" onClick={() => setDeleteModal({ open: false, obj: {} })}>Bekor qilish</button>
-                <button type="button" className="btn btn-primary" onClick={() => Uchirish(deleteModal.obj)}>O'chirish</button>
+                <button type="button" className="btn btn-link bekorQilish" onClick={() => setDeleteModal({ open: false, obj: {} })}>Отмена</button>
+                <button type="button" className="btn btn-primary" onClick={() => Uchirish(deleteModal.obj)}>Удалить</button>
               </div>
             </div>
           </div>
@@ -220,7 +220,7 @@ const TableData = ({ organization, currentUser, setAlert, organizationId, params
           <div className="modal-dialog modal-lg ">
             <div className="modal-content">
               <div className="modal-header bg-primary text-white">
-                <h1 className="modal-title">O'zgartirish</h1>
+                <h1 className="modal-title">Изменять</h1>
                 <button type="button" className="close" onClick={() => setUpdateModal({ open: false, obj: {} })} >&times;</button>
               </div>
               <div className="modal-body">
@@ -238,7 +238,7 @@ const TableData = ({ organization, currentUser, setAlert, organizationId, params
                                 // defaultValue={updateModal.obj?.firstName}
                                 ref={nameref}
                               />
-                              <label className="label-floating">Ism</label>
+                              <label className="label-floating">Имя</label>
                             </div>
                           </div>
                         </div>
@@ -254,7 +254,7 @@ const TableData = ({ organization, currentUser, setAlert, organizationId, params
                                 // defaultValue={updateModal.obj?.lastName}
                                 ref={lastNameref}
                               />
-                              <label className="label-floating">Familiya</label>
+                              <label className="label-floating">Фамилия</label>
                             </div>
                           </div>
                         </div>
@@ -271,7 +271,7 @@ const TableData = ({ organization, currentUser, setAlert, organizationId, params
                                 // defaultValue={updateModal.obj?.middleName}
                                 ref={middleNameref}
                               />
-                              <label className="label-floating">Otasini Ismi</label>
+                              <label className="label-floating">Отчество</label>
                             </div>
                           </div>
                         </div>
@@ -293,7 +293,7 @@ const TableData = ({ organization, currentUser, setAlert, organizationId, params
                                 required
                                 ref={phoneref}
                               />
-                              <label className="label-floating">Telefon Raqami</label>
+                              <label className="label-floating">Номер телефона</label>
                             </div>
                           </div>
                         </div>
@@ -335,7 +335,7 @@ const TableData = ({ organization, currentUser, setAlert, organizationId, params
                       </div>
                     </div>
                   </div>
-                  <h1 className="text-center NavLink text-color">Super admin</h1> <br />
+                  <h1 className="text-center NavLink text-color">Супер админ</h1> <br />
                   <div className="col-lg-12">
                     <div className="row">
                       <div className="col-lg-12">
@@ -345,7 +345,7 @@ const TableData = ({ organization, currentUser, setAlert, organizationId, params
                               <Select
                                 // defaultValue={{ value: updateModal?.obj?.purpose?.purpose, label: updateModal?.obj?.purpose?.purpose }}
                                 options={purpose}
-                                placeholder="Faoliyat statusi"
+                                placeholder="Статус активности"
                                 className="faoliyatStatusiUzgartirish"
                                 ref={purposeref}
                               />
@@ -364,7 +364,7 @@ const TableData = ({ organization, currentUser, setAlert, organizationId, params
                                 // defaultValue={updateModal.obj?.comment}
                                 ref={commentref}
                               />
-                              <label className="label-floating">Izoh</label>
+                              <label className="label-floating">Комментарий</label>
                             </div>
                           </div>
                         </div>
@@ -400,7 +400,7 @@ const TableData = ({ organization, currentUser, setAlert, organizationId, params
                   <div className="col-lg-12">
                     <div className="form-group">
                       <button type="button" onClick={() => malumotlarniUzgartirish(updateModal.obj)} className="btn btn-primary" style={{ width: "100%" }}>
-                        <i className="fas fa-save mr-1"></i>Saqlash
+                        <i className="fas fa-save mr-1"></i>Сохранять
                       </button>
                     </div>
                   </div>

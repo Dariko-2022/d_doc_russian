@@ -34,13 +34,13 @@ const AdminFQTopshiriqlarContent = ({ currentUser }) => {
 
   return (
     <div className="content mb-5">
-      <h3 style={{ margin: "10px 0 0 0", fontWeight: "bold", textTransform: "upperCase" }}>Topshiriqlar</h3>
+      <h3 style={{ margin: "10px 0 0 0", fontWeight: "bold", textTransform: "upperCase" }}>Задания</h3>
       <div className="">
         <ul className="nav nav-tabs nav-tabs-solid nav-tabs-solid-custom bg-primary NavLink">
           <FuqaroElektronKitobNavbar />
           <li className="nav-item">
             <NavLink to={`/fuqaro/murojati/elektron-kitob-topshiriqlar/${params.id}`} className="nav-link ml-2d-flex align-items-center" activeClassName="NavLinkLi">
-              <i className="icon-stack2 mr-1"></i> Topshiriqlar
+              <i className="icon-stack2 mr-1"></i> Задания
             </NavLink>
           </li>
         </ul>
@@ -52,11 +52,11 @@ const AdminFQTopshiriqlarContent = ({ currentUser }) => {
                   <thead>
                     <tr className="bg-dark text-white NavLink text-center">
                       <th style={{ width: "5%" }}>№</th>
-                      <th style={{ width: "20%" }}>F.I.O</th>
-                      <th style={{ width: "20%" }}>Ip manzili va MAC</th>
-                      <th style={{ width: "20%" }}>Qurilmasi</th>
-                      <th style={{ width: "20%" }}>Browser</th>
-                      <th style={{ width: "15%" }}>Vaqt</th>
+                      <th style={{ width: "20%" }}>Ф.И.О</th>
+                      <th style={{ width: "20%" }}>IP-адрес и MAC-адрес</th>
+                      <th style={{ width: "20%" }}>Устройство</th>
+                      <th style={{ width: "20%" }}>Браузер</th>
+                      <th style={{ width: "15%" }}>Время</th>
                     </tr>
                   </thead>
                   <tbody>

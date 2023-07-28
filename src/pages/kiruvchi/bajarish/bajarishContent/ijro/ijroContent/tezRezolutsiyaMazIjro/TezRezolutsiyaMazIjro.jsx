@@ -73,7 +73,7 @@ const TezRezolutsiyaMazIjro = ({ data, ranks, params, visibleIconIjro, currentUs
           <div className="col-lg-12">
             <div className="card">
               <div className="card-header bg-primary text-white header-elements-inline">
-                <h6 className="card-title" style={{ fontWeight: "bold", textTransform: "upperCase" }}>Rezalutsiya mazmuni</h6>
+                <h6 className="card-title" style={{ fontWeight: "bold", textTransform: "upperCase" }}>Содержание резолюции</h6>
               </div>
               <div className="form-group form-group-floating row my-2 mx-2">
                 <div className="col-lg-12">
@@ -86,7 +86,7 @@ const TezRezolutsiyaMazIjro = ({ data, ranks, params, visibleIconIjro, currentUs
                     // defaultValue={data?.document?.resolutionContent}
                     >
                     </textarea>
-                    <label className="label-floating">Izoh</label>
+                    <label className="label-floating">Комментарий</label>
                   </div>
                 </div>
               </div>
@@ -102,7 +102,7 @@ const TezRezolutsiyaMazIjro = ({ data, ranks, params, visibleIconIjro, currentUs
             <div className="card">
               <div className="card-header bg-primary text-white header-elements-inline">
                 <h6 className="card-title"
-                  style={{ fontWeight: "bold", textTransform: "upperCase" }}>Tezkor Rezalutsiya</h6>
+                  style={{ fontWeight: "bold", textTransform: "upperCase" }}>Быстрое резолюция</h6>
               </div>
               <div className="card-body">
                 <table className="table table-bordered datatable-select-single table-striped table-hover Tab">

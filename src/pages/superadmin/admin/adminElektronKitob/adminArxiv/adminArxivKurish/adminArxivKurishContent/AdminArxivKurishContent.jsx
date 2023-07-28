@@ -144,14 +144,14 @@ const AdminArxivKurishContent = ({ currentUser }) => {
 
   return (
     <div className="content mb-5">
-      <h3 style={{ margin: "10px 0 0 0", fontWeight: "bold", textTransform: "upperCase" }}>Barchasi</h3>
+      <h3 style={{ margin: "10px 0 0 0", fontWeight: "bold", textTransform: "upperCase" }}>Все</h3>
       <div className="">
         <ul className="nav nav-tabs nav-tabs-solid nav-tabs-solid-custom bg-primary NavLink">
           <AdminElektronKitobNavbar />
 
           <li className="nav-item">
             <NavLink to={`/super_admin_elektron-kitob-arxiv-ko'rish/${params.id}`} className="nav-link align-items-center" activeClassName="NavLinkLi">
-              <i className="icon-eye2 mr-1"></i> Ko'rish
+              <i className="icon-eye2 mr-1"></i> Видеть
             </NavLink>
           </li>
         </ul>
@@ -164,22 +164,22 @@ const AdminArxivKurishContent = ({ currentUser }) => {
                     <div className="col-lg-6">
                       <div className="card">
                         <div className="card-title bg-dark text-light text-center px-0 mb-0">
-                          <h1>Ma'lumotlar</h1>
+                          <h1>Информация</h1>
                         </div>
                         <div className="card-body">
                           <table className="table mt-2 table-bordered table-striped table-hover Tab" >
                             <tbody>
                               <tr style={{ height: "66px" }}>
-                                <td>O'zbekcha nomi:</td>
-                                <td className="uzbekchaNomi">Fuqaro murojati</td>
+                                <td>Узбекское имя:</td>
+                                <td className="uzbekchaNomi">Обращение граждан</td>
                               </tr>
                               <tr style={{ height: "66px" }}>
-                                <td>Ruscha nomi:</td>
+                                <td>русское имя:</td>
                                 <td className="ruschaNomi">Заявление гражданина</td>
                               </tr>
                               <tr style={{ height: "66px" }}>
-                                <td>Qisqacha tasnifi:</td>
-                                <td className="tasnif">Fuqaro murojatlari</td>
+                                <td>Краткая классификация:</td>
+                                <td className="tasnif">Гражданские апелляции</td>
                               </tr>
                             </tbody>
                           </table>
@@ -189,7 +189,7 @@ const AdminArxivKurishContent = ({ currentUser }) => {
                     <div className="col-lg-6">
                       <div className="card">
                         <div className="card-title bg-dark text-light text-center px-0 mb-0">
-                          <h1>Jurnalni Boshqarish</h1>
+                          <h1>Управление журналом</h1>
                         </div>
                         <div className="card-body">
                           <table className="table mt-2 table-bordered table-striped table-hover Tab" >
@@ -201,13 +201,13 @@ const AdminArxivKurishContent = ({ currentUser }) => {
                               </tr>
                               <tr className="text-center">
                                 <td>
-                                  <button className="btn btn-primary" onClick={openArchive}>Arxivdan chiqarish</button>
+                                  <button className="btn btn-primary" onClick={openArchive}>Разархивировать</button>
                                 </td>
                               </tr>
                               <tr className="text-center">
                                 <td>
                                   <div className="btn-group">
-                                    <button type="button" className="btn btn-primary dropdown-toggle" data-toggle="dropdown">Export</button>
+                                    <button type="button" className="btn btn-primary dropdown-toggle" data-toggle="dropdown">Экспорт</button>
                                     <div className="dropdown-menu dropdown-menu-right">
                                       <span className="dropdown-item"><i className="icon-menu7"></i> EXCEL</span>
                                       <span className="dropdown-item"><i className="icon-screen-full"></i> PDF</span>
@@ -240,12 +240,12 @@ const AdminArxivKurishContent = ({ currentUser }) => {
                   <thead>
                     <tr className="bg-dark text-white NavLink text-center">
                       <th style={{ width: "5%" }}>№</th>
-                      <th style={{ width: "10%" }}>Fayl</th>
-                      <th style={{ width: "20%" }}>Korrespondent</th>
-                      <th style={{ width: "25%" }}>Qisqacha Ma'lumot</th>
-                      <th style={{ width: "15%" }}>Reg № / Muddati</th>
-                      <th style={{ width: "20%" }}>Ijrochi</th>
-                      <th style={{ width: "5%" }} className="text-center">Harakatlar</th>
+                      <th style={{ width: "10%" }}>Файл</th>
+                      <th style={{ width: "20%" }}>Корреспондент</th>
+                      <th style={{ width: "25%" }}>Краткая информация</th>
+                      <th style={{ width: "15%" }}>Рег. № / Срок</th>
+                      <th style={{ width: "20%" }}>Исполнительный</th>
+                      <th style={{ width: "5%" }} className="text-center">Действия</th>
                     </tr>
                   </thead>
                   <tbody id="data">
@@ -254,7 +254,7 @@ const AdminArxivKurishContent = ({ currentUser }) => {
                         <tr key={index}>
                           <td className="text-center id">{dat.id}</td>
                           <td className="text-color Fayl">{dat.hujjatTuri}</td>
-                          <td className="korres">O'zbekiston Respublikasi Prezidenti</td>
+                          <td className="korres">Президент Республики Узбекистан</td>
                           {/* <!-- so'zlar 200ta chiqadi --> */}
                           <td style={{ textAlign: "justify" }} className="qisqacha">
                             {dat.malumot}
@@ -265,11 +265,11 @@ const AdminArxivKurishContent = ({ currentUser }) => {
                             {dat.date}
                           </td>
                           <td className="text-center ijrochi">
-                            <p style={{ margin: "0", borderBottomStyle: "dashed", borderColor: "#ddd", paddingBottom: "20px" }}>D.Sodiqov
-                              <span className="badge badge-danger ml-1">Bajarilmagan</span>
+                            <p style={{ margin: "0", borderBottomStyle: "dashed", borderColor: "#ddd", paddingBottom: "20px" }}>Д. Содиков
+                              <span className="badge badge-danger ml-1">Не выполнено</span>
                             </p>
-                            <p style={{ margin: "0", paddingTop: "20px" }}>D.Sodiqov
-                              <span className="badge badge-primary ml-1">Bajarilgan</span>
+                            <p style={{ margin: "0", paddingTop: "20px" }}>Д. Содиков
+                              <span className="badge badge-primary ml-1">Сделанный</span>
                             </p>
                           </td>
                           <td className="harakat">

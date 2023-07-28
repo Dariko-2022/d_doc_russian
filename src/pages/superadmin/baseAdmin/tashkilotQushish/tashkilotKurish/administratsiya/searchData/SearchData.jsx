@@ -60,13 +60,13 @@ const SearchData = ({ currentUser, setAlert, params, purpose, setPurpose, setOrg
           setUser(res.data.data);
         } catch (error) {
           console.log(error.response);
-          Alert(setAlert, "warning", "Ma'lumot topilmadi");
+          Alert(setAlert, "warning", "Информация не найдена");
         }
       } else {
-        Alert(setAlert, "warning", "PinFl kiritilmagan");
+        Alert(setAlert, "warning", "ПИНФЛ не включен");
       }
     } else {
-      Alert(setAlert, "warning", "Passport seria kiritilmagan");
+      Alert(setAlert, "warning", "Серия паспорта не включена");
     }
   }
 
@@ -129,7 +129,7 @@ const SearchData = ({ currentUser, setAlert, params, purpose, setPurpose, setOrg
                 console.log(sendingData);
                 try {
                   const res = await axiosInstance.post("organization/adminstrator", sendingData)
-                  Alert(setAlert, "success", "Ma'lumot muvaffaqiyatli qo'shildi");
+                  Alert(setAlert, "success", "Информация успешно добавлена!");
                   resetForm.current.reset();
                   setUser({});
                   document.querySelector('.close4').click();
@@ -141,28 +141,28 @@ const SearchData = ({ currentUser, setAlert, params, purpose, setPurpose, setOrg
                   setUser({});
                 }
               } else {
-                Alert(setAlert, "warning", "Faoliyat statusi tanlanmagan");
+                Alert(setAlert, "warning", "Статус активности не выбран");
               }
             } else {
-              Alert(setAlert, "warning", "Email kiritilmagan");
+              Alert(setAlert, "warning", "Электронная почта не введена");
             }
           } else {
-            Alert(setAlert, "warning", "Otasi nomi kiritilmagan");
+            Alert(setAlert, "warning", "Имя отца не указано");
           }
         } else {
-          Alert(setAlert, "warning", "Familiya kiritilmagan");
+          Alert(setAlert, "warning", "Фамилия не введена");
         }
       } else {
-        Alert(setAlert, "warning", "Ism kamida 3 ta harfdan iborat bo'lishi kerak");
+        Alert(setAlert, "warning", "Имя должно содержать не менее 3 букв");
       }
     } else {
-      Alert(setAlert, "warning", "Ism kiritilmagan");
+      Alert(setAlert, "warning", "Имя не введено");
     }
   }
 
   return (
     <form onSubmit={malumotlarniSaqlash} className="formaMalumotlari" ref={resetForm}>
-      <h1 className="text-center NavLink text-color">Tashkilot Administratori</h1> <br />
+      <h1 className="text-center NavLink text-color">Администратор организации</h1> <br />
       {/* search */}
       {/* <div className="col-lg-12">
         <div className="row">
@@ -240,7 +240,7 @@ const SearchData = ({ currentUser, setAlert, params, purpose, setPurpose, setOrg
                     ref={nameref}
                     disabled={!check}
                   />
-                  <label className="label-floating">Ism</label>
+                  <label className="label-floating">Имя</label>
                 </div>
               </div>
             </div>
@@ -257,7 +257,7 @@ const SearchData = ({ currentUser, setAlert, params, purpose, setPurpose, setOrg
                     ref={lastNameref}
                     disabled={!check}
                   />
-                  <label className="label-floating">Familiya</label>
+                  <label className="label-floating">Фамилия</label>
                 </div>
               </div>
             </div>
@@ -274,7 +274,7 @@ const SearchData = ({ currentUser, setAlert, params, purpose, setPurpose, setOrg
                     ref={middleNameref}
                     disabled={!check}
                   />
-                  <label className="label-floating">Otasini Ismi</label>
+                  <label className="label-floating">очество</label>
                 </div>
               </div>
             </div>
@@ -299,7 +299,7 @@ const SearchData = ({ currentUser, setAlert, params, purpose, setPurpose, setOrg
                       ref={seriaref}
                       disabled={!check}
                     />
-                    <label className="label-floating">Pasport seiasi</label>
+                    <label className="label-floating">Серия паспорта</label>
                   </div>
                 </div>
               </div>
@@ -318,7 +318,7 @@ const SearchData = ({ currentUser, setAlert, params, purpose, setPurpose, setOrg
                       ref={pinflref}
                       disabled={!check}
                     />
-                    <label className="label-floating">PinFL</label>
+                    <label className="label-floating">ПИНФЛ</label>
                   </div>
                 </div>
               </div>
@@ -337,7 +337,7 @@ const SearchData = ({ currentUser, setAlert, params, purpose, setPurpose, setOrg
                       ref={birthref}
                       disabled={!check}
                     />
-                    <label className="label-floating">Tug'ilgan kuni</label>
+                    <label className="label-floating">Дата рождения</label>
                   </div>
                 </div>
               </div>
@@ -361,7 +361,7 @@ const SearchData = ({ currentUser, setAlert, params, purpose, setPurpose, setOrg
                     ref={phoneref}
                     disabled={!check}
                   />
-                  <label className="label-floating">Telefon Raqami</label>
+                  <label className="label-floating">Номер телефона</label>
                 </div>
               </div>
             </div>
@@ -402,7 +402,7 @@ const SearchData = ({ currentUser, setAlert, params, purpose, setPurpose, setOrg
         </div>
       </div>
 
-      <h1 className="text-center NavLink text-color">Super admin</h1> <br />
+      <h1 className="text-center NavLink text-color">Супер админ</h1> <br />
       <div className="col-lg-12 px-0">
         <div className="row">
           <div className="col-lg-12">
@@ -411,7 +411,7 @@ const SearchData = ({ currentUser, setAlert, params, purpose, setPurpose, setOrg
                 <div className="position-relative">
                   <Select
                     options={purpose}
-                    placeholder="Faoliyat statusi"
+                    placeholder="Статус активности"
                     className="faoliyatStatusi"
                     isClearable={true}
                     ref={purposeref}
@@ -432,7 +432,7 @@ const SearchData = ({ currentUser, setAlert, params, purpose, setPurpose, setOrg
                     ref={commentref}
                     disabled={!check}
                   />
-                  <label className="label-floating">Izoh</label>
+                  <label className="label-floating">Комментарий</label>
                 </div>
               </div>
             </div>
@@ -468,7 +468,7 @@ const SearchData = ({ currentUser, setAlert, params, purpose, setPurpose, setOrg
       <div className="col-lg-12">
         <div className="form-group mb-1">
           <button type="submit" className="btn btn-primary" style={{ width: "100%" }}>
-            <i className="fas fa-save mr-1"></i>Saqlash
+            <i className="fas fa-save mr-1"></i>Сохранять
           </button>
         </div>
       </div>

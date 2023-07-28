@@ -62,12 +62,12 @@ const Table = () => {
           <thead className={'table-dark'}>
             <tr className="NavLink text-center">
               <th id='tabRow' style={{ width: '3.1%' }} className="id">№</th>
-              <th style={{ width: '24.3%' }} className="qabul">F.I.SH</th>
-              <th style={{ width: '24.3%' }} className="murojaat">Lavozim</th>
-              <th style={{ width: '8%' }} className="ariza">Xolati</th>
-              <th style={{ width: '8%' }} className="mur">Qachondan</th>
-              <th style={{ width: '8%', fontSize: 10 }} className="qisqacha">Qanchadan buyon</th>
-              <th style={{ width: '24.3%' }} className="reg">Izoh</th>
+              <th style={{ width: '24.3%' }} className="qabul">Ф.И.Ш</th>
+              <th style={{ width: '24.3%' }} className="murojaat">Позиция</th>
+              <th style={{ width: '8%' }} className="ariza">Положение</th>
+              <th style={{ width: '8%' }} className="mur">С каких пор</th>
+              <th style={{ width: '8%', fontSize: 10 }} className="qisqacha">Сколько</th>
+              <th style={{ width: '24.3%' }} className="reg">Комментарий</th>
             </tr>
           </thead>
           <tbody className={'table-hover'}>
@@ -128,7 +128,7 @@ function Nav({ xodim }) {
                 outline: 'none',
                 border: 'none'
               }} className={'mr-2 table-sm-full mb-sm-2'}>
-                <option selected disabled value={1}>Xodim</option>
+                <option selected disabled value={1}>Сотрудник</option>
                 <option value={2}>QVC</option>
                 <option value={3}>KELDIYOR</option>
               </select>
@@ -140,7 +140,7 @@ function Nav({ xodim }) {
                 outline: 'none',
                 border: 'none'
               }} className={'table-sm-full mb-sm-2'}>
-                <option selected disabled value={1}>Xodim</option>
+                <option selected disabled value={1}>Сотрудник</option>
                 <option value={2}>QVC</option>
                 <option value={3}>KELDIYOR</option>
               </select>
@@ -149,15 +149,15 @@ function Nav({ xodim }) {
         </thead>
       </table>
       <NavItem to={'/kiruvchi/tab'} exact={true} ml={true}>
-        <Icon className="icon-plus2" mr={1} /> Yangi Qo'shish
+        <Icon className="icon-plus2" mr={1} /> Добавить новое
       </NavItem>
 
       <NavItem to={'/kiruvchi/tablar'} exact={true} className={'ml-1'}>
-        <Icon className="icon-newspaper" mr={1} /> Yangi
+        <Icon className="icon-newspaper" mr={1} /> Новый
       </NavItem>
 
       <NavItem to={'/somewhere'} className={'ml-1'}>
-        <Icon className="icon-newspaper" mr={1} /> Xomaki
+        <Icon className="icon-newspaper" mr={1} /> Временный
       </NavItem>
     </>
   )
@@ -209,7 +209,7 @@ function IconBar() {
 
     <Flex align={'center'}>
       <Icon className={'fa fa-arrow-right wordIcon'} mr={2} size={2} font={20} />
-      Foydalanuvchi: Lazizbek Tojiboyev
+      Пользователь: Lazizbek Tojiboyev
     </Flex>
   </Flex>
 }

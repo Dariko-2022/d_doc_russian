@@ -63,7 +63,7 @@ export default function Login() {
         }
       }
     } else {
-      document.querySelector('.error').textContent = "Maydonlar to'ldirilishi shart";
+      document.querySelector('.error').textContent = "Поле, обязательное для заполнения";
       setTimeout(() => {
         document.querySelector('.error').textContent = "";
       }, 2000);
@@ -86,7 +86,7 @@ export default function Login() {
               <input
                 type="text"
                 className="login__input pl-4"
-                placeholder="User name / Email"
+                placeholder="Имя пользователя/электронная почта"
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
                 onKeyDown={keyDown}
@@ -97,7 +97,7 @@ export default function Login() {
               <input
                 type="password"
                 className="login__input pl-4"
-                placeholder="Password"
+                placeholder="Пароль"
                 value={password}
                 onChange={(e) => setPasword(e.target.value)}
                 onKeyDown={keyDown}
@@ -105,7 +105,7 @@ export default function Login() {
             </div>
             <span className="error"></span>
             <button type="button" className="button login__submit mt-0 loginBtn" onClick={submitHandler}>
-              <span className="button__text">Log In Now</span>
+              <span className="button__text">Войти сейчас</span>
               <i className="button__icon fas fa-chevron-right"></i>
             </button>
           </form>

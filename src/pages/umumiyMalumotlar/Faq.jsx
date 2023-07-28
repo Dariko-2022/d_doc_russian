@@ -4,10 +4,9 @@ import { Link } from "react-router-dom";
 const Faq = () => {
   return (
     <div>
-      frequently asked question PAGE
-
+      часто задаваемые вопросы СТРАНИЦА
       <Link to={'/'} replace>
-        <button className={'btn btn-outline'}>GO BACK</button>
+        <button className={'btn btn-outline'}>ВОЗВРАЩАТЬСЯ</button>
       </Link>
     </div>
   );

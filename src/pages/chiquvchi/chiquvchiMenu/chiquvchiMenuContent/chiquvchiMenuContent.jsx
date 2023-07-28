@@ -254,7 +254,7 @@ const ChiquvchiMenuContent = ({currentUser,permission,ranks}) => {
                                                        style={{height: '44px'}}
                                                     // onChange={(e) => setMalumot(e.target.value)}
                                                        id="xujjat"
-                                                       placeholder="Imzolovchilar"/>
+                                                       placeholder="Подписанты"/>
                                             </div>
                                         </th>
                                         <th style={{width: '350px'}}>
@@ -262,7 +262,7 @@ const ChiquvchiMenuContent = ({currentUser,permission,ranks}) => {
                                                 className="form-group form-group-feedback form-group-feedback-left inp inp-sm-none">
                                                 <Select
                                                     // options={tasnif3}
-                                                    placeholder="Korrespondent"
+                                                    placeholder="Кореспондент"
                                                     isClearable={true}
                                                     className="Korrespondent"
                                                     styles={colourStyles}
@@ -276,7 +276,7 @@ const ChiquvchiMenuContent = ({currentUser,permission,ranks}) => {
                                                        style={{height: '44px'}}
                                                        id="korrespondent2"
                                                     // onChange={(e) => setKorres(e.target.value)}
-                                                       placeholder="Qisqacha ma'lumot"/>
+                                                       placeholder="Краткая информация"/>
                                             </div>
                                         </th>
 
@@ -285,11 +285,11 @@ const ChiquvchiMenuContent = ({currentUser,permission,ranks}) => {
                                                 className="form-group form-group-feedback form-group-feedback-left inp buttonsinput inp-sm-none">
                                                 <button className="btn btn-primary mr-2 table-sm-full"
                                                         style={{height: '44px'}}
-                                                        onClick={SearchData}>Search
+                                                        onClick={SearchData}>Поиск
                                                 </button>
                                                 <button className="btn btn-primary mr-2 mobile-table-none"
                                                         style={{height: '44px'}}
-                                                        onClick={All}>Barchasi
+                                                        onClick={All}>Все
                                                 </button>
                                                 <button className="btn btn-primary mobile-table-none"
                                                         style={{height: '44px'}}
@@ -302,22 +302,22 @@ const ChiquvchiMenuContent = ({currentUser,permission,ranks}) => {
                                                            name="id" value="Id"/>
                                                     <input type="submit"
                                                            className="btn btn-white dropdown-item  w-100 myBtn"
-                                                           name="xujjat" value="Xijjat Turi"/>
+                                                           name="xujjat" value="Тип ддокумент"/>
                                                     <input type="submit"
                                                            className="btn btn-white dropdown-item  w-100 myBtn"
-                                                           name="korres" value="Korrespondent"/>
+                                                           name="korres" value="Кореспондент"/>
                                                     <input type="submit"
                                                            className="btn btn-white dropdown-item  w-100 myBtn"
-                                                           name="qiqacha" value="Qisqacha Ma'lumot"/>
+                                                           name="qiqacha" value="Краткая информация"/>
                                                     <input type="submit"
                                                            className="btn btn-white dropdown-item  w-100 myBtn"
-                                                           name="chiquvchi" value="Chiquvchi № / Sana"/>
+                                                           name="chiquvchi" value="Исходящий номер/дата"/>
                                                     <input type="submit"
                                                            className="btn btn-white dropdown-item  w-100 myBtn"
-                                                           name="reg" value="Reg № / Sana"/>
+                                                           name="reg" value="Рег № / дата"/>
                                                     <input type="submit"
                                                            className="btn btn-white dropdown-item  w-100 myBtn"
-                                                           name="harakat" value="Harakatlar"/>
+                                                           name="harakat" value="Действия"/>
                                                 </div>
                                             </div>
                                         </th>
@@ -328,19 +328,19 @@ const ChiquvchiMenuContent = ({currentUser,permission,ranks}) => {
                                     <thead>
                                     <tr className="bg-dark text-white NavLink text-center">
                                         <th id='tabRow' style={{width: '5%'}} className="id">№</th>
-                                        <th style={{width: '15%'}} className="qabul">Fayl</th>
-                                        <th style={{width: '15%'}} className="ariza">Bo'lim (Beruvchi)</th>
-                                        <th style={{width: '15%'}} className="murojaat">Tasdiqlovchi</th>
-                                        <th style={{width: '15%'}} className="mur">Korrespondent</th>
-                                        <th style={{width: '20%'}} className="qisqacha">Qisqacha mazmuni</th>
+                                        <th style={{width: '15%'}} className="qabul">Файл</th>
+                                        <th style={{width: '15%'}} className="ariza">Отдел (Выдача)/th>
+                                        <th style={{width: '15%'}} className="murojaat">Валидатор</th>
+                                        <th style={{width: '15%'}} className="mur">Корреспондент</th>
+                                        <th style={{width: '20%'}} className="qisqacha">Краткое содержание</th>
                                         {/*<th style={{width: '10 %'}} className="reg">Reg № / Sana</th>*/}
                                         {
                                             params.name==='yuborilgan'&&
                                             <>
-                                                <th style={{width: '10%'}} className="reg">Reg № / Sana</th>
+                                                <th style={{width: '10%'}} className="reg">Рег № / Дата</th>
                                             </>
                                         }
-                                        <th style={{width: '5%'}} className="text-center harakat">Harakatlar</th>
+                                        <th style={{width: '5%'}} className="text-center harakat">Действа</th>
                                     </tr>
                                     </thead>
                                     <tbody>

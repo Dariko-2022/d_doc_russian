@@ -62,16 +62,16 @@ const FormData = ({ currentUser, setAlert, setData, data, setSelectBulimlar, sel
             orgId: JSON.parse(localStorage.getItem('oi'))
           })
           formresetref.current.reset();
-          Alert(setAlert, "success", "Ma'lumot muvaffaqiyatli qo'shildi");
+          Alert(setAlert, "success", "Информация успешно добавлена");
           setData({ ...data, content: [...data.content, ...res.data] });
         } catch (error) {
           console.log(error.response);
         }
       } else {
-        Alert(setAlert, "warning", "Bo'limdahi ish stoli soni kiritilmagan");
+        Alert(setAlert, "warning", "Количество парт в отделении не указано");
       }
     } else {
-      Alert(setAlert, "warning", "Bo'lim nomi tanlanmagan");
+      Alert(setAlert, "warning", "Название раздела не выбрано");
     }
   }
 
@@ -82,7 +82,7 @@ const FormData = ({ currentUser, setAlert, setData, data, setSelectBulimlar, sel
           <div className="form-group">
             <Select
               options={selectBulimlar}
-              placeholder="Bo'lim"
+              placeholder="Отделение"
               className="bulim"
               ref={departmentref}
               isClearable={true}
@@ -98,7 +98,7 @@ const FormData = ({ currentUser, setAlert, setData, data, setSelectBulimlar, sel
                 placeholder="Placeholder"
                 ref={workcountref}
               />
-              <label className="label-floating">Bo'limdagi ish stoli</label>
+              <label className="label-floating">Стол в отделе</label>
             </div>
           </div>
         </div>
@@ -106,10 +106,10 @@ const FormData = ({ currentUser, setAlert, setData, data, setSelectBulimlar, sel
           <div className="form-group form-group-floating">
             <div className="position-relative d-flex">
               <button type="submit" className="btn btn-primary form-control form-control-outline">
-                <i className="fas fa-save" style={{ fontSize: "18px" }}></i> Saqlash
+                <i className="fas fa-save" style={{ fontSize: "18px" }}></i> Сохранять 
               </button>
               {!check && <button type="button" className="ml-3 btn btn-primary form-control form-control-outline"
-                onClick={() => reloadRef()}> Reload
+                onClick={() => reloadRef()}> Перезагрузить 
               </button>
               }
             </div>

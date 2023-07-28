@@ -42,7 +42,7 @@ const UpdateModal = ({ updateModal, setUpdateModal, currentUser, setData, data, 
         <div className="updateDataWindowWrapper">
           <form>
             <div className="updateDataWindowTop">
-              <h3>O'zgartirish oynasi</h3>
+              <h3>Изменить окно</h3>
               <span onClick={() => setUpdateModal({ open: false, obj: {} })}>&times;</span>
             </div>
             <div className="d-flex mt-2 px-2 row">
@@ -62,7 +62,7 @@ const UpdateModal = ({ updateModal, setUpdateModal, currentUser, setData, data, 
                     label: `${updateModal.obj.province.name}`
                   }}
                   options={notParentsCard}
-                  placeholder="Yo'nalish:"
+                  placeholder="Направление:"
                   className="cardTypeId"
                   ref={cardTyperef}
                 />
@@ -71,7 +71,7 @@ const UpdateModal = ({ updateModal, setUpdateModal, currentUser, setData, data, 
             <hr />
             <div className="updateDataWindowBottom">
               <button type={'button'} className="btn btn-primary"
-                onClick={() => updatedData(updateModal.obj)}>O'zgartirish
+                onClick={() => updatedData(updateModal.obj)}>Изменять 
               </button>
             </div>
           </form>

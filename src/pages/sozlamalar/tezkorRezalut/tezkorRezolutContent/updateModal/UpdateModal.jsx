@@ -19,14 +19,14 @@ const UpdateModal = ({ updateModal, setUpdateModal, currentUser, data, setData, 
           }
           return d;
         })
-        Alert(setAlert, "success", "Ma'lumot muvaffaqiyatli o'zgartirildi");
+        Alert(setAlert, "success", "Информация успешно изменена");
         setData(arr);
         setUpdateModal({ open: false, obj: {} });
       } catch (error) {
         console.log(error.response);
       }
     } else {
-      Alert(setAlert, "warning", "Tashkilot nomi kiritilmagan");
+      Alert(setAlert, "warning", "Не введено название организации");
     }
   }
 
@@ -36,7 +36,7 @@ const UpdateModal = ({ updateModal, setUpdateModal, currentUser, data, setData, 
         <div className="modal-dialog modal-lg ">
           <div className="modal-content">
             <div className="modal-header bg-primary text-white">
-              <h3 className="modal-title">Yangilash</h3>
+              <h3 className="modal-title">Обновлять</h3>
               <button type="button" className="close close2" onClick={() => setUpdateModal({ open: false, obj: {} })}>&times;</button>
             </div>
             <div className="modal-body">
@@ -53,7 +53,7 @@ const UpdateModal = ({ updateModal, setUpdateModal, currentUser, data, setData, 
                             defaultValue={updateModal.obj?.name}
                             ref={updatenameref}
                           />
-                          <label className="label-floating">Nomlanishi</label>
+                          <label className="label-floating">Именование</label>
                         </div>
                       </div>
                     </div>
@@ -67,7 +67,7 @@ const UpdateModal = ({ updateModal, setUpdateModal, currentUser, data, setData, 
                             className="btn btn-primary form-control form-control-outline"
                             onClick={() => Uzgartirish(updateModal.obj)}
                           >
-                            Qo'shish
+                            Добавлять
                           </button>
                         </div>
                       </div>

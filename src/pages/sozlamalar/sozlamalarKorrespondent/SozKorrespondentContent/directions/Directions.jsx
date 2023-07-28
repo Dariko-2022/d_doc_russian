@@ -79,8 +79,8 @@ const Directions = ({ d, currentUser }) => {
                             <h6 className="card-title">
                               <a data-toggle="collapse"
                                 className="text-white"
-                                href={`#bTashkilot${index}`}>Bosh
-                                tashkilot</a>
+                                href={`#bTashkilot${index}`}>Основная 
+                                организация </a>
                             </h6>
                           </div>
                           <div
@@ -94,14 +94,12 @@ const Directions = ({ d, currentUser }) => {
                                 <thead>
                                   <tr className="bg-dark text-white NavLink text-center">
                                     <th style={{ width: "3%" }}>№</th>
-                                    <th style={{ width: "15%" }}>logo</th>
-                                    <th style={{ width: "20%" }}>Tuman
-                                      (shahar)
+                                    <th style={{ width: "15%" }}>Лого</th>
+                                    <th style={{ width: "20%" }}>Район (город) 
                                     </th>
-                                    <th style={{ width: "25%" }}>Qisqacha
-                                      Nomi
+                                    <th style={{ width: "25%" }}>Короткое имя 
                                     </th>
-                                    <th style={{ width: "25%" }}>Rahbari</th>
+                                    <th style={{ width: "25%" }}>Директор</th>
                                   </tr>
                                 </thead>
                                 <tbody
@@ -135,8 +133,7 @@ const Directions = ({ d, currentUser }) => {
                             <h6 className="card-title">
                               <a className="collapsed text-white"
                                 data-toggle="collapse"
-                                href={`#qTashkilot${index}`}>Quyi
-                                tashkilotlar</a>
+                                href={`#qTashkilot${index}`}>Низшие организации </a>
                             </h6>
                           </div>
                           <div
@@ -151,14 +148,12 @@ const Directions = ({ d, currentUser }) => {
                                 <thead>
                                   <tr className="bg-dark text-white NavLink text-center">
                                     <th style={{ width: "3%" }}>№</th>
-                                    <th style={{ width: "15%" }}>logo</th>
-                                    <th style={{ width: "20%" }}>Tuman
-                                      (shahar)
+                                    <th style={{ width: "15%" }}>Лого </th>
+                                    <th style={{ width: "20%" }}>Район (город)
                                     </th>
-                                    <th style={{ width: "25%" }}>Qisqacha
-                                      Nomi
+                                    <th style={{ width: "25%" }}>Короткое имя
                                     </th>
-                                    <th style={{ width: "25%" }}>Rahbari</th>
+                                    <th style={{ width: "25%" }}>Директор</th>
                                   </tr>
                                 </thead>
                                 <tbody

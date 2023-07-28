@@ -234,7 +234,7 @@ const TableKurish = ({ currentUser, permission, ranks }) => {
                     <li className="nav-item">
                         <NavLink to={`/chiquvchi2/kurish/${params.name}/${params.id}`} className="nav-link Navli"
                             activeClassName='NavLinkLi'>
-                            <i className="fa-solid fa-gavel mr-1"></i> Ko'rish
+                            <i className="fa-solid fa-gavel mr-1"></i> Вид
                         </NavLink>
                     </li>
                 </ul>
@@ -470,8 +470,8 @@ const TableKurish = ({ currentUser, permission, ranks }) => {
                                             </div>
 
                                             <button onClick={() => isOfficeMenejer()}
-                                                className={'btn btn-success w-100 mt-2'}>Xujjatni
-                                                yuborish
+                                                className={'btn btn-success w-100 mt-2'}> Отправить 
+                                                документ
                                             </button>
                                         </div>
                                     </>
@@ -487,7 +487,7 @@ const TableKurish = ({ currentUser, permission, ranks }) => {
                                                     <button className="btn btn-success w-100"
                                                         style={{ marginRight: "50px !important" }}
                                                         onClick={() => sentDocument(obj.id)}>
-                                                        Yuborish
+                                                        Отправить
                                                     </button>
                                                 </div>
                                             </div>
@@ -500,14 +500,14 @@ const TableKurish = ({ currentUser, permission, ranks }) => {
                                                             onClick={tasdiqlash}
                                                             className={`btn my-2 btn-success w-100`}
                                                             style={{ display: editRad ? "block" : "none" }}>
-                                                            Tasdiqlash
+                                                           Подтверждение
                                                         </button>
                                                     </div>
                                                     <div className="col-lg-6">
                                                         <button
                                                             className={'btn btn-danger my-2 w-100'}
                                                             onClick={() => setRadEtishModal(true)}>
-                                                            Rad etish
+                                                          Отклонить это
                                                         </button>
                                                     </div>
                                                 </div>

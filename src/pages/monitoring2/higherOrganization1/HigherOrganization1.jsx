@@ -118,10 +118,10 @@ const HigherOrganization1 = ({ currentUser }) => {
                     Alert(setAlert, "warning", error?.response?.data);
                 }
             } else {
-                Alert(setAlert, "warning", "Yo'nalish tanlanmagan");
+                Alert(setAlert, "warning", "Направление не выбрано");
             }
         } else {
-            Alert(setAlert, "warning", "Card turi tanlanmagan");
+            Alert(setAlert, "warning", "Тип карты не выбран");
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [setData, setSelected]);
@@ -171,7 +171,7 @@ const HigherOrganization1 = ({ currentUser }) => {
 
     return (
         <div className="content mb-5">
-            <h3 style={{ margin: "10px 0 0 0", fontWeight: "bold", textTransform: "upperCase" }}>Nazorat Kartochkasi</h3>
+            <h3 style={{ margin: "10px 0 0 0", fontWeight: "bold", textTransform: "upperCase" }}>Контрольная карта</h3>
             <div className="card-body p-0">
                 <ul className="nav nav-tabs nav-tabs-solid nav-tabs-solid-custom bg-primary NavLink ">
                     <MonitoringNavbar />
@@ -187,7 +187,7 @@ const HigherOrganization1 = ({ currentUser }) => {
                                                 <Select
                                                     options={notParentsCard}
                                                     onChange={changeHandler}
-                                                    placeholder="Nazorat Kartochkasi"
+                                                    placeholder="Контрольная карта"
                                                     isClearable={true}
                                                     ref={CardType}
                                                 />
@@ -205,7 +205,7 @@ const HigherOrganization1 = ({ currentUser }) => {
                                                     ref={Direct}
                                                     onChange={changeHandler3}
                                                     dataSource={yunalishlar}
-                                                    placeholder="Yo'nalishlar"
+                                                    placeholder="Направления"
                                                     mode="CheckBox"
                                                     enableGroupCheckBox="true"
                                                     allowFiltering="true"
@@ -213,7 +213,7 @@ const HigherOrganization1 = ({ currentUser }) => {
                                                     selectAllText="Select All"
                                                     showSelectAll="true"
                                                     isClearable={true}
-                                                    filterBarPlaceholder="Qidirish">
+                                                    filterBarPlaceholder="Поиск">
                                                     <Inject services={[CheckBoxSelection]} />
                                                 </MultiSelectComponent>
                                             </div>
@@ -229,14 +229,14 @@ const HigherOrganization1 = ({ currentUser }) => {
                                                     fields={fields1}
                                                     ref={DocumentType}
                                                     dataSource={hujjatTuri}
-                                                    placeholder="Xujjat turi"
+                                                    placeholder="Тип документа"
                                                     mode="CheckBox"
                                                     enableGroupCheckBox="true"
                                                     allowFiltering="true"
                                                     unSelectAllText="unSelect All"
                                                     selectAllText="Select All"
                                                     showSelectAll="true"
-                                                    filterBarPlaceholder="Qidirish">
+                                                    filterBarPlaceholder="поиск">
                                                     <Inject services={[CheckBoxSelection]} />
                                                 </MultiSelectComponent>
                                             </div>
@@ -267,7 +267,7 @@ const HigherOrganization1 = ({ currentUser }) => {
                                                         onChange={(date) => setStartDate(date)}
                                                         dateFormat={'dd.MM.yyyy'}
                                                         isClearable
-                                                        placeholderText="Boshlanish sana"
+                                                        placeholderText="Дата начала"
                                                         showYearDropdown scrollableMonthYearDropdown
                                                     />
                                                 </div>
@@ -299,7 +299,7 @@ const HigherOrganization1 = ({ currentUser }) => {
                                                         onChange={(date) => setEndDate(date)}
                                                         dateFormat={'dd.MM.yyyy'}
                                                         isClearable
-                                                        placeholderText="Tugash sana"
+                                                        placeholderText="Дата окончания"
                                                         showYearDropdown
                                                         scrollableMonthYearDropdown
                                                     />
@@ -316,7 +316,7 @@ const HigherOrganization1 = ({ currentUser }) => {
                                         >
                                             Izlash
                                         </button>
-                                        <button type="button" className="btn btn-primary mr-1" style={{ width: "100%", height: "56px" }} onClick={allDocumemts}>Barchasi</button>
+                                        <button type="button" className="btn btn-primary mr-1" style={{ width: "100%", height: "56px" }} onClick={allDocumemts}>Все</button>
                                         <div className="btn-group" style={{ width: "100%", height: "56px" }}>
                                             <button type="button" className="btn btn-primary  btn-lg d-flex align-items-center justify-content-center" data-toggle="dropdown">
                                                 Export {!(forExcelData?.length > 0) && <div className="loader1 ml-2"></div>}

@@ -42,12 +42,12 @@ const TableContent = ({ data, currentUser, setData, setUpdateModal, setDeleteMod
       <thead>
         <tr className="bg-dark text-white NavLink text-center">
           <th style={{ width: "5%" }}>№</th>
-          <th style={{ width: "25%" }}>Jurnal nomi</th>
-          <th style={{ width: "25%" }}>Qisqacha tasnifi</th>
-          <th style={{ width: "10%" }}>Jurnal Prefiksi</th>
-          <th style={{ width: "10%" }}>Boshlang'ich Raqam</th>
-          <th style={{ width: "10%" }}>Jurnal Postfiksi</th>
-          <th style={{ width: "15%" }}>Xarakatlar</th>
+          <th style={{ width: "25%" }}>Название журнала</th>
+          <th style={{ width: "25%" }}>Краткая классификация</th>
+          <th style={{ width: "10%" }}>Префикс журнала</th>
+          <th style={{ width: "10%" }}>Начальный номер</th>
+          <th style={{ width: "10%" }}>Журнал Постфикс</th>
+          <th style={{ width: "15%" }}>Действия</th>
         </tr>
       </thead>
       <tbody>
@@ -72,16 +72,16 @@ const TableContent = ({ data, currentUser, setData, setUpdateModal, setDeleteMod
             <td>{dat?.journalPostfix}</td>
             <td>
               <div className="icon d-flex justify-content-center align-items-center">
-                <Link to={`/super_admin_elektron-kitob-ko'rish/${dat.id}`} className="infoBtn bg-dark" data-bs-toggle="tooltip" data-popup="tooltip" data-bs-placement="top" title="Ko'rish">
+                <Link to={`/super_admin_elektron-kitob-ko'rish/${dat.id}`} className="infoBtn bg-dark" data-bs-toggle="tooltip" data-popup="tooltip" data-bs-placement="top" title="Видеть">
                   <span><i className="icon-eye2"></i></span>
                 </Link>
                 <Link to={`/super_admin_elektron-kitob-topshiriqlar/${dat.id}`} className="infoBtn bg-dark" data-popup="tooltip" title="Log">
                   <span><i className="icon-stack2" ></i></span>
                 </Link>
-                <a href="#1" onClick={() => setUpdateModal({ open: true, obj: dat })} className="infoBtn bg-dark" data-bs-toggle="tooltip" data-popup="tooltip" data-bs-placement="top" title="O'zgartirish">
+                <a href="#1" onClick={() => setUpdateModal({ open: true, obj: dat })} className="infoBtn bg-dark" data-bs-toggle="tooltip" data-popup="tooltip" data-bs-placement="top" title="Изменять">
                   <span><i className="icon-pencil5"></i></span>
                 </a>
-                <a href="#1" type="button" className="infoBtn bg-dark" data-bs-toggle="tooltip" onClick={() => setDeleteModal({ open: true, obj: dat })} data-popup="tooltip" data-bs-placement="top" title="O'chirish"><span><i className="icon-trash"></i></span> </a>
+                <a href="#1" type="button" className="infoBtn bg-dark" data-bs-toggle="tooltip" onClick={() => setDeleteModal({ open: true, obj: dat })} data-popup="tooltip" data-bs-placement="top" title="Выключать"><span><i className="icon-trash"></i></span> </a>
               </div>
             </td>
           </tr>

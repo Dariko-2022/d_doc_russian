@@ -49,7 +49,7 @@ const UpdateModal = ({ updateModal, setUpdateModal, setMahallalar, mahallalar, c
         }
         return d;
       })
-      Alert(setAlert, "success", "Ma'lumot muvaffaqiyatli o'zgartirildi");
+      Alert(setAlert, "success", "Информация успешно изменена");
       setUpdateModal({ open: false, obj: {} })
       setMahallalar(arr);
     } catch (error) {
@@ -74,7 +74,7 @@ const UpdateModal = ({ updateModal, setUpdateModal, setMahallalar, mahallalar, c
                   <Select
                     options={notParentsCard1}
                     onChange={notParentsCardClick1}
-                    placeholder="Viloyat"
+                    placeholder="Провинция"
                     className="cardTypeId Viloyat"
                     isClearable={true}
                     ref={provinceref}
@@ -85,7 +85,7 @@ const UpdateModal = ({ updateModal, setUpdateModal, setMahallalar, mahallalar, c
                 <div className="form-group text-left">
                   <Select
                     options={notParentsCard2}
-                    placeholder="Tuman (Shahar)"
+                    placeholder="Район (Город)"
                     className="cardTypeId Tuman"
                     isClearable={true}
                     ref={cityref}
@@ -96,7 +96,7 @@ const UpdateModal = ({ updateModal, setUpdateModal, setMahallalar, mahallalar, c
                 <div className="form-group text-left">
                   <Select
                     options={notParentsCard3}
-                    placeholder="Sector"
+                    placeholder="Сектор"
                     className="cardTypeId Sector"
                     isClearable={true}
                     ref={sectorref}
@@ -111,7 +111,7 @@ const UpdateModal = ({ updateModal, setUpdateModal, setMahallalar, mahallalar, c
                       style={{ height: '56px', margin: '0' }}
                       ref={mahref}
                       className="form-control form-control-outline mahalla"
-                      placeholder="Mahalla"
+                      placeholder="Махалля"
                     />
                   </div>
                 </div>
@@ -120,7 +120,7 @@ const UpdateModal = ({ updateModal, setUpdateModal, setMahallalar, mahallalar, c
           </div>
           <hr />
           <div className="updateDataWindowBottom">
-            <button type={'button'} className="btn btn-primary" onClick={() => updatedData(updateModal.obj)}>O'zgartirish</button>
+            <button type={'button'} className="btn btn-primary" onClick={() => updatedData(updateModal.obj)}>Изменять</button>
           </div>
         </form>
       </div>

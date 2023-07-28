@@ -34,13 +34,13 @@ export default function AdminChiquvchiTopshiriqlarContent({ currentUser }) {
 
   return (
     <div className="content mb-5">
-      <h3 style={{ margin: "10px 0 0 20px", fontWeight: "bold", textTransform: "upperCase" }}>Topshiriqlar</h3>
+      <h3 style={{ margin: "10px 0 0 20px", fontWeight: "bold", textTransform: "upperCase" }}>Задания</h3>
       <div className="card-body">
         <ul className="nav nav-tabs nav-tabs-solid nav-tabs-solid-custom bg-primary NavLink" style={{ borderTopRightRadius: "5px", borderTopLeftRadius: "5px" }}>
           <ChiquvchiElektronKitobNavbar />
           <li className="nav-item">
             <NavLink to={`/chiquvchi/elektron-kitob-topshiriqlar/${params.id}`} className="nav-link ml-2d-flex align-items-center" activeClassName="NavLinkLi">
-              <i className="icon-stack2 mr-1"></i> Topshiriqlar
+              <i className="icon-stack2 mr-1"></i> Задания
             </NavLink>
           </li>
         </ul>
@@ -52,11 +52,11 @@ export default function AdminChiquvchiTopshiriqlarContent({ currentUser }) {
                   <thead>
                     <tr className="bg-dark text-white NavLink text-center">
                       <th style={{ width: "5%" }}>№</th>
-                      <th style={{ width: "20%" }}>F.I.O</th>
-                      <th style={{ width: "20%" }}>Ip manzili va MAC</th>
-                      <th style={{ width: "20%" }}>Qurilmasi</th>
-                      <th style={{ width: "20%" }}>Browser</th>
-                      <th style={{ width: "15%" }}>Vaqt</th>
+                      <th style={{ width: "20%" }}>Ф.И.О</th>
+                      <th style={{ width: "20%" }}>IP-адрес и MAC-адрес </th>
+                      <th style={{ width: "20%" }}>Устройство</th>
+                      <th style={{ width: "20%" }}>Браузер</th>
+                      <th style={{ width: "15%" }}>Время</th>
                     </tr>
                   </thead>
                   <tbody>

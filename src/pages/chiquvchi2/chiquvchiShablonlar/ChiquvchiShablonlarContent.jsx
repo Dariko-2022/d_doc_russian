@@ -90,7 +90,7 @@ const ChiquvchiShablonlarContent = ({ currentUser, permission, ranks }) => {
                                 style={{ height: '45px' }}
                                 id="korrespondent2"
                                 ref={dataNameref}
-                                placeholder="Nomi" />
+                                placeholder="Имя" />
                         </div>
                         <div className="col-lg-12 mb-3 px-0" style={{ display: "flex", justifyContent: "center" }}>
                             <div className={'templateCkeditor'} style={{ width: '980px', overflow: "auto" }}>
@@ -119,7 +119,7 @@ const ChiquvchiShablonlarContent = ({ currentUser, permission, ranks }) => {
                                     accept="image/*"
                                     onClick={closeOptions}
                                 />
-                                <label className="custom-file-label" htmlFor="customFile">Rasm biriktirish</label>
+                                <label className="custom-file-label" htmlFor="customFile">Прикрепить изображение</label>
                             </div>
 
                             <div className="col-lg-3 d-flex align-items-center justify-content-center mb-3" onClick={() => setIsGlobal(!isGlobal)}>
@@ -127,12 +127,12 @@ const ChiquvchiShablonlarContent = ({ currentUser, permission, ranks }) => {
                                     checked={isGlobal}
                                     style={{ width: "30px", height: "20px" }}>
                                 </input>
-                                <p className={'mr-2 p-0 mb-0'} style={{ fontSize: "18px" }}>Boshqalarga ruxsat</p>
+                                <p className={'mr-2 p-0 mb-0'} style={{ fontSize: "18px" }}>Разрешение другим</p>
                             </div>
 
                             <div className="col-lg-3 mb-3">
                                 <button type={'button'} className={'btn btn-success w-100'}
-                                    onClick={() => saveShablon()}>Qo'shish
+                                    onClick={() => saveShablon()}>Добавлять
                                 </button>
                             </div>
                         </div>

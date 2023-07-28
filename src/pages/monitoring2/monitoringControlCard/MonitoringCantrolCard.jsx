@@ -163,7 +163,7 @@ const MonitoringControlCard = ({ currentUser }) => {
 
     return (
         <div className="content mb-5">
-            <h3 style={{ margin: "10px 0 0 0", fontWeight: "bold", textTransform: "upperCase" }}>Nazorat Kartochkasi</h3>
+            <h3 style={{ margin: "10px 0 0 0", fontWeight: "bold", textTransform: "upperCase" }}>Контрольная карта</h3>
             <div className="card-body p-0">
                 <ul className="nav nav-tabs nav-tabs-solid nav-tabs-solid-custom bg-primary NavLink">
                     <MonitoringNavbar />
@@ -183,7 +183,7 @@ const MonitoringControlCard = ({ currentUser }) => {
                                                     popupHeight='500px'
                                                     fields={fields1}
                                                     dataSource={notParentsCard}
-                                                    placeholder="Nazorat Kartochkasi"
+                                                    placeholder="Контрольная карта"
                                                     mode="CheckBox"
                                                     enableGroupCheckBox="true"
                                                     allowFiltering="true"
@@ -191,7 +191,7 @@ const MonitoringControlCard = ({ currentUser }) => {
                                                     unSelectAllText="unSelect All"
                                                     selectAllText="Select All"
                                                     ref={CardType}
-                                                    filterBarPlaceholder="Qidirish">
+                                                    filterBarPlaceholder="Поиск">
                                                     <Inject services={[CheckBoxSelection]} />
                                                 </MultiSelectComponent>
                                             </div>
@@ -207,7 +207,7 @@ const MonitoringControlCard = ({ currentUser }) => {
                                                     popupHeight='500px'
                                                     fields={fields1}
                                                     dataSource={yunalishlar}
-                                                    placeholder="Yo'nalishlar"
+                                                    placeholder="Направления"
                                                     mode="CheckBox"
                                                     ref={Direct}
                                                     enableGroupCheckBox="true"
@@ -215,7 +215,7 @@ const MonitoringControlCard = ({ currentUser }) => {
                                                     unSelectAllText="unSelect All"
                                                     selectAllText="Select All"
                                                     showSelectAll="true"
-                                                    filterBarPlaceholder="Qidirish">
+                                                    filterBarPlaceholder="Поиск">
                                                     <Inject services={[CheckBoxSelection]} />
                                                 </MultiSelectComponent>
                                             </div>
@@ -231,14 +231,14 @@ const MonitoringControlCard = ({ currentUser }) => {
                                                     fields={fields1}
                                                     ref={DocumentType}
                                                     dataSource={hujjatTuri}
-                                                    placeholder="Xujjat turi"
+                                                    placeholder="тип документа"
                                                     mode="CheckBox"
                                                     enableGroupCheckBox="true"
                                                     allowFiltering="true"
                                                     unSelectAllText="unSelect All"
                                                     selectAllText="Select All"
                                                     showSelectAll="true"
-                                                    filterBarPlaceholder="Qidirish">
+                                                    filterBarPlaceholder="Поиск">
                                                     <Inject services={[CheckBoxSelection]} />
                                                 </MultiSelectComponent>
                                             </div>
@@ -254,14 +254,14 @@ const MonitoringControlCard = ({ currentUser }) => {
                                                     fields={fields1}
                                                     ref={Correspondent}
                                                     dataSource={korrespondent}
-                                                    placeholder="Korrespondent"
+                                                    placeholder="Корреспондент"
                                                     mode="CheckBox"
                                                     enableGroupCheckBox="true"
                                                     allowFiltering="true"
                                                     unSelectAllText="unSelect All"
                                                     selectAllText="Select All"
                                                     showSelectAll="true"
-                                                    filterBarPlaceholder="Qidirish">
+                                                    filterBarPlaceholder="Поиск">
                                                     <Inject services={[CheckBoxSelection]} />
                                                 </MultiSelectComponent>
                                             </div>
@@ -292,7 +292,7 @@ const MonitoringControlCard = ({ currentUser }) => {
                                                         onChange={(date) => setStartDate(date)}
                                                         dateFormat={'dd.MM.yyyy'}
                                                         isClearable
-                                                        placeholderText="Boshlanish sana"
+                                                        placeholderText="Дата начала"
                                                         showYearDropdown scrollableMonthYearDropdown
                                                         name="monitoringStartDate"
                                                     />
@@ -325,7 +325,7 @@ const MonitoringControlCard = ({ currentUser }) => {
                                                         onChange={(date) => setEndDate(date)}
                                                         dateFormat={'dd.MM.yyyy'}
                                                         isClearable
-                                                        placeholderText="Tugash sana"
+                                                        placeholderText="Дата окончания"
                                                         showYearDropdown
                                                         scrollableMonthYearDropdown
                                                         name="monitoringEndDate"
@@ -341,9 +341,9 @@ const MonitoringControlCard = ({ currentUser }) => {
                                             style={{ width: "33.333%", height: "56px" }}
                                             onClick={searchDocuments}
                                         >
-                                            Izlash
+                                            Поиск
                                         </button>
-                                        <button className="btn btn-primary mr-1" style={{ width: "33.333%", height: "56px" }} onClick={allDocumemts}>Barchasi</button>
+                                        <button className="btn btn-primary mr-1" style={{ width: "33.333%", height: "56px" }} onClick={allDocumemts}>Все</button>
                                         <div className="btn-group" style={{ width: "33.333%", height: "56px" }}>
                                             <button type="button" className="btn btn-primary  btn-lg d-flex align-items-center justify-content-center" data-toggle="dropdown">
                                                 Export {!(forExcelData?.length > 0) && <div className="loader1 ml-2"></div>}

@@ -88,14 +88,14 @@ const AllData = ({ currentUser, setAlert, sectorlar, viloyatData, notParentsCard
                                           <thead>
                                             <tr className="bg-dark text-white NavLink text-center">
                                               <th style={{ width: "3%" }}>№</th>
-                                              <th style={{ width: "15%" }}>Mahalla</th>
-                                              <th style={{ width: "20%" }}>Tuman
-                                                (shahar)
+                                              <th style={{ width: "15%" }}>Махалля</th>
+                                              <th style={{ width: "20%" }}>Район 
+                                              (Город) 
                                               </th>
-                                              <th style={{ width: "25%" }}>Viloyat
+                                              <th style={{ width: "25%" }}>Провинция
                                               </th>
-                                              <th style={{ width: "25%" }}>Sector</th>
-                                              <td style={{ width: "8%" }}>Harakatlar</td>
+                                              <th style={{ width: "25%" }}>Сектор</th>
+                                              <td style={{ width: "8%" }}>Действия</td>
                                             </tr>
                                           </thead>
                                           <tbody id="viloyat">

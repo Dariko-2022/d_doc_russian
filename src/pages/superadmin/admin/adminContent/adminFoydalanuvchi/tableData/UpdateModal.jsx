@@ -54,7 +54,7 @@ const UpdateModal = ({ updateModal, setUpdateModal, setAlert, currentUser, setDa
                       page: selected,
                       orgId: JSON.parse(localStorage.getItem('oi'))
                     })
-                    Alert(setAlert, "success", "Ma'lumot muvaffaqiyatli o'zgartirildi");
+                    Alert(setAlert, "success", "Информация успешно изменена");
                     setUpdateModal({ open: false, obj: {} })
                     setData(res.data);
                   } catch (error) {
@@ -64,27 +64,27 @@ const UpdateModal = ({ updateModal, setUpdateModal, setAlert, currentUser, setDa
                   console.log(error.response);
                 }
               } else {
-                Alert(setAlert, "warning", "Email xato kiritilgan");
+                Alert(setAlert, "warning", "Электронная почта была введена неправильно");
                 setUpdateModal({ open: false, obj: {} });
               }
             } else {
-              Alert(setAlert, "warning", "Telefon raqam xato kiritilgan");
+              Alert(setAlert, "warning", "Номер телефона был введен неправильно");
               setUpdateModal({ open: false, obj: {} });
             }
           } else {
-            Alert(setAlert, "warning", "Otasi ismi kiritilmagan");
+            Alert(setAlert, "warning", "Имя отца не указано");
             setUpdateModal({ open: false, obj: {} });
           }
         } else {
-          Alert(setAlert, "warning", "Familiya kiritilmagan");
+          Alert(setAlert, "warning", "Фамилия не введена");
           setUpdateModal({ open: false, obj: {} });
         }
       } else {
-        Alert(setAlert, "warning", "Ism kamida 3 ta harfdan iborat bo'lishi kerak");
+        Alert(setAlert, "warning", "Имя должно содержать не менее 3 букв");
         setUpdateModal({ open: false, obj: {} });
       }
     } else {
-      Alert(setAlert, "warning", "Ism kiritilmagan");
+      Alert(setAlert, "warning", "Имя не введено");
       setUpdateModal({ open: false, obj: {} });
     }
   }
@@ -95,7 +95,7 @@ const UpdateModal = ({ updateModal, setUpdateModal, setAlert, currentUser, setDa
       <div className="modal-dialog modal-xl">
         <div className="modal-content">
           <div className="modal-header bg-primary text-white">
-            <h6 className="modal-title">O'zgartirish</h6>
+            <h6 className="modal-title">Изменять</h6>
             <button type="button" className="close" onClick={() => setUpdateModal({ open: false, obj: {} })}>&times;</button>
           </div>
 
@@ -113,7 +113,7 @@ const UpdateModal = ({ updateModal, setUpdateModal, setAlert, currentUser, setDa
                         defaultValue={updateModal.obj?.firstName}
                         ref={nameref}
                       />
-                      <label className="label-floating">Ism</label>
+                      <label className="label-floating">Имя</label>
                     </div>
                   </div>
                 </div>
@@ -129,7 +129,7 @@ const UpdateModal = ({ updateModal, setUpdateModal, setAlert, currentUser, setDa
                         ref={lastnameref}
                       />
                       <label
-                        className="label-floating">Familiya</label>
+                        className="label-floating">Фамилия</label>
                     </div>
                   </div>
                 </div>
@@ -144,8 +144,7 @@ const UpdateModal = ({ updateModal, setUpdateModal, setAlert, currentUser, setDa
                         defaultValue={updateModal.obj?.middleName}
                         ref={middlenameref}
                       />
-                      <label className="label-floating">Otasini
-                        Ismi</label>
+                      <label className="label-floating">Очество</label>
                     </div>
                   </div>
                 </div>
@@ -162,8 +161,7 @@ const UpdateModal = ({ updateModal, setUpdateModal, setAlert, currentUser, setDa
                         defaultValue={updateModal.obj?.mobileNumber}
                         ref={phoneref}
                       />
-                      <label className="label-floating">Telefon
-                        Raqami</label>
+                      <label className="label-floating">Номер телефона</label>
                     </div>
                   </div>
                 </div>
@@ -192,7 +190,7 @@ const UpdateModal = ({ updateModal, setUpdateModal, setAlert, currentUser, setDa
                         ref={exatref}
                       />
                       <label
-                        className="label-floating">E-xat</label>
+                        className="label-floating">E-хат</label>
                     </div>
                   </div>
                 </div>
@@ -209,7 +207,7 @@ const UpdateModal = ({ updateModal, setUpdateModal, setAlert, currentUser, setDa
                         ref={pinflref}
                       />
                       <label
-                        className="label-floating">PinFL</label>
+                        className="label-floating">ПНФЛ</label>
                     </div>
                   </div>
                 </div>
@@ -220,7 +218,7 @@ const UpdateModal = ({ updateModal, setUpdateModal, setAlert, currentUser, setDa
                   <button type="button"
                     onClick={() => uzgartirish(updateModal.obj)}
                     className="btn btn-primary form-control form-control-outline">
-                    <i className="fas fa-save mr-1"></i>Saqlash
+                    <i className="fas fa-save mr-1"></i>Сохранять
                   </button>
                 </div>
               </div>

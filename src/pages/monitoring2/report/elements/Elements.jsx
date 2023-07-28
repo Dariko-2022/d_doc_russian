@@ -115,10 +115,10 @@ const Elements = ({ currentUser, loader, setData, setAlert }) => {
                     Alert(setAlert, "warning", error?.response?.data);
                 }
             } else {
-                Alert(setAlert, "warning", "Yo'nalish tanlanmagan");
+                Alert(setAlert, "warning", "Направление не выбрано");
             }
         } else {
-            Alert(setAlert, "warning", "Card turi tanlanmagan");
+            Alert(setAlert, "warning", "Тип карты не выбран");
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [setData]);
@@ -179,7 +179,7 @@ const Elements = ({ currentUser, loader, setData, setAlert }) => {
                             ref={CardType}
                             onChange={changeHandler}
                             dataSource={notParentsCard}
-                            placeholder="Nazorat Kartochkasi"
+                            placeholder="Контрольная карта"
                             mode="CheckBox"
                             enableGroupCheckBox="true"
                             allowFiltering="true"
@@ -187,7 +187,7 @@ const Elements = ({ currentUser, loader, setData, setAlert }) => {
                             selectAllText="Select All"
                             showSelectAll="true"
                             isClearable={true}
-                            filterBarPlaceholder="Qidirish">
+                            filterBarPlaceholder="Поиск">
                             <Inject services={[CheckBoxSelection]} />
                         </MultiSelectComponent>
                     </div>
@@ -204,7 +204,7 @@ const Elements = ({ currentUser, loader, setData, setAlert }) => {
                             ref={Direct}
                             onChange={changeHandler3}
                             dataSource={yunalishlar}
-                            placeholder="Yo'nalishlar"
+                            placeholder="Направления"
                             mode="CheckBox"
                             enableGroupCheckBox="true"
                             allowFiltering="true"
@@ -212,7 +212,7 @@ const Elements = ({ currentUser, loader, setData, setAlert }) => {
                             selectAllText="Select All"
                             showSelectAll="true"
                             isClearable={true}
-                            filterBarPlaceholder="Qidirish">
+                            filterBarPlaceholder="Поиск">
                             <Inject services={[CheckBoxSelection]} />
                         </MultiSelectComponent>
                     </div>
@@ -228,14 +228,14 @@ const Elements = ({ currentUser, loader, setData, setAlert }) => {
                             fields={fields1}
                             ref={DocumentType}
                             dataSource={hujjatTuri}
-                            placeholder="Xujjat turi"
+                            placeholder="Тип документ"
                             mode="CheckBox"
                             enableGroupCheckBox="true"
                             allowFiltering="true"
                             unSelectAllText="unSelect All"
                             selectAllText="Select All"
                             showSelectAll="true"
-                            filterBarPlaceholder="Qidirish">
+                            filterBarPlaceholder="Поиск">
                             <Inject services={[CheckBoxSelection]} />
                         </MultiSelectComponent>
                     </div>
@@ -266,7 +266,7 @@ const Elements = ({ currentUser, loader, setData, setAlert }) => {
                                 onChange={(date) => setStartDate(date)}
                                 dateFormat={'dd.MM.yyyy'}
                                 isClearable
-                                placeholderText="Boshlanish sana"
+                                placeholderText="Дата начала"
                                 showYearDropdown scrollableMonthYearDropdown
                             />
                         </div>
@@ -298,7 +298,7 @@ const Elements = ({ currentUser, loader, setData, setAlert }) => {
                                 onChange={(date) => setEndDate(date)}
                                 dateFormat={'dd.MM.yyyy'}
                                 isClearable
-                                placeholderText="Tugash sana"
+                                placeholderText="Дата окончания"
                                 showYearDropdown
                                 scrollableMonthYearDropdown
                             />
@@ -315,7 +315,7 @@ const Elements = ({ currentUser, loader, setData, setAlert }) => {
                 >
                     Izlash
                 </button>
-                <button type="button" className="btn btn-primary mr-1" style={{ width: "33.333%", height: "56px" }} onClick={allDocumemts}>Barchasi</button>
+                <button type="button" className="btn btn-primary mr-1" style={{ width: "33.333%", height: "56px" }} onClick={allDocumemts}>Все</button>
                 <div className="btn-group" style={{ width: "33.333%", height: "56px" }}>
                     <button type="button" className="btn btn-primary  btn-lg d-flex align-items-center justify-content-center" data-toggle="dropdown">
                         Export {!(forExcelData?.length > 0) && <div className="loader1 ml-2" ref={loadingref}></div>}

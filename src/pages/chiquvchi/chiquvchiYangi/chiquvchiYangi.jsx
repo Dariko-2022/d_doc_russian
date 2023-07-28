@@ -508,13 +508,13 @@ const ChiquvchiYangi = ({ currentUser, permission, ranks }) => {
                         console.log(error.response);
                     }
                 } else {
-                    Alert(setAlert, "warning", "Hamkorlar tanlanmagan");
+                    Alert(setAlert, "warning", "Партнеры не выбраны");
                 }
             } else {
-                Alert(setAlert, "warning", "Imzolovchilar tanlanmagan");
+                Alert(setAlert, "warning", "Подписанты не выбраны");
             }
         } else {
-            Alert(setAlert, "warning", "Tashqi yoki ichki tashkilotlar tanlanmagan");
+            Alert(setAlert, "warning", "Не выбраны ни внешние, ни внутренние организации");
         }
         console.log({
             rootID: allData[0]?.rootID,
@@ -542,7 +542,7 @@ const ChiquvchiYangi = ({ currentUser, permission, ranks }) => {
                     <li className="nav-item">
                         <NavLink to={`/chiquvchi/yangi/versiya/${params.id}`} className="nav-link"
                             activeClassName='NavLinkLi'>
-                            <i className="fa-solid fa-gavel mr-1"></i> Yangi versiya
+                            <i className="fa-solid fa-gavel mr-1"></i> Новая версия
                         </NavLink>
                     </li>
                 </ul>
@@ -551,14 +551,14 @@ const ChiquvchiYangi = ({ currentUser, permission, ranks }) => {
                         <div className="tab-pane fade show active p-3 bg-white card" styleid="colored-tab1">
                             <div className="border">
                                 <div className="card-body card-body-mobile p-0">
-                                    <h1 className="px-2">Korrespondent</h1>
+                                    <h1 className="px-2">Кореспондент</h1>
                                     <div className="row">
                                         <div className="col-lg-12 px-0">
                                             <div className="row">
                                                 <div className="col-lg-6 mb-3 d-flex  justify-content-between ">
                                                     <div className="" style={{ width: '100%' }}>
                                                         <MultiSelect selectData={ichkiTashkilotlar}
-                                                            placeholder='Ichki tashkilotlar'
+                                                            placeholder='Внутренние организации'
                                                             inputRef={ichkiRef}
                                                             defaultData={allData[0]?.inReceivers}
                                                             setIchkiTashkilotlarQiymat={setIchkiTashkilotlarQiymat}
@@ -576,7 +576,7 @@ const ChiquvchiYangi = ({ currentUser, permission, ranks }) => {
                                                         <Select
                                                             defaultValue={[rahbariyat?.find((d) => d?.value === allData[0]?.signatoryWorkPlace)]}
                                                             options={rahbariyat}
-                                                            placeholder="Imzolovchilar"
+                                                            placeholder="Подписанты"
                                                             // onChange={(e) => setRahbar(e)}
                                                             ref={rahbariyatRef}
                                                             onMenuOpen={closeOptions}
@@ -591,7 +591,7 @@ const ChiquvchiYangi = ({ currentUser, permission, ranks }) => {
 
                                                 <div className="col-lg-6 mb-3">
                                                     <MultiSelect selectData={tashqiTashkilotlar}
-                                                        placeholder='Tashqi tashkilotlar'
+                                                        placeholder='Внешние организации'
                                                         inputRef={tashqiRef}
                                                         index={1}
                                                         defaultData={allData[0]?.outReceivers}
@@ -624,8 +624,7 @@ const ChiquvchiYangi = ({ currentUser, permission, ranks }) => {
                                                             onChange={(e) => uploadFile1(e)}
                                                             onClick={closeOptions}
                                                         />
-                                                        <label className="custom-file-label" htmlFor="customFile">Fayl
-                                                            yuklash</label>
+                                                        <label className="custom-file-label" htmlFor="customFile">Файл загружен</label>
                                                     </div>
                                                 </div>
                                                 <div className="col-lg-6 mb-3">
@@ -636,7 +635,7 @@ const ChiquvchiYangi = ({ currentUser, permission, ranks }) => {
                                                         popupHeight='500px'
                                                         fields={fields1}
                                                         dataSource={hamkorlar}
-                                                        placeholder="Hamkorlar"
+                                                        placeholder="Партнеры"
                                                         mode="CheckBox"
                                                         // isDisabled={true}
                                                         ref={Hamkor}
@@ -645,7 +644,7 @@ const ChiquvchiYangi = ({ currentUser, permission, ranks }) => {
                                                         unSelectAllText="unSelect All"
                                                         selectAllText="Select All"
                                                         showSelectAll="true"
-                                                        filterBarPlaceholder="Qidirish">
+                                                        filterBarPlaceholder="Поиск">
                                                         <Inject services={[CheckBoxSelection]} />
                                                     </MultiSelectComponent>
                                                 </div>
@@ -734,7 +733,7 @@ const ChiquvchiYangi = ({ currentUser, permission, ranks }) => {
                                                 <div className="col-lg-12 d-flex mt-3 d-flex justify-content-end">
                                                     <button type={'button'} className="btn btn-primary mb-3 "
                                                         onClick={() => saveAllData()}>
-                                                        Saqlash
+                                                        Сохранять
                                                     </button>
                                                 </div>
                                             </div>
@@ -831,8 +830,7 @@ const ChiquvchiYangi = ({ currentUser, permission, ranks }) => {
                                                 />
                                                 <button style={{ display: ilova ? 'block' : 'none', margin: "10px 0" }}
                                                     className={'btn btn-primary'} type="button"
-                                                    onClick={getData2}>Get
-                                                    Data
+                                                    onClick={getData2}>Получить данные
                                                 </button>
                                                 <div ref={dataCKEditor2ref} style={{ display: "none" }}>
                                                     {data2 && parse(data2)}
@@ -847,7 +845,7 @@ const ChiquvchiYangi = ({ currentUser, permission, ranks }) => {
                                 <div className={'mt-3'}>
                                     <div className="card-header bg-primary text-white header-elements-inline">
                                         <h6 className="card-title"
-                                            style={{ fontWeight: "bold", textTransform: "upperCase" }}>Shablonlar</h6>
+                                            style={{ fontWeight: "bold", textTransform: "upperCase" }}>Шаблоны</h6>
                                     </div>
                                     <div className="card-body border row" style={{ cursor: 'pointer' }}>
                                         <div className="col-lg-12">
@@ -859,13 +857,13 @@ const ChiquvchiYangi = ({ currentUser, permission, ranks }) => {
                                                             className="id file_kor_short_not">№
                                                         </th>
                                                         <th id='tabRow' style={{ width: '35 %' }}
-                                                            className="qabul file_kor_short">Rasmi
+                                                            className="qabul file_kor_short">Фото
                                                         </th>
                                                         <th id='tabRow' style={{ width: '35 %' }}
-                                                            className="ariza file_kor_short_not">Nomlanishi
+                                                            className="ariza file_kor_short_not">Именование
                                                         </th>
                                                         <th id='tabRow' style={{ width: '20%' }}
-                                                            className="text-center harakat file_kor_short_not">Sana
+                                                            className="text-center harakat file_kor_short_not">Дата
                                                         </th>
                                                     </tr>
                                                 </thead>
@@ -924,20 +922,20 @@ const ChiquvchiYangi = ({ currentUser, permission, ranks }) => {
                                             backgroundColor: "lightgray"
                                         }}>
                                             <h3 className="font-weight-semibold py-1 px-1 "
-                                                style={{ borderRadius: '5px', fontSize: "20px", color: "#000" }}>Yangi
-                                                chiquvchi
-                                                hujjat
-                                                kiritildi</h3>
+                                                style={{ borderRadius: '5px', fontSize: "20px", color: "#000" }}>Вставлен 
+                                                новый 
+                                                исходящий 
+                                                документ</h3>
                                         </div>
 
                                         <div className="modal-footer d-flex justify-content-center">
                                             <button type={'button'} onClick={() => goToYangi()}
                                                 className="btn btn-success"
-                                                style={{ width: "150px" }}>Yangi
+                                                style={{ width: "150px" }}>Новый
                                             </button>
                                             <button type={'button'} onClick={() => saveAllData()}
                                                 className="btn btn-success"
-                                                style={{ width: "150px" }}>Xomaki
+                                                style={{ width: "150px" }}>Временный
                                             </button>
                                         </div>
                                     </div>

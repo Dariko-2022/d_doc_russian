@@ -4,7 +4,7 @@ import BaseSozlamalarNavbar from "../baseSozlamalarNavbar/BaseSozlamalarNavbar";
 const BaseSozlamalarContent = ({ currentUser }) => {
   return (
     <div className="content mb-5">
-      <h3 style={{ margin: "10px 0 0 20px", fontWeight: "bold", textTransform: "upperCase" }}>Kartochka</h3>
+      <h3 style={{ margin: "10px 0 0 20px", fontWeight: "bold", textTransform: "upperCase" }}>Карта</h3>
 
       <div className="card-body">
         <ul className="nav nav-tabs nav-tabs-solid nav-tabs-solid-custom bg-primary NavLink" style={{ borderTopRightRadius: "5px", borderTopLeftRadius: "5px" }}>
@@ -15,7 +15,7 @@ const BaseSozlamalarContent = ({ currentUser }) => {
           <div className="tab-pane fade show active" id="colored-tab1">
             <div className="card">
               <div className="card-body" style={{ padding: "30px" }}>
-                <h3 style={{ fontWeight: "bold", textTransform: "upperCase" }}>Yangi Yaratish</h3>
+                <h3 style={{ fontWeight: "bold", textTransform: "upperCase" }}>Добавить новое</h3>
                 <form className="mt-3">
                   <div className="row">
                     <div className="col-lg-4">
@@ -23,7 +23,7 @@ const BaseSozlamalarContent = ({ currentUser }) => {
                         <div className="col-lg-12">
                           <div className="position-relative">
                             <input type="text" className="form-control form-control-outline" placeholder="Placeholder" />
-                            <label className="label-floating">Nomlanishi</label>
+                            <label className="label-floating">Именование</label>
                           </div>
                         </div>
                       </div>
@@ -33,18 +33,18 @@ const BaseSozlamalarContent = ({ currentUser }) => {
                         <div className="col-lg-12">
                           <div className="position-relative">
                             <input type="text" className="form-control form-control-outline" placeholder="Placeholder" />
-                            <label className="label-floating">Nomlanishi</label>
+                            <label className="label-floating">Именование</label>
                           </div>
                         </div>
                       </div>
                     </div>
                     <div className="col-lg-4">
                       <div className="form-group form-group-floating">
-                        <select data-placeholder="Nazorat Kartochkasi" className="form-control select-search  form-control-outlin select">
+                        <select data-placeholder="Контрольная карта" className="form-control select-search  form-control-outlin select">
                           <option></option>
                           <optgroup label="Nazorat Kartochkasi">
-                            <option value="AZ">1a Nazorat Kartochkasi</option>
-                            <option value="CO">1b Nazorat Kartochkasi</option>
+                            <option value="AZ">1a Контрольная карта</option>
+                            <option value="CO">1б Контрольная карта</option>
                           </optgroup>
                         </select>
                       </div>
@@ -56,13 +56,13 @@ const BaseSozlamalarContent = ({ currentUser }) => {
                         <div className="col-lg-12">
                           <div className="position-relative">
                             <input type="search" className="form-control form-control-outline" placeholder="Placeholder" />
-                            <label className="label-floating">Qidirish</label>
+                            <label className="label-floating">Поиск</label>
                           </div>
                         </div>
                       </div>
                     </div>
                     <div className="col-lg-4">
-                      <button type="submit" style={{ width: "150px", height: "55px" }} className="btn btn-primary">Qo'shish</button>
+                      <button type="submit" style={{ width: "150px", height: "55px" }} className="btn btn-primary">Добавлять</button>
                     </div>
                   </div>
                 </form>
@@ -74,19 +74,19 @@ const BaseSozlamalarContent = ({ currentUser }) => {
                   <thead>
                     <tr className="bg-dark text-white NavLink text-center">
                       <th style={{ width: "5%", borderRadius: "10px 0 0 0" }}>№</th>
-                      <th style={{ width: "20%" }}>Nomlanishi</th>
-                      <th style={{ width: "25%" }}>Ijro Muddati</th>
-                      <th style={{ width: "30%" }}>Kartochka</th>
-                      <th style={{ width: "15%" }}>Ko'rsatish</th>
-                      <th style={{ width: "15%" }}>Harakatlar</th>
+                      <th style={{ width: "20%" }}>Именование</th>
+                      <th style={{ width: "25%" }}>Период работы</th>
+                      <th style={{ width: "30%" }}>Карточка</th>
+                      <th style={{ width: "15%" }}>Показывать</th>
+                      <th style={{ width: "15%" }}>Действия</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr style={{ fontSize: "14px" }}>
                       <td>1</td>
-                      <td>O'zbekiston Respublikasi Qonuni</td>
+                      <td>Закон Республики Узбекистан</td>
                       <td className="text-center">3</td>
-                      <td>1a Nazorat Kartochkasi</td>
+                      <td>1a Контрольная карта</td>
                       <td className="text-center">
                         <div
                           className="custom-control custom-control-right custom-checkbox custom-control-inline">
@@ -104,9 +104,9 @@ const BaseSozlamalarContent = ({ currentUser }) => {
                     </tr>
                     <tr style={{ fontSize: "14px" }}>
                       <td>1</td>
-                      <td>O'zbekiston Respublikasi Qonuni</td>
+                      <td>Закон Республики Узбекистан</td>
                       <td className="text-center">3</td>
-                      <td>1a Nazorat Kartochkasi</td>
+                      <td>1a Контрольная карта</td>
                       <td className="text-center">
                         <div
                           className="custom-control custom-control-right custom-checkbox custom-control-inline">

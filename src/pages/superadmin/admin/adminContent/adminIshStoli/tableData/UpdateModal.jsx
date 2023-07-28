@@ -146,7 +146,7 @@ const UpdateModal = ({ setUpdateModal, updateModal, setAlert, currentUser, qushi
                   console.log(err.response);
                 })
 
-              Alert(setAlert, 'success', "Ma'lumot muvaffaqiyatli o'zgartirildi");
+              Alert(setAlert, 'success', "Информация успешно изменена");
             })
             .catch(err => {
               console.log(err);
@@ -154,15 +154,15 @@ const UpdateModal = ({ setUpdateModal, updateModal, setAlert, currentUser, qushi
             })
           setUpdateModal({ open: false, obj: {} });
         } else {
-          Alert(setAlert, "warning", "Lavozim tanlanmagan");
+          Alert(setAlert, "warning", "Позиция не выбрана");
           setUpdateModal({ open: false, obj: {} });
         }
       } else {
-        Alert(setAlert, "warning", "Ijrochi biriktirilmagan");
+        Alert(setAlert, "warning", "Исполнитель не привязан");
         setUpdateModal({ open: false, obj: {} });
       }
     } else {
-      Alert(setAlert, "warning", "Rank tanlanmagan");
+      Alert(setAlert, "warning", "Ранк не выбран");
       setUpdateModal({ open: false, obj: {} });
     }
   }
@@ -198,7 +198,7 @@ const UpdateModal = ({ setUpdateModal, updateModal, setAlert, currentUser, qushi
         style={{ maxHeight: "650px", overflowY: "scroll" }}>
         <div className="modal-content">
           <div className="modal-header bg-primary text-white">
-            <h6 className="modal-title">Ish stoli qo'shish</h6>
+            <h6 className="modal-title">Добавить рабочий стол</h6>
             <button type="button" className="close" onClick={() => setUpdateModal({ open: false, obj: {} })}>&times;</button>
           </div>
           <div className="modal-body pb-0">
@@ -213,7 +213,7 @@ const UpdateModal = ({ setUpdateModal, updateModal, setAlert, currentUser, qushi
                         defaultValue={updateModal.obj?.departmentName}
                         disabled
                       />
-                      <label className="label-floating">Bo'lim nomi</label>
+                      <label className="label-floating">Название раздела</label>
                     </div>
                   </div>
                 </div>
@@ -232,8 +232,7 @@ const UpdateModal = ({ setUpdateModal, updateModal, setAlert, currentUser, qushi
                         defaultValue={updateModal.obj?.uniqueCode}
                         disabled
                       />
-                      <label className="label-floating">Unik
-                        Kod</label>
+                      <label className="label-floating">Уникальный код</label>
                     </div>
                   </div>
                 </div>
@@ -273,7 +272,7 @@ const UpdateModal = ({ setUpdateModal, updateModal, setAlert, currentUser, qushi
                         }}
                         options={biriktirilganIjrochilar}
                         isClearable={true}
-                        placeholder="Biriktirilgan ijrochi"
+                        placeholder="Прикрепленный исполнитель"
                         className="biriktirilganIjrochi"
                         ref={rangeUserref}
                       />
@@ -281,7 +280,7 @@ const UpdateModal = ({ setUpdateModal, updateModal, setAlert, currentUser, qushi
                       <Select
                         options={biriktirilganIjrochilar}
                         isClearable={true}
-                        placeholder="Biriktirilgan ijrochi"
+                        placeholder="Прикрепленный исполнитель"
                         className="biriktirilganIjrochi"
                         ref={rangeUserref}
                       />
@@ -298,7 +297,7 @@ const UpdateModal = ({ setUpdateModal, updateModal, setAlert, currentUser, qushi
                         }}
                         options={lavozimlar}
                         isClearable={true}
-                        placeholder="Lavozimi"
+                        placeholder="Позиция"
                         className="lavozimi"
                         ref={positionref}
                       />
@@ -306,7 +305,7 @@ const UpdateModal = ({ setUpdateModal, updateModal, setAlert, currentUser, qushi
                       <Select
                         options={lavozimlar}
                         isClearable={true}
-                        placeholder="Lavozimi"
+                        placeholder="Позиция"
                         className="lavozimi"
                         ref={positionref}
                       />
@@ -327,7 +326,7 @@ const UpdateModal = ({ setUpdateModal, updateModal, setAlert, currentUser, qushi
                     <i className="icon-plus2 pt-1 pr-1"
                       style={{ fontSize: "12px" }}></i>
                   )}
-                  Qo'shimcha huquq va rank
+                 Дополнительные права и Ранк
                 </button>
               </div>
               {visible && (
@@ -337,7 +336,7 @@ const UpdateModal = ({ setUpdateModal, updateModal, setAlert, currentUser, qushi
                       <Select
                         defaultValue={huquqlar.filter((d) => updateModal.obj?.permissions?.find((f) => f.name === d.label)?.name)}
                         options={huquqlar}
-                        placeholder="Xodimga beriladigan huquqlar"
+                        placeholder="Права, предоставленные работнику"
                         className="huquqlar"
                         isMulti
                         isClearable={true}
@@ -354,7 +353,7 @@ const UpdateModal = ({ setUpdateModal, updateModal, setAlert, currentUser, qushi
                             label: updateModal.obj?.userRoles[1]?.name
                           }}
                           options={ranks}
-                          placeholder="Rank"
+                          placeholder="Ранк"
                           className="qushimchaRanki"
                           isClearable={true}
                           ref={extrarankref}
@@ -362,7 +361,7 @@ const UpdateModal = ({ setUpdateModal, updateModal, setAlert, currentUser, qushi
                       ) : (
                         <Select
                           options={ranks}
-                          placeholder="Qo'shimcha rank"
+                          placeholder="Дополнительный ранк"
                           className="qushimchaRanki"
                           isClearable={true}
                           ref={extrarankref}
@@ -387,7 +386,7 @@ const UpdateModal = ({ setUpdateModal, updateModal, setAlert, currentUser, qushi
                     <i className="icon-plus2 pt-1 pr-1"
                       style={{ fontSize: "12px" }}></i>
                   )}
-                  Qo'shimcha bo'lim va lavozim
+                  Дополнительный отдел и должность
                 </button>
               </div>
               {visible1 && (
@@ -403,7 +402,7 @@ const UpdateModal = ({ setUpdateModal, updateModal, setAlert, currentUser, qushi
                             }}
                             options={selectBulimlar}
                             onChange={(e) => logChangeBulim(e, updateModal.obj)}
-                            placeholder="Bo'lim"
+                            placeholder="Отделение"
                             className="qushimchaBulim1"
                             isClearable={true}
                             ref={extradepartmentref}
@@ -412,7 +411,7 @@ const UpdateModal = ({ setUpdateModal, updateModal, setAlert, currentUser, qushi
                           <Select
                             options={selectBulimlar}
                             onChange={(e) => logChangeBulim(e, updateModal.obj)}
-                            placeholder="Bo'lim"
+                            placeholder="Отделение"
                             className="qushimchaBulim1"
                             isClearable={true}
                             ref={extradepartmentref}
@@ -429,7 +428,7 @@ const UpdateModal = ({ setUpdateModal, updateModal, setAlert, currentUser, qushi
                               label: qushimchaUpdate?.userRoles[0]?.name
                             }}
                             options={ranks}
-                            placeholder="Rank"
+                            placeholder="Ранк"
                             className="qushimchaRank1"
                             isClearable={true}
                             ref={extrarank1ref}
@@ -437,7 +436,7 @@ const UpdateModal = ({ setUpdateModal, updateModal, setAlert, currentUser, qushi
                         ) : (
                           <Select
                             options={ranks}
-                            placeholder="Qo'shimcha rank"
+                            placeholder="Дополнительный ранк"
                             className="qushimchaRank1"
                             isClearable={true}
                             ref={extrarank1ref}
@@ -452,7 +451,7 @@ const UpdateModal = ({ setUpdateModal, updateModal, setAlert, currentUser, qushi
                         <Select
                           options={ishStoli}
                           isClearable={true}
-                          placeholder="Ish stoli"
+                          placeholder="Рабочий стол"
                           className="qushimchaIshStoli"
                           ref={worktableref}
                         />
@@ -468,7 +467,7 @@ const UpdateModal = ({ setUpdateModal, updateModal, setAlert, currentUser, qushi
                             }}
                             options={qushimchaLavozimlar}
                             isClearable={true}
-                            placeholder="Lavozimi"
+                            placeholder="Позиция"
                             className="qushimchaLavozimi1"
                             ref={extrapositionref}
                           />
@@ -476,7 +475,7 @@ const UpdateModal = ({ setUpdateModal, updateModal, setAlert, currentUser, qushi
                           <Select
                             options={qushimchaLavozimlar}
                             isClearable={true}
-                            placeholder="Lavozimi"
+                            placeholder="Позиция"
                             className="qushimchaLavozimi1"
                             ref={extrapositionref}
                           />
@@ -500,7 +499,7 @@ const UpdateModal = ({ setUpdateModal, updateModal, setAlert, currentUser, qushi
                         <i className="icon-plus2 pt-1 pr-1"
                           style={{ fontSize: "12px" }}></i>
                       )}
-                      Qo'shimcha huquq va rank
+                     Дополнительные права и звание
                     </button>
                   </div>
                   {visible2 && (
@@ -510,7 +509,7 @@ const UpdateModal = ({ setUpdateModal, updateModal, setAlert, currentUser, qushi
                           <Select
                             options={huquqlar}
                             isClearable={true}
-                            placeholder="Xodimga beriladigan huquqlar"
+                            placeholder="Права, предоставленные работнику"
                             className="qushimchaHuquqlar1"
                             isMulti
                             ref={extralawref}
@@ -526,7 +525,7 @@ const UpdateModal = ({ setUpdateModal, updateModal, setAlert, currentUser, qushi
                                 label: qushimchaUpdate?.userRoles[1]?.name
                               }}
                               options={ranks}
-                              placeholder="Qo'shimcha rank"
+                              placeholder="Дополнительный ранк"
                               className="qushimchaRank2"
                               isClearable={true}
                               ref={extrarank2ref}
@@ -534,7 +533,7 @@ const UpdateModal = ({ setUpdateModal, updateModal, setAlert, currentUser, qushi
                           ) : (
                             <Select
                               options={ranks}
-                              placeholder="Qo'shimcha rank"
+                              placeholder="Дополнительный ранк"
                               className="qushimchaRank2"
                               isClearable={true}
                               ref={extrarank2ref}
@@ -556,7 +555,7 @@ const UpdateModal = ({ setUpdateModal, updateModal, setAlert, currentUser, qushi
                           onClick={() => yangilash(updateModal.obj)}
                           className="btn btn-primary form-control form-control-outline">
                           <i className="fas fa-save"
-                            style={{ fontSize: "18px" }}></i> Saqlash
+                            style={{ fontSize: "18px" }}></i> Сохранять
                         </button>
                       </div>
                     </div>

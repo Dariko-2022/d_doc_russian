@@ -43,7 +43,7 @@ const FormElements = ({ setAlert, currentUser, stirData, setData }) => {
                   className="form-control form-control-outline tashNomi"
                   placeholder="Placeholder"
                 />
-                <label className="label-floating">Tashkilot nomi</label>
+                <label className="label-floating">Название организации</label>
               </div>
             </div>
           </div>
@@ -58,7 +58,7 @@ const FormElements = ({ setAlert, currentUser, stirData, setData }) => {
                   className="form-control form-control-outline manzil"
                   placeholder="Placeholder"
                 />
-                <label className="label-floating">Mazili</label>
+                <label className="label-floating">Адрес</label>
               </div>
             </div>
           </div>
@@ -74,7 +74,7 @@ const FormElements = ({ setAlert, currentUser, stirData, setData }) => {
                   className="form-control form-control-outline telefon"
                   placeholder="Placeholder"
                 />
-                <label className="label-floating">Telefon</label>
+                <label className="label-floating">Телефон</label>
               </div>
             </div>
           </div>

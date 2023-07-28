@@ -31,52 +31,52 @@ const UmumiyContent = () => {
   return (
     <div className="content">
 
-      <h1 style={{ margin: "10px 0 0 20px", fontWeight: "bold", textTransform: "upperCase" }}>viloyatlar</h1>
+      <h1 style={{ margin: "10px 0 0 20px", fontWeight: "bold", textTransform: "upperCase" }}>Регионы</h1>
       <div className="card-body">
         <ul className="nav nav-tabs nav-tabs-solid nav-tabs-solid-custom bg-primary NavLink">
           <li className="nav-item" style={{ marginLeft: "30px" }}>
             <a href="./viloyatlar.html" className="nav-link NavLinkLi d-flex align-items-center justify-content-center">
-              <i className="icon-office mr-1"></i> Viloyatlar
+              <i className="icon-office mr-1"></i> Регионы
             </a>
           </li>
           <li className="nav-item">
             <a href="./shahartuman.html" className="nav-link d-flex align-items-center justify-content-center">
-              <i className="icon-user-tie mr-1"></i> Shahar va tumanlar
+              <i className="icon-user-tie mr-1"></i> Города и районы
             </a>
           </li>
           <li className="nav-item">
             <a href="#1" className="nav-link d-flex align-items-center justify-content-center">
-              <i className="icon-stack2 mr-1"></i> Maxallalar
+              <i className="icon-stack2 mr-1"></i> Махалля
             </a>
           </li>
           <li className="nav-item">
             <a href="#1" className="nav-link d-flex align-items-center justify-content-center">
-              <i className="icon-newspaper mr-1"></i> OTM
+              <i className="icon-newspaper mr-1"></i> ОТМ
             </a>
           </li>
           <li className="nav-item">
             <a href="#1" className="nav-link d-flex align-items-center">
-              <i className="icon-chess-queen mr-1"></i> Bayram Kunlari
+              <i className="icon-chess-queen mr-1"></i> Каникулы
             </a>
           </li>
           <li className="nav-item">
             <a href="#1" className="nav-link d-flex align-items-center">
-              <i className="icon-users4 mr-1"></i> Karindoshlar
+              <i className="icon-users4 mr-1"></i> Родственники
             </a>
           </li>
           <li className="nav-item">
             <a href="#1" className="nav-link d-flex align-items-center">
-              <i className="icon-stats-growth mr-1"></i> Ilmiy Daraja
+              <i className="icon-stats-growth mr-1"></i> Ученая степень
             </a>
           </li>
           <li className="nav-item">
             <a href="#1" className="nav-link d-flex align-items-center">
-              <i className="icon-stars mr-1"></i> Chet Tillari
+              <i className="icon-stars mr-1"></i> Иностранные языки
             </a>
           </li>
           <li className="nav-item">
             <a href="#1" className="nav-link d-flex align-items-center">
-              <i className="icon-newspaper mr-1"></i>Yo'nalishlar
+              <i className="icon-newspaper mr-1"></i>Направления
             </a>
           </li>
         </ul>
@@ -94,7 +94,7 @@ const UmumiyContent = () => {
                             <input type="text"
                               className="form-control form-control-outline"
                               placeholder="Placeholder" />
-                            <label className="label-floating">Nomlanishi</label>
+                            <label className="label-floating">Именование</label>
                           </div>
                         </div>
                       </div>
@@ -102,7 +102,7 @@ const UmumiyContent = () => {
                     <div className="col-lg-2">
                       <button type="submit" style={{ width: "150px", height: "55px" }}
                         className="btn btn-primary">
-                        <i className="icon-floppy-disk mr-1"></i>Saqlash
+                        <i className="icon-floppy-disk mr-1"></i>Сохранять
                       </button>
                     </div>
                   </div>
@@ -112,8 +112,8 @@ const UmumiyContent = () => {
                   <thead>
                     <tr className="bg-dark text-white NavLink text-center">
                       <th style={{ width: "5%" }}>№</th>
-                      <th style={{ width: "60%" }}>Nomlanishi</th>
-                      <th style={{ width: "60%" }}>Harakatlar</th>
+                      <th style={{ width: "60%" }}>Именование</th>
+                      <th style={{ width: "60%" }}>Действия</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -132,16 +132,16 @@ const UmumiyContent = () => {
                           <div className="modal-dialog">
                             <div className="modal-content">
                               <div className="modal-header bg-primary text-white">
-                                <h6 className="modal-title">O'chirish oynasi</h6>
+                                <h6 className="modal-title">Удалить окно</h6>
                                 <button type="button" className="close close2" data-dismiss="modal">×</button>
                               </div>
                               <div className="modal-body text-center">
-                                <h3 style={{ textTransform: "upperCase", fontWeight: "bold" }} className="text-danger">Ogoh bo'ling!</h3>
-                                <h5>Ushbu ma'lumotni o'chirmoqchimisiz?</h5>
+                                <h3 style={{ textTransform: "upperCase", fontWeight: "bold" }} className="text-danger">Будьте в курсе!</h3>
+                                <h5>Вы хотите удалить эту информацию?</h5>
                               </div>
                               <div className="modal-footer">
-                                <button type="button" className="btn btn-link" data-dismiss="modal">Bekor qilish</button>
-                                <button type="button" className="btn btn-primary" onClick={() => Uchirish(index)}>O'chirish</button>
+                                <button type="button" className="btn btn-link" data-dismiss="modal">Отмена</button>
+                                <button type="button" className="btn btn-primary" onClick={() => Uchirish(index)}>Выключать</button>
                               </div>
                             </div>
                           </div>
@@ -151,7 +151,7 @@ const UmumiyContent = () => {
                           <div className="modal-dialog modal-xl">
                             <div className="modal-content">
                               <div className="modal-header bg-primary text-white">
-                                <h6 className="modal-title">O'zgartirish</h6>
+                                <h6 className="modal-title">Изменять</h6>
                                 <button type="button" className="close close1" data-dismiss="modal">&times;</button>
                               </div>
 
@@ -169,7 +169,7 @@ const UmumiyContent = () => {
                                                 placeholder="Placeholder"
                                                 defaultValue={dat.nomlanishi}
                                               />
-                                              <label className="label-floating">Nomlanishi</label>
+                                              <label className="label-floating">Именование</label>
                                             </div>
                                           </div>
                                         </div>
@@ -182,7 +182,7 @@ const UmumiyContent = () => {
                                       <div className="col-lg-12">
                                         <div className="position-relative">
                                           <button type="button" onClick={() => Uzgartirish(index)} className="btn btn-primary form-control form-control-outline">
-                                            <i className="fas fa-save mr-1"></i>Saqlash
+                                            <i className="fas fa-save mr-1"></i>Сохранять
                                           </button>
                                         </div>
                                       </div>

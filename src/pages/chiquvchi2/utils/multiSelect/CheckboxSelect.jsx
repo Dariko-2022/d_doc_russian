@@ -40,7 +40,7 @@ export default function CheckboxSelect() {
             </div>
 
             <div class="form-group">
-                <label>With <span class="font-weight-semibold">Select all</span> option</label>
+                <label>With <span class="font-weight-semibold">Выбрать все</span> варианты</label>
                 <span class="multiselect-native-select">
                     <select class="form-control multiselect-select-all" multiple="multiple">
                         <option value="cheese">Cheese</option>
@@ -55,14 +55,14 @@ export default function CheckboxSelect() {
                             title="Cheese, Tomatoes, Mozzarella, Mushrooms"
                             style={{ width: "100%", overflow: "hidden", textOverflow: "ellipsis" }}
                             aria-expanded="false">
-                            <span class="multiselect-selected-text">All selected (4)</span>
+                            <span class="multiselect-selected-text">Все выбрано (4)</span>
                         </button>
 
                         <div class="multiselect-container dropdown-menu">
                             <div class="multiselect-all" title=" Select all">
                                 <label class="dropdown-item custom-control flex-1 custom-checkbox">
                                     <input class="custom-control-input" type="checkbox" value="multiselect-all" />
-                                    <span class="custom-control-label w-100 font-weight-bold"> Select all</span>
+                                    <span class="custom-control-label w-100 font-weight-bold"> Выбрать все </span>
                                 </label>
                             </div>
                             <div class="multiselect-item" title="Cheese">
@@ -97,7 +97,7 @@ export default function CheckboxSelect() {
 
 
             <div class="form-group">
-                <label>Clickable optgroups</label>
+                <label>Кликабельные оптгруппы</label>
                 <span class="multiselect-native-select">
                     <select class="form-control multiselect-clickable-groups" multiple="multiple" data-fouc="">
                         <optgroup label="Mathematics">

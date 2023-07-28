@@ -4,7 +4,7 @@ import BaseSozlamalarNavbar from "../../baseSozlamalarNavbar/BaseSozlamalarNavba
 const BaseSozJurnallarContent = ({ currentUser }) => {
   return (
     <div className="content mb-5">
-      <h3 style={{ margin: "10px 0 0 20px", fontWeight: "bold", textTransform: "upperCase" }}>Barchasi</h3>
+      <h3 style={{ margin: "10px 0 0 20px", fontWeight: "bold", textTransform: "upperCase" }}>Все</h3>
       <div className="card-body">
         <ul className="nav nav-tabs nav-tabs-solid nav-tabs-solid-custom bg-primary NavLink" style={{ borderTopRightRadius: "5px", borderTopLeftRadius: "5px" }}>
           <BaseSozlamalarNavbar />
@@ -17,12 +17,12 @@ const BaseSozJurnallarContent = ({ currentUser }) => {
                   <div className="row">
                     <div className="col-lg-3">
                       <div className="form-group">
-                        <select data-placeholder="Xujjat turini tanlang" className="form-control select-search  form-control-outlin select">
+                        <select data-placeholder="Выберите тип документа" className="form-control select-search  form-control-outlin select">
                           <option></option>
                           <optgroup label="Xujjat turini tanlang">
-                            <option value="AZ">Buxoro viloyat</option>
-                            <option value="CO">Navoiy Viloyat</option>
-                            <option value="CO">Samarqand Viloyat</option>
+                            <option value="AZ">Бухарская область</option>
+                            <option value="CO">Навоийская область</option>
+                            <option value="CO">Самаркандская область</option>
                           </optgroup>
                         </select>
                       </div>
@@ -32,7 +32,7 @@ const BaseSozJurnallarContent = ({ currentUser }) => {
                         <div className="col-lg-12">
                           <div className="position-relative">
                             <input type="text" className="form-control form-control-outline" placeholder="Placeholder" />
-                            <label className="label-floating">O'zbekcha Nomi</label>
+                            <label className="label-floating">Русское имяУзбекское имя</label>
                           </div>
                         </div>
                       </div>
@@ -42,7 +42,7 @@ const BaseSozJurnallarContent = ({ currentUser }) => {
                         <div className="col-lg-12">
                           <div className="position-relative">
                             <input type="text" className="form-control form-control-outline" placeholder="Placeholder" />
-                            <label className="label-floating">Rushcha Nomi</label>
+                            <label className="label-floating">Узбекское имя</label>
                           </div>
                         </div>
                       </div>
@@ -52,7 +52,7 @@ const BaseSozJurnallarContent = ({ currentUser }) => {
                         <div className="col-lg-12">
                           <div className="position-relative">
                             <input type="text" className="form-control form-control-outline" placeholder="Placeholder" />
-                            <label className="label-floating">Qisqacha tasnifi</label>
+                            <label className="label-floating">Краткая классификация</label>
                           </div>
                         </div>
                       </div>
@@ -64,7 +64,7 @@ const BaseSozJurnallarContent = ({ currentUser }) => {
                         <div className="col-lg-12">
                           <div className="position-relative">
                             <input type="text" className="form-control form-control-outline" placeholder="Placeholder" />
-                            <label className="label-floating">Jurnal prefiksi</label>
+                            <label className="label-floating">Префикс журнала</label>
                           </div>
                         </div>
                       </div>
@@ -74,7 +74,7 @@ const BaseSozJurnallarContent = ({ currentUser }) => {
                         <div className="col-lg-12">
                           <div className="position-relative">
                             <input type="text" className="form-control form-control-outline form-control-sm" aria-label="form-control-sm example" placeholder="Placeholder" />
-                            <label className="label-floating">Jurnal Postfiksi</label>
+                            <label className="label-floating">Журнал Постфикс</label>
                           </div>
                         </div>
                       </div>
@@ -84,7 +84,7 @@ const BaseSozJurnallarContent = ({ currentUser }) => {
                         <div className="col-lg-12">
                           <div className="position-relative">
                             <input type="number" className="form-control form-control-outline" placeholder="Placeholder" />
-                            <label className="label-floating">Boshlang'ich raqam</label>
+                            <label className="label-floating">Стартовый номер</label>
                           </div>
                         </div>
                       </div>
@@ -93,8 +93,8 @@ const BaseSozJurnallarContent = ({ currentUser }) => {
                   <hr />
                   <div className="row d-flex justify-content-center">
                     <div className="col-lg-6 d-flex justify-content-center">
-                      <button type="submit" className="btn btn-primary"><i className="icon-floppy-disk"></i> Saqlash</button>
-                      <button type="submit" className="btn btn-danger ml-2">Bekor Qilish</button>
+                      <button type="submit" className="btn btn-primary"><i className="icon-floppy-disk"></i> Сохранять</button>
+                      <button type="submit" className="btn btn-danger ml-2">Отмена</button>
                     </div>
                   </div>
                 </form>

@@ -28,7 +28,7 @@ const KiruvchiCon = ({ data, params }) => {
       <div className="col-lg-12">
         <div className="card">
           <div className="card-header bg-primary text-white header-elements-inline">
-            <h6 className="card-title" style={{ fontWeight: "bold", textTransform: "upperCase" }}>Kiruvchi</h6>
+            <h6 className="card-title" style={{ fontWeight: "bold", textTransform: "upperCase" }}>Входящий</h6>
           </div>
           <div className="card-body">
             <div className="p-0">
@@ -86,7 +86,7 @@ const KiruvchiCon = ({ data, params }) => {
                       <th className="d-flex align-items-center justify-content-end cursor-pointer p-0">
                         <a href={url + `/api/document/getDocumentFiles/${params.id}/${JSON.parse(localStorage.getItem('ids'))}`}
                           className="btn btn-primary w-100"
-                        >Fayllarni birlashtirib yuklash</a>
+                        >Загружать файлы вместе</a>
                       </th>
                     </tr>
                   )}

@@ -51,7 +51,7 @@ const SidebarSection = () => {
         <li className="nav-item">
           <Link to="/super_admin" className="nav-link d-flex align-items-center liHover">
             <AiOutlineHome className="text-primary" />
-            <span className="ml-3">Bosh sahifa</span>
+            <span className="ml-3">Домашняя страница</span>
           </Link>
         </li>
 
@@ -59,38 +59,38 @@ const SidebarSection = () => {
         <li className="nav-item nav-item-submenu hujjatlar">
           <div className="nav-link d-flex align-items-center" onClick={() => openFM('hujjatlar')}>
             <HiOutlineDocumentDuplicate className="text-primary" />
-            <span className="ml-3">Hujjatlar</span>
+            <span className="ml-3">Документы</span>
           </div>
 
           <ul className="nav-item-ul " style={{ display: "none" }}>
             <li className="nav-item">
               <Link to="/super_admin_elektron-kitob" className="nav-link liHover d-flex align-items-center">
                 <TfiBookmarkAlt className="text-primary" />
-                <span className="ml-3">Elektron kitob</span>
+                <span className="ml-3">Электронная книга</span>
               </Link>
             </li>
             <li className="nav-item">
               <Link to="/super_admin_sozlamalar" className="nav-link liHover d-flex align-items-center">
                 <TfiSettings className="text-primary" />
-                <span className="ml-3">Sozlamalar</span>
+                <span className="ml-3">Настройки</span>
               </Link>
             </li>
             <li className="nav-item nav-item-submenu monitoring" onClick={() => openFM('monitoring')}>
               <div className="nav-link d-flex align-items-center ml-3">
                 <TbHeartRateMonitor className="text-primary" />
-                <span className="ml-3">Monitoring</span>
+                <span className="ml-3">Мониторинг</span>
               </div>
               <ul className="nav-item-ul pl-3" style={{ display: "none" }}>
                 <li className="nav-item">
                   <Link to="/monitoring_kiruvchi" className="nav-link liHover d-flex align-items-center">
                     <CiMonitor className="text-primary" />
-                    <span className="ml-2">Monitoring</span>
+                    <span className="ml-2">Мониторинг</span>
                   </Link>
                 </li>
                 <li className="nav-item">
                   <Link to="/monitoring_kiruvchi_2" className="nav-link liHover d-flex align-items-center">
                     <CiMonitor className="text-primary" />
-                    <span className="ml-2">Monitoring 2</span>
+                    <span className="ml-2">Мониторинг 2</span>
                   </Link>
                 </li>
               </ul >
@@ -102,7 +102,7 @@ const SidebarSection = () => {
         <li className="nav-item nav-item-submenu fuqaroMurojaati">
           <div className="nav-link  d-flex align-items-center" onClick={() => openFM('fuqaroMurojaati')}>
             <BsPerson className="text-primary" />
-            <span className="ml-3">Fuqaro Murojatlari</span>
+            <span className="ml-3">Гражданские апелляции</span>
           </div>
 
           <ul className="nav-item-ul" style={{ display: "none" }}>
@@ -115,7 +115,7 @@ const SidebarSection = () => {
             <li className="nav-item">
               <Link to="/fuqaro/murojati/elektron-kitob" className="nav-link liHover d-flex align-items-center">
                 <RiFileSettingsLine className="text-primary" />
-                <span className="ml-3">Journal Sozlamalar</span>
+                <span className="ml-3">Настройки журнала</span>
               </Link>
             </li>
           </ul>
@@ -125,7 +125,7 @@ const SidebarSection = () => {
         <li className="nav-item nav-item-submenu chiquvchi">
           <div className="nav-link d-flex align-items-center" onClick={() => openFM('chiquvchi')}>
             <HiOutlineSwitchHorizontal className="text-primary" />
-            <span className="ml-3">Chiquvchi</span>
+            <span className="ml-3">Исходящий</span>
           </div>
 
           <ul className="nav-item-ul" style={{ display: "none" }}>
@@ -138,13 +138,13 @@ const SidebarSection = () => {
             <li className="nav-item">
               <Link to="/chiquvchi/elektron-kitob" className="nav-link liHover d-flex align-items-center">
                 <RiFileSettingsLine className="text-primary" />
-                <span className="ml-3">Journal Sozlamalar</span>
+                <span className="ml-3">Настройки журнала</span>
               </Link>
             </li>
             <li className="nav-item">
               <Link to="/chiquvchi/super_admin_fishka" className="nav-link liHover d-flex align-items-center">
                 <TfiSettings className="text-primary" />
-                <span className="ml-3">Sozlamalar</span>
+                <span className="ml-3">Настройки</span>
               </Link>
             </li>
           </ul>
@@ -155,7 +155,7 @@ const SidebarSection = () => {
           <Link to={kadrlarBranch.length > 0 ? `/kadrlar/${kadrlarBranch[0].name}` : "/kadrlar/Asosiy"} className="nav-link liHover">
             {/* <i className="icon-users" style={{ color: "#0056B8" }} /> */}
             <BsFilePerson className="text-primary" />
-            <span className="ml-3">Kadrlar</span>
+            <span className="ml-3">Кадры</span>
           </Link>
         </li>
 
@@ -163,20 +163,20 @@ const SidebarSection = () => {
         <li className="nav-item nav-item-submenu paketlar">
           <div className="nav-link d-flex align-items-center" onClick={() => openFM('paketlar')}>
             <FiPackage className="text-primary" />
-            <span className="ml-3">Paketlar</span>
+            <span className="ml-3">Пакеты</span>
           </div>
 
           <ul className="nav-item-ul" style={{ display: "none" }}>
             <li className="nav-item">
               <Link to="/super_admin/umumiy/paketlar" className="nav-link liHover d-flex align-items-center">
                 <GoPackage className="text-primary" />
-                <span className="ml-3">Umumiy paketlar</span>
+                <span className="ml-3">Общий пакет</span>
               </Link>
             </li>
             <li className="nav-item">
               <Link to="/super_admin/mavjud/paketlar" className="nav-link liHover d-flex align-items-center">
                 <GoPackage className="text-primary" />
-                <span className="ml-3">Mavjud paketlar</span>
+                <span className="ml-3">Доступные пакеты</span>
               </Link>
             </li>
           </ul>
@@ -186,7 +186,7 @@ const SidebarSection = () => {
         <li className="nav-item nav-item-submenu tashkilotlar">
           <div className="nav-link d-flex align-items-center" onClick={() => openFM('tashkilotlar')}>
             <SlOrganization className="text-primary" />
-            <span className="ml-3">Tashkilotlar</span>
+            <span className="ml-3">Организации</span>
           </div>
 
           <ul className="nav-item-ul" style={{ display: "none" }}>
@@ -194,13 +194,13 @@ const SidebarSection = () => {
               {/* /super_admin/umumiy/tashkilotlar */}
               <Link to="/office_manager/umumiy/tashkilotlar" className="nav-link liHover d-flex align-items-center">
                 <RiOrganizationChart className="text-primary" />
-                <span className="ml-3">Umumiy tashkilotlar</span>
+                <span className="ml-3">Общие организации</span>
               </Link>
             </li>
             <li className="nav-item">
               <Link to="/super_admin/mavjud/tashkilotlar" className="nav-link liHover d-flex align-items-center">
                 <RiOrganizationChart className="text-primary" />
-                <span className="ml-3">Mavjud tashkilotlar</span>
+                <span className="ml-3">Существующие организации</span>
               </Link>
             </li>
           </ul>

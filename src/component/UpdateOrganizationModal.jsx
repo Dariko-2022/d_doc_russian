@@ -41,7 +41,7 @@ const UpdateOrganizationModal = ({ setIsOrgModalUpdate, isOrgModalUpdate, tashqi
     <div className="openOrgModal_container">
       <div className="openOrgModal_wrapper">
         <div className="openOrgModal_top">
-          <span className='orgName'>Tashkilotni o'zgartirish</span>
+          <span className='orgName'>Изменить организацию</span>
           <i className="material-icons closeIcon" onClick={() => setIsOrgModalUpdate({ open: false, obj: {} })}>&#xe5cd;</i>
         </div>
         <div className="openOrgModal_bottom">
@@ -64,7 +64,7 @@ const UpdateOrganizationModal = ({ setIsOrgModalUpdate, isOrgModalUpdate, tashqi
               />
               <input
                 type="text"
-                placeholder='Exat'
+                placeholder='Eхaт'
                 className='ibput_data_update'
                 defaultValue={isOrgModalUpdate.obj.exat}
                 ref={exatRef}
@@ -78,7 +78,7 @@ const UpdateOrganizationModal = ({ setIsOrgModalUpdate, isOrgModalUpdate, tashqi
           </form>
           <button type='button' className='btn_save'
             onClick={() => PatchFunc()}
-          ><i className='fas-fa save'></i> Saqlash</button>
+          ><i className='fas-fa save'></i> Сохранять</button>
         </div>
       </div>
     </div>

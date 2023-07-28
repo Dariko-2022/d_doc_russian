@@ -50,19 +50,19 @@ const MavjudShablonlar = ({ permission, ranks, currentUser }) => {
                                     <thead className={'theadSticky'}>
                                         <tr className="bg-dark text-white NavLink text-center">
                                             <th id='tabRow' style={{ width: '5%' }} className="id file_kor_short_not">№</th>
-                                            <th id='tabRow' style={{ width: '25 %' }} className="qabul file_kor_short">Rasmi
+                                            <th id='tabRow' style={{ width: '25 %' }} className="qabul file_kor_short">Картина
                                             </th>
                                             <th id='tabRow' style={{ width: '10 %' }}
-                                                className="ariza file_kor_short_not">Nomlanishi
+                                                className="ariza file_kor_short_not">Именование
                                             </th>
                                             <th id='tabRow' style={{ width: '30 %' }}
-                                                className="ariza file_kor_short_not">Qisqacha
+                                                className="ariza file_kor_short_not">Краткая
                                             </th>
                                             <th id='tabRow' style={{ width: '30 %' }}
-                                                className="ariza file_kor_short_not">Boshqalarga ko'rinishi
+                                                className="ariza file_kor_short_not">Внешний вид для других
                                             </th>
                                             <th id='tabRow' style={{ width: '20%' }}
-                                                className="text-center harakat file_kor_short_not">Harakatlar
+                                                className="text-center harakat file_kor_short_not">Действия
                                             </th>
                                         </tr>
                                     </thead>

@@ -182,7 +182,7 @@ const SidebarSection = ({ roles, permission, ranks, currentUser }) => {
             state: { data: "aaa" }
           }} className="nav-link liHover">
             <i className="icon-home4" style={{ color: "#0056B8" }} />
-            <span>Bosh sahifa</span>
+            <span>Домашняя страница</span>
           </Link>
         </li>
 
@@ -199,7 +199,7 @@ const SidebarSection = ({ roles, permission, ranks, currentUser }) => {
                     className="nav-link liHover">
                     <i className="icon-file-check"
                       style={{ color: "#0056B8" }} />
-                    <span>Kiruvchi</span>
+                    <span>Входящий</span>
                   </Link>
                 </li>
               )
@@ -209,31 +209,31 @@ const SidebarSection = ({ roles, permission, ranks, currentUser }) => {
                 <li key={index} className="nav-item " style={{ fontSize: '18px' }}>
                   <Link to={kadrlarBranch.length > 0 ? `/kadrlar/${kadrlarBranch[0].name}` : "/kadrlar/Asosiy"} className="nav-link liHover">
                     <i className="icon-users" style={{ color: "#0056B8" }} />
-                    <span>Kadrlar</span>
+                    <span>кадры</span>
                   </Link>
                 </li>
               )
               // monitoring
-            ) : (d.name === "Monitoring" && (permission?.includes("MONITORING")) && d.active) ? (
+            ) : (d.name === "Мониторинг" && (permission?.includes("MONITORING")) && d.active) ? (
               // (roles?.includes("boss_1") || roles?.includes("boss_2") || roles?.includes("boss_3") || roles?.includes("controller") || roles?.includes("head_of_department") || roles?.includes("office_manager"))
               // permission.length > 0
               d.visible && (
                 <li key={index} className="nav-item " style={{ fontSize: '18px' }}>
                   <Link to="/monitoring_kiruvchi" className="nav-link liHover">
                     <i className="icon-pie-chart5" style={{ color: "#0056B8" }} />
-                    <span>Monitoring</span>
+                    <span>Мониторинг</span>
                   </Link>
                 </li>
               )
             ) : (
               // fuqaro murojaati
-              (((nameTab !== '' || (ranks?.includes(8))) && d.active && d.name === "Fuqaro Murojaati") ? (
+              (((nameTab !== '' || (ranks?.includes(8))) && d.active && d.name === "fuqaro murojaati") ? (
                 d.visible && (
                   <li key={index} className="nav-item nav-item-submenu fuqaroMurojaati" style={{ display: "block" }}>
                     <div className="nav-link" style={{ fontSize: '18px', cursor: "pointer" }}
                       onClick={() => openFM('fuqaroMurojaati')}>
                       <i className="icon-home4 text-primary" />
-                      <span>Fuqaro Murojaatlari</span>
+                      <span>Гражданские апелляции</span>
                     </div>
                     {ranks?.includes(8) ? (
                       <ul className="nav-item-ul" style={{ display: "none" }}>
@@ -242,7 +242,7 @@ const SidebarSection = ({ roles, permission, ranks, currentUser }) => {
                             style={{ fontSize: '18px' }}>
                             <i className="icon-magazine"
                               style={{ color: "#0056B8" }} />
-                            <span>Yangi Qo'shish</span>
+                            <span>Добавить новое</span>
                           </Link>
                         </li>
                       </ul>
@@ -253,7 +253,7 @@ const SidebarSection = ({ roles, permission, ranks, currentUser }) => {
                             style={{ fontSize: '18px' }}>
                             <i className="icon-magazine"
                               style={{ color: "#0056B8" }} />
-                            <span>Yangi</span>
+                            <span>Новый</span>
                           </Link>
                         </li>
                       </ul>
@@ -293,20 +293,20 @@ const SidebarSection = ({ roles, permission, ranks, currentUser }) => {
                       <div className="nav-link" style={{ fontSize: '18px', cursor: "pointer" }}
                         onClick={() => openCh('chiquvchi2')}>
                         <i className="icon-home4 text-primary" />
-                        <span>Chiquvchi</span>
+                        <span>Исходящий</span>
                       </div>
 
                       <ul className="nav-item-ul" style={{ display: "none" }}>
                         <li className="nav-item">
                           <Link to="/chiquvchi2/yangi" className="nav-link liHover" style={{ fontSize: '18px' }}>
                             <i className="icon-magazine" style={{ color: "#0056B8" }} />
-                            <span>Yangi</span>
+                            <span>Новый</span>
                           </Link>
                         </li>
                         <li className="nav-item">
                           <Link to="/chiquvchi2/shablon/yaratish" className="nav-link liHover" style={{ fontSize: '18px' }}>
                             <i className="icon-magazine" style={{ color: "#0056B8" }} />
-                            <span>Yangi shablon yaratish</span>
+                            <span>Создать новый шаблон</span>
                           </Link>
                         </li>
                       </ul>
@@ -325,7 +325,7 @@ const SidebarSection = ({ roles, permission, ranks, currentUser }) => {
           <li className="nav-item" style={{ fontSize: '18px', display: "block" }}>
             <Link to="/qidirish" className="nav-link liHover">
               <i className="fas fa-search" style={{ color: "#0056B8" }} />
-              <span>Keng qidirish</span>
+              <span>Мгновенный поиск</span>
             </Link>
           </li>
         )}
@@ -343,7 +343,7 @@ const SidebarSection = ({ roles, permission, ranks, currentUser }) => {
         <li className="nav-item" style={{ display: "none" }}>
           <Link to="/arxiv" className="nav-link liHover" style={{ fontSize: '18px' }}>
             <i className="fas fa-archive" />
-            <span>Arxiv</span>
+            <span>Архив</span>
           </Link>
         </li>
 
@@ -353,7 +353,7 @@ const SidebarSection = ({ roles, permission, ranks, currentUser }) => {
             <Link to="/office_manager/mavjud/paketlar" className="nav-link liHover"
               style={{ fontSize: '18px' }}>
               <i className="icon-cog" style={{ color: "#0056B8" }} />
-              <span>Sozlamalar</span>
+              <span>Настройки</span>
             </Link>
           </li>
         )}
@@ -362,7 +362,7 @@ const SidebarSection = ({ roles, permission, ranks, currentUser }) => {
         <li className="nav-item " style={{ display: "none" }}>
           <Link to="/sozlamalarAdmin" className="nav-link liHover">
             <i className="fas fa-user-cog" style={{ color: "#0056B8" }} />
-            <span>SozlamalarAdmin</span>
+            <span>Администратор настроек</span>
           </Link>
         </li>
 
@@ -370,7 +370,7 @@ const SidebarSection = ({ roles, permission, ranks, currentUser }) => {
         <li className="nav-item" style={{ display: "none" }}>
           <Link to="/shablonlar" className="nav-link liHover">
             <i className="fas fa-sitemap" />
-            <span>Shablonlar</span>
+            <span>Шаблоны</span>
           </Link>
         </li>
 
@@ -378,7 +378,7 @@ const SidebarSection = ({ roles, permission, ranks, currentUser }) => {
         <li className="nav-item liHover" style={{ display: "none" }}>
           <Link to="/umumiyMalumotlar" className="nav-link">
             <i className="icon-books" style={{ color: "#0056B8" }} />
-            <span>Umumiy Ma'lumotlar</span>
+            <span>Общая информация</span>
           </Link>
         </li>
 
@@ -386,7 +386,7 @@ const SidebarSection = ({ roles, permission, ranks, currentUser }) => {
         <li className="nav-item liHover" style={{ display: "none" }}>
           <Link to="/umumiySozlamalar" className="nav-link">
             <i className="fas fa-users-cog" style={{ color: "#0056B8" }} />
-            <span>Umumiy Sozlamalar</span>
+            <span>Общие настройки</span>
           </Link>
         </li>
 
@@ -394,7 +394,7 @@ const SidebarSection = ({ roles, permission, ranks, currentUser }) => {
         <li className="nav-item" style={{ display: "none" }}>
           <div className="nav-link">
             <i className="icon-home4" />
-            <span>Ish stoli</span>
+            <span>Рабочий стол</span>
           </div>
         </li>
 
@@ -402,7 +402,7 @@ const SidebarSection = ({ roles, permission, ranks, currentUser }) => {
         <li className="nav-item" style={{ display: "none" }}>
           <div className="nav-link">
             <i className="icon-home4" />
-            <span>Pochta</span>
+            <span>Почта</span>
           </div>
         </li>
 
@@ -410,50 +410,50 @@ const SidebarSection = ({ roles, permission, ranks, currentUser }) => {
         <li className="nav-item nav-item-submenu" style={{ display: "none" }}>
           <div className="nav-link">
             <i className="icon-home4" />
-            <span>Ichki</span>
+            <span>Внутренний</span>
           </div>
           <ul className="nav nav-group-sub">
             <li className="nav-item">
-              <a href={"index.html"} className="nav-link">Qaror</a>
+              <a href={"index.html"} className="nav-link"> Решение </a>
             </li>
             <li className="nav-item">
               <div className="nav-link">
-                Farmoyish
+              Заказ
               </div>
             </li>
             <li className="nav-item">
               <div className="nav-link">
-                Buyruqlar
+              Распоряжения
               </div>
             </li>
             <li className="nav-item">
               <div className="nav-link">
-                Chora tadbirlar
+              Исправительные меры
               </div>
             </li>
             <li className="nav-item">
               <div className="nav-link">
-                Bayonnomalar
+              Протокольные
               </div>
             </li>
             <li className="nav-item">
               <div className="nav-link">
-                Bildirishnomalar
+                 Уведомления
               </div>
             </li>
             <li className="nav-item">
               <div className="nav-link">
-                Xizmat xati
+              Служебное письмо
               </div>
             </li>
             <li className="nav-item">
               <div className="nav-link">
-                Dalolatnoma
+              Действовать
               </div>
             </li>
             <li className="nav-item">
               <div className="nav-link">
-                Topshiriqlar
+              Задания
               </div>
             </li>
           </ul>
@@ -463,20 +463,20 @@ const SidebarSection = ({ roles, permission, ranks, currentUser }) => {
         <li className="nav-item nav-item-submenu" style={{ display: "none" }}>
           <div className="nav-link">
             <i className="icon-home4" />
-            <span>Qo'shimcha</span>
+            <span>Дополнительный</span>
           </div>
           <ul className="nav nav-group-sub">
             <li className="nav-item">
-              <a href={"index.html"} className="nav-link">Keng qidirish</a>
+              <a href={"index.html"} className="nav-link">Мгновенный поиск</a>
             </li>
             <li className="nav-item">
               <div className="nav-link">
-                Arxiv
+                Архив
               </div>
             </li>
             <li className="nav-item">
               <div className="nav-link">
-                Ichki guruh
+              Внутренняя группа
               </div>
             </li>
           </ul>
@@ -485,15 +485,15 @@ const SidebarSection = ({ roles, permission, ranks, currentUser }) => {
         <li className="nav-item nav-item-submenu" style={{ display: "none" }}>
           <div className="nav-link">
             <i className="icon-home4" />
-            <span>Monitoring</span>
+            <span>Мониторинг</span>
           </div>
           <ul className="nav nav-group-sub">
             <li className="nav-item">
-              <a href={"index.html"} className="nav-link">Hisobotlar</a>
+              <a href={"index.html"} className="nav-link">Отчеты</a>
             </li>
             <li className="nav-item">
               <div className="nav-link">
-                Statistika
+              Статистика
               </div>
             </li>
           </ul>
@@ -502,15 +502,15 @@ const SidebarSection = ({ roles, permission, ranks, currentUser }) => {
         <li className="nav-item nav-item-submenu" style={{ display: "none" }}>
           <div className="nav-link">
             <i className="icon-home4" />
-            <span>Xabarnoma</span>
+            <span>Уведомление</span>
           </div>
           <ul className="nav nav-group-sub">
             <li className="nav-item">
-              <a href={"index.html"} className="nav-link">Online chat</a>
+              <a href={"index.html"} className="nav-link">Онлайн чат</a>
             </li>
             <li className="nav-item">
               <div className="nav-link">
-                E'lon xabarnomasi
+              Уведомление об объявлении
               </div>
             </li>
           </ul>
@@ -519,15 +519,15 @@ const SidebarSection = ({ roles, permission, ranks, currentUser }) => {
         <li className="nav-item nav-item-submenu" style={{ display: "none" }}>
           <div className="nav-link">
             <i className="icon-home4" />
-            <span>Keldi ketdi</span>
+            <span>Он пришел и ушел</span>
           </div>
           <ul className="nav nav-group-sub">
             <li className="nav-item">
-              <a href={"index.html"} className="nav-link">Xodimlar</a>
+              <a href={"index.html"} className="nav-link">Сотрудники</a>
             </li>
             <li className="nav-item">
               <div className="nav-link">
-                Telefon kitobi
+              Телефонная книга
               </div>
             </li>
           </ul>
@@ -536,20 +536,20 @@ const SidebarSection = ({ roles, permission, ranks, currentUser }) => {
         <li className="nav-item nav-item-submenu" style={{ display: "none" }}>
           <div className="nav-link">
             <i className="icon-home4" />
-            <span>Qabul</span>
+            <span>Принятие</span>
           </div>
           <ul className="nav nav-group-sub">
             <li className="nav-item">
-              <a href={"index.html"} className="nav-link">Rahbar qabuli</a>
+              <a href={"index.html"} className="nav-link">Прием директора</a>
             </li>
             <li className="nav-item">
               <div className="nav-link">
-                Xodimlar qabuli
+              Подбор сотрудников
               </div>
             </li>
             <li className="nav-item">
               <div className="nav-link">
-                Fuqarolar qabuli
+              Прием граждан
               </div>
             </li>
           </ul>

@@ -53,7 +53,7 @@ const Near1dayInputsElementsHome = ({ setTableData, currentUser, dateFormatSet, 
                 type="text"
                 className="form-control form-control-lg"
                 id="xujjat"
-                placeholder="Korrespondent"
+                placeholder="Корреспондент"
                 ref={korresref}
               />
               <div className="form-control-feedback form-control-feedback-lg">
@@ -104,7 +104,7 @@ const Near1dayInputsElementsHome = ({ setTableData, currentUser, dateFormatSet, 
                     isClearable
                     showYearDropdown
                     scrollableMonthYearDropdown
-                    placeholderText="Sana"
+                    placeholderText="дата"
                     name="date"
                   />
                 </div>
@@ -120,7 +120,7 @@ const Near1dayInputsElementsHome = ({ setTableData, currentUser, dateFormatSet, 
                 onClick={SearchData}>Search
               </button>
               <button className="btn btn-primary mr-2 table-sm-full"
-                onClick={All}>Barchasi
+                onClick={All}>Все
               </button>
               <button className="btn btn-primary mobile-table-none"
                 data-toggle="dropdown"><i className="icon-menu9"
@@ -132,22 +132,22 @@ const Near1dayInputsElementsHome = ({ setTableData, currentUser, dateFormatSet, 
                   name="id" value="Id" />
                 <input type="submit"
                   className="btn btn-white dropdown-item  w-100 myBtn"
-                  name="xujjat" value="Xijjat Turi" />
+                  name="Xujjat" value="тип документа" />
                 <input type="submit"
                   className="btn btn-white dropdown-item  w-100 myBtn"
-                  name="korres" value="Korrespondent" />
+                  name="korres" value="Корреспондент" />
                 <input type="submit"
                   className="btn btn-white dropdown-item  w-100 myBtn"
-                  name="qisqacha" value="Qisqacha Ma'lumot" />
+                  name="qisqacha" value="Краткая информация" />
                 <input type="submit"
                   className="btn btn-white dropdown-item  w-100 myBtn"
-                  name="reg" value="Chiquvchi № / Sana" />
+                  name="reg" value="Исходящий № / дата" />
                 <input type="submit"
                   className="btn btn-white dropdown-item  w-100 myBtn"
-                  name="ijrochi" value="Ijrochi" />
+                  name="Ijrochi" value="Исполнительный" />
                 <input type="submit"
                   className="btn btn-white dropdown-item  w-100 myBtn"
-                  name="harakat" value="Harakatlar" />
+                  name="Harakatlar" value="Действия" />
               </div>
             </div>
           </th>

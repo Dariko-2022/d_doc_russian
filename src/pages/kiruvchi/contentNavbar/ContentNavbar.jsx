@@ -87,14 +87,14 @@ const ContentNavbar = ({ permission, ranks, currentUser }) => {
       {permission.includes("YANGI QO'SHISH") && (
         <li className="nav-item" >
           <NavLink exact to="/kiruvchi" className="nav-link " activeClassName='NavLinkLi' style={{ marginLeft: "20px" }}>
-            <i className="icon-plus2 mr-1 sx-none"></i> Yangi Qo'shish
+            <i className="icon-plus2 mr-1 sx-none"></i> Добавить новое
           </NavLink>
         </li>
       )}
       {permission.includes("YANGI") && (
         <li className="nav-item yangi" style={{ marginLeft: permission.includes("YANGI QO'SHISH") ? "0px" : "30px", display: count?.yangi === 0 ? "none" : "block" }}>
           <NavLink to="/kiruvchi/yangi" className="nav-link" activeClassName='NavLinkLi'>
-            <i className="icon-newspaper mr-1 sx-none"></i> Yangi
+            <i className="icon-newspaper mr-1 sx-none"></i> Новый
           </NavLink>
           <span className="badge1">{count?.yangi}</span>
         </li>
@@ -102,20 +102,20 @@ const ContentNavbar = ({ permission, ranks, currentUser }) => {
       {(ranks.includes(1) || ranks.includes(2) || ranks.includes(3) || permission.includes("RESOLUTSIYA") || permission.includes("RECEPTION")) && (
         <li className="nav-item rezalutsiya" style={{ marginLeft: (!(permission.includes("YANGI QO'SHISH") || permission.includes("YANGI") || (count?.yangi !== 0))) && "20px", display: count?.rezalutsiya === 0 ? "none" : "block" }} >
           <NavLink to="/kiruvchi/resolution" className="nav-link" activeClassName='NavLinkLi'>
-            <i className="icon-user-plus mr-1 sx-none"></i> Rezalutsiya
+            <i className="icon-user-plus mr-1 sx-none"></i> Резолюция
           </NavLink>
           <span className="badge1" >{count?.rezalutsiya}</span>
         </li>
       )}
       <li className="nav-item bajarishUchun" style={{ marginLeft: (permission.includes("YANGI QO'SHISH") || permission.includes("YANGI") || (ranks.includes(1) || ranks.includes(2) || ranks.includes(3) || ranks.includes(4) || ranks.includes(8)) || (count?.rezalutsiya === 0 && count?.yangi === 0)) && "20px", display: count?.bajarishUchun === 0 ? "none" : "block" }}>
         <NavLink to="/kiruvchi/bajarish" className="nav-link" activeClassName='NavLinkLi'>
-          <i className="icon-pen mr-1 sx-none"></i> Bajarish Uchun
+          <i className="icon-pen mr-1 sx-none"></i> Для выполнения
         </NavLink>
         <span className="badge1">{count?.bajarishUchun}</span>
       </li>
       <li className="nav-item nazoratda" style={{ display: count?.nazoratda === 0 ? "none" : "block", marginLeft: (count?.bajarishUchun === 0 && count?.rezalutsiya === 0 && count?.yangi === 0) && "20px" }}>
         <NavLink to="/kiruvchi/nazorat" className="nav-link" activeClassName='NavLinkLi'>
-          <i className="icon-laptop mr-1 sx-none"></i> Nazoratda
+          <i className="icon-laptop mr-1 sx-none"></i> Под контролем
         </NavLink>
         <span className="badge1">{count?.nazoratda}</span>
       </li>
@@ -124,45 +124,45 @@ const ContentNavbar = ({ permission, ranks, currentUser }) => {
           marginLeft: (count?.bajarishUchun === 0 && count?.rezalutsiya === 0 && count?.yangi === 0) && "20px"
         }}>
           <NavLink to="/kiruvchi/maxsusNazorat" className="nav-link" activeClassName='NavLinkLi'>
-            <i className="icon-laptop mr-1 sx-none"></i> Maxsus nazorat
+            <i className="icon-laptop mr-1 sx-none"></i>Специальный контроль
           </NavLink>
           <span className="badge1">{maxsusNazoratCount}</span>
         </li>
       )}
       <li className="nav-item umumlashtiruvchi" style={{ display: count?.umumlashtiruvchi === 0 ? "none" : "block", marginLeft: (count?.nazoratda === 0 && count?.bajarishUchun === 0 && count?.rezalutsiya === 0) && "20px" }}>
         <NavLink to="/kiruvchi/umumlashtiruvchi" className="nav-link" activeClassName='NavLinkLi'>
-          <i className="icon-laptop mr-1 sx-none"></i> Umumlashtiruvchi
+          <i className="icon-laptop mr-1 sx-none"></i> Генерализатор
         </NavLink>
         <span className="badge1">{count?.umumlashtiruvchi}</span>
       </li>
       <li className="nav-item malumotUchun" style={{ display: count?.malumotUchun === 0 ? "none" : "block", marginLeft: (count?.umumlashtiruvchi === 0 && count?.nazoratda === 0 && count?.bajarishUchun === 0 && count?.rezalutsiya === 0 && count?.yangi === 0) && "20px" }}>
         <NavLink to="/kiruvchi/ma'lumot-uchun" className="nav-link" activeClassName='NavLinkLi'>
-          <i className="icon-laptop mr-1 sx-none"></i> Ma'lumot uchun
+          <i className="icon-laptop mr-1 sx-none"></i> Для справки
         </NavLink>
         <span className="badge1">{count?.malumotUchun}</span>
       </li>
       <li className="nav-item bajarilmagan" style={{ display: count?.bajarilmagan === 0 ? "none" : "block", marginLeft: (count?.malumotUchun === 0 && count?.umumlashtiruvchi === 0 && count?.nazoratda === 0 && count?.bajarishUchun === 0 && count?.rezalutsiya === 0 && count?.yangi === 0) && "20px" }}>
         <NavLink to="/kiruvchi/kechiktirilgan" className="nav-link" activeClassName='NavLinkLi'>
-          <i className="icon-calendar mr-1 sx-none"></i> Bajarilmagan
+          <i className="icon-calendar mr-1 sx-none"></i> Не выполнено
         </NavLink>
         <span className="badge1">{count?.bajarilmagan}</span>
       </li>
       <li className="nav-item redetilgan" style={{ display: count?.radEtilgan === 0 ? "none" : "block", marginLeft: (count?.bajarilmagan === 0 && count?.malumotUchun === 0 && count?.umumlashtiruvchi === 0 && count?.nazoratda === 0 && count?.bajarishUchun === 0 && count?.rezalutsiya === 0 && count?.yangi === 0) && "20px" }}>
         <NavLink to="/kiruvchi/radetilgan" className="nav-link" activeClassName='NavLinkLi'>
-          <i className="icon-stack-cancel mr-1 sx-none"></i> Rad Etilgan
+          <i className="icon-stack-cancel mr-1 sx-none"></i>Отклоненный
         </NavLink>
         <span className="badge1">{count?.radEtilgan}</span>
       </li>
       <li className="nav-item bajarilgan" style={{ display: count?.bajarilgan === 0 ? "none" : "block", marginLeft: (count?.radEtilgan === 0 && count?.bajarilmagan === 0 && count?.malumotUchun === 0 && count?.umumlashtiruvchi === 0 && count?.nazoratda === 0 && count?.bajarishUchun === 0 && count?.rezalutsiya === 0 && count?.yangi === 0) && "20px" }}>
         <NavLink to="/kiruvchi/bajarilgan" className="nav-link" activeClassName='NavLinkLi'>
-          <i className="icon-check mr-1 sx-none"></i> Bajarilgan
+          <i className="icon-check mr-1 sx-none"></i> Сделанный
         </NavLink>
         <span className="badge1">{count?.bajarilgan}</span>
       </li>
       {permission.includes("NAZORATDAN OLISH") && (
         <li className="nav-item nazoratdanOlish" style={{ display: count?.nazoratdanOlish === 0 ? "none" : "block", marginLeft: (count?.bajarilgan === 0 && count?.radEtilgan === 0 && count?.bajarilmagan === 0 && count?.malumotUchun === 0 && count?.umumlashtiruvchi === 0 && count?.nazoratda === 0 && count?.bajarishUchun === 0 && count?.rezalutsiya === 0 && count?.yangi === 0) && "20px" }}>
           <NavLink to="/kiruvchi/nazoratdan-olish" className="nav-link " activeClassName='NavLinkLi'>
-            <i className="icon-check mr-1 sx-none"></i> Nazoratdan Olish
+            <i className="icon-check mr-1 sx-none"></i> Взять под контроль
           </NavLink>
           <span className="badge1" >{count?.nazoratdanOlish}</span>
         </li>
@@ -170,7 +170,7 @@ const ContentNavbar = ({ permission, ranks, currentUser }) => {
       {((ranks.includes(1) || ranks.includes(2) || ranks.includes(3) || permission.includes("RECEPTION"))) && maxsusNazoratdanOlishCount !== 0 && (
         <li className="nav-item nazoratdanOlish" style={{ marginLeft: (count?.bajarilgan === 0 && count?.radEtilgan === 0 && count?.bajarilmagan === 0 && count?.malumotUchun === 0 && count?.umumlashtiruvchi === 0 && count?.nazoratda === 0 && count?.bajarishUchun === 0 && count?.rezalutsiya === 0 && count?.yangi === 0) && "20px" }}>
           <NavLink to="/kiruvchi/maxsusNazoratdanOlish" className="nav-link " activeClassName='NavLinkLi'>
-            <i className="icon-check mr-1 sx-none"></i> Maxsus Nazoratdan Olish
+            <i className="icon-check mr-1 sx-none"></i> Специальная инспекция
           </NavLink>
           <span className="badge1" >{maxsusNazoratdanOlishCount}</span>
         </li>

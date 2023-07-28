@@ -12,14 +12,14 @@ const GetOrganization = ({ setAlert, currentUser, sitrref, sitr2ref, orgNameref,
   const tashkilotniOlish = async () => {
     if (sitrref?.current?.value) {
       if (sitrref.current.value?.length !== 11) {
-        Alert(setAlert, "warning", "Sitr xato kiritilgan");
+        Alert(setAlert, "warning", "СТИР был введен ошибочно");
       } else {
         try {
           const res = await axiosInstance.post("organization/searchinn", {
             stir: sitrref.current.value
           })
           if (res.data.date?.le_NM_UZ === "") {
-            Alert(setAlert, "warning", "Ma'lumot topilmadi");
+            Alert(setAlert, "warning", "Информация не найдена");
             clearAllInputData();
           } else {
             cityref.current.props.onChange({ value: res.data.date?.soato_DESC_UZ, label: res.data.date?.soato_DESC_UZ });
@@ -33,12 +33,12 @@ const GetOrganization = ({ setAlert, currentUser, sitrref, sitr2ref, orgNameref,
           }
         } catch (error) {
           console.log(error?.response);
-          Alert(setAlert, "warning", "Ma'lumot topilmadi");
+          Alert(setAlert, "warning", "Информация не найдена");
           clearAllInputData();
         }
       }
     } else {
-      Alert(setAlert, "warning", "Tahkilot sitri kiritilmagan");
+      Alert(setAlert, "warning", "Организационный СТИР не включен");
     }
   }
 
@@ -59,14 +59,14 @@ const GetOrganization = ({ setAlert, currentUser, sitrref, sitr2ref, orgNameref,
                 disabled={isChecked}
                 ref={sitrref}
               />
-              <label className="label-floating">Tashkilot sitri</label>
+              <label className="label-floating">Организация СТИР</label>
             </div>
           </div>
         </div>
         <div className="col-lg-3">
           <div className="form-group form-group-floating">
             <div className="position-relative">
-              <button type="button" onClick={tashkilotniOlish} className="btn btn-primary form-control form-control-outline buttonStir">Olish</button>
+              <button type="button" onClick={tashkilotniOlish} className="btn btn-primary form-control form-control-outline buttonStir">Получать</button>
             </div>
           </div>
         </div>

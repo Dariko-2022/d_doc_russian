@@ -10,7 +10,7 @@ const KiruvchiKurish = ({ data }) => {
             <h6 className="card-title" style={{
               fontWeight: "bold",
               textTransform: "upperCase"
-            }}>Kiruvchi</h6>
+            }}>Входящий</h6>
           </div>
           <div className="card-body">
             <div className="p-0">

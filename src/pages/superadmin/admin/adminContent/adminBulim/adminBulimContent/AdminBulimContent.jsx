@@ -83,7 +83,7 @@ const AdminBulimContent = () => {
         }
         return dat;
       })
-      Alert(setAlert, "success", "Ma'lumot muvaffaqitayli o'zgartirildi");
+      Alert(setAlert, "success", "Информация успешно изменена");
       setData(arr);
       setUpdateModal({ open: false, obj: {} });
     } catch (error) {
@@ -114,19 +114,19 @@ const AdminBulimContent = () => {
               upperDepartmentId: arr ? arr[0]?.value : null
             })
             setData([...data, res.data]);
-            Alert(setAlert, "success", "Ma'lumot muvaffaqitayli qo'shildi");
+            Alert(setAlert, "success", "Информация успешно добавлена");
           } catch (error) {
             console.log(error?.response);
           }
           document.querySelector('.formClear').reset();
         } else {
-          Alert(setAlert, "warning", "Tavsif maydoni bo'sh bo'lmasligi kerak");
+          Alert(setAlert, "warning", "Поле описания не должно быть пустым");
         }
       } else {
-        Alert(setAlert, "warning", "Bo'limning ruscha nomi kiritilmagan");
+        Alert(setAlert, "warning", "Русское название кафедры не указано");
       }
     } else {
-      Alert(setAlert, "warning", "Bo'lim nomi kiritilmagan");
+      Alert(setAlert, "warning", "Не введено название раздела");
     }
   }
 
@@ -171,7 +171,7 @@ const AdminBulimContent = () => {
 
   return (
     <div className="content mb-5">
-      <h3 style={{ margin: "10px 0 0 20px", fontWeight: "bold", textTransform: "upperCase" }}>Bo'lim</h3>
+      <h3 style={{ margin: "10px 0 0 20px", fontWeight: "bold", textTransform: "upperCase" }}>Отделение</h3>
       <div className="card-body">
         <ul className="nav nav-tabs nav-tabs-solid nav-tabs-solid-custom bg-primary NavLink">
           <AdminContentNavbar />
@@ -192,7 +192,7 @@ const AdminBulimContent = () => {
                               className="form-control form-control-outline nomlanishi"
                               placeholder="Placeholder"
                             />
-                            <label className="label-floating">Nomlanishi</label>
+                            <label className="label-floating">Именованиеi</label>
                           </div>
                         </div>
                       </div>
@@ -204,7 +204,7 @@ const AdminBulimContent = () => {
                             <input type="text"
                               className="form-control form-control-outline ruschaNomi"
                               placeholder="Placeholder" />
-                            <label className="label-floating">Ruscha nomi</label>
+                            <label className="label-floating">Русское имя</label>
                           </div>
                         </div>
                       </div>
@@ -216,14 +216,14 @@ const AdminBulimContent = () => {
                             <input type="text"
                               className="form-control form-control-outline tavsif"
                               placeholder="Placeholder" />
-                            <label className="label-floating">Tavsif</label>
+                            <label className="label-floating">Описание</label>
                           </div>
                         </div>
                       </div>
                     </div>
                     <div className="col-lg-3">
                       <button type="submit" className="btn btn-primary w-100" style={{ height: "56px" }}>
-                        <i className="fas fa-save" style={{ fontSize: "18px" }}></i> Saqlash
+                        <i className="fas fa-save" style={{ fontSize: "18px" }}></i> Сохранять
                       </button>
                     </div>
                   </div>
@@ -231,7 +231,7 @@ const AdminBulimContent = () => {
                     <div className="col-lg-6">
                       <div className="mb-2 d-flex align-items-center">
                         <input type="checkbox" className='mr-1 cursor-pointer' id="bulimFunc" style={{ width: "20px", height: "20px" }} />
-                        Asosiy bo'limni tanlash
+                        Выберите основной раздел
                       </div>
                     </div>
                   </div>
@@ -254,12 +254,12 @@ const AdminBulimContent = () => {
                   <thead>
                     <tr className="bg-dark text-white NavLink text-center">
                       <th style={{ width: "5%" }}>№</th>
-                      <th style={{ width: "20%" }}>Nomlanishi</th>
-                      <th style={{ width: "20%" }}>Asosiy Kategoriya</th>
-                      <th style={{ width: "15%" }}>Tarjimalar</th>
-                      <th style={{ width: "5%" }}>Xodimlar</th>
-                      <th style={{ width: "20%" }}>Tashkilot Nomi</th>
-                      <th>Harakatlar</th>
+                      <th style={{ width: "20%" }}>Именование</th>
+                      <th style={{ width: "20%" }}>Главная категория</th>
+                      <th style={{ width: "15%" }}>Переводы</th>
+                      <th style={{ width: "5%" }}>Сотрудники</th>
+                      <th style={{ width: "20%" }}>Название организации</th>
+                      <th>Действия</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -285,7 +285,7 @@ const AdminBulimContent = () => {
                         <div className="modal-dialog modal-xl">
                           <div className="modal-content">
                             <div className="modal-header bg-primary text-white">
-                              <h6 className="modal-title">Bo'lim qo'shish
+                              <h6 className="modal-title">Добавить раздел
                               </h6>
                               <button type="button" className="close close2" onClick={() => setUpdateModal({ open: false, obj: {} })}>&times;</button>
                             </div>
@@ -302,7 +302,7 @@ const AdminBulimContent = () => {
                                             defaultValue={updateModal.obj.uzName}
                                           />
                                           <label
-                                            className="label-floating">Nomlanishi</label>
+                                            className="label-floating">Именование</label>
                                         </div>
                                       </div>
                                     </div>
@@ -318,7 +318,7 @@ const AdminBulimContent = () => {
                                             placeholder="Placeholder"
                                             defaultValue={updateModal.obj.ruName}
                                           />
-                                          <label className="label-floating">Tarjimalar (ruscha)</label>
+                                          <label className="label-floating">Переводы (русский)</label>
                                         </div>
                                       </div>
                                     </div>
@@ -335,7 +335,7 @@ const AdminBulimContent = () => {
                                             defaultValue={updateModal.obj.description}
                                           />
                                           <label
-                                            className="label-floating">Tavsif</label>
+                                            className="label-floating">Описание</label>
                                         </div>
                                       </div>
                                     </div>
@@ -358,7 +358,7 @@ const AdminBulimContent = () => {
                                       <div className="col-lg-12">
                                         <div className="position-relative">
                                           <button type="button" onClick={() => UzgartirishlarniSaqlash(updateModal.obj)} className="btn btn-primary" style={{ width: "100%", height: "40px" }}>
-                                            <i className="fas fa-save" style={{ fontSize: "18px" }}></i> Saqlash
+                                            <i className="fas fa-save" style={{ fontSize: "18px" }}></i> Сохранять
                                           </button>
                                         </div>
                                       </div>
@@ -383,16 +383,16 @@ const AdminBulimContent = () => {
                           <div className="modal-dialog">
                             <div className="modal-content">
                               <div className="modal-header bg-primary text-white">
-                                <h6 className="modal-title">O'chirish oynasi</h6>
+                                <h6 className="modal-title">Удалить окно</h6>
                                 <button type="button" className="close" onClick={() => setDeleteModal({ open: false, obj: {} })}>×</button>
                               </div>
                               <div className="modal-body ">
-                                <h3 style={{ textTransform: "upperCase", fontWeight: "bold" }} className="text-danger">Ogoh bo'ling!</h3>
-                                <h5>Ushbu ma'lumotni o'chirmoqchimisiz?</h5>
+                                <h3 style={{ textTransform: "upperCase", fontWeight: "bold" }} className="text-danger">Будьте в курсе!</h3>
+                                <h5>Вы хотите удалить эту информацию?</h5>
                               </div>
                               <div className="modal-footer">
-                                <button type="button" className="btn btn-link bekorQilish" onClick={() => setDeleteModal({ open: false, obj: {} })}>Bekor qilish</button>
-                                <button type="button" className="btn btn-primary" onClick={() => Uchirish(deleteModal.obj)}>O'chirish</button>
+                                <button type="button" className="btn btn-link bekorQilish" onClick={() => setDeleteModal({ open: false, obj: {} })}>Отмена</button>
+                                <button type="button" className="btn btn-primary" onClick={() => Uchirish(deleteModal.obj)}>Выключать</button>
                               </div>
                             </div>
                           </div>

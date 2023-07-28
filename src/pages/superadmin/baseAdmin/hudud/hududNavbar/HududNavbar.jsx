@@ -6,32 +6,32 @@ const HududNavbar = () => {
     <>
       <li className="nav-item" style={{ marginLeft: "20px" }}>
         <NavLink to="/super_base_admin_hudud-viloyatlar" className="nav-link" activeClassName='NavLinkLi'>
-          Viloyatlar
+        Провинции
         </NavLink>
       </li>
       <li className="nav-item" >
         <NavLink to="/super_base_admin_hudud-shahar-tuman" className="nav-link" activeClassName='NavLinkLi'>
-          Shahar va tumanlar
+        Города и районы
         </NavLink>
       </li>
       <li className="nav-item" >
         <NavLink exact to="/super_base_admin_hudud" className="nav-link" activeClassName='NavLinkLi'>
-          Mahalla
+        Район
         </NavLink>
       </li>
       <li className="nav-item">
         <NavLink exact to="/super_base_admin_journals_tasnif1" className="nav-link" activeClassName='NavLinkLi'>
-          Tasnif1
+        Классификация1
         </NavLink>
       </li>
       <li className="nav-item" >
         <NavLink to="/super_base_admin_journals_tasnif2" className="nav-link" activeClassName='NavLinkLi'>
-          Tasnif2
+        Классификация2
         </NavLink>
       </li>
       <li className="nav-item" >
         <NavLink to="/super_base_admin_journals_tasnif3" className="nav-link" activeClassName='NavLinkLi'>
-          Tasnif3
+        Классификация3
         </NavLink>
       </li>
     </>

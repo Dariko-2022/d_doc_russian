@@ -47,11 +47,11 @@ const TableData = ({ data, currentUser, setData, allBulimSelect, setAllBulimSele
         <thead>
           <tr className="bg-dark text-white NavLink text-center">
             <th style={{ width: "5%" }}>№</th>
-            <th style={{ width: "30%" }}>Nomlanishi</th>
-            <th style={{ width: "30%" }}>Asosiy Kategoriya</th>
-            <th style={{ width: "25%" }}>Tarjimalar</th>
-            <th style={{ width: "5%" }}>Xodimlar</th>
-            <th style={{ width: "5%" }}>Harakatlar</th>
+            <th style={{ width: "30%" }}>Именование</th>
+            <th style={{ width: "30%" }}>Главная категория</th>
+            <th style={{ width: "25%" }}>Переводы</th>
+            <th style={{ width: "5%" }}>Сотрудники</th>
+            <th style={{ width: "5%" }}>Действия</th>
           </tr>
         </thead>
         <tbody>
@@ -74,12 +74,12 @@ const TableData = ({ data, currentUser, setData, allBulimSelect, setAllBulimSele
                   <span className="infoBtn bg-dark cursor-pointer"
                     onClick={() => setUpdateModal({ open: true, obj: dat })}
                     data-bs-toggle="tooltip" data-popup="tooltip"
-                    data-bs-placement="top" title="O'zgartirish"><i
+                    data-bs-placement="top" title="Изменять"><i
                       className="icon-pencil5"></i> </span>
                   <span className="infoBtn bg-dark cursor-pointer"
                     onClick={() => setDeleteModal({ open: true, obj: dat })}
                     data-bs-toggle="tooltip" data-popup="tooltip"
-                    data-bs-placement="top" title="O'chirish"><i
+                    data-bs-placement="top" title="Выключать"><i
                       className="icon-trash"></i> </span>
                 </div>
               </td>

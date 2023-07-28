@@ -19,17 +19,17 @@ const FormElements = ({ selectBulimlar, currentUser, setAlert, setData, data }) 
             orgId: JSON.parse(localStorage.getItem('oi'))
           })
           formResetref.current.reset();
-          Alert(setAlert, "success", "Ma'lumot muvaffaqitayli qo'shildi");
+          Alert(setAlert, "success", "Информация успешно добавлена");
           setData({ ...data, content: [...data.content, res.data] });
         } catch (error) {
           console.log(error?.response);
           Alert(setAlert, "warning", error?.response?.data);
         }
       } else {
-        Alert(setAlert, "warning", "Lavozim kiritilmagan");
+        Alert(setAlert, "warning", "Позиция не введена");
       }
     } else {
-      Alert(setAlert, "warning", "Bo'lim nomi tanlanmagan");
+      Alert(setAlert, "warning", "BНазвание раздела не выбрано");
     }
   }
 
@@ -40,7 +40,7 @@ const FormElements = ({ selectBulimlar, currentUser, setAlert, setData, data }) 
           <div className="form-group">
             <Select
               options={selectBulimlar}
-              placeholder="Biriktirilgan bo'lim"
+              placeholder="Прикрепленный раздел"
               className="bulim"
               required
               ref={departmentsref}
@@ -57,7 +57,7 @@ const FormElements = ({ selectBulimlar, currentUser, setAlert, setData, data }) 
                   placeholder="Placeholder"
                   ref={rankref}
                 />
-                <label className="label-floating">Lavozimi</label>
+                <label className="label-floating">Позиция</label>
               </div>
             </div>
           </div>
@@ -67,7 +67,7 @@ const FormElements = ({ selectBulimlar, currentUser, setAlert, setData, data }) 
             <div className="col-lg-12">
               <div className="position-relative">
                 <button type="submit" className="btn btn-primary form-control form-control-outline">
-                  <i className="fas fa-save" style={{ fontSize: "18px" }}></i> Saqlash
+                  <i className="fas fa-save" style={{ fontSize: "18px" }}></i> Сохранять
                 </button>
               </div>
             </div>

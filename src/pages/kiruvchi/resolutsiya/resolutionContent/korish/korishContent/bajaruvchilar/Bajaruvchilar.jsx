@@ -151,7 +151,7 @@ const Bajaruvchilar = ({ data, xodimlar, qaytaIjro, confirmerWorkPlaceId }) => {
               <h6 className="card-title" style={{
                 fontWeight: "bold",
                 textTransform: "upperCase"
-              }}>Bajaruvchi</h6>
+              }}>Исполнитель </h6>
             </div>
 
             {(data[0]?.inExecutorInformationList?.length > 0 && xodimlar?.length > 0) && data[0]?.inExecutorInformationList?.map((dat, index) => (
@@ -207,14 +207,14 @@ const Bajaruvchilar = ({ data, xodimlar, qaytaIjro, confirmerWorkPlaceId }) => {
                                       label: `${(dat?.firstName.trim() && dat?.firstName?.trim().length > 1) ? ((((dat?.firstName[0].trim().toUpperCase() === "S" || dat?.firstName[0].trim().toUpperCase() === "C") && dat?.firstName[1].trim().toUpperCase() === "H")) ? dat?.firstName?.trim().substring(0, 2) + ". " : dat?.firstName?.trim().substring(0, 1) + ". ") : ""}${dat?.lastName.trim()}`
                                     }}
                                     options={xodimlar}
-                                    placeholder="Xodim"
+                                    placeholder="Сотрудник"
                                     className="XodimBajaruvchi"
                                     styles={colourStyles}
                                   />
                                 ) : (
                                   <Select
                                     options={xodimlar}
-                                    placeholder="Xodim"
+                                    placeholder="Сотрудник"
                                     className="XodimBajaruvchi"
                                     styles={colourStyles2}
                                   />
@@ -233,7 +233,7 @@ const Bajaruvchilar = ({ data, xodimlar, qaytaIjro, confirmerWorkPlaceId }) => {
                                     defaultValue={dat?.description}
                                   >
                                   </textarea>
-                                  <label className="label-floating">Izoh</label>
+                                  <label className="label-floating">Комментарий</label>
                                 </div>
                               </div>
                             </div>
@@ -251,7 +251,7 @@ const Bajaruvchilar = ({ data, xodimlar, qaytaIjro, confirmerWorkPlaceId }) => {
                                     defaultValue={dat?.deadline}
                                     style={{ border: "1px solid lightgray" }}
                                   />
-                                  <label className="label-floating">Sana</label>
+                                  <label className="label-floating">Дата</label>
                                 </div>
                               </div>
                             </div>
@@ -267,7 +267,7 @@ const Bajaruvchilar = ({ data, xodimlar, qaytaIjro, confirmerWorkPlaceId }) => {
                                   }}
                                   options={qaytaIjro}
                                   onChange={(e) => selectQaytaIjroFunc(e, index)}
-                                  placeholder="Qayta Ijro"
+                                  placeholder="Повтор"
                                   className="qaytaIjro col1QaytaIjro"
                                   styles={colourStyles}
                                 />
@@ -275,7 +275,7 @@ const Bajaruvchilar = ({ data, xodimlar, qaytaIjro, confirmerWorkPlaceId }) => {
                                 <Select
                                   options={qaytaIjro}
                                   onChange={(e) => selectQaytaIjroFunc(e, index)}
-                                  placeholder="Qayta Ijro"
+                                  placeholder="Повтор"
                                   className="qaytaIjro col1QaytaIjro"
                                   styles={colourStyles}
                                 />
@@ -308,7 +308,7 @@ const Bajaruvchilar = ({ data, xodimlar, qaytaIjro, confirmerWorkPlaceId }) => {
                                   placeholder="Placeholder"
                                 />
                                 <label
-                                  className="label-floating">Boshqa</label>
+                                  className="label-floating">Другой</label>
                               </div>
                             </div>
                           </div>
@@ -377,7 +377,7 @@ const Bajaruvchilar = ({ data, xodimlar, qaytaIjro, confirmerWorkPlaceId }) => {
                                   >
                                   </textarea>
                                   <label
-                                    className="label-floating">Izoh</label>
+                                    className="label-floating">Комментарий</label>
                                 </div>
                               </div>
                             </div>
@@ -394,7 +394,7 @@ const Bajaruvchilar = ({ data, xodimlar, qaytaIjro, confirmerWorkPlaceId }) => {
                                     placeholder="Placeholder"
                                     style={{ border: "1px solid lightgray" }}
                                   />
-                                  <label className="label-floating">Sana</label>
+                                  <label className="label-floating">Дата</label>
                                 </div>
                               </div>
                             </div>
@@ -438,7 +438,7 @@ const Bajaruvchilar = ({ data, xodimlar, qaytaIjro, confirmerWorkPlaceId }) => {
                                   style={{ height: "56px", }}
                                   placeholder="Placeholder"
                                 />
-                                <label className="label-floating">Boshqa</label>
+                                <label className="label-floating">Другой</label>
                               </div>
                             </div>
                           </div>
@@ -454,7 +454,7 @@ const Bajaruvchilar = ({ data, xodimlar, qaytaIjro, confirmerWorkPlaceId }) => {
       </div>
       <div className="text-right mr-2 my-2">
         <button type="button" className="btn btn-primary" onClick={newCreateBajaruvchi} id="myFormInput">
-          Yangi qo'shish
+        Добавить новое
         </button>
       </div>
     </>

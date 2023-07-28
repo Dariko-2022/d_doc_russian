@@ -231,7 +231,7 @@ const KadrlarTable = ({ currentUser, permission1, ranks }) => {
         agree: true
       }).then(res => {
         console.log(res.data);
-        Alert(setAlert, "success", "Muvofaqqiyatli qo'shildi");
+        Alert(setAlert, "success", "Добавлено успешно");
         setBranchs([...branchs, { id: branchId, name: branchNotActiveRef.current.value, main: false }])
         history.push(`/kadrlar/${branchNotActiveRef.current.value}`)
 
@@ -300,7 +300,7 @@ const KadrlarTable = ({ currentUser, permission1, ranks }) => {
   return (
     <div className="content kadr-bg" style={{ background: "#fff" }}>
       <div className="mb-2" style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-        <h1 style={{ fontWeight: "bold", textTransform: "upperCase" }}>Kadrlar bo'limi</h1>
+        <h1 style={{ fontWeight: "bold", textTransform: "upperCase" }}>Отдел кадров</h1>
         <div className="d-flex" style={{ gap: "1rem" }}>
 
           <div className="" style={{ width: "400px" }}>
@@ -324,7 +324,7 @@ const KadrlarTable = ({ currentUser, permission1, ranks }) => {
             {console.log(globalSearch)}
             <Select
               ref={globalSearchRef}
-              placeholder="Keng qidirish:"
+              placeholder="Широкий поиск:"
               name="colors"
               options={globalSearch}
               className="w-100"
@@ -336,7 +336,7 @@ const KadrlarTable = ({ currentUser, permission1, ranks }) => {
 
           {newNotActive.length > 0 && (
             <button type="button" class="btn btn-success position-relative" onClick={() => { setNewBranchModal({ isShow: true, branch: { id: 0, main: false, name: "" } }); }}>
-              <i className="fa-solid fa-folder-open mr-1" style={{ fontSize: "18px" }}></i>  Yangi
+              <i className="fa-solid fa-folder-open mr-1" style={{ fontSize: "18px" }}></i>  Новый
               <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary">
                 {newNotActive.length}
               </span>
@@ -344,7 +344,7 @@ const KadrlarTable = ({ currentUser, permission1, ranks }) => {
           )}
 
           <button onClick={() => setAddModal(true)} type="submit" title="Qo'shish" className="btn btn-primary p-2" style={{ padding: "4px 8px" }}>
-            <i className="icon-plus3 mr-1" style={{ fontSize: "18px" }}></i> Guruh yaratish
+            <i className="icon-plus3 mr-1" style={{ fontSize: "18px" }}></i> Создать группу
           </button>
         </div>
 
@@ -363,7 +363,7 @@ const KadrlarTable = ({ currentUser, permission1, ranks }) => {
           <div className="modal-dialog modal-lg" style={{ width: "100%" }}>
             <div className="modal-content">
               <div className="modal-header bg-primary text-white">
-                <h5 className="modal-title">Yangi guruh yaratish</h5>
+                <h5 className="modal-title">Создать новую группу</h5>
                 <button onClick={() => setAddModal(false)} type="button" className="close" data-dismiss="modal" style={{ fontSize: "24px" }}>
                   &times;
                 </button>
@@ -379,13 +379,13 @@ const KadrlarTable = ({ currentUser, permission1, ranks }) => {
                       onKeyDown={(e) => keyDown(e, "branchAdd")}
                     />
                     <label
-                      className="label-floating kadrInp">Guruh nomi:</label>
+                      className="label-floating kadrInp">Имя группы:</label>
                   </div>
                 </div>
 
                 <div className="modal-footer px-0">
                   <button onClick={() => addClassNav()} type="button" className="btn btn-primary" style={{ height: "48px" }}>
-                    <i class="icon-plus3 mr-1"></i> Qo'shish</button>
+                    <i class="icon-plus3 mr-1"></i> Добавлять</button>
                 </div>
               </div>
             </div>
@@ -414,7 +414,7 @@ const KadrlarTable = ({ currentUser, permission1, ranks }) => {
                       ref={branchRef}
                     />
                     <label
-                      className="label-floating kadrInp">Guruh nomi:</label>
+                      className="label-floating kadrInp">Имя группы:</label>
                   </div>
                 </div>
 
@@ -427,23 +427,23 @@ const KadrlarTable = ({ currentUser, permission1, ranks }) => {
                       updateBranchModal?.branch.main ? (
                         <div className="custom-control custom-checkbox custom-control-success" style={{ fontSize: "1rem", display: "flex", alignContent: "center" }}>
                           <input type="checkbox" className="custom-control-input" id="chek" checked={true} />
-                          <label className="custom-control-label" for="chek" style={{ textTransform: "uppercase" }}>Asosiy sifatda belgingan</label>
+                          <label className="custom-control-label" for="chek" style={{ textTransform: "uppercase" }}>Отмечено как основное качество</label>
                         </div>
                       )
                         : (
                           <div className="custom-control custom-checkbox custom-control-success" style={{ fontSize: "1rem", display: "flex", alignContent: "center" }}>
                             <input type="checkbox" className="custom-control-input" id="chek" checked={updateBranchModal?.check} onChange={() => checkMainFunc()} />
-                            <label className="custom-control-label" for="chek" style={{ textTransform: "uppercase" }}>Asosiy sifatda belgilash</label>
+                            <label className="custom-control-label" for="chek" style={{ textTransform: "uppercase" }}>Определение главного качества.</label>
                           </div>)
                     }
 
                   </div>
                   <div className="d-flex" style={{ gap: "1rem" }}>
                     <button onClick={() => updateBranch()} type="button" className="btn btn-success" style={{ height: "48px" }}>
-                      <i class="fa-solid fa-floppy-disk mr-1"></i> Saqlash</button>
+                      <i class="fa-solid fa-floppy-disk mr-1"></i> Сохранять</button>
 
                     <button onClick={() => setDeleteBranchModal({ isShow: true, branch: updateBranchModal.branch })} type="button" className="btn btn-danger" style={{ height: "48px" }}>
-                      <i class="icon-bin mr-1"></i> O'chirish</button>
+                      <i class="icon-bin mr-1"></i> Выключать</button>
                   </div>
                 </div>
               </div>
@@ -458,7 +458,7 @@ const KadrlarTable = ({ currentUser, permission1, ranks }) => {
         <div className="modal-dialog modal-lg">
           <div className="modal-content">
             <div className="modal-header bg-primary text-white">
-              <h5 className="modal-title">O'chirish</h5>
+              <h5 className="modal-title">Выключать</h5>
               <button onClick={() => setDeleteBranchModal({ isShow: false, branch: { id: 0, main: false, name: "" } })} type="button" className="close" data-dismiss="modal" style={{ fontSize: "24px" }}>
                 &times;
               </button>
@@ -467,15 +467,15 @@ const KadrlarTable = ({ currentUser, permission1, ranks }) => {
             <form action="#">
               <div className="modal-body pb-0">
                 <div className="form-group">
-                  <h5> Ushbu ma'lumotlarni
-                    <span className="text-danger" style={{ fontWeight: "600" }}> o'chirishni </span> tasdiqlaysizmi?
+                  <h5> Вы подтверждаете 
+                    <span className="text-danger" style={{ fontWeight: "600" }}> удалить </span> эта информация
                   </h5>
                 </div>
 
               </div>
 
               <div className="modal-footer" style={{ display: "flex", justifyContent: "center" }}>
-                <button onClick={() => { deleteBranch() }} type="button" style={{ minWidth: "80px" }} className="btn btn-danger">Ha</button>
+                <button onClick={() => { deleteBranch() }} type="button" style={{ minWidth: "80px" }} className="btn btn-danger">Да</button>
                 <button onClick={() => setDeleteBranchModal({ isShow: false, branch: { id: 0, main: false, name: "" } })} type="button" style={{ minWidth: "80px" }} className="btn btn-primary">Yo'q</button>
               </div>
             </form>
@@ -488,7 +488,7 @@ const KadrlarTable = ({ currentUser, permission1, ranks }) => {
           <div className="modal-dialog modal-lg" style={{ width: "100%" }}>
             <div className="modal-content">
               <div className="modal-header bg-primary text-white">
-                <h5 className="modal-title">Kadr qabul qilish</h5>
+                <h5 className="modal-title">Принятие кадри</h5>
                 <button onClick={() => setNewBranchModal({ isShow: false, branch: { id: 0, main: false, name: "" } })} type="button" className="close" data-dismiss="modal" style={{ fontSize: "24px" }}>
                   &times;
                 </button>
@@ -527,7 +527,7 @@ const KadrlarTable = ({ currentUser, permission1, ranks }) => {
         <div className="modal-dialog modal-lg">
           <div className="modal-content">
             <div className="modal-header bg-primary text-white">
-              <h5 className="modal-title">O'chirish</h5>
+              <h5 className="modal-title">Выключать</h5>
               <button onClick={() => setDeleteNotActiveModal({ isShow: false, users: [], name: "" })} type="button" className="close" data-dismiss="modal" style={{ fontSize: "24px" }}>
                 &times;
               </button>
@@ -536,8 +536,8 @@ const KadrlarTable = ({ currentUser, permission1, ranks }) => {
             <form action="#">
               <div className="modal-body pb-0">
                 <div className="form-group">
-                  <h5> Ushbu kadrlarni
-                    <span className="text-danger" style={{ fontWeight: "600" }}> o'chirishni </span> tasdiqlaysizmi?
+                  <h5> Вы уверены, что хотите
+                    <span className="text-danger" style={{ fontWeight: "600" }}> удалить </span> это кадры?
                   </h5>
                 </div>
 
@@ -556,7 +556,7 @@ const KadrlarTable = ({ currentUser, permission1, ranks }) => {
         <div className="modal-dialog modal-lg">
           <div className="modal-content">
             <div className="modal-header bg-primary text-white">
-              <h5 className="modal-title">O'chirish</h5>
+              <h5 className="modal-title">Выключать</h5>
               <button onClick={() => setCreateNotActiveModal({ isShow: false, users: [], name: "" })} type="button" className="close" data-dismiss="modal" style={{ fontSize: "24px" }}>
                 &times;
               </button>
@@ -565,8 +565,8 @@ const KadrlarTable = ({ currentUser, permission1, ranks }) => {
             <form action="#">
               <div className="modal-body pb-0">
                 <div className="form-group">
-                  <h5> Ushbu kadrlarni
-                    <span className="text-success" style={{ fontWeight: "600" }}> qo'shishni </span> tasdiqlaysizmi?
+                  <h5> Вы уверены, что хотите
+                    <span className="text-success" style={{ fontWeight: "600" }}> добавить </span> это кадры?
                   </h5>
                 </div>
 
@@ -586,7 +586,7 @@ const KadrlarTable = ({ currentUser, permission1, ranks }) => {
           <div className="modal-dialog modal-lg" style={{ width: "100%" }}>
             <div className="modal-content">
               <div className="modal-header bg-primary text-white">
-                <h5 className="modal-title">Yangi guruh qo'shish</h5>
+                <h5 className="modal-title">Добавить новую группу</h5>
                 <button onClick={() => setAddNotActiveModal(false)} type="button" className="close" data-dismiss="modal" style={{ fontSize: "24px" }}>
                   &times;
                 </button>
@@ -602,13 +602,13 @@ const KadrlarTable = ({ currentUser, permission1, ranks }) => {
                         ref={branchNotActiveRef}
                       />
                       <label
-                        className="label-floating kadrInp">Guruh nomi:</label>
+                        className="label-floating kadrInp">Имя группы:</label>
                     </div>
                   </div>
 
                   <div className="modal-footer px-0">
                     <button onClick={() => createNotActiveFunc()} type="button" className="btn btn-primary" style={{ height: "48px" }}>
-                      <i class="icon-plus3 mr-1"></i> Qo'shish</button>
+                      <i class="icon-plus3 mr-1"></i> Добавлять</button>
                   </div>
                 </div>
 

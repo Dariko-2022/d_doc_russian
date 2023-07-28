@@ -6,22 +6,22 @@ export default function SozlamalarNavbar() {
     <>
       <li className="nav-item" style={{ marginLeft: "30px" }}>
         <NavLink exact to="/super_base_admin_murojaat_formasi" className="nav-link" activeClassName='NavLinkLi'>
-          Murojaat Formasi
+        Форма заявки
         </NavLink>
       </li>
       <li className="nav-item" >
         <NavLink exact to="/super_base_admin_murojaat_maqsadi" className="nav-link" activeClassName='NavLinkLi'>
-          Murojaat Maqsadi
+        Цель применения
         </NavLink>
       </li>
       <li className="nav-item" >
         <NavLink exact to="/super_base_admin_murojaat_turi" className="nav-link" activeClassName='NavLinkLi'>
-          Murojaat Turi
+        Тип приложения
         </NavLink>
       </li>
       <li className="nav-item">
         <NavLink exact to="/super_base_admin_qabulxona" className="nav-link" activeClassName='NavLinkLi'>
-          Qabulxona
+        Прием
         </NavLink>
       </li>
     </>

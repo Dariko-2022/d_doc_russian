@@ -65,7 +65,7 @@ const SozlamaContent = ({ currentUser, permission, ranks }) => {
 
   return (
     <div className="content mb-5 ">
-      <h3 style={{ margin: "10px 0 0 0", fontWeight: "bold", textTransform: "upperCase" }}>Sozlash</h3>
+      <h3 style={{ margin: "10px 0 0 0", fontWeight: "bold", textTransform: "upperCase" }}>Настройка</h3>
       <div className="card-body p-0">
         <ul className="nav nav-tabs nav-tabs-solid nav-tabs-solid-custom bg-primary NavLink" style={{ paddingTop: "2px", minHeight: "52px" }}>
           <ContentNavbar permission={permission} ranks={ranks} currentUser={currentUser} />
@@ -73,7 +73,7 @@ const SozlamaContent = ({ currentUser, permission, ranks }) => {
           <li className="nav-item">
             <NavLink to={`/kiruvchi/sozlash/${params.id}/${params.name}`} className="nav-link"
               activeClassName='NavLinkLi'>
-              <i className="fab fa-whmcs mr-1"></i>Sozlash
+              <i className="fab fa-whmcs mr-1"></i>Настройка
             </NavLink>
           </li>
         </ul>

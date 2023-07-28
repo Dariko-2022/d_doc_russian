@@ -77,7 +77,7 @@ const JournalsContent = ({ currentUser }) => {
               ac2Id: Tasnif2 ? Tasnif2.value : null,
             })
             setTasnif3(prev => [...prev, res.data.data]);
-            Alert(setAlert, "success", "Ma'lumot muvaffaqiyatli qo'shildi");
+            Alert(setAlert, "success", "Информация успешно добавлена");
           } catch (error) {
             console.log(error.response)
           }
@@ -85,13 +85,13 @@ const JournalsContent = ({ currentUser }) => {
           desc2ref.current?.props?.value && desc2ref.current.removeValue(desc2ref.current.props.value);
           desc3ref.current.value = "";
         } else {
-          Alert(setAlert, "warning", "Tasnif3 kiritilmagan");
+          Alert(setAlert, "warning", "Класс 3 не включен");
         }
       } else {
-        Alert(setAlert, "warning", "Tasnif2 tanlanmagan");
+        Alert(setAlert, "warning", "Класс 2 не включен");
       }
     } else {
-      Alert(setAlert, "warning", "Tasnif1 tanlanmagan");
+      Alert(setAlert, "warning", "Класс 1 не включен");
     }
   }
 
@@ -121,7 +121,7 @@ const JournalsContent = ({ currentUser }) => {
 
   return (
     <div className="content mb-5">
-      <h3 style={{ margin: "10px 0 0 0", fontWeight: "bold", textTransform: "upperCase" }}>Tasnif3</h3>
+      <h3 style={{ margin: "10px 0 0 0", fontWeight: "bold", textTransform: "upperCase" }}>Классификация3</h3>
       <div className="card-body p-0">
         <ul className="nav nav-tabs nav-tabs-solid nav-tabs-solid-custom bg-primary NavLink">
           <HududNavbar />
@@ -137,7 +137,7 @@ const JournalsContent = ({ currentUser }) => {
                         <Select
                           options={notParentsCard1}
                           onChange={notParentsCardClick1}
-                          placeholder="Tasnif1"
+                          placeholder="Классификация1"
                           className="cardTypeId"
                           isClearable={true}
                           ref={desc1ref}
@@ -148,7 +148,7 @@ const JournalsContent = ({ currentUser }) => {
                       <div className="form-group text-left">
                         <Select
                           options={notParentsCard2}
-                          placeholder="Tasnif2"
+                          placeholder="Классификация2"
                           className="cardTypeId"
                           isClearable={true}
                           ref={desc2ref}
@@ -162,7 +162,7 @@ const JournalsContent = ({ currentUser }) => {
                             type="text"
                             style={{ height: '56px' }}
                             className="form-control form-control-outline Tasnif3"
-                            placeholder="Tasnif3"
+                            placeholder="Классификация1"
                             ref={desc3ref}
                           />
                         </div>
@@ -170,7 +170,7 @@ const JournalsContent = ({ currentUser }) => {
                     </div>
                     <div className="col-lg-3">
                       <button type="button" className="btn btn-primary" style={{ padding: "1rem" }} onClick={saveData}>
-                        <i className="icon-floppy-disk mr-1"></i> Saqlash
+                        <i className="icon-floppy-disk mr-1"></i> Сохранять
                       </button>
                     </div>
                   </div>

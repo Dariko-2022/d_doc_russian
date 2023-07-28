@@ -7,18 +7,18 @@ export default function MurojaatNavbar() {
       <li className="nav-item" style={{ marginLeft: "30px" }}>
         <NavLink to="/super_base_admin_murojaat" className="nav-link" activeClassName='NavLinkLi'>
           {/* <i className="icon-plus2 mr-1"></i> */}
-          Yo'nalishlar
+          Направления
         </NavLink>
       </li>
       <li className="nav-item" >
         <NavLink exact to="/super_base_admin_fuqaro-savollari" className="nav-link" activeClassName='NavLinkLi'>
-          Murojaat savollari
+        Вопросы приложения
         </NavLink>
       </li>
       <li className="nav-item">
         <NavLink to="/super_base_admin_fuqaro-javoblari" className="nav-link" activeClassName='NavLinkLi'>
           {/* <i className="icon-office"></i>  */}
-          Murojaat javoblari
+          Ответы приложений
         </NavLink>
       </li>
     </>

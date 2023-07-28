@@ -6,17 +6,17 @@ export default function RollarNavbar() {
     <>
       <li className="nav-item" >
         <NavLink exact to="/super_base_admin_rollar" className="nav-link" activeClassName='NavLinkLi'>
-          Tashkilot rollari
+        Организационные роли
         </NavLink>
       </li>
       <li className="nav-item">
         <NavLink to="/super_base_admin_xodim-rollari" className="nav-link" activeClassName='NavLinkLi'>
-          <i className="icon-office"></i> Xodim rollari
+          <i className="icon-office"></i> Роли сотрудников
         </NavLink>
       </li>
       <li className="nav-item">
         <NavLink exact to="/super_base_admin_boshqa-rollar" className="nav-link" activeClassName='NavLinkLi'>
-          <i className="icon-stack2"></i> Boshqa rollar
+          <i className="icon-stack2"></i> Другие роли
         </NavLink>
       </li>
     </>

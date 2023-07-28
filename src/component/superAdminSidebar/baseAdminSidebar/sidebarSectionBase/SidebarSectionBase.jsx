@@ -45,42 +45,42 @@ export default function SidebarSectionBase() {
         <li className="nav-item nav-item-submenu Kiruvchi" style={{ fontSize: '16px !important' }}>
           <div className="nav-link" onClick={() => openFM('Kiruvchi')}>
             <i className="icon-home4 " />
-            <span style={{ fontSize: "18px" }}>Kiruvchi</span>
+            <span style={{ fontSize: "18px" }}>Входящий</span>
           </div>
 
           <ul className="nav-item-ul" style={{ display: "none" }}>
             <li className="nav-item">
               <Link to="/super_base_admin_tashkilot-qushish" className="nav-link d-flex align-items-center" style={{ fontSize: "18px" }}>
                 <i className="fas fa-folder-plus" />
-                <span>Tashkilot qo'shish</span>
+                <span>Добавить организацию</span>
               </Link>
             </li>
 
             <li className="nav-item">
               <Link to="/super_base_admin-modullar" className="nav-link d-flex align-items-center" style={{ fontSize: "18px" }}>
                 <i className="fas fa-cog" />
-                <span>Modul</span>
+                <span>Модул</span>
               </Link>
             </li>
 
             <li className="nav-item">
               <Link to="/super_base_admin-kartochka" className="nav-link d-flex align-items-center" style={{ fontSize: "18px" }}>
                 <i className="fas fa-plus" />
-                <span>Kartochka qo'shish</span>
+                <span>Добавить карту</span>
               </Link>
             </li>
 
             <li className="nav-item">
               <Link to="/super_base_admin-fake" className="nav-link d-flex align-items-center" style={{ fontSize: "18px" }}>
                 <i className="fa-solid fa-arrows-rotate"></i>
-                <span>Yolg'on</span>
+                <span>Ложь</span>
               </Link>
             </li>
 
             <li className="nav-item">
               <Link to="/super_base_admin-org" className="nav-link d-flex align-items-center" style={{ fontSize: "18px" }}>
                 <i className="fa-solid fa-arrows-rotate"></i>
-                <span>Admistrator</span>
+                <span>Администратор</span>
               </Link>
             </li>
           </ul>
@@ -174,14 +174,14 @@ export default function SidebarSectionBase() {
         <li className="nav-item nav-item-submenu fqMurojaati">
           <div className="nav-link" onClick={() => openFM('fqMurojaati')}>
             <i className="icon-home4" />
-            <span style={{ fontSize: '18px' }}>Fuqoro Murojati</span>
+            <span style={{ fontSize: '18px' }}>Гражданская апелляция</span>
           </div>
 
           <ul className="nav-item-ul" style={{ display: "none" }}>
             <li className="nav-item">
               <Link to="/super_base_admin_hudud-viloyatlar" className="nav-link d-flex align-items-center" style={{ fontSize: '18px' }}>
                 <i className="fas fa-folder-plus" />
-                <span>Hudud</span>
+                <span>Территория</span>
               </Link>
             </li>
             {/* <li className="nav-item">*/}

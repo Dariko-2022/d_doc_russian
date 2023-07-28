@@ -8,25 +8,25 @@ const NavbarContentMonitoring = () => {
       <li exact className="nav-item" style={{ marginLeft: "20px", display: "none" }}>
         <NavLink exact to={`/monitoring`} activeClassName='NavLinkLi'
           className="nav-link d-flex align-items-center">
-          <i className="icon-plus2 mr-1"></i> Hammasi
+          <i className="icon-plus2 mr-1"></i> Все
         </NavLink>
       </li>
       <li className="nav-item" style={{ marginLeft: "20px" }}>
         <NavLink to={`/monitoring_kiruvchi`} activeClassName="NavLinkLi"
           className="nav-link d-flex align-items-center">
-          <i className="icon-user-plus mr-1"></i> Kiruvchi
+          <i className="icon-user-plus mr-1"></i> Входящий
         </NavLink>
       </li>
       <li className="nav-item">
         <NavLink to={`/monitoring_nazorat-kartochka`} activeClassName="NavLinkLi"
           className="nav-link d-flex align-items-center">
-          <i className="icon-user-plus mr-1"></i> Nazorat kartochkasi
+          <i className="icon-user-plus mr-1"></i>Контрольная карта
         </NavLink>
       </li>
       <li className="nav-item">
         <NavLink to={`/monitoring_nazorat-kartochka-malumot`} activeClassName="NavLinkLi"
           className="nav-link d-flex align-items-center">
-          <i className="icon-newspaper mr-1"></i> Nazorat Kartochkasi ma'lumot
+          <i className="icon-newspaper mr-1"></i> Информация о контрольной карте
         </NavLink>
       </li>
       <li className="nav-item">
@@ -57,13 +57,13 @@ const NavbarContentMonitoring = () => {
       <li className="nav-item">
         <NavLink to={`/monitoring_yuqori_tashkilot_1a`} activeClassName="NavLinkLi"
           className="nav-link d-flex align-items-center">
-          <i className="icon-user-plus mr-1"></i> Yuqori tashkilot 1
+          <i className="icon-user-plus mr-1"></i> Высшая организация 1
         </NavLink>
       </li>
       <li className="nav-item">
         <NavLink to={`/monitoring_umumiy-hisobot`} activeClassName="NavLinkLi"
           className="nav-link d-flex align-items-center">
-          <i className="icon-user-plus mr-1"></i> Hisobot
+          <i className="icon-user-plus mr-1"></i> Отчет
         </NavLink>
       </li>
     </>

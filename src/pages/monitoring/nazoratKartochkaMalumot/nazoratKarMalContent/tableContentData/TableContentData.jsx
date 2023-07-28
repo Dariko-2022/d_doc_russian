@@ -42,7 +42,7 @@ const TableContentData = ({ allCard, data, setSelected, setData, selected, start
         setSelected(0);
         setData(res.data);
       } else {
-        Alert(setAlert, "warning", "Hech qanday ma'lumot mavjud emas");
+        Alert(setAlert, "warning", "Информация отсутствует");
       }
     } catch (error) {
       console.log(error);
@@ -61,8 +61,8 @@ const TableContentData = ({ allCard, data, setSelected, setData, selected, start
         <thead>
           <tr className="bg-dark text-white text-center tableHeader w-100">
             <th style={{ width: "5%" }}>№ </th>
-            <th style={{ width: "45%", textAlign: 'left' }}>Hujjat turi</th>
-            <th style={{ width: "50%" }}>Kelgan hujjatlar soni</th>
+            <th style={{ width: "45%", textAlign: 'left' }}>Тип документа</th>
+            <th style={{ width: "50%" }}>Количество входящих документов</th>
           </tr>
         </thead>
 

@@ -293,7 +293,7 @@ const IjroniYuklash = ({ openIjroniYuklash, setOpenIjroniYuklash, params, setAle
                     minLength="150"
                     maxLength="300"
                     className="form-control form-control-outline izohMatni"
-                    placeholder="Izoh"
+                    placeholder="Комментарий"
                     required
                   />
                 </div>
@@ -314,7 +314,7 @@ const IjroniYuklash = ({ openIjroniYuklash, setOpenIjroniYuklash, params, setAle
                     {file?.length > 0 ? `${file?.length} ta fayl tanlandi` : "Faylni yuklash"}
                   </span>
                 </label>
-                <label className="d-block text-muted mb-0">Ruxsat etilgan formatlar:doc, docx, xls,xlsx, ppt, pptx, pdf, .zip, .rar</label>
+                <label className="d-block text-muted mb-0">Фиксированные форматы:doc, docx, xls,xlsx, ppt, pptx, pdf, .zip, .rar</label>
               </div>
             </div>
             <div className="text-right">
@@ -336,7 +336,7 @@ const IjroniYuklash = ({ openIjroniYuklash, setOpenIjroniYuklash, params, setAle
               </div>
             </div>
             <div className="modal-footer pr-0">
-              <button type="button" className="btn btn-primary" onClick={() => ijroHujjatiniSaqlash(openIjroniYuklash.obj)}>Saqlash</button>
+              <button type="button" className="btn btn-primary" onClick={() => ijroHujjatiniSaqlash(openIjroniYuklash.obj)}>Сохранять</button>
             </div>
           </div>
         </div>

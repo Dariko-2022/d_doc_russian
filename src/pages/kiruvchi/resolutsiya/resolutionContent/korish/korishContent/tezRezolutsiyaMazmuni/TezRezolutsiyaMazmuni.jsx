@@ -78,7 +78,7 @@ const TezRezolutsiyaMazmuni = ({ data, currentUser, setAlert }) => {
           <div className="card">
             <div className="card-header bg-primary text-white header-elements-inline">
               <h6 className="card-title"
-                style={{ fontWeight: "bold", textTransform: "uppercase" }}>Rezalutsiya mazmuni</h6>
+                style={{ fontWeight: "bold", textTransform: "uppercase" }}>Содержание резолюции</h6>
             </div>
             <div className="form-group form-group-floating row my-2 mx-2">
               <div className="col-lg-12">
@@ -92,12 +92,12 @@ const TezRezolutsiyaMazmuni = ({ data, currentUser, setAlert }) => {
                   // disabled={(e) => e.target.length > 250}
                   >
                   </textarea>
-                  <label className="label-floating">Izoh</label>
+                  <label className="label-floating">Комментарий</label>
                 </div>
                 <span className={'text-muted'} style={{
                   fontSize: "12px",
                   color: "lightgrey",
-                }}>Belgilar soni 800 dan oshmasligi kerak</span>
+                }}>Количество символов не должно превышать 800</span>
               </div>
             </div>
           </div>
@@ -109,8 +109,8 @@ const TezRezolutsiyaMazmuni = ({ data, currentUser, setAlert }) => {
         <div className="col-lg-12">
           <div className="card">
             <div className="card-header bg-primary text-white header-elements-inline">
-              <h6 className="card-title" style={{ fontWeight: "bold", textTransform: "upperCase" }}>Tezkor
-                Rezalutsiya</h6>
+              <h6 className="card-title" style={{ fontWeight: "bold", textTransform: "upperCase" }}>Быстрый
+                Резолюция</h6>
             </div>
             <div className="card-body">
               <table

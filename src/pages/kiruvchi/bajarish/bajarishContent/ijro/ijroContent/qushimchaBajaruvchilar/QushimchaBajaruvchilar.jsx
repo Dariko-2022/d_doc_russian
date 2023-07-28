@@ -106,7 +106,7 @@ const QushimchaBajaruvchilar = ({ yangiQushish, xodimlar, setYangiQushish, colou
       <div className="col-lg-12">
         <div className="">
           <div className="card-header bg-primary text-white header-elements-inline">
-            <h6 className="card-title" style={{ fontWeight: "bold", textTransform: "upperCase" }}>Qo'shimcha Bajaruvchilar</h6>
+            <h6 className="card-title" style={{ fontWeight: "bold", textTransform: "upperCase" }}>Дополнительные исполнители</h6>
           </div>
           {yangiQushish.map((yangi, index) => (
             <div key={index} >
@@ -156,7 +156,7 @@ const QushimchaBajaruvchilar = ({ yangiQushish, xodimlar, setYangiQushish, colou
                                   placeholder="Placeholder"
                                 >
                                 </textarea>
-                                <label className="label-floating">Izoh</label>
+                                <label className="label-floating">Комментарий</label>
                               </div>
                             </div>
                           </div>
@@ -172,7 +172,7 @@ const QushimchaBajaruvchilar = ({ yangiQushish, xodimlar, setYangiQushish, colou
                                   placeholder="Placeholder"
                                   style={{ border: "1px solid lightgray" }}
                                 />
-                                <label className="label-floating">Sana</label>
+                                <label className="label-floating">Дата</label>
                               </div>
                             </div>
                           </div>
@@ -197,7 +197,7 @@ const QushimchaBajaruvchilar = ({ yangiQushish, xodimlar, setYangiQushish, colou
                                 style={{ height: "56px" }}
                                 placeholder="Placeholder"
                               />
-                              <label className="label-floating">Boshqa</label>
+                              <label className="label-floating">Другой</label>
                             </div>
                           </div>
                         </div>
@@ -210,7 +210,7 @@ const QushimchaBajaruvchilar = ({ yangiQushish, xodimlar, setYangiQushish, colou
           ))}
           <div className="text-right my-2">
             <button type="button" className="btn btn-primary" onClick={newCreateBajaruvchi} id="myFormInput">
-              Yangi qo'shish
+            Добавить новое
             </button>
           </div>
         </div>

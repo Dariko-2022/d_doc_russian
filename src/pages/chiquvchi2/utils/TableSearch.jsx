@@ -151,21 +151,21 @@ const TableSearch = ({ imzolovchilarRef, korrespondentRef, qisqachaMalumotRef, s
                     style={{ height: '44px' }}
                     id="korrespondent2"
                     ref={qisqachaMalumotRef}
-                    placeholder="Qisqacha ma'lumot" />
+                    placeholder="Краткая информация" />
             </div>
 
             <div className="col-lg-2 col-md-6 mb-2">
                 <button className="btn btn-primary table-sm-full w-100"
                     style={{ height: '44px' }}
                     onClick={() => searchData()}>
-                    Qidiruv
+                    Поиск
                 </button>
             </div>
             <div className="col-lg-2 col-md-6 mb-2">
                 <button className="btn btn-primary mobile-table-none w-100"
                     style={{ height: '44px' }}
                     onClick={() => allData()}>
-                    Barchasi
+                    Все
                 </button>
             </div>
         </>

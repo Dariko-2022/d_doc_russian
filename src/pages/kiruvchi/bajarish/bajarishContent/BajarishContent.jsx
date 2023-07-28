@@ -76,7 +76,7 @@ const BajarishContent = ({ currentUser, permission, ranks }) => {
 
   return (
     <div className="content mb-5 content-mobile">
-      <h3 style={{ margin: "10px 0 0 0", fontWeight: "bold", textTransform: "upperCase" }}>Bajarish uchun</h3>
+      <h3 style={{ margin: "10px 0 0 0", fontWeight: "bold", textTransform: "upperCase" }}>Для выполнения</h3>
       <div className="card-body card-body-mobile p-0">
         <ul className="nav nav-tabs nav-tabs-solid nav-tabs-solid-custom bg-primary NavLink" style={{ paddingTop: "2px", minHeight: "52px" }}>
           <ContentNavbar permission={permission} ranks={ranks} currentUser={currentUser} />

@@ -65,11 +65,11 @@ const NewAllData = ({ data, setData, dateFormatSet, selected, setSelected }) => 
         <thead className="theadSticky">
           <tr className="bg-dark text-white NavLink text-center" style={{ height: "45px" }}>
             <th style={{ width: "5%" }} className="id">№</th>
-            <th style={{ width: "20%" }} className="xujjat mobile-table-none">Xujjat Turi</th>
-            <th style={{ width: "25%" }} className="korres">Korrespondent</th>
-            <th style={{ width: "30%" }} className="qisqacha mobile-table-none">Qisqacha Ma'lumot</th>
-            <th style={{ width: "15%" }} className="chiquvchi">Chiquvchi № / Sana</th>
-            <th style={{ width: "5%" }} className="text-center harakat mobile-table-none">Harakatlar</th>
+            <th style={{ width: "20%" }} className="xujjat mobile-table-none">тип документа</th>
+            <th style={{ width: "25%" }} className="korres">Корреспондент</th>
+            <th style={{ width: "30%" }} className="qisqacha mobile-table-none">Краткая информация</th>
+            <th style={{ width: "15%" }} className="chiquvchi">Исходящий № / Дата</th>
+            <th style={{ width: "5%" }} className="text-center harakat mobile-table-none">Действия</th>
           </tr>
         </thead>
         <tbody>

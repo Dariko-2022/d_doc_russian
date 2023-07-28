@@ -198,7 +198,7 @@ const Navbar = ({ currentUser, setSimpleUser, setUserAdmin }) => {
                   <i className="icon-cog5 mr-2" />
                   {JSON.parse(JSON.parse(localStorage.getItem('ids'))) ? (
                     <>
-                      Ish Stoli
+                      Рабочий стол
                     </>
                   ) : (
                     JSON.parse(jwtDecode(currentUser)?.supperAdmin)?.userRoles?.length > 0 && JSON.parse(jwtDecode(currentUser)?.supperAdmin)?.userRoles?.map((d, i) => (
@@ -223,7 +223,7 @@ const Navbar = ({ currentUser, setSimpleUser, setUserAdmin }) => {
                           onClick={() => ishStoliKirish(d)}
                           style={{ fontSize: "14px", textTransform: "upperCase" }}
                         >
-                          Ish Stoli {i + 1}
+                          Рабочий стол {i + 1}
                         </span>
                       ))
                     )
@@ -273,7 +273,7 @@ const Navbar = ({ currentUser, setSimpleUser, setUserAdmin }) => {
               </li>
               <li className="nav-item ml-2">
                 <span className="navbar-nav-link navbar-nav-link-toggler text-dark d-flex align-items-center exitIcon" style={{ fontWeight: "bold" }} onClick={removeToken}>
-                  <span className='chiqishNavbar' style={{ fontSize: "13px" }}>Chiqish</span>
+                  <span className='chiqishNavbar' style={{ fontSize: "13px" }}>Выход</span>
                   <i className="icon-switch2" style={{ marginLeft: "5px", fontSize: "12px" }} />
                 </span>
               </li>

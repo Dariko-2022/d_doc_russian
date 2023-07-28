@@ -268,52 +268,52 @@ const InputContentForm = ({ file, setFile, currentUser, setAlert, deleteFile, up
                               Alert(setAlert, "warning", error?.response?.data);
                             }
                           } else {
-                            Alert(setAlert, "warning", "Qisqacha ma'lumot kiritilmagan");
+                            Alert(setAlert, "warning", "Краткая информация не включена");
                             setIsDisebled(false)
                           }
                         } else {
-                          Alert(setAlert, "warning", "Sahifalar soni kiritilmagan");
+                          Alert(setAlert, "warning", "Количество страниц не включено");
                           setIsDisebled(false)
                         }
                       } else {
-                        Alert(setAlert, "warning", "Ro'yxat sana tanlanmagan");
+                        Alert(setAlert, "warning", "Дата списка не выбрана");
                         setIsDisebled(false)
                       }
                     } else {
                       setIsDisebled(false)
-                      Alert(setAlert, "warning", "Chiquvchi sana tanlanmagan");
+                      Alert(setAlert, "warning", "Исходящий дата не выбрана");
                     }
                   } else {
                     setIsDisebled(false)
-                    Alert(setAlert, "warning", "Chiquvchi raqam kiritilmagan");
+                    Alert(setAlert, "warning", "Не введен исходящий номер");
                   }
                 } else {
                   setIsDisebled(false)
-                  Alert(setAlert, "warning", "Korrespondent kiritilmagan");
+                  Alert(setAlert, "warning", "Корреспондент не включен");
                 }
               } else {
                 setIsDisebled(false)
-                Alert(setAlert, "warning", "Tasdiqlovchi tanlanmagan");
+                Alert(setAlert, "warning", "Валидатор не выбран");
               }
             } else {
               setIsDisebled(false)
-              Alert(setAlert, "warning", "Taqdim etish formasi tanlanmagan");
+              Alert(setAlert, "warning", "Форма отправки не выбрана");
             }
           } else {
             setIsDisebled(false)
-            Alert(setAlert, "warning", "Card nomi tanlanmagan");
+            Alert(setAlert, "warning", "Имя карты не выбрано");
           }
         } else {
           setIsDisebled(false)
-          Alert(setAlert, "warning", "Jurnal tanlanmagan");
+          Alert(setAlert, "warning", "Журнал не выбран");
         }
       } else {
         setIsDisebled(false)
-        Alert(setAlert, "warning", "Fayl formati berilgan formatda bo'lishi kerak");
+        Alert(setAlert, "warning", "Формат файла должен быть в указанном формате");
       }
     } else {
       setIsDisebled(false)
-      Alert(setAlert, "warning", "Fayl tanlanmagan");
+      Alert(setAlert, "warning", "Файл не выбран");
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [file, setAlert, setFile]);
@@ -327,7 +327,7 @@ const InputContentForm = ({ file, setFile, currentUser, setAlert, deleteFile, up
               <Select
                 options={card}
                 onChange={clickCard}
-                placeholder="Jurnali"
+                placeholder="Журнал"
                 className='jurnali'
                 isClearable={true}
                 ref={jurnalref}
@@ -356,7 +356,7 @@ const InputContentForm = ({ file, setFile, currentUser, setAlert, deleteFile, up
               <Select
                 options={notParentsCard}
                 onChange={notParentsCardClick}
-                placeholder="Card turi"
+                placeholder="Тип Card"
                 className="cardTypeId"
                 isClearable={true}
                 ref={cardTyperef}
@@ -369,7 +369,7 @@ const InputContentForm = ({ file, setFile, currentUser, setAlert, deleteFile, up
             <div className="position-relative relative1">
               <Select
                 options={cardsName}
-                placeholder="Card nomi"
+                placeholder="Имя Card"
                 className="card1 ssss"
                 isClearable={true}
                 ref={cardNameref}
@@ -384,7 +384,7 @@ const InputContentForm = ({ file, setFile, currentUser, setAlert, deleteFile, up
             <div className="position-relative">
               <Select
                 options={taqdimForma}
-                placeholder="Taqdim etish formasi"
+                placeholder="Форма представления"
                 className='taqdimForma'
                 isClearable={true}
                 ref={taqdimFormaref}
@@ -397,7 +397,7 @@ const InputContentForm = ({ file, setFile, currentUser, setAlert, deleteFile, up
             <div className="position-relative">
               <Select
                 options={tasdiqlovchi}
-                placeholder="Tasdiqlovchi"
+                placeholder="Валидатор"
                 className='tasdiqlovchi'
                 isClearable={true}
                 ref={userref}
@@ -410,7 +410,7 @@ const InputContentForm = ({ file, setFile, currentUser, setAlert, deleteFile, up
             <div className="position-relative">
               <Select
                 options={korrespondent}
-                placeholder="Korrespondent"
+                placeholder="Корреспондент"
                 className='korrespondent'
                 isClearable={true}
                 ref={korresref}
@@ -423,7 +423,7 @@ const InputContentForm = ({ file, setFile, currentUser, setAlert, deleteFile, up
             onClick={() => setAddModal(true)}
             type="button"
             style={{ height: "56px" }}>
-            Qo'shish
+           Добавлять
           </button>
         </div>
 
@@ -437,11 +437,11 @@ const InputContentForm = ({ file, setFile, currentUser, setAlert, deleteFile, up
                 type="text"
                 className="form-control form-control-outline chiquvchiRaqam"
                 id="chiquvchiRaqam"
-                placeholder="Placeholder"
+                placeholder="Исходящий номер"
                 required
                 ref={outNumref}
               />
-              <label className="label-floating">Chiquvchi raqami</label>
+              <label className="label-floating">Исходящий номер</label>
             </div>
           </div>
         </div>
@@ -466,7 +466,7 @@ const InputContentForm = ({ file, setFile, currentUser, setAlert, deleteFile, up
               dateFormat={'dd.MM.yyyy'}
               isClearable
               showYearDropdown
-              placeholderText="Chiquvchi sanasi"
+              placeholderText="Исходящий дата"
               scrollableMonthYearDropdown
               name="datechiqSanaKiruvchi"
             />
@@ -491,7 +491,7 @@ const InputContentForm = ({ file, setFile, currentUser, setAlert, deleteFile, up
               onChange={(date) => setStartDate2(date)}
               dateFormat={'dd.MM.yyyy'}
               isClearable
-              placeholderText="Ro'yxatdan o'tish sanasi"
+              placeholderText="Дата регистрации"
               showYearDropdown
               scrollableMonthYearDropdown
               name="dateruyxatSanaKiruvchi"
@@ -505,11 +505,11 @@ const InputContentForm = ({ file, setFile, currentUser, setAlert, deleteFile, up
                 type="number"
                 className="form-control form-control-outline sahifalarSoni"
                 id="sahifalarSoni"
-                placeholder="Placeholder"
+                placeholder="Количество страниц"
                 required
                 ref={countPageref}
               />
-              <label className="label-floating">Sahifalar soni</label>
+              <label className="label-floating">Количество страниц</label>
             </div>
           </div>
         </div>
@@ -524,12 +524,12 @@ const InputContentForm = ({ file, setFile, currentUser, setAlert, deleteFile, up
               <textarea cols="30" rows="5" id="malumot"
                 maxLength="300"
                 className="form-control form-control-outline qisqachaMalumot"
-                placeholder="Placeholder"
+                placeholder="Краткая информация"
                 required
                 ref={shortDescref}
               />
-              <label className="label-floating">Qisqacha ma'lumot</label>
-              <span className="mt-5 text-muted">Qisqacha ma'lumot 300 ta belgidan oshmaydi</span>
+              <label className="label-floating">Краткая информация</label>
+              <span className="mt-5 text-muted">Краткая информация не превышает 300 символов</span>
             </div>
           </div>
         </div>
@@ -551,14 +551,14 @@ const InputContentForm = ({ file, setFile, currentUser, setAlert, deleteFile, up
                 {file?.length > 0 ? `${file?.length} ta fayl tanlandi` : "Faylni tanlash"}
               </label>
             </div>
-            <label className="d-block text-muted mb-0">Ruxsat etilgan formatlar: doc, docx, xls,xlsx, ppt, pptx, pdf, .zip, .rar</label>
+            <label className="d-block text-muted mb-0">Поддерживаемые форматы: doc, docx, xls,xlsx, ppt, pptx, pdf, .zip, .rar</label>
           </div>
         </div>
       </div>
       <div className="d-flex align-items-center justify-content-between ml-2">
         <button type="button" className="btn btn-primary hujQush"
           onClick={() => hujjatQushish()} disabled={isDisebled}
-        >Xujjat qo'shish</button>
+        >Добавить документ</button>
       </div>
 
       {openModal && (

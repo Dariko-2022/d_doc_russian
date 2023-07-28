@@ -273,7 +273,7 @@ const TashkilotQushishContent = ({ tab, currentUser }) => {
         </ul>
       ) : (
         <h3 style={{ margin: "10px 0 0 0", fontWeight: "bold", 
-        textTransform: "upperCase" }}>Tashkilot qo'shish</h3>
+        textTransform: "upperCase" }}>Добавить организацию</h3>
       )}
 
       <div className="card-body p-0" style={{ marginTop: !tab && "-20px", padding: tab && 0 }}>
@@ -288,14 +288,14 @@ const TashkilotQushishContent = ({ tab, currentUser }) => {
                   color: "#fff",
                   padding: "0 5px 5px 0"
                 }}>
-                  Tashkilotlar boshqaruv paneli
+                  Панель управления организациями
                 </h5>
               </li>
               <li className="nav-item mr-3">
                 <a href="#1" data-toggle="modal" className="" data-target="#yonalish" style={{ fontWeight: "bold", textTransform: "upperCase", color: "#fff" }}>
-                  <i className="icon-plus2"></i> Yo'nalish Qo'shish</a>
+                  <i className="icon-plus2"></i> Добавить направление</a>
                 <a href="#1" data-toggle="modal" className="ml-4 atAuto" data-target="#modal_theme_primary" style={{ fontWeight: "bold", textTransform: "upperCase", color: "#fff" }}>
-                  <i className="icon-plus2"></i> Tashkilot Qo'shish
+                  <i className="icon-plus2"></i> Добавить организацию
                 </a>
 
                 {/* yunalish qushish modali */}
@@ -330,7 +330,7 @@ const TashkilotQushishContent = ({ tab, currentUser }) => {
                         type="text"
                         className="form-control form-control-outline"
                         style={{ paddingLeft: "25px" }}
-                        placeholder="Nomi yoki Stir"
+                        placeholder="Имя или СТИР"
                         onChange={(e) => setSearch(e.target.value)}
                       />
                       <i className="fas fa-search" style={{ position: "absolute", top: "15px", left: "18px" }}></i>
@@ -341,16 +341,15 @@ const TashkilotQushishContent = ({ tab, currentUser }) => {
                       <thead>
                         <tr className="bg-dark text-white NavLink text-center">
                           <th style={{ width: "3%" }}>№</th>
-                          <th style={{ width: "15%" }}>logo</th>
-                          <th style={{ width: "15%" }}>Tuman
-                            (shahar)
+                          <th style={{ width: "15%" }}>Лого</th>
+                          <th style={{ width: "15%" }}>Район
+                            (Город)
                           </th>
-                          <th style={{ width: "25%" }}>Qisqacha
-                            Nomi
+                          <th style={{ width: "25%" }}>Короткое имя
                           </th>
-                          <th style={{ width: "25%" }}>Rahbari</th>
-                          <th style={{ width: "10%" }}>Stir</th>
-                          <td style={{ width: "8%" }}>Harakatlar</td>
+                          <th style={{ width: "25%" }}>Директор</th>
+                          <th style={{ width: "10%" }}>СТИР</th>
+                          <td style={{ width: "8%" }}>Действия</td>
                         </tr>
                       </thead>
                       <tbody
@@ -470,8 +469,8 @@ const TashkilotQushishContent = ({ tab, currentUser }) => {
                                               <h6 className="card-title">
                                                 <a data-toggle="collapse"
                                                   className="text-white"
-                                                  href={`#bTashkilot${index}`}>Bosh
-                                                  tashkilot</a>
+                                                  href={`#bTashkilot${index}`}>Основная 
+                                                  организация</a>
                                               </h6>
                                             </div>
 
@@ -486,15 +485,13 @@ const TashkilotQushishContent = ({ tab, currentUser }) => {
                                                   <thead>
                                                     <tr className="bg-dark text-white NavLink text-center">
                                                       <th style={{ width: "3%" }}>№</th>
-                                                      <th style={{ width: "15%" }}>logo</th>
-                                                      <th style={{ width: "20%" }}>Tuman
-                                                        (shahar)
+                                                      <th style={{ width: "15%" }}>Лого</th>
+                                                      <th style={{ width: "20%" }}>Район
                                                       </th>
-                                                      <th style={{ width: "25%" }}>Qisqacha
-                                                        Nomi
+                                                      <th style={{ width: "25%" }}>Короткое имя
                                                       </th>
-                                                      <th style={{ width: "25%" }}>Rahbari</th>
-                                                      <td style={{ width: "8%" }}>Harakatlar</td>
+                                                      <th style={{ width: "25%" }}>Директор</th>
+                                                      <td style={{ width: "8%" }}>Действия</td>
                                                     </tr>
                                                   </thead>
                                                   <tbody
@@ -548,7 +545,7 @@ const TashkilotQushishContent = ({ tab, currentUser }) => {
                                           <div className="card mb-0">
                                             <div className="card-header bg-dark" onClick={() => getTashQuyiTashkilot(tash.id)}>
                                               <h6 className="card-title">
-                                                <a className="collapsed text-white" data-toggle="collapse" href={`#qTashkilot${index}`}>Quyi tashkilotlar</a>
+                                                <a className="collapsed text-white" data-toggle="collapse" href={`#qTashkilot${index}`}>Низшие организации</a>
                                               </h6>
                                             </div>
                                             <div id={`qTashkilot${index}`} className="collapse" data-parent={`#qTashkilot${index}`}>
@@ -557,15 +554,15 @@ const TashkilotQushishContent = ({ tab, currentUser }) => {
                                                   <thead>
                                                     <tr className="bg-dark text-white NavLink text-center">
                                                       <th style={{ width: "3%" }}>№</th>
-                                                      <th style={{ width: "15%" }}>logo</th>
-                                                      <th style={{ width: "20%" }}>Tuman
-                                                        (shahar)
+                                                      <th style={{ width: "15%" }}>Лого</th>
+                                                      <th style={{ width: "20%" }}>Район
+                                                        (город)
                                                       </th>
-                                                      <th style={{ width: "25%" }}>Qisqacha
-                                                        Nomi
+                                                      <th style={{ width: "25%" }}> Короткое
+                                                       имя
                                                       </th>
-                                                      <th style={{ width: "25%" }}>Rahbari</th>
-                                                      <td style={{ width: "8%" }}>Harakatlar</td>
+                                                      <th style={{ width: "25%" }}>Директор</th>
+                                                      <td style={{ width: "8%" }}>Действия</td>
                                                     </tr>
                                                   </thead>
                                                   <tbody id="viloyat">

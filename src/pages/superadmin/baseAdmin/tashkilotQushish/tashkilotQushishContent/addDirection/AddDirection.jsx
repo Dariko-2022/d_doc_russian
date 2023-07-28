@@ -22,7 +22,7 @@ const AddDirection = ({  setAlert, setYunalishlar }) => {
       }
       closeBtn.current.click();
     } else {
-      Alert(setAlert, "warning", "Yunalish nomi kiritilmagan");
+      Alert(setAlert, "warning", "Не введено название направления");
     }
   }
 
@@ -30,7 +30,7 @@ const AddDirection = ({  setAlert, setYunalishlar }) => {
     <div className="modal-dialog modal-lg ">
       <div className="modal-content">
         <div className="modal-header bg-primary text-white">
-          <h5 className="modal-title" style={{ textTransform: "capitalize" }}>Yo'nalish qo'shish</h5>
+          <h5 className="modal-title" style={{ textTransform: "capitalize" }}>Добавить направление</h5>
           <button type="button" className="close" data-dismiss="modal" ref={closeBtn}>&times;</button>
         </div>
 
@@ -47,13 +47,13 @@ const AddDirection = ({  setAlert, setYunalishlar }) => {
                       ref={directionref}
                       autoFocus
                     />
-                    <label className="label-floating">Yo'nalish</label>
+                    <label className="label-floating">Направление</label>
                   </div>
                 </div>
               </div>
               <div className="col-lg-4">
                 <span className="error text-danger d-block" style={{ textTransform: "capitalize" }}></span>
-                <button type="submit" className="btn btn-primary" >Saqlash</button>
+                <button type="submit" className="btn btn-primary" >Сохранять</button>
               </div>
             </div>
           </form>
